@@ -11,13 +11,13 @@ const useStyles = makeStyles({
     icons: {
         marginRight: "25px",
         marginLeft: "25px",
-        color: "#766c5b",
+        color: "black",
         '&:hover': {
-            color: "#bbad94",
+            color: "#c89019",
         }   
     },
     bodyColor: {
-        backgroundColor: "#efe9db",
+        backgroundColor: "#fffdf9",
     }
 })
 
