@@ -3,8 +3,8 @@ import "./style.css";
 import { makeStyles } from "@material-ui/core/styles";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import PublicIcon from "@material-ui/icons/Public";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import TwitterIcon from "@material-ui/icons/Twitter";
 
 
 const useStyles = makeStyles({
@@ -31,8 +31,8 @@ function Jumbotron() {
     <div className="center">
         <a href="https://github.com/marisanesmith" rel="noreferrer" target="_blank" className={styles.icons}><GitHubIcon fontSize="large"/></a>
         <a href="https://www.instagram.com/thisworldtraveled" rel="noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large"/></a>
-        <a href="https://www.linkedin.com/in/marisa-nesmith" rel="noreferrer" target="_blank" className={styles.icons}><LinkedInIcon fontSize="large"/></a>
-        <a href="https://www.thisworldtraveled.com" rel="noreferrer" target="_blank" className={styles.icons}><PublicIcon fontSize="large"/></a>
+        <a href="https://www.linkedin.com/in/marisa-nesmith" rel="noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large"/></a>
+        <a href="https://www.thisworldtraveled.com" rel="noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large"/></a>
     </div>
     </body>
 

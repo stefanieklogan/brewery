@@ -1,11 +1,21 @@
 import React from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
+import { makeStyles } from "@material-ui/core/styles";
+
+
+const useStyles = makeStyles({
+
+    color: {
+        backgroundColor: "#efe9dd",
+    }
+})
 
 function NavBar() {
+    const styles = useStyles();
     return (
         <div>
-            <body className="color">
+            <body className={styles.color}>
             <nav className="navbar navbar-expand-lg navbar-light">
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
