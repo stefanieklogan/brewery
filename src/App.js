@@ -8,6 +8,7 @@ import Jumbotron from './components/Jumbotron';
 // import Portfolio from './pages/Portfolio';
 // import Photography from "./pages/Photography";
 import { HashRouter, Route, Switch } from 'react-router-dom';
+import HomePagePic from './components/HomePagePic';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <HashRouter basename="/">
         <NavBar />
         <Jumbotron />
+        <HomePagePic />
         <Switch>
           {/* <Route exact path="/"><Home /></Route> */}
           {/* <Route exact path="/portfolio"><Portfolio /></Route> */}

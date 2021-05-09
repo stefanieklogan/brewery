@@ -6,11 +6,12 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import { Icon, InlineIcon } from '@iconify/react';
 import untappdIcon from '@iconify-icons/simple-icons/untappd';
-
+// import ResponsiveImgMaterialUi from "responsive-img-material-ui";
 
 const useStyles = makeStyles({
     icons: {
         marginRight: "25px",
+        marginBottom: "50px",
         marginLeft: "25px",
         color: "black",
         '&:hover': {
@@ -18,7 +19,7 @@ const useStyles = makeStyles({
         }   
     },
     beerIcon: {
-       fontSize: "30px",
+        fontSize: "30px",
         marginRight: "25px",
         marginLeft: "25px",
         color: "black",
@@ -27,7 +28,7 @@ const useStyles = makeStyles({
         }   
     },
     bodyColor: {
-        backgroundColor: "#fffdf9",
+        backgroundColor: "#efe9dd",
     }
 })
 
@@ -36,7 +37,10 @@ function Jumbotron() {
     return (
     <body className={styles.bodyColor}>
     <div className="jumbo">
-        <h1 className="display-4">Celebration Brewery Logo</h1>
+        <img src="../../assets/Celebration_Logo2.png" alt="Celebration Brewing Logo" />
+        {/* <ResponsiveImgMaterialUi
+        lg="../../assets/Celebration Brewing.png"
+        /> */}
     </div>
     <div className="center">
         <a href="https://untappd.com/CelebrationBrewing" rel="noreferrer" target="_blank" className={styles.beerIcon}><Icon icon={untappdIcon} /></a>

@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
 
-    color: {
+    navStyle: {
         backgroundColor: "#efe9dd",
     }
 })
@@ -15,13 +15,13 @@ function NavBar() {
     const styles = useStyles();
     return (
         <div>
-            <body className={styles.color}>
+            <body className={styles.navStyle}>
             <nav className="navbar navbar-expand-lg navbar-light">
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav nav-fill w-50">
             <li className="nav-item">
         <Link className="nav-link" to="/"> Home </Link>
             </li>

@@ -9,12 +9,16 @@ const useStyles = makeStyles({
     }
 })
 
+//set the copyright date to the current year so that it automatically updates
+
 function Copyright() {
     const styles = useStyles();
+    const currentYear = new Date().getFullYear();
     return (
     <div >
         <footer className={styles.footerColor}>
-            <div className="footer fixed-bottom text-center p-2"> Copyright © Celebration Brewing 2021
+            <div className="footer fixed-bottom text-center p-2"> 
+            <p>Copyright © Celebration Brewing {currentYear}</p>
             </div>
         </footer>
     </div>
