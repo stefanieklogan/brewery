@@ -7,6 +7,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import { Icon, InlineIcon } from '@iconify/react';
 import untappdIcon from '@iconify-icons/simple-icons/untappd';
 // import ResponsiveImgMaterialUi from "responsive-img-material-ui";
+import Logo from "../../assets/Celebration_Logo2.png";
 
 const useStyles = makeStyles({
     icons: {
@@ -36,7 +37,7 @@ function Jumbotron() {
     return (
     <body className={styles.bodyColor}>
     <div className="jumbo">
-        <img src="../../assets/Celebration_Logo2.png" alt="Celebration Brewing Logo" />
+        <img src={Logo}alt="Celebration Brewing Logo" />
         {/* <ResponsiveImgMaterialUi
         lg="../../assets/Celebration Brewing.png"
         /> */}
