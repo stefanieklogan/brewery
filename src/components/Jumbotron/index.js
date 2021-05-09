@@ -11,7 +11,6 @@ import untappdIcon from '@iconify-icons/simple-icons/untappd';
 const useStyles = makeStyles({
     icons: {
         marginRight: "25px",
-        marginBottom: "50px",
         marginLeft: "25px",
         color: "black",
         '&:hover': {

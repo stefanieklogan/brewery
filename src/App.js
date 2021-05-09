@@ -9,6 +9,7 @@ import Jumbotron from './components/Jumbotron';
 // import Photography from "./pages/Photography";
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import HomePagePic from './components/HomePagePic';
+import HomePageAbout from './components/HomePageAbout'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <NavBar />
         <Jumbotron />
         <HomePagePic />
+        <HomePageAbout />
         <Switch>
           {/* <Route exact path="/"><Home /></Route> */}
           {/* <Route exact path="/portfolio"><Portfolio /></Route> */}
