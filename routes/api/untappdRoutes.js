@@ -1,13 +1,10 @@
 const router = require("express").Router();
-var UntappdClient = require("./UntappdClient",false);
+var UntappdClient = require("node-untappd");
+var debug = false;
+var untappd = new UntappdClient(debug);
 
-// Definitions
-
-// Replace this with your CLIENT ID
-var clientId = "[ your api key goes here ]";
-
-// Replace this with your CLIENT SECRET
-var clientSecret = "[ your client secret goes here ]";
+var clientId = process.env.CLIENT_ID ;
+var clientSecret = process.env.CLIENT_SECRET;
 
 // Set to true if you want to see all sort of nasty output on stdout
 var debug = false;
