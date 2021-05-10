@@ -4,8 +4,13 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "bootstrap": "^5.0.0",
     "react": "^16.6.3",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "^16.6.3",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "^2.1.1"
   },
   "scripts": {
@@ -13,5 +18,15 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "devDependencies": {
+    "@iconify/icons-simple-icons": "^1.1.24",
+    "@iconify/react": "^1.1.4"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
