@@ -15,11 +15,9 @@ function HomePageAbout() {
     const styles = useStyles();
     return (
         <div>
-            <body>
             <h2 className={styles.titleStyle}> ORLANDO'S FAVORITE BREWERY</h2>
             <p>A blurb about Celebration Brewery. How it started, where it's located, etc. Short and sweet description</p>
             <Button variant="contained"> Visit Us </Button>
-    </body>
 </div>
         
     )

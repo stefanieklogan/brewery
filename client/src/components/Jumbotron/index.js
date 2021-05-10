@@ -5,7 +5,7 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import { Icon, InlineIcon } from '@iconify/react';
-import untappdIcon from '@iconify-icons/simple-icons/untappd';
+// import untappdIcon from '@iconify-icons/simple-icons/untappd';
 // import ResponsiveImgMaterialUi from "responsive-img-material-ui";
 import Logo from "../../assets/Celebration_Logo2.png";
 
@@ -35,7 +35,7 @@ const useStyles = makeStyles({
 function Jumbotron() {
     const styles = useStyles();
     return (
-    <body className={styles.bodyColor}>
+    <div className={styles.bodyColor}>
     <div className="jumbo">
         <img src={Logo}alt="Celebration Brewing Logo" />
         {/* <ResponsiveImgMaterialUi
@@ -43,12 +43,12 @@ function Jumbotron() {
         /> */}
     </div>
     <div className="center">
-        <a href="https://untappd.com/CelebrationBrewing" rel="noreferrer" target="_blank" className={styles.beerIcon}><Icon icon={untappdIcon} /></a>
-        <a href="https://www.instagram.com/celebrationbrewing/" rel="noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large"/></a>
-        <a href="https://www.facebook.com/CelebrationBrewing" rel="noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large"/></a>
-        <a href="https://twitter.com/CelebrationBrew" rel="noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large"/></a>
+        <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon /></a>
+        <a href="https://www.instagram.com/celebrationbrewing/" rel="noopener noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large"/></a>
+        <a href="https://www.facebook.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large"/></a>
+        <a href="https://twitter.com/CelebrationBrew" rel="noopener noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large"/></a>
     </div>
-    </body>
+    </div>
 
     );
 }
