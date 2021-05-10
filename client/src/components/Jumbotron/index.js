@@ -43,10 +43,10 @@ function Jumbotron() {
         /> */}
     </div>
     <div className="center">
-        <a href="https://untappd.com/CelebrationBrewing" rel="noreferrer" target="_blank" className={styles.beerIcon}><Icon /></a>
-        <a href="https://www.instagram.com/celebrationbrewing/" rel="noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large"/></a>
-        <a href="https://www.facebook.com/CelebrationBrewing" rel="noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large"/></a>
-        <a href="https://twitter.com/CelebrationBrew" rel="noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large"/></a>
+        <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon /></a>
+        <a href="https://www.instagram.com/celebrationbrewing/" rel="noopener noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large"/></a>
+        <a href="https://www.facebook.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large"/></a>
+        <a href="https://twitter.com/CelebrationBrew" rel="noopener noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large"/></a>
     </div>
     </div>
 
