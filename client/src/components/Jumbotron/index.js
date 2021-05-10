@@ -35,7 +35,7 @@ const useStyles = makeStyles({
 function Jumbotron() {
     const styles = useStyles();
     return (
-    <body className={styles.bodyColor}>
+    <div className={styles.bodyColor}>
     <div className="jumbo">
         <img src={Logo}alt="Celebration Brewing Logo" />
         {/* <ResponsiveImgMaterialUi
@@ -48,7 +48,7 @@ function Jumbotron() {
         <a href="https://www.facebook.com/CelebrationBrewing" rel="noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large"/></a>
         <a href="https://twitter.com/CelebrationBrew" rel="noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large"/></a>
     </div>
-    </body>
+    </div>
 
     );
 }
