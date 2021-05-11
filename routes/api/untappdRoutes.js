@@ -1,4 +1,9 @@
 const router = require("express").Router();
+// returns 25 records max, can limit to under 25
+//VENUE_ID (int, required) - The Venue ID that you want to display checkins
+// client_id and client_secret (string, required) -pass the client_id and client_secret for unauthorized calls
+///v4/venue/checkins/VENUE_ID
+//104959
 const passport = require("passport");
 
 passport.use(new UntappdStrategy({
