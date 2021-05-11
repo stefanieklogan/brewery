@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css';
 import { makeStyles } from "@material-ui/core/styles";
-
+import pbu from "../../assets/pbu_40_yellow.png"
 
 const useStyles = makeStyles({
     footerColor: {
@@ -18,7 +18,9 @@ function Copyright() {
     <div >
         <footer className={styles.footerColor}>
             <div className="footer fixed-bottom text-center p-2"> 
-            <p>Copyright © Celebration Brewing {currentYear}</p>
+            <p>Copyright © Celebration Brewing 
+            {currentYear}</p>
+            <img src={pbu}></img>
             </div>
         </footer>
     </div>
