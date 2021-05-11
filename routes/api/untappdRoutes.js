@@ -1,4 +1,52 @@
 const router = require("express").Router();
+import axios from "axios";
+
+const cliID = process.env.CLIENT_ID;
+const cliSec = process.env.CLIENT_SECRET;
+const bID = process.env.BID;
+const limit = 1;
+const beerID = 0;
+const checkinNum = 0;
+const compact = true;
+
+export default {
+	getBreweryData: function () {
+		return (
+			axios.get(
+				"https://api.untappd.com/v4/brewery/info" +
+				bID +
+				"?client_id=" + cliID +
+				"&client_secret=" + cliSec +
+				"&compact=" + compact
+			));
+	},
+	getBreweryCheckins: function () {
+		return (
+			axios.get(
+				"https://api.untappd.com/v4/brewery/checkins/" +
+				bID +
+				"?client_id=" + cliID +
+				"&client_secret=" + cliSec +
+				"&limit=" + limit
+			));
+	},
+	getBeerInfo: function () {
+		return (
+			axios.get(
+				"https://api.untappd.com/v4/beer/info/" + beerID +
+				"?client_id=" + cliID +
+				"&client_secret=" + cliSec
+			));
+	},
+	getCheckinData: function () {
+		return (
+			axios.get(
+				"https://api.untappd.com/v4/checkin/view/" + checkinNum +
+				"?client_id=" + cliID +
+				"&client_secret=" + cliSec
+			));
+	}
+};
 
 const passport = require("passport");
 
@@ -21,7 +69,7 @@ app.get('/auth/untappd/callback',
 		// Successful authentication, redirect home.
 		res.redirect('/');
 	});
-	
+
 var UntappdClient = require("node-untappd");
 var debug = false;
 var untappd = new UntappdClient(debug);
