@@ -11,6 +11,9 @@ class FeedbackForm extends React.Component {
             checkbox: false,
             email: ''
         };
+        
+
+        console.log(this.state.checkbox);
 
         this.handleNameChange = (e) => {
             this.setState({ name: e.target.value })
@@ -24,12 +27,18 @@ class FeedbackForm extends React.Component {
             this.setState({ email: e.target.value })
         }
 
-        this.handleCheckboxChange = (e) => {
-            this.setState({ checkbox: e.target.value })
-        }
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
+    }
+
+    handleCheckboxChange = (e) => {
+        this.setState({ checkbox: !this.state.checkbox })
     }
 
     handleSubmit = e => {
+        if (this.state.checkbox === false) {            
+            this.setState({ email: '' })
+    }
         console.log(`${this.state.name} ${this.state.feedback} ${this.state.email} ${this.state.checkbox}`)
         alert(`${this.state.name} ${this.state.feedback} ${this.state.email} ${this.state.checkbox}`)
         e.preventDefault()
@@ -37,6 +46,18 @@ class FeedbackForm extends React.Component {
 
     render() {
         const { name, feedback, checkbox, email } = this.state
+        const isChecked = this.state.checkbox;
+        let emailInput;
+
+        if (isChecked) {
+            emailInput = (
+            <div>
+                    <label>Email:</label>{isChecked}
+                    <input className="email" type="text" value={email} onChange={this.handleEmailChange} />
+                </div>
+            )
+        }    
+        
         return (
             <form onSubmit={this.handleSubmit}>
                 <div>
@@ -51,10 +72,7 @@ class FeedbackForm extends React.Component {
                     <p>I would like to be contacted:</p>
                     <Checkbox value={checkbox} onChange={this.handleCheckboxChange} />
                 </div>
-                <div>
-                    <label>Email:</label>
-                    <input className="email" type="text" value={email} onChange={this.handleEmailChange} />
-                </div>
+               {emailInput}
 
                     <button type="submit">Submit</button>
   
