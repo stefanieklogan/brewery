@@ -11,9 +11,6 @@ class FeedbackForm extends React.Component {
             checkbox: false,
             email: ''
         };
-        
-
-        console.log(this.state.checkbox);
 
         this.handleNameChange = (e) => {
             this.setState({ name: e.target.value })
@@ -36,11 +33,11 @@ class FeedbackForm extends React.Component {
     }
 
     handleSubmit = e => {
-        if (this.state.checkbox === false) {            
+        if (this.state.checkbox === false) {
             this.setState({ email: '' })
-    }
+        }
         console.log(`${this.state.name} ${this.state.feedback} ${this.state.email} ${this.state.checkbox}`)
-        alert(`${this.state.name} ${this.state.feedback} ${this.state.email} ${this.state.checkbox}`)
+        alert(`Thank you for your feedback!`)
         e.preventDefault()
     }
 
@@ -51,13 +48,13 @@ class FeedbackForm extends React.Component {
 
         if (isChecked) {
             emailInput = (
-            <div>
+                <div>
                     <label>Email:</label>{isChecked}
                     <input className="email" type="text" value={email} onChange={this.handleEmailChange} />
                 </div>
             )
-        }    
-        
+        }
+
         return (
             <form onSubmit={this.handleSubmit}>
                 <div>
@@ -69,13 +66,11 @@ class FeedbackForm extends React.Component {
                     <textarea className="feedback" type="text" value={feedback} onChange={this.handleFeedbackChange}></textarea>
                 </div>
                 <div>
-                    <p>I would like to be contacted:</p>
-                    <Checkbox value={checkbox} onChange={this.handleCheckboxChange} />
+                    <p>I would like to be contacted:</p><Checkbox value={checkbox} onChange={this.handleCheckboxChange} />{emailInput}
                 </div>
-               {emailInput}
 
-                    <button type="submit">Submit</button>
-  
+                <button type="submit">Submit</button>
+
             </form>
         );
     }
