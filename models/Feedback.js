@@ -11,11 +11,23 @@ Feedback.init(
     primaryKey: true,
     autoIncrement: true,
     },
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     feedback: {
     type: DataTypes.TEXT,
     validate: {
         len: [2,500]
     }
+    },
+    checkbox: {
+        type: Boolean,
+        allowNull: true,
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: true,
     },
     date_created: {
     type: DataTypes.DATE,
