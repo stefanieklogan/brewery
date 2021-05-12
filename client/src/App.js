@@ -12,19 +12,32 @@ import HomePageAbout from './components/HomePageAbout';
 import SignUpForm from './components/SignUpForm';
 import FeedbackForm from './components/FeedbackForm';
 
+function Homepage() {
+
+  return (
+    <div>
+
+        <Jumbotron />
+        <HomePagePic />
+        <HomePageAbout />
+        <SignUpForm />
+        <Copyright />
+
+    </div>
+  );
+
+}
+
+
 function App() {
 
   return (
     <div className="App">
       <HashRouter basename="/">
         <NavBar />
-        <Jumbotron />
-        <HomePagePic />
-        <HomePageAbout />
-        <SignUpForm />
         <Switch>
           {<Route exact path="/feedback"><FeedbackForm /></Route>}
-          {/* <Route exact path="/"><Home /></Route> */}
+          <Route exact path="/"><Homepage /></Route>
           {/* <Route exact path="/portfolio"><Portfolio /></Route> */}
           {/* <Route exact path="/contact"><Contact /></Route>  */}
           {/* <Route exact path="/photography"><Photography /> </Route> */}
