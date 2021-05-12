@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import NavBar from './components/NavBar';
 import Copyright from './components/Copyright';
 import Jumbotron from './components/Jumbotron';
@@ -10,6 +10,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import HomePagePic from './components/HomePagePic';
 import HomePageAbout from './components/HomePageAbout';
 import SignUpForm from './components/SignUpForm';
+import FeedbackForm from './components/FeedbackForm';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <HomePageAbout />
         <SignUpForm />
         <Switch>
+          {<Route exact path="/feedback"><FeedbackForm /></Route>}
           {/* <Route exact path="/"><Home /></Route> */}
           {/* <Route exact path="/portfolio"><Portfolio /></Route> */}
           {/* <Route exact path="/contact"><Contact /></Route>  */}
