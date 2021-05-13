@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+//, { Component } removed after React (no unused vars)
 import NavBar from './components/NavBar';
 import Copyright from './components/Copyright';
 import Jumbotron from './components/Jumbotron';

@@ -4,7 +4,6 @@ import Mailchimp from 'react-mailchimp-form'
 
 // need to install package npm install react-mailchimp-form
 
-
 class App extends Component {
 
 render() {
