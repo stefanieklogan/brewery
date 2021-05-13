@@ -11,7 +11,9 @@
     "react-bootstrap": "^1.5.2",
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^2.1.1"
+    "react-scripts": "^2.1.1",
+    "@iconify/icons-simple-icons": "^1.1.24",
+    "@iconify/react": "^1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,8 +22,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "@iconify/icons-simple-icons": "^1.1.24",
-    "@iconify/react": "^1.1.4"
+   
   },
   "browserslist": [
     ">0.2%",
