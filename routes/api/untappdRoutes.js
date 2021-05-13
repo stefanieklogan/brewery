@@ -1,5 +1,5 @@
 const router = require("express").Router();
-import axios from "axios";
+const axios = require("axios");
 
 const cliID = process.env.CLIENT_ID;
 const cliSec = process.env.CLIENT_SECRET;
@@ -9,7 +9,7 @@ const beerID = 0;
 const checkinNum = 0;
 const compact = true;
 
-export default {
+module.exports = {
 	getBreweryData: function () {
 		return (
 			axios.get(
@@ -105,5 +105,3 @@ untappd.userActivityFeed(function (err, obj) {
 		console.log(err, obj);
 	}
 }, data);
-
-module.exports = router;
