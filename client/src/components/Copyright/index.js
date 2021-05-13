@@ -20,7 +20,7 @@ function Copyright() {
             <div className="footer fixed-bottom text-center p-2"> 
             <p>Copyright © Celebration Brewing 
             {currentYear}</p>
-            <img src={pbu}></img>
+            <img alt="Powered By Untappd" src={pbu}></img>
             </div>
         </footer>
     </div>
