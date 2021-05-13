@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+// import { HashRouter, Route, Switch } from 'react-router-dom';
 import Checkbox from '@material-ui/core/Checkbox';
 
 class FeedbackForm extends React.Component {

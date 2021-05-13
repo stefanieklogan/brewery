@@ -4,7 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
+//, InlineIcon removed after Icon- waning no unused vars
 // import untappdIcon from '@iconify-icons/simple-icons/untappd';
 // import ResponsiveImgMaterialUi from "responsive-img-material-ui";
 import Logo from "../../assets/Celebration_Logo2.png";
