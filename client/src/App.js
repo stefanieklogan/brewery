@@ -13,7 +13,7 @@ import HomePageAbout from './components/HomePageAbout';
 import SignUpForm from './components/SignUpForm';
 import FeedbackForm from './components/FeedbackForm';
 import AdminLogIn from './components/AdminLogin';
-import BeerList from './pages/BeerPage';
+import BeerList from './pages/Beer';
 
 function Homepage() {
 
