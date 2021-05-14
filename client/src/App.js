@@ -17,13 +17,11 @@ function Homepage() {
 
   return (
     <div>
-
         <Jumbotron />
         <HomePagePic />
         <HomePageAbout />
         <SignUpForm />
         <Copyright />
-
     </div>
   );
 
@@ -38,6 +36,7 @@ function App() {
         <NavBar />
         <Switch>
           {<Route exact path="/feedback"><FeedbackForm /></Route>}
+          {<Route exact path="/admin"><AdminLogIn /></Route>}
           <Route exact path="/"><Homepage /></Route>
           {/* <Route exact path="/portfolio"><Portfolio /></Route> */}
           {/* <Route exact path="/contact"><Contact /></Route>  */}
