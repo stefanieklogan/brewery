@@ -3,11 +3,8 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import IconButton from '@material-ui/core/IconButton';
+// import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import SkipNextIcon from '@material-ui/icons/SkipNext';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,10 +26,6 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(1),
     paddingBottom: theme.spacing(1),
   },
-  playIcon: {
-    height: 38,
-    width: 38,
-  },
 }));
 
 export default function MediaControlCard() {
@@ -40,33 +33,31 @@ export default function MediaControlCard() {
   const theme = useTheme();
 
   return (
+    <div>
+    <NavBar />
     <Card className={classes.root}>
       <div className={classes.details}>
         <CardContent className={classes.content}>
           <Typography component="h5" variant="h5">
-            Live From Space
+            Beer Name
           </Typography>
           <Typography variant="subtitle1" color="textSecondary">
-            Mac Miller
+            Beer Type
           </Typography>
         </CardContent>
-        <div className={classes.controls}>
-          <IconButton aria-label="previous">
-            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
-          </IconButton>
-          <IconButton aria-label="play/pause">
-            <PlayArrowIcon className={classes.playIcon} />
-          </IconButton>
-          <IconButton aria-label="next">
-            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
-          </IconButton>
+        <div>
+          <Typography variant="paragraph" component="p">
+            This will be a paragraph form of a beer description
+          </Typography>
         </div>
       </div>
       <CardMedia
         className={classes.cover}
         image="/static/images/cards/live-from-space.jpg"
-        title="Live from space album cover"
+        title="Beer Image"
       />
     </Card>
+    <Copyright />
+    </div>
   );
 }
