@@ -50,17 +50,6 @@ export default function MediaControlCard() {
             This will be a paragraph form of a beer description
           </Typography>
         </div>
-        {/* <div className={classes.controls}>
-          <IconButton aria-label="previous">
-            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
-          </IconButton>
-          <IconButton aria-label="play/pause">
-            <PlayArrowIcon className={classes.playIcon} />
-          </IconButton>
-          <IconButton aria-label="next">
-            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
-          </IconButton>
-        </div> */}
       </div>
       <CardMedia
         className={classes.cover}
