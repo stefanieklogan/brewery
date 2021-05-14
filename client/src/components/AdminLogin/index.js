@@ -1,4 +1,7 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+// import Form from '@material-ui/core/form';
+
 
 class AdminLogin extends React.Component {
     constructor(props) {
@@ -16,16 +19,16 @@ class AdminLogin extends React.Component {
             this.setState({ password: e.target.value })
         }
 
-        render() {
+        // render() {
             return (
-                <Form className="login-form">
+                <form className="login-form">
                     <h2>Admin Login</h2>
-                    <input type="email" placeholder="Email">
-                        <input type="password" placeholder="Password">
+                    <input type="email" placeholder="Email"/>
+                        <input type="password" placeholder="Password"/>
                             <Button className="loginBtn">Login</Button>
-            </Form>
+            </form>
         )
-    }
+    {/* } */}
 }}
 
 export default AdminLogin;
