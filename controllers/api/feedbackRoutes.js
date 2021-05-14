@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Feedback } = require('../../models');
 
-router.post('/', async(req, res) => {
+router.post('/feedback', async(req, res) => {
 
   try {
     let newFeedback = {
@@ -11,6 +11,7 @@ router.post('/', async(req, res) => {
       checkbox: req.body.checkbox
     }
     let feedback = await Feedback.create(newFeedback);
+    
     res.status(200).json(feedback);
   } catch (err) {
     console.log(err);
