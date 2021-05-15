@@ -1,107 +1,113 @@
 const router = require("express").Router();
-const axios = require("axios");
 
 const cliID = process.env.CLIENT_ID;
 const cliSec = process.env.CLIENT_SECRET;
 const bID = process.env.BID;
-const limit = 1;
-const beerID = 0;
-const checkinNum = 0;
-const compact = true;
 
-module.exports = {
-	getBreweryData: function () {
-		return (
-			axios.get(
-				"https://api.untappd.com/v4/brewery/info" +
-				bID +
-				"?client_id=" + cliID +
-				"&client_secret=" + cliSec +
-				"&compact=" + compact
-			));
-	},
-	getBreweryCheckins: function () {
-		return (
-			axios.get(
-				"https://api.untappd.com/v4/brewery/checkins/" +
-				bID +
-				"?client_id=" + cliID +
-				"&client_secret=" + cliSec +
-				"&limit=" + limit
-			));
-	},
-	getBeerInfo: function () {
-		return (
-			axios.get(
-				"https://api.untappd.com/v4/beer/info/" + beerID +
-				"?client_id=" + cliID +
-				"&client_secret=" + cliSec
-			));
-	},
-	getCheckinData: function () {
-		return (
-			axios.get(
-				"https://api.untappd.com/v4/checkin/view/" + checkinNum +
-				"?client_id=" + cliID +
-				"&client_secret=" + cliSec
-			));
-	}
-};
+const compact = false;
+const untappdController = require("../../controllers/untappdController");
 
-const passport = require("passport");
+// /api/untappd
+router.route("/")
+	.get(
+		"https://api.untappd.com/v4/brewery/info" +
+		bID +
+		"?client_id=" + cliID +
+		"&client_secret=" + cliSec +
+		"&compact=" + compact).then(res => res.json(res))
+		.catch(err => res.status(422).json(err))
 
-passport.use(new UntappdStrategy({
-	clientID: process.env.CLIENT_ID,
-	clientSecret: process.env.CLIENT_SECRET,
-	// redirect after login
-	callbackURL: 'https://www.example.net/auth/untappd/callback'
-}, function (accessToken, refreshToken, profile, done) {
-	User.findOrCreate({ untappdId: profile.id }, function (err, user) {
-		done(err, user);
-	});
-}));
+		//response.brewery.beer_list.items[isArray]
+// items[0].beer.beer_label
+// items[0].beer.beer_name
+//items[0].beer.beer_style
+//items[0].beer.beer_description
 
-app.get('/auth/untappd', passport.authenticate('untappd'));
+module.exports = router;
+//const limit = 1;
+//const beerID = 0;
+//const checkinNum = 0;
+	// getBreweryCheckins: function () {
+	// 	return (
+	// 		axios.get(
+	// 			"https://api.untappd.com/v4/brewery/checkins/" +
+	// 			bID +
+	// 			"?client_id=" + cliID +
+	// 			"&client_secret=" + cliSec +
+	// 			"&limit=" + limit
+	// 		));
+	// },
+	// getBeerInfo: function () {
+	// 	return (
+	// 		axios.get(
+	// 			"https://api.untappd.com/v4/beer/info/" + beerID +
+	// 			"?client_id=" + cliID +
+	// 			"&client_secret=" + cliSec
+	// 		));
+	// },
+	// getCheckinData: function () {
+	// 	return (
+	// 		axios.get(
+	// 			"https://api.untappd.com/v4/checkin/view/" + checkinNum +
+	// 			"?client_id=" + cliID +
+	// 			"&client_secret=" + cliSec
+	// 		));
+	// }
 
-app.get('/auth/untappd/callback',
-	passport.authenticate('untappd', { failureRedirect: '/login' }),
-	function (req, res) {
-		// Successful authentication, redirect home.
-		res.redirect('/');
-	});
+// const passport = require("passport");
 
-var UntappdClient = require("node-untappd");
-var debug = false;
-var untappd = new UntappdClient(debug);
+// passport.use(new UntappdStrategy({
+// 	clientID: process.env.CLIENT_ID,
+// 	clientSecret: process.env.CLIENT_SECRET,
+// 	// redirect after login
+// 	callbackURL: 'https://www.example.net/auth/untappd/callback'
+// }, function (accessToken, refreshToken, profile, done) {
+// 	User.findOrCreate({ untappdId: profile.id }, function (err, user) {
+// 		done(err, user);
+// 	});
+// }));
 
-var clientId = process.env.CLIENT_ID;
-var clientSecret = process.env.CLIENT_SECRET;
+// app.get('/auth/untappd', passport.authenticate('untappd'));
 
-// Set to true if you want to see all sort of nasty output on stdout
-var debug = false;
+// app.get('/auth/untappd/callback',
+// 	passport.authenticate('untappd', { failureRedirect: '/login' }),
+// 	function (req, res) {
+// 		// Successful authentication, redirect home.
+// 		res.redirect('/');
+// 	});
 
-// The user we want to lookup for this example
-var data = {};
-data.USERNAME = "[ some user name ]";
+// var UntappdClient = require("node-untappd");
+// var debug = false;
+// var untappd = new UntappdClient(debug);
 
-// Create Client
-var untappd = new UntappdClient(debug);
-untappd.setClientId(clientId);
-untappd.setClientSecret(clientSecret);
+// var clientId = process.env.CLIENT_ID;
+// var clientSecret = process.env.CLIENT_SECRET;
 
-// EXAMPLE - List last 25 recent checkins of the given user
-untappd.userActivityFeed(function (err, obj) {
-	if (debug) console.log(err, obj);
-	if (obj && obj.response && obj.response.checkins && obj.response.checkins.items) {
-		var beers = obj.response.checkins.items.forEach(function (checkin) {
-			console.log(checkin);
-			console.log(checkin.user.user_name, "drank", checkin.beer.beer_name);
-			console.log("by", checkin.brewery.brewery_name);
-			if (checkin.venue.venue_name)
-				console.log("at", checkin.venue.venue_name);
-			console.log("on", checkin.created_at);
-		});
-	} else {
-		console.log(err, obj);
-	}
-}, data);
+// // Set to true if you want to see all sort of nasty output on stdout
+// var debug = false;
+
+// // The user we want to lookup for this example
+// var data = {};
+// data.USERNAME = "[ some user name ]";
+
+// // Create Client
+// var untappd = new UntappdClient(debug);
+// untappd.setClientId(clientId);
+// untappd.setClientSecret(clientSecret);
+
+// // EXAMPLE - List last 25 recent checkins of the given user
+// untappd.userActivityFeed(function (err, obj) {
+// 	if (debug) console.log(err, obj);
+// 	if (obj && obj.response && obj.response.checkins && obj.response.checkins.items) {
+// 		var beers = obj.response.checkins.items.forEach(function (checkin) {
+// 			console.log(checkin);
+// 			console.log(checkin.user.user_name, "drank", checkin.beer.beer_name);
+// 			console.log("by", checkin.brewery.brewery_name);
+// 			if (checkin.venue.venue_name)
+// 				console.log("at", checkin.venue.venue_name);
+// 			console.log("on", checkin.created_at);
+// 		});
+// 	} else {
+// 		console.log(err, obj);
+// 	}
+// }, data);
