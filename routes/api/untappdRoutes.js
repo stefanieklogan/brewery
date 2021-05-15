@@ -4,6 +4,7 @@ const cliID = process.env.CLIENT_ID;
 const cliSec = process.env.CLIENT_SECRET;
 const bID = process.env.BID;
 const compact = false;
+const untappdController = require("../../controllers/untappdController");
 
 // /api/untappd
 router.route("/")
@@ -12,7 +13,8 @@ router.route("/")
 		bID +
 		"?client_id=" + cliID +
 		"&client_secret=" + cliSec +
-		"&compact=" + compact)
+		"&compact=" + compact).then(res => res.json(res))
+		.catch(err => res.status(422).json(err))
 
 		//response.brewery.beer_list.items[isArray]
 // items[0].beer.beer_label
