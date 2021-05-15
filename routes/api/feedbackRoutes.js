@@ -4,6 +4,9 @@ const { Feedback } = require('../../models');
 router.post('/feedback', async(req, res) => {
 
   try {
+
+    console.log(req.body);
+
     let newFeedback = {
       name: req.body.name,
       feedback: req.body.feedback,
@@ -12,6 +15,9 @@ router.post('/feedback', async(req, res) => {
     }
     let feedback = await Feedback.create(newFeedback);
     
+
+    console.log(feedback);
+
     res.status(200).json(feedback);
   } catch (err) {
     console.log(err);

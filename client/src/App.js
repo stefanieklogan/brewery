@@ -12,7 +12,7 @@ import HomePagePic from './components/HomePagePic';
 import HomePageAbout from './components/HomePageAbout';
 import SignUpForm from './components/SignUpForm';
 import FeedbackForm from './components/FeedbackForm';
-import AdminLogIn from './components/AdminLogin';
+import AdminLogin from './components/AdminLogin';
 import BeerList from './pages/Beer';
 
 function Homepage() {
@@ -29,7 +29,6 @@ function Homepage() {
 
 }
 
-
 function App() {
 
   return (
@@ -38,7 +37,7 @@ function App() {
         <NavBar />
         <Switch>
           {<Route exact path="/feedback"><FeedbackForm /></Route>}
-          {<Route exact path="/admin"><AdminLogIn /></Route>}
+          <Route exact path="/admin"><AdminLogin /></Route>
           <Route exact path="/"><Homepage /></Route>
           <Route exact path="/beer"><BeerList /></Route>
           {/* <Route exact path="/contact"><Contact /></Route>  */}
