@@ -22,7 +22,7 @@ Feedback.init(
             }
         },
         checkbox: {
-            type: Boolean,
+            type: DataTypes.BOOLEAN,
             allowNull: true,
         },
         email: {

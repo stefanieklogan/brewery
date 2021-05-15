@@ -4,22 +4,24 @@ import Button from '@material-ui/core/Button';
 
 
 class AdminLogin extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            email: '',
-            password: '',
-        };
-
-        this.handleEmailChange = (e) => {
-            this.setState({ email: e.target.value })
-        }
-
-        this.handlePasswordChange = (e) => {
-            this.setState({ password: e.target.value })
-        }
-
-        // render() {
+constructor(props) {    
+      super(props);
+      this.state = {
+          email: '',
+          password: ''
+      }
+    
+      this.handleEmailChange = (e) => {
+          this.setState({ email: e.target.value})
+      }
+ 
+      this.handlePasswordChange = (e) => {
+          this.setState({ password: e.target.value})
+      }
+      
+    }
+        
+        render() {
             return (
                 <form className="login-form">
                     <h2>Admin Login</h2>
@@ -28,7 +30,8 @@ class AdminLogin extends React.Component {
                             <Button className="loginBtn">Login</Button>
             </form>
         )
-    {/* } */}
+
 }}
+
 
 export default AdminLogin;
