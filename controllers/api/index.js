@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const feedbackRoutes = require("./feedbackRoutes");
-// const untappdRoutes = require("./untappdRoutes");
+const untappdRoutes = require("./untappdRoutes");
 
 router.use("/feedback", feedbackRoutes);
-// router.use("/", untappdRoutes);
+router.use("/untappd", untappdRoutes);
 
 module.exports = router;
