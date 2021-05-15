@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BeerCard from '../../components/BeerCard';
-import API from "../../../../controllers/api/untappdRoutes";
+// import API from "../../../../controllers/api/untappdRoutes";
 
 function Beer() {
     // Setting our component's initial state
@@ -13,11 +13,11 @@ function Beer() {
 
     // Loads all beers and sets them to beers
     function loadBeers() {
-        API.getBeers()
-            .then(res =>
-                setBeers(res.data)
-            )
-            .catch(err => console.log(err));
+        // API.getBeers()
+            // .then(res =>
+            //     setBeers(res.data)
+            // )
+            // .catch(err => console.log(err));
     };
 
     function Beer() {
