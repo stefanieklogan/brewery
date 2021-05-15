@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default {
-  searchBeers: function() {
+  getBeers: function() {
     return axios.get("/api/untappd");
   }
 };
