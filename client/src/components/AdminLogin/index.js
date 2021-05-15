@@ -2,7 +2,6 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 // import Form from '@material-ui/core/form';
 
-
 class AdminLogin extends React.Component {
     constructor(props) {
         super(props);
@@ -28,7 +27,6 @@ class AdminLogin extends React.Component {
                             <Button className="loginBtn">Login</Button>
             </form>
         )
-    {/* } */}
 }}
 
 export default AdminLogin;
