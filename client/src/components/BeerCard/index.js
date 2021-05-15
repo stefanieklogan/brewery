@@ -1,9 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { makeStyles } from "@material-ui/core/styles";
-
-import { CardActionArea, Card, CardContent, Typography, CardActions } from "@material-ui/core";
-
+import { CardActionArea, Card, CardContent, Typography } from "@material-ui/core";
+//     CardActions removed from line 5 after typography
 const useStyles = makeStyles({
     root: {
         width: 350,
