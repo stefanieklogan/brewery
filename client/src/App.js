@@ -14,6 +14,7 @@ import SignUpForm from './components/SignUpForm';
 import FeedbackForm from './components/FeedbackForm';
 import AdminLogin from './components/AdminLogin';
 import BeerList from './pages/Beer';
+import FeedbackResults from './components/FeedbackResults';
 
 function Homepage() {
 
@@ -36,10 +37,11 @@ function App() {
       <HashRouter basename="/">
         <NavBar />
         <Switch>
-          {<Route exact path="/feedback"><FeedbackForm /></Route>}
+          <Route exact path="/feedback"><FeedbackForm /></Route>
           <Route exact path="/admin"><AdminLogin /></Route>
           <Route exact path="/"><Homepage /></Route>
           <Route exact path="/beer"><BeerList /></Route>
+          <Route exact path='/admin/feedbackresults'><FeedbackResults /></Route>
           {/* <Route exact path="/contact"><Contact /></Route>  */}
           {/* <Route exact path="/photography"><Photography /> </Route> */}
           </Switch>

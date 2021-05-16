@@ -5,6 +5,7 @@ const app = express();
 const session = require("express-session");
 require("dotenv").config();
 const routes = require("./routes/");
+const mysql = require('mysql');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -26,12 +27,44 @@ if (process.env.NODE_ENV === "production") {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const SELECT_ALL_FEEDBACK_QUERY = 'SELECT * FROM feedback';
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'develop2021!',
+  database: 'brewery'
+})
+
+connection.connect(err => {
+  if(err) {
+    return err;
+  }
+});
+
 // Send every request to the React app
 // Define any API routes before this runs
 app.use(routes);
 
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
+app.post('/feedback', (req, res) => {
+  res.send('add feedback')
+})
+
+app.get('/feedback', (req, res) => {
+connection.query(SELECT_ALL_FEEDBACK_QUERY, (err, results) => {
+  if(err) {
+    return res.send(err)
+  }
+else {
+  return res.json({
+    data:results
+  })
+}
+});
 });
 
 sequelize.sync({ force: false }).then(() => {
