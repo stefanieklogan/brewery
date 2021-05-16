@@ -4,7 +4,6 @@ const { Feedback } = require('../../models');
 router.post('/feedback', async(req, res) => {
 
   try {
-    console.log(req.body);
     let newFeedback = {
       name: req.body.name,
       feedback: req.body.feedback,

@@ -66,7 +66,7 @@ class FeedbackForm extends React.Component {
                     <textarea className="feedback" type="text" value={feedback} onChange={this.handleFeedbackChange}></textarea>
                 </div>
                 <div>
-                    <p>I would like to be contacted:</p><Checkbox value={checkbox} onChange={this.handleCheckboxChange} />{emailInput}
+                    <p>Check here if you would like to be contacted:</p><Checkbox value={checkbox} onChange={this.handleCheckboxChange} />{emailInput}
                 </div>
 
                 <button type="submit">Submit</button>
