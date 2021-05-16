@@ -12,7 +12,9 @@ router.post('/feedback', async(req, res) => {
     }
     let feedback = await Feedback.create(newFeedback);
     
+
     console.log(feedback);
+
     res.status(200).json(feedback);
   } catch (err) {
     console.log(err);
