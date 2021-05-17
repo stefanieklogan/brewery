@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Feedback } = require('../../models');
+const feedbackController = require("../../controllers/feedbackControllers");
 
 router.post('/feedback', async(req, res) => {
 
@@ -21,5 +22,8 @@ router.post('/feedback', async(req, res) => {
     res.status(500).send(err);
   }
 });
+
+router.route("/")
+	.get(feedbackController.getFeedback)
 
 module.exports = router;
