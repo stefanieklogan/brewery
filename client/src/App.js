@@ -10,7 +10,7 @@ import Jumbotron from './components/Jumbotron';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import Image from './components/Image';
 import HomePageAbout from './components/HomePageAbout';
-import SignUpForm from './components/SignUpForm';
+// import SignUpForm from './components/SignUpForm';
 import FeedbackForm from './components/FeedbackForm';
 import AdminLogin from './components/AdminLogin';
 import BeerList from './pages/Beer';
@@ -23,7 +23,7 @@ function Homepage() {
         <Jumbotron />
         <Image />
         <HomePageAbout />
-        <SignUpForm />
+        {/* <SignUpForm /> */}
         <Copyright />
     </div>
   );

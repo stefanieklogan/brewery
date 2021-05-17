@@ -1,8 +1,11 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-import Button from '@material-ui/core/Button';
+import Button from 'react-bootstrap/Button';
 import Typography from '@material-ui/core/Typography';
-
+import Logo from "../../assets/Celebration_Logo.png";
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
 
 const useStyles = makeStyles({
 
@@ -10,7 +13,7 @@ const useStyles = makeStyles({
         backgroundColor: "white",
         color: "#c89019",
         textAlign: "center",
-        marginTop: "50px",
+        marginTop: "80px",
         marginBottom: "10px",
     },
     para: {
@@ -22,6 +25,13 @@ const useStyles = makeStyles({
     button: {
         justifyContent: "center",
         alignItems: "center",
+        color: "black",
+        // backgroundColor: "#c89019"
+    },
+    image: {
+        height: "350px",
+        width: "350px",
+        paddingTop: "100px",
     }
 })
 
@@ -29,6 +39,11 @@ function HomePageAbout() {
     const styles = useStyles();
     return (
         <div>
+            <Row className="justify-content-md-center">
+                <div className={styles.image}>
+                <Image src={Logo}alt="Celebration Brewing Logo" fluid />
+                </div>
+            </Row>
             <Typography className={styles.titleStyle} component="h3" variant="h3">
                 ORLANDO'S FAVORITE BREWERY
             </Typography>
@@ -42,7 +57,7 @@ function HomePageAbout() {
             Everyday, we’re driven by our core values: delivering quality flavors, honoring our customers and celebrating the culture of beer. Experience it for yourself by joining us for a brewery tour, a special event or just to try what’s on tap.
             </Typography>  
             <div className={styles.button}>
-            <Button variant="contained"> Visit Us </Button>
+            <Button variant="outline-dark" href="#" size="lg" className={styles.button}>Visit Us</Button>
             </div>     
         </div>
         
