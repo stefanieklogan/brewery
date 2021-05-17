@@ -38,7 +38,7 @@ class FeedbackForm extends React.Component {
         }
         console.log(`${this.state.name} ${this.state.feedback} ${this.state.email} ${this.state.checkbox}`)
         alert(`Thank you for your feedback!`)
-        e.preventDefault()
+        e.preventDefault();
     }
 
     render() {

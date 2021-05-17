@@ -1,3 +1,5 @@
+import db from '../../db';
+
 const router = require('express').Router();
 const { Feedback } = require('../../models');
 const feedbackController = require("../../controllers/feedbackControllers");
@@ -13,7 +15,6 @@ router.post('/feedback', async(req, res) => {
     }
     let feedback = await Feedback.create(newFeedback);
     
-
     console.log(feedback);
 
     res.status(200).json(feedback);
@@ -25,5 +26,6 @@ router.post('/feedback', async(req, res) => {
 
 router.route("/")
 	.get(feedbackController.getFeedback)
+
 
 module.exports = router;
