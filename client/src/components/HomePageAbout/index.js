@@ -3,7 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Logo from "../../assets/Celebration_Logo.png";
+import beerImage from "../../assets/beer-glasses.jpg";
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 // import ImageList from '@material-ui/core/ImageList';
 // import ImageListItem from '@material-ui/core/ImageListItem';
@@ -11,7 +13,7 @@ import Container from 'react-bootstrap/Container';
 // import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
-import { ImageList, ImageListItem, ImageListItemBar, ListSubheader } from '@material-ui/core';
+// import { ImageList, ImageListItem, ImageListItemBar, ListSubheader } from '@material-ui/core';
 
 // import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
@@ -75,7 +77,7 @@ function HomePageAbout() {
             <Typography className={styles.titleStyle} component="h3" variant="h3">
                 FEATURED BEERS
             </Typography> 
-            <ImageList sx={{ width: 500, height: 450 }}>
+        {/* <ImageList sx={{ width: 500, height: 450 }}>
         <ImageListItem key="Subheader" cols={2}>
         <ListSubheader component="div">December</ListSubheader>
         </ImageListItem>
@@ -101,14 +103,33 @@ function HomePageAbout() {
           />
         </ImageListItem>
       ))}
-    </ImageList>
+    </ImageList> */}
             <div className={styles.root}>
             <Button variant="outlined" href="#"> View All Beers </Button>
             </div> 
             </Container>
-        
+            <Container>
+                <Row>
+                    <Col>
+                    <div className={styles.image}>
+                        <Image src={beerImage} alt="Celebration Brewing Logo" fluid />
+                    </div>
+                    </Col>
+                    <Col>
+                    <Typography className={styles.titleStyle} component="h3" variant="h3">
+                        WHAT'S HAPPENING
+                    </Typography>
+                    <Typography className={styles.para} component="p" variant="p">
+                        Discover all the latest events of festivals that ar happening at Celebration Brewing or that Celebration Brewing will be a part of!         
+                    </Typography>
+                    <div className={styles.root}>
+                    <Button variant="outlined" href="#"> View All Events </Button>
+                    </div> 
+                    </Col>
+                </Row>
+            </Container>
+            
         </div>
-        
     )
 };
 
