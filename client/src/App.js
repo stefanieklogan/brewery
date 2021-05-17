@@ -8,7 +8,7 @@ import Jumbotron from './components/Jumbotron';
 // import Portfolio from './pages/Portfolio';
 // import Photography from "./pages/Photography";
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import HomePagePic from './components/HomePagePic';
+// import HomePagePic from './components/HomePagePic';
 import HomePageAbout from './components/HomePageAbout';
 import SignUpForm from './components/SignUpForm';
 import FeedbackForm from './components/FeedbackForm';
@@ -21,7 +21,7 @@ function Homepage() {
   return (
     <div>
         <Jumbotron />
-        <HomePagePic />
+        {/* <HomePagePic /> */}
         <HomePageAbout />
         <SignUpForm />
         <Copyright />
