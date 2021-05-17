@@ -18,11 +18,11 @@ class TableData extends Component {
     displayFeedback = () => {
 console.log("made it:")
         const rows = this.state.feedback;
-        rows.map(feedback => {
-                return [feedback.date_created, feedback.name, feedback.email, feedback.contact, feedback.feedback]
+        var renderTable = rows.map(feedback => {
+                return [feedback.id, feedback.date_created, feedback.name, feedback.email, feedback.contact, feedback.feedback]
             })
         console.log(rows);
-        this.setState( rows )
+        this.setState( { rows: renderTable } )
     }
 
     grabFeedback = () => {
@@ -47,19 +47,20 @@ console.log("made it:")
     // }
 
     // handleSort = () => {
-    //     const sortedArr = [...this.state.employees]
+    //     const sortedArr = [...this.state.feedback]
     //     console.log(sortedArr);
     //     if (this.state.sort === "DESC") {
     //     sortedArr.sort((a,b) => a.date.localeCompare(b.date))}
     //     else {
     //     sortedArr.sort((a,b) => b.date.localeCompare(a.date))
     //     }
-    //     this.setState({employees:sortedArr}, () => {this.displayFeedback()})
+    //     this.setState({feedback:sortedArr}, () => {this.displayFeedback()})
     // }
     render() {
         return (
             <TableHtml
                 headings={this.state.headings}
+                key={this.state.id}
                 click={this.handleClickChange}
                 row={this.state.rows}
                 format={this.state.format}

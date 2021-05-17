@@ -1,6 +1,7 @@
 import React from 'react';
 // import { HashRouter, Route, Switch } from 'react-router-dom';
 import Checkbox from '@material-ui/core/Checkbox';
+import axios from 'axios';
 
 class FeedbackForm extends React.Component {
     constructor(props) {
@@ -36,7 +37,16 @@ class FeedbackForm extends React.Component {
         if (this.state.checkbox === false) {
             this.setState({ email: '' })
         }
+        console.log(this.state)
         console.log(`${this.state.name} ${this.state.feedback} ${this.state.email} ${this.state.checkbox}`)
+        axios.post('/api/feedback', this.state)
+        .then(response => {
+            console.log(response)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+
         alert(`Thank you for your feedback!`)
         e.preventDefault();
     }
@@ -66,10 +76,10 @@ class FeedbackForm extends React.Component {
                     <textarea className="feedback" type="text" value={feedback} onChange={this.handleFeedbackChange}></textarea>
                 </div>
                 <div>
-                    <p>Check here if you would like to be contacted:</p><Checkbox value={checkbox} onChange={this.handleCheckboxChange} />{emailInput}
+                    <p className="checkbox">Check here if you would like to be contacted:</p><Checkbox value={checkbox} onChange={this.handleCheckboxChange} /><p className="email">{emailInput}</p>
                 </div>
 
-                <button type="submit">Submit</button>
+                <button className="submitBtn" type="submit">Submit</button>
 
             </form>
         );
