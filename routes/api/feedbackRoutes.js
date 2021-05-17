@@ -1,10 +1,8 @@
-import db from '../../db';
-
 const router = require('express').Router();
 const { Feedback } = require('../../models');
 const feedbackController = require("../../controllers/feedbackControllers");
 
-router.post('/feedback', async(req, res) => {
+router.post('/', async(req, res) => {
 
   try {
     let newFeedback = {
