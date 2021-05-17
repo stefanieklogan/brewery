@@ -1,12 +1,8 @@
 import React from 'react';
 //, { Component } removed after React (no unused vars)
 import NavBar from './components/NavBar';
-import Copyright from './components/Copyright';
+// import Copyright from './components/Copyright';
 import Jumbotron from './components/Jumbotron';
-// import Home from './pages/Home'
-// import Contact from './pages/Contact';
-// import Portfolio from './pages/Portfolio';
-// import Photography from "./pages/Photography";
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import Image from './components/Image';
 import HomePageAbout from './components/HomePageAbout';
@@ -24,7 +20,7 @@ function Homepage() {
         <Image />
         <HomePageAbout />
         {/* <SignUpForm /> */}
-        <Copyright />
+        {/* <Copyright /> */}
     </div>
   );
 
@@ -43,7 +39,7 @@ function App() {
           <Route exact path="/beer"><BeerList /></Route>
           <Route exact path='/admin/feedbackresults'><FeedbackResults /></Route>
           </Switch>
-          <Copyright />
+          {/* <Copyright /> */}
       </HashRouter>
     </div>
   );
