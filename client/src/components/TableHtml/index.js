@@ -3,8 +3,7 @@ import "./style.css";
 
 function TableHtml (props)  {
     // let { format, headings, rows, click } = props;
-  let { format, headings, rows } = props;
-
+  let { format, headings, row } = props;
   return (
         <table className={`table ${format || "table-striped"}`}>
         <thead>
@@ -18,7 +17,14 @@ function TableHtml (props)  {
           </tr>
         </thead>
         <tbody>      
-          {rows.map(row => <tr>{row.map(item => <td>{item}</td>)}</tr>)}
+          {row.map ((item) => (
+            <tr>
+              <td>
+              {item.name}
+              </td>
+              </tr>
+          )
+          )}
         </tbody>
       </table>
   );

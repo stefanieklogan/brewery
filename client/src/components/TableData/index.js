@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TableHtml from '../TableHtml';
-import API from '../../utils/api'
+import API from '../../utils/API'
 
 class TableData extends Component {
     state = {
@@ -12,23 +12,31 @@ class TableData extends Component {
     };
 
     componentDidMount() {
-        this.displayFeedback();
-    }
-
-    componentDidUpdate(prevProps) {
-        if (this.props.search !== prevProps.search) this.displayFeedback();
+        this.grabFeedback();
     }
 
     displayFeedback = () => {
-
-        const rows = this.state.feedback.filter(feedback => feedback.name.toLowerCase().includes(this.props.search))
-            .map(feedback => {
+console.log("made it:")
+        const rows = this.state.feedback;
+        rows.map(feedback => {
                 return [feedback.date_created, feedback.name, feedback.email, feedback.contact, feedback.feedback]
             })
         console.log(rows);
-        this.setState({ rows })
+        this.setState( rows )
     }
 
+    grabFeedback = () => {
+        API.getFeedback()
+            .then(feedback => {
+                this.setState({ feedback: feedback.data }, () => {this.displayFeedback()})
+                console.log(feedback.data);
+                // console.log(this.props.search);
+            })
+            .catch(err => console.log(err));
+    };
+   // componentDidUpdate(prevProps) {
+    //     if (this.props.search !== prevProps.search) this.displayFeedback();
+    // }
     // handleClickChange = e => {
     //     if (this.state.sort === "DESC") {
     //         this.setState({ sort: "ASCEND" })
@@ -48,23 +56,12 @@ class TableData extends Component {
     //     }
     //     this.setState({employees:sortedArr}, () => {this.displayFeedback()})
     // }
-
-    displayFeedback = () => {
-        API.getFeedback()
-            .then(feedback => {
-                this.setState({ feedback: feedback.data.results }, () => {this.displayFeedback()})
-                console.log(feedback.data.results);
-                console.log(this.props.search);
-            })
-            .catch(err => console.log(err));
-    };
-
     render() {
         return (
             <TableHtml
                 headings={this.state.headings}
                 click={this.handleClickChange}
-                rows={this.state.rows}
+                row={this.state.rows}
                 format={this.state.format}
             />
         )

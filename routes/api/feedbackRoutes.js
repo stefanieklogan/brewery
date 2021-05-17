@@ -2,6 +2,7 @@ import db from '../../db';
 
 const router = require('express').Router();
 const { Feedback } = require('../../models');
+const feedbackController = require("../../controllers/feedbackControllers");
 
 router.post('/feedback', async(req, res) => {
 
@@ -23,14 +24,8 @@ router.post('/feedback', async(req, res) => {
   }
 });
 
-router.get('/admin/feedback', async (req, res) => {
-  try {
-    let feedback = await db.feedback.all();
-    res.json(feedback);
-  } catch(e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-})
+router.route("/")
+	.get(feedbackController.getFeedback)
+
 
 module.exports = router;

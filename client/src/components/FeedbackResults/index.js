@@ -1,4 +1,5 @@
 import React from 'react';
+import TableData from '../TableData';
 
 class FeedbackResults extends React.Component {
 state = {
@@ -7,7 +8,7 @@ state = {
     render() {
             return (
             <div>
-                hello
+               <TableData/>
             </div>
         );
     }
