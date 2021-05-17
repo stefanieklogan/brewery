@@ -3,12 +3,20 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image';
 import Logo from "../../assets/Celebration Brewing.png"
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+    image: {
+        display: "flex",
+    }
+})
 
 function HomePagePic() {
+    const styles = useStyles();
     return (
         <Container>
             <Row>
-                <Image src={Logo} />
+                <Image className={styles.image} src={Logo} fluid/>
             </Row>
         </Container>
     )
