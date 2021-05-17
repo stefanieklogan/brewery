@@ -1,3 +1,5 @@
+import db from '../../db';
+
 const router = require('express').Router();
 const { Feedback } = require('../../models');
 
@@ -12,7 +14,6 @@ router.post('/feedback', async(req, res) => {
     }
     let feedback = await Feedback.create(newFeedback);
     
-
     console.log(feedback);
 
     res.status(200).json(feedback);
@@ -21,5 +22,15 @@ router.post('/feedback', async(req, res) => {
     res.status(500).send(err);
   }
 });
+
+router.get('/admin/feedback', async (req, res) => {
+  try {
+    let feedback = await db.feedback.all();
+    res.json(feedback);
+  } catch(e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+})
 
 module.exports = router;
