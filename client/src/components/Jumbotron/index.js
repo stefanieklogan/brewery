@@ -14,8 +14,6 @@ import { Icon } from '@iconify/react';
 // import untappdIcon from '@iconify-icons/simple-icons/untappd';
 // import ResponsiveImgMaterialUi from "responsive-img-material-ui";
 import Logo from "../../assets/Celebration_Logo2.png";
-import Img from "../../assets/Celebration Brewing.png";
-
 
 const useStyles = makeStyles({
     icons: {
