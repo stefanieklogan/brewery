@@ -1,16 +1,13 @@
 import React from 'react';
 //, { Component } removed after React (no unused vars)
 import NavBar from './components/NavBar';
-import Copyright from './components/Copyright';
+import Footer from './components/Footer';
+// import Copyright from './components/Copyright';
 import Jumbotron from './components/Jumbotron';
-// import Home from './pages/Home'
-// import Contact from './pages/Contact';
-// import Portfolio from './pages/Portfolio';
-// import Photography from "./pages/Photography";
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import HomePagePic from './components/HomePagePic';
+import Image from './components/Image';
 import HomePageAbout from './components/HomePageAbout';
-import SignUpForm from './components/SignUpForm';
+// import SignUpForm from './components/SignUpForm';
 import FeedbackForm from './components/FeedbackForm';
 import AdminLogin from './components/AdminLogin';
 import BeerList from './pages/Beer';
@@ -21,10 +18,11 @@ function Homepage() {
   return (
     <div>
         <Jumbotron />
-        <HomePagePic />
+        <Image />
         <HomePageAbout />
-        <SignUpForm />
-        <Copyright />
+        {/* <SignUpForm /> */}
+        <Footer />
+        {/* <Copyright /> */}
     </div>
   );
 
@@ -42,10 +40,8 @@ function App() {
           <Route exact path="/"><Homepage /></Route>
           <Route exact path="/beer"><BeerList /></Route>
           <Route exact path='/admin/feedbackresults'><FeedbackResults /></Route>
-          {/* <Route exact path="/contact"><Contact /></Route>  */}
-          {/* <Route exact path="/photography"><Photography /> </Route> */}
           </Switch>
-          <Copyright />
+          {/* <Copyright /> */}
       </HashRouter>
     </div>
   );
