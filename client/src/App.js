@@ -1,6 +1,7 @@
 import React from 'react';
 //, { Component } removed after React (no unused vars)
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 // import Copyright from './components/Copyright';
 import Jumbotron from './components/Jumbotron';
 import { HashRouter, Route, Switch } from 'react-router-dom';
@@ -20,6 +21,7 @@ function Homepage() {
         <Image />
         <HomePageAbout />
         {/* <SignUpForm /> */}
+        <Footer />
         {/* <Copyright /> */}
     </div>
   );

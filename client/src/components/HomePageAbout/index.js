@@ -3,10 +3,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Logo from "../../assets/Celebration_Logo.png";
-import beerImage from "../../assets/beer-glasses.jpg";
+import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+
 // import ImageList from '@material-ui/core/ImageList';
 // import ImageListItem from '@material-ui/core/ImageListItem';
 // import ImageListItemBar from '@material-ui/core/ImageListItemBar';
@@ -16,7 +18,6 @@ import InfoIcon from '@material-ui/icons/Info';
 // import { ImageList, ImageListItem, ImageListItemBar, ListSubheader } from '@material-ui/core';
 
 // import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -46,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
         height: "350px",
         width: "350px",
         paddingTop: "100px",
+    },
+    beerImage: {
+        height: "350px",
+
     }
 }));
 
@@ -108,10 +113,10 @@ function HomePageAbout() {
             <Button variant="outlined" href="#"> View All Beers </Button>
             </div> 
             </Container>
-            <Container>
+            <Container fluid>
                 <Row>
                     <Col>
-                    <div className={styles.image}>
+                    <div className={styles.beerImage}>
                         <Image src={beerImage} alt="Celebration Brewing Logo" fluid />
                     </div>
                     </Col>
@@ -122,7 +127,7 @@ function HomePageAbout() {
                     <Typography className={styles.para} component="p" variant="p">
                         Discover all the latest events of festivals that ar happening at Celebration Brewing or that Celebration Brewing will be a part of!         
                     </Typography>
-                    <div className={styles.root}>
+                    <div className="justify-content-center">
                     <Button variant="outlined" href="#"> View All Events </Button>
                     </div> 
                     </Col>

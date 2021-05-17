@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 function HomePagePic() {
     const styles = useStyles();
     return (
-        <Container>
+        <Container fluid>
             <Row>
                 <Image className={styles.image} src={Logo} fluid/>
             </Row>

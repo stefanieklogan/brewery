@@ -47,7 +47,7 @@ function Jumbotron() {
     const styles = useStyles();
     return (
     <div className={styles.bodyColor}>
-        <Container>
+        <Container fluid>
             <Row className="justify-content-md-center">
                 <div className={styles.image}>
                 <Image src={Logo}alt="Celebration Brewing Logo" fluid />
