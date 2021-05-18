@@ -40,12 +40,12 @@ class FeedbackForm extends React.Component {
         console.log(this.state)
         console.log(`${this.state.name} ${this.state.feedback} ${this.state.email} ${this.state.checkbox}`)
         axios.post('/api/feedback', this.state)
-        .then(response => {
-            console.log(response)
-        })
-        .catch(error => {
-            console.log(error)
-        })
+            .then(response => {
+                console.log(response)
+            })
+            .catch(error => {
+                console.log(error)
+            })
 
         alert(`Thank you for your feedback!`)
         e.preventDefault();

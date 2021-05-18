@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 function SignUpForm() {
     const styles = useStyles();
 
-    return(
+    return (
         <form className={styles.root} noValidate autoComplete="off">
             <TextField id="outlined-basic" label="First Name" variant="outlined" />
             <TextField id="outlined-basic" label="Last Name" variant="outlined" />

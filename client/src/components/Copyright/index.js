@@ -17,10 +17,10 @@ function Copyright() {
     const currentYear = new Date().getFullYear();
     return (
         <div className={styles.copyrightColor}>
-            <div className="footer fixed-bottom text-center p-2"> 
-            <p>Copyright © Celebration Brewing 
+            <div className="footer fixed-bottom text-center p-2">
+                <p>Copyright © Celebration Brewing
             {currentYear}</p>
-            <img alt="Powered By Untappd" src={pbu}></img>
+                <img alt="Powered By Untappd" src={pbu}></img>
             </div>
         </div>
     )
