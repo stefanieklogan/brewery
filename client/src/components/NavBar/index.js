@@ -34,7 +34,7 @@ function NavBar() {
                                 <Link className="nav-link" to="/events"> Events </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/visit"> Find Us </Link>
+                                <Link className="nav-link" to="/visit"> Visit Us </Link>
                             </li>
                             <a href='https://untappd.com/CelebrationBrewing?ref=followbtn'><img alt="like brewery on untappd" className="right" src='https://untappd.akamaized.net/social/ut_follow_sm.png' /></a>
                         </ul>
