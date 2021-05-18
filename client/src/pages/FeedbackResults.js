@@ -24,7 +24,7 @@ class TableData extends Component {
             })
             .catch(err => console.log(err));
     };
-   // componentDidUpdate(prevProps) {
+    // componentDidUpdate(prevProps) {
     //     if (this.props.search !== prevProps.search) this.displayFeedback();
     // }
     // handleClickChange = e => {

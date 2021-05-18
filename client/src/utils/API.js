@@ -1,10 +1,10 @@
 import axios from "axios";
 
 export default {
-  getBeers: function() {
+  getBeers: function () {
     return axios.get("/api/untappd");
   },
-  getFeedback: function() {
+  getFeedback: function () {
     return axios.get("/api/feedback");
   }
 };

@@ -50,25 +50,25 @@ function AboutUs() {
         <div>
             <Row className="justify-content-md-center">
                 <div className={styles.image}>
-                <Image src={Logo}alt="Celebration Brewing Logo" fluid />
+                    <Image src={Logo} alt="Celebration Brewing Logo" fluid />
                 </div>
             </Row>
             <Typography className={styles.titleStyle} component="h3" variant="h3">
                 About Celebration Brewing
             </Typography>
             <Typography className={styles.para} component="p" variant="p">
-            Since 2021, Celebration Brewing Company has been committed to producing authentic and unique beers that push the boundaries of regular brewing styles and categories. We’re proud to serve our customers with only the best, continually crafting each taste until it’s exactly right.
-            <br/>
-            <br/>
+                Since 2021, Celebration Brewing Company has been committed to producing authentic and unique beers that push the boundaries of regular brewing styles and categories. We’re proud to serve our customers with only the best, continually crafting each taste until it’s exactly right.
+            <br />
+                <br />
             Celebration Brewing is a family-owned brewery, taproom, and kitchen located in beautiful Celebration, Florida. We focus on using only the best ingredients and delivering the utmost quality to our customers.
-            <br/>
-            <br/>
+            <br />
+                <br />
             Everyday, we’re driven by our core values: delivering quality flavors, honoring our customers and celebrating the culture of beer. Experience it for yourself by joining us for a brewery tour, a special event or just to try what’s on tap.
-            </Typography>  
+            </Typography>
             <div className={styles.root}>
-            <Button variant="outlined" href="#"> Visit Us </Button>
-            </div> 
+                <Button variant="outlined" href="#"> Visit Us </Button>
             </div>
+        </div>
     )
 };
 

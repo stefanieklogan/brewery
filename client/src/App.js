@@ -13,28 +13,28 @@ import FeedbackResults from './pages/FeedbackResults';
 
 function App() {
   return (
-      <Router>
-        <NavBar />
-        <Switch>
+    <Router>
+      <NavBar />
+      <Switch>
         <Route exact path="/">
           <Homepage /></Route>
         <Route exact path="/beer">
           <Beer /></Route>
         <Route exact path="/about">
           <AboutUs /></Route>
-          <Route exact path="/contact">
-            <Feedback /></Route>
-          <Route exact path="/visit">
-            <VisitUs /></Route>
-          <Route exact path="/signup">
-            <SignUp /></Route>
-          <Route exact path="/admin">
-            <Login /></Route>
-          <Route exact path='/admin/feedbackresults'>
-            <FeedbackResults /></Route>
-          </Switch>
-          {/* <Copyright /> */}
-          </Router>
+        <Route exact path="/contact">
+          <Feedback /></Route>
+        <Route exact path="/visit">
+          <VisitUs /></Route>
+        <Route exact path="/signup">
+          <SignUp /></Route>
+        <Route exact path="/admin">
+          <Login /></Route>
+        <Route exact path='/admin/feedbackresults'>
+          <FeedbackResults /></Route>
+      </Switch>
+      {/* <Copyright /> */}
+    </Router>
   );
 }
 

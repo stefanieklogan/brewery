@@ -16,7 +16,7 @@ function HomePagePic() {
     return (
         <Container fluid>
             <Row>
-                <Image className={styles.image} src={Logo} fluid/>
+                <Image className={styles.image} src={Logo} fluid />
             </Row>
         </Container>
     )

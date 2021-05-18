@@ -60,30 +60,30 @@ function VisitUs() {
             <Container fluid>
                 <Row>
                     <Col sm={8}>
-                    <div className={styles.beerImage}>
-                        <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
-                        <Typography className={styles.titleStyle} component="h3" variant="h3">
-                        Contact Us
+                        <div className={styles.beerImage}>
+                            <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
+                            <Typography className={styles.titleStyle} component="h3" variant="h3">
+                                Contact Us
                     </Typography>
-                    <Typography className={styles.titleStyle} component="h5" variant="h5">
-                        VISIT CELEBRATION BREWING
+                            <Typography className={styles.titleStyle} component="h5" variant="h5">
+                                VISIT CELEBRATION BREWING
                     </Typography>
-                    <Typography className={styles.para} component="p" variant="p">
-                    A blurb about taking a brewery tour at Celebration brewing.                    
+                            <Typography className={styles.para} component="p" variant="p">
+                                A blurb about taking a brewery tour at Celebration brewing.
                     </Typography>
-                    <div className="justify-content-center">
-                    <Link className="nav-link" to="/about"> PLAN YOUR VISIT</Link>                    </div>
-                    </div>
+                            <div className="justify-content-center">
+                                <Link className="nav-link" to="/about"> PLAN YOUR VISIT</Link>                    </div>
+                        </div>
                     </Col>
                     <Col sm={4}>
-                    <div className={styles.mapImage}>
-                        <Image src={Map} alt="Celebration Brewing Logo" fluid />
-                        <Typography className={styles.titleStyle} component="h3" variant="h3"></Typography>
+                        <div className={styles.mapImage}>
+                            <Image src={Map} alt="Celebration Brewing Logo" fluid />
+                            <Typography className={styles.titleStyle} component="h3" variant="h3"></Typography>
                         </div>
                     </Col>
                 </Row>
-            </Container> 
-            </div>
+            </Container>
+        </div>
     )
 };
 
