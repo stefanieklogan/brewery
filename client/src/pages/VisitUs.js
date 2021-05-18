@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Logo from "../assets/Celebration_Logo.png";
 import Map from "../assets/map.png";
@@ -68,7 +68,7 @@ function VisitUs() {
                             <Typography className={styles.titleStyle} component="h5" variant="h5">
                                 VISIT CELEBRATION BREWING
                     </Typography>
-                            <Typography className={styles.para} component="p" variant="p">
+                            <Typography className={styles.para} component="p" variant="inherit">
                                 A blurb about taking a brewery tour at Celebration brewing.
                     </Typography>
                             <div className="justify-content-center">

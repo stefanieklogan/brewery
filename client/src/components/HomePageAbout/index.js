@@ -13,8 +13,8 @@ import Image from 'react-bootstrap/Image';
 // import ImageListItem from '@material-ui/core/ImageListItem';
 // import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 // import ListSubheader from '@material-ui/core/ListSubheader';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
+// import IconButton from '@material-ui/core/IconButton';
+// import InfoIcon from '@material-ui/icons/Info';
 // import { ImageList, ImageListItem, ImageListItemBar, ListSubheader } from '@material-ui/core';
 
 // import Container from 'react-bootstrap/Container';
@@ -66,7 +66,7 @@ function HomePageAbout() {
             <Typography className={styles.titleStyle} component="h3" variant="h3">
                 ORLANDO'S FAVORITE BREWERY
             </Typography>
-            <Typography className={styles.para} component="p" variant="p">
+            <Typography className={styles.para} component="p" variant="inherit">
                 Since 2021, Celebration Brewing Company has been committed to producing authentic and unique beers that push the boundaries of regular brewing styles and categories. We’re proud to serve our customers with only the best, continually crafting each taste until it’s exactly right.
             <br />
                 <br />
@@ -124,7 +124,7 @@ function HomePageAbout() {
                         <Typography className={styles.titleStyle} component="h3" variant="h3">
                             WHAT'S HAPPENING
                     </Typography>
-                        <Typography className={styles.para} component="p" variant="p">
+                        <Typography className={styles.para} component="p" variant="inherit">
                             Discover all the latest events of festivals that ar happening at Celebration Brewing or that Celebration Brewing will be a part of!
                     </Typography>
                         <div className="justify-content-center">
@@ -138,31 +138,31 @@ function HomePageAbout() {
     )
 };
 
-const itemData = [
-    {
-        img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-        title: 'Breakfast',
-        author: '@bkristastucchio',
-        rows: 2,
-        cols: 2,
-        featured: true,
-    },
-    {
-        img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-        title: 'Burger',
-        author: '@rollelflex_graphy726',
-    },
-    {
-        img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-        title: 'Camera',
-        author: '@helloimnik',
-    },
-    {
-        img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-        title: 'Coffee',
-        author: '@nolanissac',
-        cols: 2,
-    },
-];
+// const itemData = [
+//     {
+//         img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+//         title: 'Breakfast',
+//         author: '@bkristastucchio',
+//         rows: 2,
+//         cols: 2,
+//         featured: true,
+//     },
+//     {
+//         img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+//         title: 'Burger',
+//         author: '@rollelflex_graphy726',
+//     },
+//     {
+//         img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
+//         title: 'Camera',
+//         author: '@helloimnik',
+//     },
+//     {
+//         img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
+//         title: 'Coffee',
+//         author: '@nolanissac',
+//         cols: 2,
+//     },
+// ];
 
 export default HomePageAbout

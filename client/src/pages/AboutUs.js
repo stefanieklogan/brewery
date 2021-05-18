@@ -5,8 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import Logo from "../assets/Celebration_Logo.png";
 // import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
+// import Col from 'react-bootstrap/Col';
+// import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 
 const useStyles = makeStyles((theme) => ({
@@ -56,7 +56,7 @@ function AboutUs() {
             <Typography className={styles.titleStyle} component="h3" variant="h3">
                 About Celebration Brewing
             </Typography>
-            <Typography className={styles.para} component="p" variant="p">
+            <Typography className={styles.para} component="p" variant="inherit">
                 Since 2021, Celebration Brewing Company has been committed to producing authentic and unique beers that push the boundaries of regular brewing styles and categories. We’re proud to serve our customers with only the best, continually crafting each taste until it’s exactly right.
             <br />
                 <br />

@@ -42,11 +42,11 @@ function Footer() {
             <Container fluid>
                 <Row>
                     <Col>
-                        <Typography className={styles.para} component="p" variant="p">
-                            <p>1234 Disney World Dr.
+                        <Typography className={styles.para} component="p" variant="inherit">
+                            1234 Disney World Dr.
                             Orlando, Florida 33333
 
-                        (000) 000-0000</p>
+                        (000) 000-0000
                         </Typography>
                     </Col>
                     <Col>
@@ -58,7 +58,7 @@ function Footer() {
                         <Typography className={styles.titleStyle} component="h3" variant="h3">
                             Explore
                     </Typography>
-                        <Typography className={styles.para} component="p" variant="p">
+                        <Typography className={styles.para} component="p" variant="inherit">
                             <Link className="nav-link" to="/"> Home </Link>
                             <Link className="nav-link" to="/about"> About Us</Link>
                             <Link className="nav-link" to="/beer"> The Beer </Link>
