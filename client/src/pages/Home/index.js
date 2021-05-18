@@ -1,8 +1,8 @@
 import React from 'react';
-import Jumbotron from '../../components/Jumbotron';
-import Image from '../../components/Image';
-import HomePageAbout from '../../components/HomePageAbout';
-import Footer from '../../components/Footer';
+import Jumbotron from '../../../../../components/Jumbotron';
+import Image from '../../../../../components/Image';
+import HomePageAbout from '../../../../../components/HomePageAbout';
+import Footer from '../../../../../components/Footer';
 
 function Homepage() {
 	return (
