@@ -4,7 +4,7 @@ import API from '../../utils/API'
 
 class TableData extends Component {
     state = {
-        rows: [[]],
+        rows: [],
         headings: ["Date", "Name", "Email", "Contact?", "Feedback"],
         format: "",
         feedback: [],
@@ -15,20 +15,10 @@ class TableData extends Component {
         this.grabFeedback();
     }
 
-    displayFeedback = () => {
-console.log("made it:")
-        const rows = this.state.feedback;
-        var renderTable = rows.map(feedback => {
-                return [feedback.id, feedback.date_created, feedback.name, feedback.email, feedback.contact, feedback.feedback]
-            })
-        console.log(rows);
-        this.setState( { rows: renderTable } )
-    }
-
     grabFeedback = () => {
         API.getFeedback()
             .then(feedback => {
-                this.setState({ feedback: feedback.data }, () => {this.displayFeedback()})
+                this.setState({ rows: feedback.data })
                 console.log(feedback.data);
                 // console.log(this.props.search);
             })
@@ -60,9 +50,8 @@ console.log("made it:")
         return (
             <TableHtml
                 headings={this.state.headings}
-                key={this.state.id}
                 click={this.handleClickChange}
-                row={this.state.rows}
+                rows={this.state.rows}
                 format={this.state.format}
             />
         )
