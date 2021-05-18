@@ -28,15 +28,25 @@ function NavBar() {
                                 <Link className="nav-link" to="/beer"> The Beer </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/about"> About Us</Link>
+                                <Link className="nav-link" to="/about"> About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/events"> Events </Link>
+                                <Link className="nav-link" to="/contact"> Contact </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/visit"> Visit Us </Link>
+                                <Link className="nav-link" to="/visit"> Visit </Link>
                             </li>
-                            <a href='https://untappd.com/CelebrationBrewing?ref=followbtn'><img alt="like brewery on untappd" className="right" src='https://untappd.akamaized.net/social/ut_follow_sm.png' /></a>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/signup"> NewsletterSignup</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/admin"> AdminLogin</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/admin/feedbackresults"> FeedbackResults  </Link>
+                            </li>
+                            
+                            {/* <a href='https://untappd.com/CelebrationBrewing?ref=followbtn'><img alt="like brewery on untappd" className="right" src='https://untappd.akamaized.net/social/ut_follow_sm.png' /></a> */}
                         </ul>
                     </div>
                 </nav>

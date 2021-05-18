@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import TableHtml from '../TableHtml';
-import API from '../../utils/API'
+import TableHtml from '../components/TableHtml';
+import API from '../utils/API'
 
 class TableData extends Component {
     state = {
