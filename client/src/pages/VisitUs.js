@@ -9,6 +9,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
+import { Link } from 'react-router-dom';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,13 +21,13 @@ const useStyles = makeStyles((theme) => ({
     },
     titleStyle: {
         backgroundColor: "white",
-        color: "#c89019",
-        textAlign: "center",
+        color: "black",
+        textAlign: "left",
         marginTop: "80px",
         marginBottom: "10px",
     },
     para: {
-        textAlign: "center",
+        textAlign: "left",
         marginTop: "30px",
         paddingRight: "100px",
         paddingLeft: "100px",
@@ -38,6 +40,10 @@ const useStyles = makeStyles((theme) => ({
         height: "200px",
         width: "250px",
         marginTop: "100px",
+    },
+    link: {
+        color: "black",
+        textDecoration: "none",
     },
     mapImage: {
         height: "250px",
@@ -57,14 +63,16 @@ function VisitUs() {
                     <div className={styles.beerImage}>
                         <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
                         <Typography className={styles.titleStyle} component="h3" variant="h3">
-                        Brewery Tours
+                        Contact Us
+                    </Typography>
+                    <Typography className={styles.titleStyle} component="h5" variant="h5">
+                        VISIT CELEBRATION BREWING
                     </Typography>
                     <Typography className={styles.para} component="p" variant="p">
                     A blurb about taking a brewery tour at Celebration brewing.                    
                     </Typography>
                     <div className="justify-content-center">
-                    <Button variant="outlined" href="#"> View All Events </Button>
-                    </div>
+                    <Link className="nav-link" to="/about"> PLAN YOUR VISIT</Link>                    </div>
                     </div>
                     </Col>
                     <Col sm={4}>
