@@ -1,7 +1,8 @@
 import React from 'react';
-import { makeStyles } from "@material-ui/core/styles";
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid, Button, Typography } from '@material-ui/core';
+// import Button from '@material-ui/core/Button';
+// import Typography from '@material-ui/core/Typography';
 import Logo from "../../assets/Celebration_Logo.png";
 import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
@@ -57,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
 function HomePageAbout() {
     const styles = useStyles();
     return (
-        <div>
+        <Grid>
             <Row className="justify-content-md-center">
                 <div className={styles.image}>
                     <Image src={Logo} alt="Celebration Brewing Logo" fluid />
@@ -134,7 +135,7 @@ function HomePageAbout() {
                 </Row>
             </Container>
 
-        </div>
+        </Grid>
     )
 };
 

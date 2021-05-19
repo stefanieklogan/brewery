@@ -3,9 +3,9 @@ import "./style.css";
 //Cannot find module: '@material-ui/core/grid'. Make sure this package is installed.
 //npm ERR! Could not install from "@material-ui/core/grid" as it does not contain a package.json file.
 // import Grid from "@material-ui/core/grid";
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-
+import { Grid, Container } from '@material-ui/core';
 import Row from 'react-bootstrap/Row';
 import { makeStyles } from "@material-ui/core/styles";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -48,20 +48,18 @@ const useStyles = makeStyles({
 function Jumbotron() {
     const styles = useStyles();
     return (
+        <Grid>
         <div className={styles.bodyColor}>
-            <Container fluid>
+            <Container fixed>
                 <Row className="justify-content-md-center">
                     <div className={styles.image}>
                         <Image src={Logo} alt="Celebration Brewing Logo" fluid />
+                        <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon /></a>
+                        <a href="https://www.instagram.com/celebrationbrewing/" rel="noopener noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large" /></a>
+                        <a href="https://www.facebook.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large" /></a>
+                        <a href="https://twitter.com/CelebrationBrew" rel="noopener noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large" /></a>
                     </div>
                 </Row>
-
-                <div container justify="center">
-                    <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon /></a>
-                    <a href="https://www.instagram.com/celebrationbrewing/" rel="noopener noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large" /></a>
-                    <a href="https://www.facebook.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large" /></a>
-                    <a href="https://twitter.com/CelebrationBrew" rel="noopener noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large" /></a>
-                </div>
             </Container>
 
 
@@ -72,6 +70,7 @@ function Jumbotron() {
         <a href="https://twitter.com/CelebrationBrew" rel="noopener noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large"/></a>
     </div> */}
         </div>
+        </Grid>
 
     );
 }

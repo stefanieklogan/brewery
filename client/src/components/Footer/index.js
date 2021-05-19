@@ -7,7 +7,7 @@ import Logo from "../../assets/Celebration_LogoBLACK.png";
 // import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
+import Container from '@material-ui/core/Container';
 import Image from 'react-bootstrap/Image';
 
 
@@ -39,7 +39,7 @@ function Footer() {
     const styles = useStyles();
     return (
         <div>
-            <Container fluid>
+            <Container fixed>
                 <Row>
                     <Col>
                         <Typography className={styles.para} component="p" variant="inherit">
