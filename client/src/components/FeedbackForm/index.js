@@ -1,9 +1,31 @@
 import React from 'react';
 // import { HashRouter, Route, Switch } from 'react-router-dom';
 import Checkbox from '@material-ui/core/Checkbox';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Form from 'react-bootstrap/Form';
+// import { makeStyles } from "@material-ui/core/styles";
 import axios from 'axios';
 
+// const useStyles = makeStyles((theme) => ({
+//     root: {
+//         '& > *': {
+//             margin: theme.spacing(1),
+//             textAlign: "center",
+//         },
+//     },
+//     titleStyle: {
+//         backgroundColor: "white",
+//         color: "#c89019",
+//         textAlign: "center",
+//         marginTop: "80px",
+//         marginBottom: "10px",
+//     },
+// }));
+
 class FeedbackForm extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -59,29 +81,43 @@ class FeedbackForm extends React.Component {
         if (isChecked) {
             emailInput = (
                 <div>
-                    <label>Email:</label>{isChecked}
-                    <input className="email" type="text" value={email} onChange={this.handleEmailChange} />
+                    {/* <label>Email:</label>{isChecked} */}
+                    <TextField className="email" type="text" label="Email" variant="outlined" value={email} onChange={this.handleEmailChange} />{isChecked}
                 </div>
             )
         }
 
+        // const styles = useStyles();
+            
         return (
-            <form onSubmit={this.handleSubmit}>
+
+            <Form onSubmit={this.handleSubmit}>
                 <div>
-                    <label>Name:</label>
-                    <input className="name" type="text" value={name} onChange={this.handleNameChange} />
+                <Typography component="h5" variant="h5">
+                GET IN TOUCH
+                </Typography>
+                <Typography component="p" variant="p"> We value your input and feedback! Please fill out the form below and we will get in touch as soon as possible! Thank you!
+                </Typography>
                 </div>
-                <div>
-                    <label>Feedback:</label>
-                    <textarea className="feedback" type="text" value={feedback} onChange={this.handleFeedbackChange}></textarea>
-                </div>
+                <Form>
+                    <Form.Group controlId="formBasicEmail">
+                        <Form.Control type="name" placeholder="Enter Name" value={name} onChange={this.handleNameChange}></Form.Control>
+                    </Form.Group>
+                    <Form.Group controlId="exampleForm.ControlTextarea1">
+                        <Form.Control as="textarea" placeholder="Message" rows={3} value={feedback} onChange={this.handleFeedbackChange}/>
+                    </Form.Group>
+                    </Form>
+                    {/* <label>Name:</label> */}
+                    {/* <TextField id="outlined-password-input" label="Name" variant="outlined" className="name" type="text" value={name} onChange={this.handleNameChange} /> */}
+                    {/* <label>Feedback:</label> */}
+                    {/* <TextField id="outlined-multiline-static" multiline rowsMax={4} label="Feedback" variant="outlined" className="feedback" type="text" value={feedback} onChange={this.handleFeedbackChange}></TextField> */}
                 <div>
                     <p className="checkbox">Check here if you would like to be contacted:</p><Checkbox value={checkbox} onChange={this.handleCheckboxChange} /><p className="email">{emailInput}</p>
                 </div>
 
-                <button className="submitBtn" type="submit">Submit</button>
+                <Button className="submitBtn" variant="outlined" type="submit">Submit</Button>
 
-            </form>
+            </Form>
         );
     }
 }
