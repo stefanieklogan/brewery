@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
-import Grid from "@material-ui/core/grid";
+//Cannot find module: '@material-ui/core/grid'. Make sure this package is installed.
+//npm ERR! Could not install from "@material-ui/core/grid" as it does not contain a package.json file.
+// import Grid from "@material-ui/core/grid";
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 
@@ -22,7 +24,7 @@ const useStyles = makeStyles({
         color: "black",
         '&:hover': {
             color: "#c89019",
-        }   
+        }
     },
     beerIcon: {
         fontSize: "30px",
@@ -31,7 +33,7 @@ const useStyles = makeStyles({
         color: "black",
         '&:hover': {
             color: "#c89019",
-        }   
+        }
     },
     bodyColor: {
         backgroundColor: "#efe9dd",
@@ -46,30 +48,30 @@ const useStyles = makeStyles({
 function Jumbotron() {
     const styles = useStyles();
     return (
-    <div className={styles.bodyColor}>
-        <Container fluid>
-            <Row className="justify-content-md-center">
-                <div className={styles.image}>
-                <Image src={Logo}alt="Celebration Brewing Logo" fluid />
+        <div className={styles.bodyColor}>
+            <Container fluid>
+                <Row className="justify-content-md-center">
+                    <div className={styles.image}>
+                        <Image src={Logo} alt="Celebration Brewing Logo" fluid />
+                    </div>
+                </Row>
+
+                <div container justify="center">
+                    <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon /></a>
+                    <a href="https://www.instagram.com/celebrationbrewing/" rel="noopener noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large" /></a>
+                    <a href="https://www.facebook.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large" /></a>
+                    <a href="https://twitter.com/CelebrationBrew" rel="noopener noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large" /></a>
                 </div>
-            </Row>
-            
-        <Grid container justify="center">
-        <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon /></a>
-        <a href="https://www.instagram.com/celebrationbrewing/" rel="noopener noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large"/></a>
-        <a href="https://www.facebook.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large"/></a>
-        <a href="https://twitter.com/CelebrationBrew" rel="noopener noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large"/></a>
-    </Grid>
-        </Container>
-    
-    
-    {/* <div className="justify-content-md-center">
+            </Container>
+
+
+            {/* <div className="justify-content-md-center">
         <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon /></a>
         <a href="https://www.instagram.com/celebrationbrewing/" rel="noopener noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large"/></a>
         <a href="https://www.facebook.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large"/></a>
         <a href="https://twitter.com/CelebrationBrew" rel="noopener noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large"/></a>
     </div> */}
-    </div>
+        </div>
 
     );
 }

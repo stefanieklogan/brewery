@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Feedback } = require('../../models');
 const feedbackController = require("../../controllers/feedbackControllers");
 
-router.post('/', async(req, res) => {
+router.post('/', async (req, res) => {
 
   try {
     let newFeedback = {
@@ -12,7 +12,7 @@ router.post('/', async(req, res) => {
       checkbox: req.body.checkbox
     }
     let feedback = await Feedback.create(newFeedback);
-    
+
     console.log(feedback);
 
     res.status(200).json(feedback);
@@ -23,7 +23,7 @@ router.post('/', async(req, res) => {
 });
 
 router.route("/")
-	.get(feedbackController.getFeedback)
+  .get(feedbackController.getFeedback)
 
 
 module.exports = router;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import TableHtml from '../TableHtml';
-import API from '../../utils/API'
+import TableHtml from '../components/TableHtml';
+import API from '../utils/API'
 
 class TableData extends Component {
     state = {
@@ -19,12 +19,11 @@ class TableData extends Component {
         API.getFeedback()
             .then(feedback => {
                 this.setState({ rows: feedback.data })
-                console.log(feedback.data);
                 // console.log(this.props.search);
             })
             .catch(err => console.log(err));
     };
-   // componentDidUpdate(prevProps) {
+    // componentDidUpdate(prevProps) {
     //     if (this.props.search !== prevProps.search) this.displayFeedback();
     // }
     // handleClickChange = e => {

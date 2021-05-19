@@ -39,37 +39,37 @@ function Footer() {
     const styles = useStyles();
     return (
         <div>
-        <Container fluid>
+            <Container fluid>
                 <Row>
                     <Col>
-                    <Typography className={styles.para} component="p" variant="p">
-                        <p>1234 Disney World Dr.
-                        Orlando, Florida 33333
+                        <Typography className={styles.para} component="p" variant="inherit">
+                            1234 Disney World Dr.
+                            Orlando, Florida 33333
 
-                        (000) 000-0000</p>
-                    </Typography>
+                        (000) 000-0000
+                        </Typography>
                     </Col>
                     <Col>
-                    <div className={styles.beerImage}>
-                        <Image src={Logo} alt="Celebration Brewing Logo" fluid />
-                    </div>
+                        <div className={styles.beerImage}>
+                            <Image src={Logo} alt="Celebration Brewing Logo" fluid />
+                        </div>
                     </Col>
                     <Col>
-                    <Typography className={styles.titleStyle} component="h3" variant="h3">
-                        Explore
+                        <Typography className={styles.titleStyle} component="h3" variant="h3">
+                            Explore
                     </Typography>
-                    <Typography className={styles.para} component="p" variant="p">
-                    <Link className="nav-link" to="/"> Home </Link> 
-                    <Link className="nav-link" to="/about"> About Us</Link>
-                    <Link className="nav-link" to="/beer"> The Beer </Link>
-                    <Link className="nav-link" to="/visit"> Visit Us </Link>
-                    <Link className="nav-link" to="/events"> Events </Link>
-                    </Typography>
+                        <Typography className={styles.para} component="p" variant="inherit">
+                            <Link className="nav-link" to="/"> Home </Link>
+                            <Link className="nav-link" to="/about"> About Us</Link>
+                            <Link className="nav-link" to="/beer"> The Beer </Link>
+                            <Link className="nav-link" to="/visit"> Visit Us </Link>
+                            <Link className="nav-link" to="/events"> Events </Link>
+                        </Typography>
                     </Col>
                 </Row>
             </Container>
-            </div>
-        
+        </div>
+
     )
 }
 

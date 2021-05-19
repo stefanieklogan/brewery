@@ -5,8 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import Logo from "../assets/Celebration_Logo.png";
 // import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
+// import Col from 'react-bootstrap/Col';
+// import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 
 const useStyles = makeStyles((theme) => ({
@@ -50,25 +50,25 @@ function AboutUs() {
         <div>
             <Row className="justify-content-md-center">
                 <div className={styles.image}>
-                <Image src={Logo}alt="Celebration Brewing Logo" fluid />
+                    <Image src={Logo} alt="Celebration Brewing Logo" fluid />
                 </div>
             </Row>
             <Typography className={styles.titleStyle} component="h3" variant="h3">
                 About Celebration Brewing
             </Typography>
-            <Typography className={styles.para} component="p" variant="p">
-            Since 2021, Celebration Brewing Company has been committed to producing authentic and unique beers that push the boundaries of regular brewing styles and categories. We’re proud to serve our customers with only the best, continually crafting each taste until it’s exactly right.
-            <br/>
-            <br/>
+            <Typography className={styles.para} component="p" variant="inherit">
+                Since 2021, Celebration Brewing Company has been committed to producing authentic and unique beers that push the boundaries of regular brewing styles and categories. We’re proud to serve our customers with only the best, continually crafting each taste until it’s exactly right.
+            <br />
+                <br />
             Celebration Brewing is a family-owned brewery, taproom, and kitchen located in beautiful Celebration, Florida. We focus on using only the best ingredients and delivering the utmost quality to our customers.
-            <br/>
-            <br/>
+            <br />
+                <br />
             Everyday, we’re driven by our core values: delivering quality flavors, honoring our customers and celebrating the culture of beer. Experience it for yourself by joining us for a brewery tour, a special event or just to try what’s on tap.
-            </Typography>  
+            </Typography>
             <div className={styles.root}>
-            <Button variant="outlined" href="#"> Visit Us </Button>
-            </div> 
+                <Button variant="outlined" href="#"> Visit Us </Button>
             </div>
+        </div>
     )
 };
 

@@ -3,7 +3,6 @@ import "./style.css";
 
 function TableHtml({ format, headings, rows }) {
   // let { format, headings, rows, click } = props;
-  console.log("tablehtml, line 6", rows)
   return (
     <table className={`table ${format || "table-striped"}`}>
       <thead>
