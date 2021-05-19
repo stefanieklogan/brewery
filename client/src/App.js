@@ -13,6 +13,7 @@ import AdminLogin from './components/AdminLogin';
 import Beer from './pages/Beer';
 import AboutUs from './pages/AboutUs';
 import VisitUs from './pages/VisitUs';
+import Contact from './pages/Contact';
 import FeedbackResults from './components/FeedbackResults';
 
 function Homepage() {
