@@ -8,22 +8,6 @@ import AboutUs from './pages/AboutUs';
 import Feedback from './pages/FeedbackForm';
 import VisitUs from './pages/VisitUs';
 
-
-function Homepage() {
-
-  return (
-    <div>
-        <Jumbotron />
-        <Image />
-        <HomePageAbout />
-        {/* <SignUpForm /> */}
-        <Footer />
-        {/* <Copyright /> */}
-    </div>
-  );
-
-}
-
 import SignUp from "./pages/Signup"
 import Login from './pages/AdminLogin';
 import FeedbackResults from './pages/FeedbackResults';
