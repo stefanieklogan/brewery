@@ -16,6 +16,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@iconify-icons/mdi": "^1.1.15",
+    "@iconify/react": "^1.1.4",
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.7"
   },

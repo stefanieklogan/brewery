@@ -63,7 +63,7 @@ function Footer() {
                             <Link className="nav-link" to="/about"> About Us</Link>
                             <Link className="nav-link" to="/beer"> The Beer </Link>
                             <Link className="nav-link" to="/visit"> Visit Us </Link>
-                            <Link className="nav-link" to="/events"> Events </Link>
+                            <Link className="nav-link" to="/contact"> Contact </Link>
                         </Typography>
                     </Col>
                 </Row>

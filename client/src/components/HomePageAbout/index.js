@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
+import Grid from '@material-ui/core/Grid';
 
 // import ImageList from '@material-ui/core/ImageList';
 // import ImageListItem from '@material-ui/core/ImageListItem';
@@ -57,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
 function HomePageAbout() {
     const styles = useStyles();
     return (
-        <div>
+        <Grid>
             <Row className="justify-content-md-center">
                 <div className={styles.image}>
                     <Image src={Logo} alt="Celebration Brewing Logo" fluid />
@@ -125,7 +126,7 @@ function HomePageAbout() {
                             WHAT'S HAPPENING
                     </Typography>
                         <Typography className={styles.para} component="p" variant="inherit">
-                            Discover all the latest events of festivals that ar happening at Celebration Brewing or that Celebration Brewing will be a part of!
+                            Discover all the latest events of festivals that are happening at Celebration Brewing or that Celebration Brewing will be a part of!
                     </Typography>
                         <div className="justify-content-center">
                             <Button variant="outlined" href="#"> View All Events </Button>
@@ -134,7 +135,7 @@ function HomePageAbout() {
                 </Row>
             </Container>
 
-        </div>
+        </Grid>
     )
 };
 
