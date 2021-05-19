@@ -42,6 +42,7 @@ function App() {
           <Route exact path="/"><Homepage /></Route>
           <Route exact path="/beer"><Beer /></Route>
           <Route exact path="/about"><AboutUs /></Route>
+          <Route exact path="/contact"><Contact/></Route>
           <Route exact path="/visit"><VisitUs /></Route>
           <Route exact path='/admin/feedbackresults'><FeedbackResults /></Route>
           </Switch>
