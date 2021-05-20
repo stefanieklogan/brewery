@@ -12,10 +12,10 @@ import { Container } from '@material-ui/core';
 // import Row from 'react-bootstrap/Row';
 
 import { makeStyles } from "@material-ui/core/styles";
-// import InstagramIcon from "@material-ui/icons/Instagram";
-// import FacebookIcon from "@material-ui/icons/Facebook";
-// import TwitterIcon from "@material-ui/icons/Twitter";
-// import { Icon } from '@iconify/react';
+import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import { Icon } from '@iconify/react';
 //, InlineIcon removed after Icon- waning no unused vars
 // import untappdIcon from '@iconify-icons/simple-icons/untappd';
 // import ResponsiveImgMaterialUi from "responsive-img-material-ui";

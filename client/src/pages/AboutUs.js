@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Copyright from '../components/Copyright';
+import { Grid } from '@material-ui/core';
 import { makeStyles } from "@material-ui/core/styles";
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
