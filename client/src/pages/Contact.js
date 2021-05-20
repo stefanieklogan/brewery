@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Container, Grid, Box, Paper } from '@material-ui/core';
+import { Typography, Container, Grid, Box, Fade } from '@material-ui/core';
 import { sizing } from '@material-ui/system';
 import FeedbackForm from '../components/FeedbackForm/';
 import Footer from '../components/Footer/';
@@ -46,9 +46,11 @@ function Contact() {
                     <Image src={Beer} alt="Pouring beer" fluid />
                 </div>
             </Box>
+            {/* <Fade> */}
             <Typography className={styles.title} component="h3" variant="h3">
             CONTACT US
             </Typography>
+            {/* </Fade> */}
             <Typography className={styles.para} component="p" variant="p">
             Located in the Celebration area of Orlando, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce out beers,etc.
             </Typography>
