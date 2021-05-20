@@ -3,6 +3,22 @@ const router = require('express').Router();
 const { Admin } = require('../../models');
 // router.route("/login")
 // 	.post(adminController.postLogin)
+router.post('/signup', async (req, res) => {
+    try {
+        const userData = await Admin.create(req.body);
+
+        req.session.save(() => {
+            req.session.user_id = userData.id;
+            req.session.logged_in = true;
+            res.status(200).json(userData);
+            console.log(userData);
+        });
+
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 router.post('/login', async (req, res) => {
     try {
         const userData = await Admin.findOne({
@@ -49,6 +65,7 @@ router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(204).end();
+            console.log("Logout Successful")
         });
     } else {
         res.status(404).end();

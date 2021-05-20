@@ -47,7 +47,10 @@ function NavBar() {
                                 <Link className="nav-link" to="/signup"> NewsletterSignup</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/admin"> AdminLogin</Link>
+                                <Link className="nav-link" to="/adminsignup"> AdminSignup</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/adminlogin"> AdminLogin</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/admin/feedbackresults"> FeedbackResults  </Link>

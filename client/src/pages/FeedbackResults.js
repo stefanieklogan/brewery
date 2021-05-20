@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import TableHtml from '../components/TableHtml';
 import API from '../utils/API';
 import moment from 'moment';
+import axios from 'axios';
+import Button from '@material-ui/core/Button';
 
 class TableData extends Component {
     state = {
@@ -24,7 +26,37 @@ class TableData extends Component {
             })
             .catch(err => console.log(err));
     };
-    // componentDidUpdate(prevProps) {
+
+    handleLogout = e => {
+		e.preventDefault();
+		axios.post('/api/admin/logout', this.state)
+			.then(response => {
+				console.log("logged out")
+			})
+			.catch(error => {
+				console.log(error)
+			})
+	}
+
+    render() {
+        return (
+            <>
+            <Button type="submit" onChange={this.handleLogout} >Log Out</Button>
+            <TableHtml
+                headings={this.state.headings}
+                click={this.handleClickChange}
+                rows={this.state.rows}
+                format={this.state.format}
+            />
+            </>
+        )
+    };
+
+}
+
+export default TableData;
+
+// componentDidUpdate(prevProps) {
     //     if (this.props.search !== prevProps.search) this.displayFeedback();
     // }
     // handleClickChange = e => {
@@ -46,17 +78,3 @@ class TableData extends Component {
     //     }
     //     this.setState({feedback:sortedArr}, () => {this.displayFeedback()})
     // }
-    render() {
-        return (
-            <TableHtml
-                headings={this.state.headings}
-                click={this.handleClickChange}
-                rows={this.state.rows}
-                format={this.state.format}
-            />
-        )
-    };
-
-}
-
-export default TableData;

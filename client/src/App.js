@@ -8,8 +8,7 @@ import AboutUs from './pages/AboutUs';
 import Feedback from './pages/FeedbackForm';
 import VisitUs from './pages/VisitUs';
 import Contact from './pages/Contact';
-
-
+import AdminSignupForm from './pages/AdminSignup'
 import SignUp from "./pages/Signup"
 import Login from './pages/AdminLogin';
 import FeedbackResults from './pages/FeedbackResults';
@@ -32,7 +31,9 @@ function App() {
           <VisitUs /></Route>
         <Route exact path="/signup">
           <SignUp /></Route>
-        <Route exact path="/admin">
+          <Route exact path="/adminsignup">
+          <AdminSignupForm /></Route>
+        <Route exact path="/adminlogin">
           <Login /></Route>
         <Route exact path='/admin/feedbackresults'>
           <FeedbackResults /></Route>
