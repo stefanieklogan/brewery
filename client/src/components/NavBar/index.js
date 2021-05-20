@@ -6,7 +6,8 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
 
     navStyle: {
-        backgroundColor: "#efe9dd",
+        backgroundColor: "#f4f0e9",
+        color: "#bd8a1f",
     }
 })
 

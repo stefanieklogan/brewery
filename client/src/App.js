@@ -7,6 +7,7 @@ import Beer from './pages/Beer';
 import AboutUs from './pages/AboutUs';
 import Feedback from './pages/FeedbackForm';
 import VisitUs from './pages/VisitUs';
+import Contact from './pages/Contact';
 
 import SignUp from "./pages/Signup"
 import Login from './pages/AdminLogin';
@@ -25,7 +26,7 @@ function App() {
         <Route exact path="/about">
           <AboutUs /></Route>
         <Route exact path="/contact">
-          <Feedback /></Route>
+          <Contact /></Route>
         <Route exact path="/visit">
           <VisitUs /></Route>
         <Route exact path="/signup">

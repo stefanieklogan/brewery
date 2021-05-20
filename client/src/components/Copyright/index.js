@@ -18,8 +18,7 @@ function Copyright() {
     return (
         <div className={styles.copyrightColor}>
             <div className="footer fixed-bottom text-center p-2">
-                <p>Copyright © Celebration Brewing
-            {currentYear}</p>
+                <p>Copyright © Celebration Brewing {currentYear} - All Rights Reserved</p>
                 <img alt="Powered By Untappd" src={pbu}></img>
             </div>
         </div>

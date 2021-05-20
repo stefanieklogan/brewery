@@ -36,11 +36,12 @@ const useStyles = makeStyles({
         }
     },
     bodyColor: {
-        backgroundColor: "#efe9dd",
+        backgroundColor: "#f4f0e9",
     },
     image: {
         height: "800px",
-        width: "1000px",
+        // width: "1000px",
+        width: "100%",
         paddingTop: "100px",
     }
 })
@@ -50,7 +51,7 @@ function Jumbotron() {
     return (
         <Grid>
         <div className={styles.bodyColor}>
-            <Container fixed>
+            <Container fluid>
                 <Row className="justify-content-md-center">
                     <div className={styles.image}>
                         <Image src={Logo} alt="Celebration Brewing Logo" fluid />
