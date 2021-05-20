@@ -24,6 +24,9 @@ const useStyles = makeStyles({
         marginTop: "80px",
         marginBottom: "10px",
     },
+    h4:{
+        textAlign: "center",
+    },
     bodyColor: {
         backgroundColor: "#efe9dd",
     },
@@ -54,6 +57,12 @@ function Contact() {
             <Typography className={styles.para} component="p" variant="p">
             Located in the Celebration area of Orlando, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce out beers,etc.
             </Typography>
+                <Typography className={styles.h4} component="h4" variant="h4">
+                Get in Touch
+                </Typography>
+                <Typography className={styles.para} component="p" variant="inherit"> We value your input and feedback! Please fill out the form below and we will get in touch as soon as possible! Thank you!
+                </Typography>
+            
             <FeedbackForm />
         </Container>
         <Footer />
