@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import Image from 'react-bootstrap/Image';
 import Logo from "../../assets/Celebration_Logo.png";
+import Row from 'react-bootstrap/Row';
+
 
 
 const useStyles = makeStyles({
