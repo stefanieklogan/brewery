@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TableHtml from '../components/TableHtml';
-import API from '../utils/API'
+import API from '../utils/API';
+import moment from 'moment';
 
 class TableData extends Component {
     state = {

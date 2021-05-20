@@ -28,6 +28,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "if-env": "^1.0.4",
+    "moment": "^2.29.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
     "node-untappd": "^0.6.0",
