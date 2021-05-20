@@ -1,11 +1,6 @@
 import React from "react";
 import "./style.css";
-//Cannot find module: '@material-ui/core/grid'. Make sure this package is installed.
-//npm ERR! Could not install from "@material-ui/core/grid" as it does not contain a package.json file.
-
-import { Grid } from '@material-ui/core';
-import Container from 'react-bootstrap/Container';
-
+// import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import { Grid, Container } from '@material-ui/core';
 import Row from 'react-bootstrap/Row';
