@@ -13,16 +13,18 @@ router.post('/login', async (req, res) => {
 
         if (!userData) {
             res.status(400).json({
-                message: 'Incorrect email or password, please try again'
+                message: 'Incorrect email, please try again'
             });
             return;
         }
+        console.log(userData);
 
-        const validPassword = await userData.checkPassword(req.body.password);
+        // const validPassword = await userData.checkPassword(req.body.password);
+        const validPassword = req.body.password === userData.password;
 
         if (!validPassword) {
             res.status(400).json({
-                message: 'Incorrect email or password, please try again'
+                message: 'Incorrect password, please try again'
             });
             return;
         }
@@ -41,15 +43,16 @@ router.post('/login', async (req, res) => {
         res.status(400).json(err);
     }
 });
+
 //logout route for admin
-// router.get('/logout', (req, res) => {
-//     if (req.session.logged_in) {
-//         req.session.destroy(() => {
-//             res.status(204).redirect('/');
-//         });
-//     } else {
-//         res.status(404).end();
-//     }
-// });
+router.post('/logout', (req, res) => {
+    if (req.session.logged_in) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    } else {
+        res.status(404).end();
+    }
+});
 
 module.exports = router;
