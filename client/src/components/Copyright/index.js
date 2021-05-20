@@ -6,7 +6,7 @@ import pbu from "../../assets/pbu_40_yellow.png"
 const useStyles = makeStyles({
     copyrightColor: {
         color: "black",
-        position: "sticky"
+        marginTop: "70px",
     }
 })
 
@@ -17,7 +17,7 @@ function Copyright() {
     const currentYear = new Date().getFullYear();
     return (
         <div className={styles.copyrightColor}>
-            <div className="footer fixed-bottom text-center p-2">
+            <div className="footer text-center p-2">
                 <p>Copyright © Celebration Brewing {currentYear} - All Rights Reserved</p>
                 <img alt="Powered By Untappd" src={pbu}></img>
             </div>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API.js";
+import Footer from '../../components/Footer/';
+import Copyright from '../../components/Copyright/';
 //     CardActions removed from line 5 after typography
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -67,6 +69,8 @@ function Beer() {
                     </Grid>
                 ))}
             </Grid>
+            <Footer />
+            <Copyright />
         </main>
     )
 }

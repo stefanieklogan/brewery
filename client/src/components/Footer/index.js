@@ -9,11 +9,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from '@material-ui/core/Container';
 import Image from 'react-bootstrap/Image';
-import Grid from '@material-ui/core/Grid';
+import { Grid } from '@material-ui/core';
 
 
 const useStyles = makeStyles({
-
+    root: {
+        marginTop: "80px",
+        marginBottom: "80px",
+    },
     navStyle: {
         backgroundColor: "#efe9dd",
     },
@@ -47,7 +50,7 @@ const useStyles = makeStyles({
 function Footer() {
     const styles = useStyles();
     return (
-        <div>
+        <div className={styles.root}>
             <Container fluid>
                 <Row>
                     <Col>
