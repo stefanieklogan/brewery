@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+
 //Cannot find module: '@material-ui/core/grid'. Make sure this package is installed.
 //npm ERR! Could not install from "@material-ui/core/grid" as it does not contain a package.json file.
 
@@ -9,11 +10,12 @@ import { Grid } from '@material-ui/core';
 import Image from 'react-bootstrap/Image';
 import { Container } from '@material-ui/core';
 // import Row from 'react-bootstrap/Row';
+
 import { makeStyles } from "@material-ui/core/styles";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import { Icon } from '@iconify/react';
+// import InstagramIcon from "@material-ui/icons/Instagram";
+// import FacebookIcon from "@material-ui/icons/Facebook";
+// import TwitterIcon from "@material-ui/icons/Twitter";
+// import { Icon } from '@iconify/react';
 //, InlineIcon removed after Icon- waning no unused vars
 // import untappdIcon from '@iconify-icons/simple-icons/untappd';
 // import ResponsiveImgMaterialUi from "responsive-img-material-ui";
@@ -52,6 +54,7 @@ const useStyles = makeStyles({
 function Jumbotron() {
     const styles = useStyles();
     return (
+
         <Grid className={styles.bodyColor}>
             <Container fluid="true">
                 <Grid className="justify-content-center">
@@ -64,7 +67,7 @@ function Jumbotron() {
                     <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon /></a>
                     <a href="https://www.instagram.com/celebrationbrewing/" rel="noopener noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large" /></a>
                     <a href="https://www.facebook.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large" /></a>
-                    <a href="https://twitter.com/CelebrationBrew" rel="noopener noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large" /></a>
+
                 </Grid>
             </Container>
         </Grid>

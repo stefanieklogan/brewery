@@ -20,11 +20,38 @@ class TableData extends Component {
         API.getFeedback()
             .then(feedback => {
                 this.setState({ rows: feedback.data })
-                // console.log(this.props.search);
-            })
-            .catch(err => console.log(err));
+            }).catch(err => console.log(err));
     };
-    // componentDidUpdate(prevProps) {
+
+    handleLogout = e => {
+        e.preventDefault();
+        axios.post('/api/admin/logout', this.state)
+            .then(res => {
+                console.log(res)
+            }).catch(error => { console.log(error) })
+    }
+
+    render() {
+        return (
+            <div>
+                <Button type="submit" 
+                onChange={this.handleLogout} >
+                    Log Out</Button>
+                <TableHtml
+                    headings={this.state.headings}
+                    click={this.handleClickChange}
+                    rows={this.state.rows}
+                    format={this.state.format}
+                />
+            </div>
+        )
+    };
+
+}
+
+export default TableData;
+
+// componentDidUpdate(prevProps) {
     //     if (this.props.search !== prevProps.search) this.displayFeedback();
     // }
     // handleClickChange = e => {
@@ -46,17 +73,3 @@ class TableData extends Component {
     //     }
     //     this.setState({feedback:sortedArr}, () => {this.displayFeedback()})
     // }
-    render() {
-        return (
-            <TableHtml
-                headings={this.state.headings}
-                click={this.handleClickChange}
-                rows={this.state.rows}
-                format={this.state.format}
-            />
-        )
-    };
-
-}
-
-export default TableData;

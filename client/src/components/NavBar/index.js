@@ -7,7 +7,6 @@ import Logo from "../../assets/Celebration_Logo.png";
 // import Row from 'react-bootstrap/Row';
 
 
-
 const useStyles = makeStyles({
 
     navStyle: {
@@ -32,7 +31,9 @@ function NavBar() {
                     <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul className="navbar-nav nav-fill w-50">
                             <li className="nav-item">
+
                             <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fixed ="true"/>
+
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/"> Home </Link>
@@ -53,7 +54,10 @@ function NavBar() {
                                 <Link className="nav-link" to="/signup"> NewsletterSignup</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/admin"> AdminLogin</Link>
+                                <Link className="nav-link" to="/adminsignup"> AdminSignup</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/adminlogin"> AdminLogin</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/admin/feedbackresults"> FeedbackResults  </Link>

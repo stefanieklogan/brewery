@@ -67,9 +67,10 @@ function Contact() {
         </Container>
         <Footer />
         <Copyright />
+
         </Grid>
     );
 
 }
 
-export default Contact
+export default Contact;

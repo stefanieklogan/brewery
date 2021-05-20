@@ -31,7 +31,9 @@ function App() {
           <VisitUs /></Route>
         <Route exact path="/signup">
           <SignUp /></Route>
-        <Route exact path="/admin">
+          <Route exact path="/adminsignup">
+          <AdminSignupForm /></Route>
+        <Route exact path="/adminlogin">
           <Login /></Route>
         <Route exact path='/admin/feedbackresults'>
           <FeedbackResults /></Route>

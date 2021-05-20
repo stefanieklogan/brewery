@@ -34,16 +34,6 @@ class Login extends React.Component {
 			})
 	}
 
-	handleLogout = e => {
-		e.preventDefault();
-		axios.post('/api/admin/logout', this.state)
-			.then(response => {
-				console.log("logged out")
-			})
-			.catch(error => {
-				console.log(error)
-			})
-	}
 
 	render() {
 		const { email, password } = this.state
@@ -57,7 +47,6 @@ class Login extends React.Component {
 
 				<Button type="submit" onClick={this.handleLogin} >Log In</Button>
 				
-				<Button type="submit" onChange={this.handleLogout} >Log Out</Button>
 			</form>
 		);
 	}

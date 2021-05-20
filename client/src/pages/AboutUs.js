@@ -4,7 +4,6 @@ import Copyright from '../components/Copyright';
 import { makeStyles } from "@material-ui/core/styles";
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
 import Logo from "../assets/Celebration_Logo.png";
 // import BeerGlass from "../assets/beer-glass";
 // import beerImage from "../../assets/brewery.jpg";
@@ -101,3 +100,4 @@ function AboutUs() {
 // ]
 
 export default AboutUs
+
