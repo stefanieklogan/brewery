@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API.js";
+import Footer from '../../components/Footer/';
+import Copyright from '../../components/Copyright/';
 //     CardActions removed from line 5 after typography
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -21,6 +23,11 @@ const useStyles = makeStyles((theme) => ({
     },
     cover: {
         width: 100,
+    },
+    title: {
+        textAlign: "center",
+        marginTop: "70px",
+        marginBottom: "50px"
     }
 }));
 
@@ -42,8 +49,9 @@ function Beer() {
     };
     return (
         <main>
-            <div className="mb-5">
-                <h2>Beers on Tap</h2></div>
+            <Typography className={classes.title} component="h3" variant="h3">
+                BEERS ON TAP
+            </Typography>
             <Grid container spacing={3}>
                 {beers.map((beer) => (
                     <Grid key={beer.beer.beer_name} item xs={6}>
@@ -67,6 +75,8 @@ function Beer() {
                     </Grid>
                 ))}
             </Grid>
+            <Footer />
+            <Copyright />
         </main>
     )
 }

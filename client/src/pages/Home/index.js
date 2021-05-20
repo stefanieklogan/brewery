@@ -3,6 +3,7 @@ import Jumbotron from '../../components/Jumbotron';
 import Image from '../../components/Image';
 import HomePageAbout from '../../components/HomePageAbout';
 import Footer from '../../components/Footer';
+import Copyright from '../../components/Copyright/';
 
 function Homepage() {
 	return (
@@ -12,7 +13,7 @@ function Homepage() {
 			<HomePageAbout />
 			{/* <SignUpForm /> */}
 			<Footer />
-			{/* <Copyright /> */}
+			<Copyright />
 		</div>
 	);
 }
