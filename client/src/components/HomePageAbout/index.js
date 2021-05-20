@@ -42,13 +42,14 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: "100px",
     },
     button: {
-        justifyContent: "center",
-        alignItems: "center",
+        // justifyContent: "center",
+        // alignItems: "center",
     },
     image: {
-        height: "350px",
-        width: "350px",
+        height: "35%",
+        width: "35%",
         paddingTop: "100px",
+        justify: "center"
     },
     beerImage: {
         height: "350px",
@@ -60,11 +61,9 @@ function HomePageAbout() {
     const styles = useStyles();
     return (
         <Grid>
-            <Row className="justify-content-md-center">
-                <div className={styles.image}>
-                    <Image src={Logo} alt="Pouring beer" fluid />
-                </div>
-            </Row>
+            <Grid>
+                <Image justify="center" className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
+            </Grid>
             <Typography className={styles.titleStyle} component="h3" variant="h3">
                 ORLANDO'S FAVORITE BREWERY
             </Typography>
