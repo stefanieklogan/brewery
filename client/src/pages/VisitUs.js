@@ -87,4 +87,4 @@ function VisitUs() {
     )
 };
 
-export default VisitUs
+export default VisitUs;

@@ -5,7 +5,6 @@ const app = express();
 const session = require("express-session");
 require("dotenv").config();
 const routes = require("./routes/");
-// const mysql = require('mysql');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -26,19 +25,6 @@ if (process.env.NODE_ENV === "production") {
 }
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// const connection = mysql.createConnection({
-//   host: 'localhost',
-//   user: 'root',
-//   password: 'develop2021!',
-//   database: 'brewery'
-// })
-
-// connection.connect(err => {
-//   if (err) {
-//     return err;
-//   }
-// });
 
 // Send every request to the React app
 // Define any API routes before this runs

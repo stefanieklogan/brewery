@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TableHtml from '../components/TableHtml';
 import API from '../utils/API';
-import moment from 'moment';
+// import moment from 'moment';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
 
@@ -22,33 +22,30 @@ class TableData extends Component {
         API.getFeedback()
             .then(feedback => {
                 this.setState({ rows: feedback.data })
-                // console.log(this.props.search);
-            })
-            .catch(err => console.log(err));
+            }).catch(err => console.log(err));
     };
 
     handleLogout = e => {
-		e.preventDefault();
-		axios.post('/api/admin/logout', this.state)
-			.then(response => {
-				console.log("logged out")
-			})
-			.catch(error => {
-				console.log(error)
-			})
-	}
+        e.preventDefault();
+        axios.post('/api/admin/logout', this.state)
+            .then(res => {
+                console.log(res)
+            }).catch(error => { console.log(error) })
+    }
 
     render() {
         return (
-            <>
-            <Button type="submit" onChange={this.handleLogout} >Log Out</Button>
-            <TableHtml
-                headings={this.state.headings}
-                click={this.handleClickChange}
-                rows={this.state.rows}
-                format={this.state.format}
-            />
-            </>
+            <div>
+                <Button type="submit" 
+                onChange={this.handleLogout} >
+                    Log Out</Button>
+                <TableHtml
+                    headings={this.state.headings}
+                    click={this.handleClickChange}
+                    rows={this.state.rows}
+                    format={this.state.format}
+                />
+            </div>
         )
     };
 

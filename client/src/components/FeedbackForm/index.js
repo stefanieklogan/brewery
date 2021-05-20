@@ -88,29 +88,37 @@ class FeedbackForm extends React.Component {
         }
 
         // const styles = useStyles();
-            
+
         return (
 
             <Form onSubmit={this.handleSubmit}>
                 <div>
-                <Typography component="h5" variant="h5">
-                GET IN TOUCH
-                </Typography>
-                <Typography component="p" variant="inherit"> We value your input and feedback! Please fill out the form below and we will get in touch as soon as possible! Thank you!
-                </Typography>
+                    <Typography component="h5" variant="h5">
+                        GET IN TOUCH
+                    </Typography>
+                    <Typography component="p" variant="inherit"> 
+                    We value your input and feedback! Please fill out the form below and we will get in touch as soon as possible! Thank you!
+                    </Typography>
                 </div>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Control type="name" placeholder="Enter Name" value={name} onChange={this.handleNameChange}></Form.Control>
-                    </Form.Group>
-                    <Form.Group controlId="exampleForm.ControlTextarea1">
-                        <Form.Control as="textarea" placeholder="Message" rows={3} value={feedback} onChange={this.handleFeedbackChange}/>
-                    </Form.Group>
-                    {/* <label>Name:</label> */}
-                    {/* <TextField id="outlined-password-input" label="Name" variant="outlined" className="name" type="text" value={name} onChange={this.handleNameChange} /> */}
-                    {/* <label>Feedback:</label> */}
-                    {/* <TextField id="outlined-multiline-static" multiline rowsMax={4} label="Feedback" variant="outlined" className="feedback" type="text" value={feedback} onChange={this.handleFeedbackChange}></TextField> */}
+                <Form.Group controlId="formBasicEmail">
+                    <Form.Control type="name" placeholder="Enter Name" 
+                    value={name} 
+                    onChange={this.handleNameChange}>
+                    </Form.Control>
+                </Form.Group>
+                <Form.Group controlId="exampleForm.ControlTextarea1">
+                    <Form.Control as="textarea" placeholder="Message" rows={3} value={feedback} 
+                    onChange={this.handleFeedbackChange}/>
+                </Form.Group>
+                {/* <label>Name:</label> */}
+                {/* <TextField id="outlined-password-input" label="Name" variant="outlined" className="name" type="text" value={name} onChange={this.handleNameChange} /> */}
+                {/* <label>Feedback:</label> */}
+                {/* <TextField id="outlined-multiline-static" multiline rowsMax={4} label="Feedback" variant="outlined" className="feedback" type="text" value={feedback} onChange={this.handleFeedbackChange}></TextField> */}
                 <div>
-                    <p className="checkbox">Check here if you would like to be contacted:</p><Checkbox value={checkbox} onChange={this.handleCheckboxChange} /><p className="email">{emailInput}</p>
+                    <p className="checkbox">
+                        Check here if you would like to be contacted:</p>
+                        <Checkbox value={checkbox} onChange={this.handleCheckboxChange} />
+                        <p className="email">{emailInput}</p>
                 </div>
 
                 <Button className="submitBtn" variant="outlined" type="submit">Submit</Button>

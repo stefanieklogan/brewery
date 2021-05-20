@@ -33,8 +33,7 @@ class AdminSignupForm extends React.Component {
 		axios.post('/api/admin/signup', this.state)
 			.then(response => {
 				console.log(response)
-			})
-			.catch(error => {
+			}).catch(error => {
 				console.log(error)
 			})
 	}
@@ -44,10 +43,12 @@ class AdminSignupForm extends React.Component {
 		return (
 			<form noValidate autoComplete="off" onSubmit={this.handleSubmit}>
 
-				<TextField id="outlined-basic" label="Email" variant="outlined" value={email} 
+				<TextField id="outlined-basic" label="Email" variant="outlined" 
+				value={email} 
 				onChange={this.handleEmailChange} />
 
-				<TextField id="outlined-basic" label="Name" variant="outlined" value={name} 
+				<TextField id="outlined-basic" label="Name" variant="outlined" 
+				value={name} 
 				onChange={this.handleNameChange} />
 
 				<TextField id="outlined-basic" label="Password" variant="outlined" value={password}
