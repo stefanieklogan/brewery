@@ -7,29 +7,41 @@ import Logo from "../../assets/Celebration_LogoBLACK.png";
 // import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
+import Container from '@material-ui/core/Container';
 import Image from 'react-bootstrap/Image';
+import { Grid } from '@material-ui/core';
 
 
 const useStyles = makeStyles({
-
+    root: {
+        marginTop: "80px",
+        marginBottom: "80px",
+    },
     navStyle: {
         backgroundColor: "#efe9dd",
     },
     titleStyle: {
         backgroundColor: "white",
-        color: "#c89019",
+        color: "black",
         textAlign: "center",
-        marginTop: "80px",
-        marginBottom: "10px",
     },
     para: {
         textAlign: "center",
-        marginTop: "30px",
-        paddingRight: "100px",
-        paddingLeft: "100px",
+        marginTop: "50px",
+        // paddingRight: "100px",
+        // paddingLeft: "100px",
+    },
+    number: {
+        textAlign: "center",
+        marginTop: "20px",
+    },
+    hours: {
+        textAlign: "center",
+        marginTop: "10px",
     },
     link: {
+        textAlign: "center",
+        marginTop: "30px",
         color: "black",
         textDecoration: "none",
     }
@@ -38,34 +50,54 @@ const useStyles = makeStyles({
 function Footer() {
     const styles = useStyles();
     return (
-        <div>
+        <div className={styles.root}>
             <Container fluid>
                 <Row>
                     <Col>
+                    <Row>
                         <Typography className={styles.para} component="p" variant="inherit">
                             1234 Disney World Dr.
                             Orlando, Florida 33333
-
-                        (000) 000-0000
                         </Typography>
+                        </Row>
+                        <Row>
+                        <Typography className={styles.number} component="p" variant="inherit">
+                            (333) 333-3333
+                        </Typography>
+                        </Row>
+                        <Row>
+                        <Typography className={styles.para} component="p" variant="inherit">
+                            Hours:
+                        </Typography>
+                        </Row>
+                        <Row>
+                        <Typography className={styles.hours} component="p" variant="inherit">
+                            M-F 10:00am - 7:00pm
+                        </Typography>
+                        </Row>
+                        <Row>
+                        <Typography className={styles.hours} component="p" variant="inherit">
+                            Sat & Sun 10:00am - 12:00am
+                        </Typography>
+                        </Row>
                     </Col>
                     <Col>
                         <div className={styles.beerImage}>
                             <Image src={Logo} alt="Celebration Brewing Logo" fluid />
                         </div>
                     </Col>
-                    <Col>
-                        <Typography className={styles.titleStyle} component="h3" variant="h3">
+                        <Col>
+                        <Typography className={styles.titleStyle} component="h4" variant="h4">
                             Explore
                     </Typography>
-                        <Typography className={styles.para} component="p" variant="inherit">
+                        <Typography className={styles.link} component="p" variant="inherit">
                             <Link className="nav-link" to="/"> Home </Link>
-                            <Link className="nav-link" to="/about"> About Us</Link>
-                            <Link className="nav-link" to="/beer"> The Beer </Link>
-                            <Link className="nav-link" to="/visit"> Visit Us </Link>
+                            <Link className="nav-link" to="/about"> About</Link>
+                            <Link className="nav-link" to="/beer"> Beer </Link>
+                            <Link className="nav-link" to="/visit"> Visit</Link>
                             <Link className="nav-link" to="/contact"> Contact </Link>
                         </Typography>
-                    </Col>
+                        </Col>
                 </Row>
             </Container>
         </div>

@@ -96,17 +96,15 @@ class FeedbackForm extends React.Component {
                 <Typography component="h5" variant="h5">
                 GET IN TOUCH
                 </Typography>
-                <Typography component="p" variant="p"> We value your input and feedback! Please fill out the form below and we will get in touch as soon as possible! Thank you!
+                <Typography component="p" variant="inherit"> We value your input and feedback! Please fill out the form below and we will get in touch as soon as possible! Thank you!
                 </Typography>
                 </div>
-                <Form>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Control type="name" placeholder="Enter Name" value={name} onChange={this.handleNameChange}></Form.Control>
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlTextarea1">
                         <Form.Control as="textarea" placeholder="Message" rows={3} value={feedback} onChange={this.handleFeedbackChange}/>
                     </Form.Group>
-                    </Form>
                     {/* <label>Name:</label> */}
                     {/* <TextField id="outlined-password-input" label="Name" variant="outlined" className="name" type="text" value={name} onChange={this.handleNameChange} /> */}
                     {/* <label>Feedback:</label> */}
