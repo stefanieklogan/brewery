@@ -23,6 +23,11 @@ const useStyles = makeStyles((theme) => ({
     },
     cover: {
         width: 100,
+    },
+    title: {
+        textAlign: "center",
+        marginTop: "70px",
+        marginBottom: "50px"
     }
 }));
 
@@ -44,8 +49,9 @@ function Beer() {
     };
     return (
         <main>
-            <div className="mb-5">
-                <h2>Beers on Tap</h2></div>
+            <Typography className={classes.title} component="h3" variant="h3">
+                BEERS ON TAP
+            </Typography>
             <Grid container spacing={3}>
                 {beers.map((beer) => (
                     <Grid key={beer.beer.beer_name} item xs={6}>
