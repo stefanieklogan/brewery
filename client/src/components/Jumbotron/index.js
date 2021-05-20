@@ -2,13 +2,14 @@ import React from "react";
 import "./style.css";
 // import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-import { Grid, Container } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
+//Container
 import Row from 'react-bootstrap/Row';
 import { makeStyles } from "@material-ui/core/styles";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import { Icon } from '@iconify/react';
+// import InstagramIcon from "@material-ui/icons/Instagram";
+// import FacebookIcon from "@material-ui/icons/Facebook";
+// import TwitterIcon from "@material-ui/icons/Twitter";
+// import { Icon } from '@iconify/react';
 //, InlineIcon removed after Icon- waning no unused vars
 // import untappdIcon from '@iconify-icons/simple-icons/untappd';
 // import ResponsiveImgMaterialUi from "responsive-img-material-ui";
@@ -48,21 +49,21 @@ function Jumbotron() {
     return (
         <Grid>
         <div className={styles.bodyColor}>
-            <Container fluid>
+            {/* <Container fluid> */}
                 <Row className="justify-content-md-center">
                     <div className={styles.image}>
                         <Image src={Logo} alt="Celebration Brewing Logo" fluid />
                     </div>
                 </Row>
 
-                <Grid container="true" justify="center">
+                {/* <Grid container="true" justify="center">
                 <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon /></a>
 
                     <a href="https://www.instagram.com/celebrationbrewing/" rel="noopener noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large" /></a>
                     <a href="https://www.facebook.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large" /></a>
                     <a href="https://twitter.com/CelebrationBrew" rel="noopener noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large" /></a>
-                </Grid>
-            </Container>
+                </Grid> */}
+            {/* </Container> */}
 
 
             {/* <div className="justify-content-md-center">
