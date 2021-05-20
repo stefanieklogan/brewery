@@ -5,7 +5,6 @@ import NavBar from './components/NavBar';
 import Homepage from './pages/Home'
 import Beer from './pages/Beer';
 import AboutUs from './pages/AboutUs';
-import Feedback from './pages/FeedbackForm';
 import VisitUs from './pages/VisitUs';
 import Contact from './pages/Contact';
 import AdminSignupForm from './pages/AdminSignup'

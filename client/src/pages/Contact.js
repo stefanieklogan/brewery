@@ -31,20 +31,20 @@ function Contact() {
 
     return (
         <Grid>
-        <Container>
-            <Typography className={styles.title} component="h3" variant="h3">
-            CONTACT US
+            <Container>
+                <Typography className={styles.title} component="h3" variant="h3">
+                    CONTACT US
             </Typography>
-            <Typography className={styles.para} component="p" variant="p">
-            Located in the Celebration area of Orlando, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce out beers,etc.
+                <Typography className={styles.para} component="p" variant="inherit">
+                    Located in the Celebration area of Orlando, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce out beers,etc.
             </Typography>
-            <FeedbackForm />
-        </Container>
-        <Footer />
-        <Copyright />
+                <FeedbackForm />
+            </Container>
+            <Footer />
+            <Copyright />
         </Grid>
     );
 
 }
 
-export default Contact
+export default Contact;

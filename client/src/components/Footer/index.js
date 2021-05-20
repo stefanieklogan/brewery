@@ -9,8 +9,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from '@material-ui/core/Container';
 import Image from 'react-bootstrap/Image';
-import { Grid } from '@material-ui/core';
-
+// import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles({
     root: {
@@ -54,30 +53,30 @@ function Footer() {
             <Container fluid>
                 <Row>
                     <Col>
-                    <Row>
-                        <Typography className={styles.para} component="p" variant="inherit">
-                            1234 Disney World Dr.
-                            Orlando, Florida 33333
+                        <Row>
+                            <Typography className={styles.para} component="p" variant="inherit">
+                                1234 Disney World Dr.
+                                Orlando, Florida 33333
                         </Typography>
                         </Row>
                         <Row>
-                        <Typography className={styles.number} component="p" variant="inherit">
-                            (333) 333-3333
+                            <Typography className={styles.number} component="p" variant="inherit">
+                                (333) 333-3333
                         </Typography>
                         </Row>
                         <Row>
-                        <Typography className={styles.para} component="p" variant="inherit">
-                            Hours:
+                            <Typography className={styles.para} component="p" variant="inherit">
+                                Hours:
                         </Typography>
                         </Row>
                         <Row>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            M-F 10:00am - 7:00pm
+                            <Typography className={styles.hours} component="p" variant="inherit">
+                                M-F 10:00am - 7:00pm
                         </Typography>
                         </Row>
                         <Row>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Sat & Sun 10:00am - 12:00am
+                            <Typography className={styles.hours} component="p" variant="inherit">
+                                Sat &amp; Sun 10:00am - 12:00am
                         </Typography>
                         </Row>
                     </Col>
@@ -86,7 +85,7 @@ function Footer() {
                             <Image src={Logo} alt="Celebration Brewing Logo" fluid />
                         </div>
                     </Col>
-                        <Col>
+                    <Col>
                         <Typography className={styles.titleStyle} component="h4" variant="h4">
                             Explore
                     </Typography>
@@ -95,9 +94,10 @@ function Footer() {
                             <Link className="nav-link" to="/about"> About</Link>
                             <Link className="nav-link" to="/beer"> Beer </Link>
                             <Link className="nav-link" to="/visit"> Visit</Link>
-                            <Link className="nav-link" to="/contact"> Contact </Link>
+                            <Link className="nav-link" to="/contact"> Contact
+                            </Link>
                         </Typography>
-                        </Col>
+                    </Col>
                 </Row>
             </Container>
         </div>
@@ -105,4 +105,4 @@ function Footer() {
     )
 }
 
-export default Footer
+export default Footer;

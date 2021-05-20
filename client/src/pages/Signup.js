@@ -17,6 +17,7 @@ class SignupForm extends React.Component {
 		this.handleEmailChange = (e) => {
 			this.setState({ email: e.target.value })
 		}
+
 		this.handleFirstNameChange = (e) => {
 			this.setState({ firstName: e.target.value })
 		}
@@ -31,12 +32,8 @@ class SignupForm extends React.Component {
 	handleSubmit = e => {
 		e.preventDefault();
 		axios.post('/api/signup', this.state)
-			.then(response => {
-				console.log(response)
-			})
-			.catch(error => {
-				console.log(error)
-			})
+			.then(response => {console.log(response)})
+			.catch(error => {console.log(error)})
 	}
 
 	render() {
@@ -44,7 +41,8 @@ class SignupForm extends React.Component {
 		return (
 			<form noValidate autoComplete="off" onSubmit={this.handleSubmit}>
 
-				<TextField id="outlined-basic" label="Email" variant="outlined" value={email} 
+				<TextField id="outlined-basic" label="Email" variant="outlined" 
+				value={email} 
 				onChange={this.handleEmailChange} />
 
 				<TextField id="outlined-basic" label="First Name" variant="outlined" value={firstName} 

@@ -22,4 +22,4 @@ function HomePagePic() {
     )
 }
 
-export default HomePagePic
+export default HomePagePic;
