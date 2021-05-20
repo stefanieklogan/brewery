@@ -7,7 +7,7 @@ import Logo from "../../assets/Celebration_LogoBLACK.png";
 // import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Container from '@material-ui/core/Container';
+// import Container from '@material-ui/core/Container';
 import Image from 'react-bootstrap/Image';
 // import { Grid } from '@material-ui/core';
 
@@ -50,7 +50,7 @@ function Footer() {
     const styles = useStyles();
     return (
         <div className={styles.root}>
-            <Container fluid>
+            {/* <Container fluid> */}
                 <Row>
                     <Col>
                         <Row>
@@ -99,7 +99,7 @@ function Footer() {
                         </Typography>
                     </Col>
                 </Row>
-            </Container>
+            {/* </Container> */}
         </div>
 
     )
