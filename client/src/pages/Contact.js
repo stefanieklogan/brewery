@@ -1,6 +1,6 @@
 import React from 'react';
-import { Typography, Container, Grid, Box, Fade } from '@material-ui/core';
-import { sizing } from '@material-ui/system';
+import { Typography, Container, Grid, Box } from '@material-ui/core';
+// import { sizing } from '@material-ui/system';
 import FeedbackForm from '../components/FeedbackForm/';
 import Footer from '../components/Footer/';
 import Copyright from '../components/Copyright/';

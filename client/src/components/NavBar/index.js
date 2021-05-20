@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import Image from 'react-bootstrap/Image';
 import Logo from "../../assets/Celebration_Logo.png";
-import Row from 'react-bootstrap/Row';
+// import Row from 'react-bootstrap/Row';
 
 
 
@@ -32,7 +32,7 @@ function NavBar() {
                     <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul className="navbar-nav nav-fill w-50">
                             <li className="nav-item">
-                            <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fixed />
+                            <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fixed ="true"/>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/"> Home </Link>

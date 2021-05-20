@@ -8,7 +8,7 @@ import { Grid } from '@material-ui/core';
 
 import Image from 'react-bootstrap/Image';
 import { Container } from '@material-ui/core';
-import Row from 'react-bootstrap/Row';
+// import Row from 'react-bootstrap/Row';
 import { makeStyles } from "@material-ui/core/styles";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -53,14 +53,14 @@ function Jumbotron() {
     const styles = useStyles();
     return (
         <Grid className={styles.bodyColor}>
-            <Container fluid>
+            <Container fluid="true">
                 <Grid className="justify-content-center">
                     <div className={styles.image}>
                         <Image src={Logo} alt="Celebration Brewing Logo" fluid />
                     </div>
                 </Grid>
 
-                <Grid container="true" justify="center">
+                <Grid container justify="center">
                     <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon /></a>
                     <a href="https://www.instagram.com/celebrationbrewing/" rel="noopener noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large" /></a>
                     <a href="https://www.facebook.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large" /></a>

@@ -3,7 +3,7 @@ import React from 'react';
 import Checkbox from '@material-ui/core/Checkbox';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 import Form from 'react-bootstrap/Form';
 // import { makeStyles } from "@material-ui/core/styles";
 import axios from 'axios';
