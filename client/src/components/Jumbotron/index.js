@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 //Cannot find module: '@material-ui/core/grid'. Make sure this package is installed.
 //npm ERR! Could not install from "@material-ui/core/grid" as it does not contain a package.json file.
-// import Grid from "@material-ui/core/grid";
+import Grid from "@material-ui/core/grid";
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 
@@ -56,12 +56,12 @@ function Jumbotron() {
                     </div>
                 </Row>
 
-                <div container="true" justify="center">
+                <Grid container="true" justify="center">
                     <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon /></a>
                     <a href="https://www.instagram.com/celebrationbrewing/" rel="noopener noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large" /></a>
                     <a href="https://www.facebook.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large" /></a>
                     <a href="https://twitter.com/CelebrationBrew" rel="noopener noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large" /></a>
-                </div>
+                </Grid>
             </Container>
 
 
