@@ -1,8 +1,11 @@
 import React from 'react';
-import { Typography, Container, Grid } from '@material-ui/core';
+import { Typography, Container, Grid, Box, Paper } from '@material-ui/core';
+import { sizing } from '@material-ui/system';
 import FeedbackForm from '../components/FeedbackForm/';
 import Footer from '../components/Footer/';
 import Copyright from '../components/Copyright/';
+import Image from 'react-bootstrap/Image';
+import Beer from "../assets/pour-beer.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 
 
@@ -24,6 +27,12 @@ const useStyles = makeStyles({
     bodyColor: {
         backgroundColor: "#efe9dd",
     },
+    image: {
+        display: "flex",
+        justifyContent: "center",
+        flexWrap: "wrap",
+        marginTop: "50px",
+    }
 })
 
 function Contact() {
@@ -32,6 +41,11 @@ function Contact() {
     return (
         <Grid>
         <Container>
+            <Box width={1}>
+                <div className={styles.image}>
+                    <Image src={Beer} alt="Pouring beer" fluid />
+                </div>
+            </Box>
             <Typography className={styles.title} component="h3" variant="h3">
             CONTACT US
             </Typography>

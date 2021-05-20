@@ -68,9 +68,9 @@ function AboutUs() {
                 <br />
             Everyday, we’re driven by our core values: delivering quality flavors, honoring our customers and celebrating the culture of beer. Experience it for yourself by joining us for a brewery tour, a special event or just to try what’s on tap.
             </Typography>
-            <div className={styles.root}>
+            <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                 <Button variant="outlined" href="#"> Visit Us </Button>
-            </div>
+            </Grid>
             <Footer />
             <Copyright />
         </div>

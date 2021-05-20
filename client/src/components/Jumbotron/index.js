@@ -4,10 +4,10 @@ import "./style.css";
 //npm ERR! Could not install from "@material-ui/core/grid" as it does not contain a package.json file.
 
 import { Grid } from '@material-ui/core';
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
 
 import Image from 'react-bootstrap/Image';
-import { Grid, Container } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 import Row from 'react-bootstrap/Row';
 import { makeStyles } from "@material-ui/core/styles";
 import InstagramIcon from "@material-ui/icons/Instagram";

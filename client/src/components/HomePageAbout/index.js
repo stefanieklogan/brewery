@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-import Grid from '@material-ui/core/Grid';
+// import Grid from '@material-ui/core/Grid';
 
 // import ImageList from '@material-ui/core/ImageList';
 // import ImageListItem from '@material-ui/core/ImageListItem';
@@ -62,7 +62,7 @@ function HomePageAbout() {
         <Grid>
             <Row className="justify-content-md-center">
                 <div className={styles.image}>
-                    <Image src={Logo} alt="Celebration Brewing Logo" fluid />
+                    <Image src={Logo} alt="Pouring beer" fluid />
                 </div>
             </Row>
             <Typography className={styles.titleStyle} component="h3" variant="h3">
@@ -77,9 +77,9 @@ function HomePageAbout() {
                 <br />
             Everyday, we’re driven by our core values: delivering quality flavors, honoring our customers and celebrating the culture of beer. Experience it for yourself by joining us for a brewery tour, a special event or just to try what’s on tap.
             </Typography>
-            <div className={styles.root}>
-                <Button variant="outlined" href="#"> Visit Us </Button>
-            </div>
+            <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
+                <Button className={styles.button} variant="outlined" href="#"> Visit Us </Button>
+            </Grid>
             <Container>
                 <Typography className={styles.titleStyle} component="h3" variant="h3">
                     FEATURED BEERS
@@ -111,11 +111,11 @@ function HomePageAbout() {
         </ImageListItem>
       ))}
     </ImageList> */}
-                <div className={styles.root}>
+                <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                     <Button variant="outlined" href="#"> View All Beers </Button>
-                </div>
+                </Grid>
             </Container>
-            <Container fluid>
+            {/* <Container fluid>
                 <Row>
                     <Col>
                         <div className={styles.beerImage}>
@@ -123,7 +123,7 @@ function HomePageAbout() {
                         </div>
                     </Col>
                     <Col>
-                        <Typography className={styles.titleStyle} component="h3" variant="h3">
+                    <Typography className={styles.titleStyle} component="h3" variant="h3">
                             WHAT'S HAPPENING
                     </Typography>
                         <Typography className={styles.para} component="p" variant="inherit">
@@ -134,7 +134,7 @@ function HomePageAbout() {
                         </div>
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
 
         </Grid>
     )
