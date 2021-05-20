@@ -5,7 +5,7 @@ const { Admin } = require('../../models');
 // 	.post(adminController.postLogin)
 router.post('/signup', async (req, res) => {
     try {
-        const userData = await User.create(req.body);
+        const userData = await Admin.create(req.body);
 
         req.session.save(() => {
             req.session.user_id = userData.id;
