@@ -54,7 +54,7 @@ function Contact() {
             CONTACT US
             </Typography>
             {/* </Fade> */}
-            <Typography className={styles.para} component="p" variant="p">
+            <Typography className={styles.para} component="p" variant="h6">
             Located in the Celebration area of Orlando, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce out beers,etc.
             </Typography>
                 <Typography className={styles.h4} component="h4" variant="h4">
