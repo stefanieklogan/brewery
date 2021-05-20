@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
 
-class SignupForm extends React.Component {
+class AdminSignupForm extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -59,4 +59,4 @@ class SignupForm extends React.Component {
 	}
 }
 
-export default SignupForm;
+export default AdminSignupForm;
