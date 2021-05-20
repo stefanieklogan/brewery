@@ -5,6 +5,7 @@ import Copyright from '../../components/Copyright/';
 //     CardActions removed from line 5 after typography
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
+import { CardActionArea } from '@material-ui/core';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
@@ -13,6 +14,7 @@ import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
+        padding: '50px',
     },
     details: {
         display: 'flex',
@@ -22,7 +24,10 @@ const useStyles = makeStyles((theme) => ({
         flex: '1 0 auto',
     },
     cover: {
-        width: 100,
+        height: 175,
+        width: 150,
+        align: "center",
+        justify: "center",
     },
     title: {
         textAlign: "center",
@@ -48,36 +53,72 @@ function Beer() {
             .catch(err => console.log(err));
     };
     return (
-        <main>
-            <Typography className={classes.title} component="h3" variant="h3">
-                BEERS ON TAP
+        // <main>
+        //     <Typography className={classes.title} component="h3" variant="h3">
+        //         BEERS ON TAP
+        //     </Typography>
+        //     <Grid container spacing={3}>
+        //         {beers.map((beer) => (
+        //             <Grid key={beer.beer.beer_name} item xs={6}>
+        //                 <Card className={classes.root}>
+        //                     <CardActionArea>
+        //                     <CardMedia
+        //                         className={classes.cover}
+        //                         image={beer.beer.beer_label}
+        //                         alt={beer.beer.beer_name}
+        //                     />
+        //                     <div className={classes.details}>
+        //                         <CardContent className={classes.content}>
+        //                             <Typography component="h5" variant="h5">
+        //                                 {beer.beer.beer_name}
+        //                             </Typography>
+        //                             <Typography variant="subtitle1" color="textSecondary">
+        //                                 {beer.beer.beer_description}
+        //                             </Typography>
+        //                         </CardContent>
+        //                         </div>
+        //                         </CardActionArea>
+                            
+                            
+        //                 </Card>
+        //             </Grid>
+        //         ))}
+        //     </Grid>
+        //     <Footer />
+        //     <Copyright />
+        // </main>
+        <Grid>
+        <Typography className={classes.title} component="h3" variant="h3">
+            BEERS ON TAP
+        </Typography>
+        <Grid container spacing={3} style={{ alignItems:"center", padding:"30px", justifyContent: "center" }}>
+            {beers.map((beer) => (
+            <Grid key={beer.beer.beer_name} item xs={6}>
+            <Card className={classes.root}>
+            <CardActionArea>
+            <CardMedia
+                component="img"
+                className={classes.cover}
+                image={beer.beer.beer_label}
+                alt={beer.beer.beer_name}
+                height="140"
+            />
+            <CardContent>
+            <Typography component="h5" variant="h5">
+                {beer.beer.beer_name}
             </Typography>
-            <Grid container spacing={3}>
-                {beers.map((beer) => (
-                    <Grid key={beer.beer.beer_name} item xs={6}>
-                        <Card className={classes.root}>
-                            <div className={classes.details}>
-                                <CardContent className={classes.content}>
-                                    <Typography component="h5" variant="h5">
-                                        {beer.beer.beer_name}
-                                    </Typography>
-                                    <Typography variant="subtitle1" color="textSecondary">
-                                        {beer.beer.beer_description}
-                                    </Typography>
-                                </CardContent>
-                            </div>
-                            <CardMedia
-                                className={classes.cover}
-                                image={beer.beer.beer_label}
-                                alt={beer.beer.beer_name}
-                            />
-                        </Card>
-                    </Grid>
-                ))}
+            <Typography variant="subtitle1" color="textSecondary">
+                {beer.beer.beer_description}
+            </Typography>
+            </CardContent>
+            </CardActionArea>
+            </Card>
             </Grid>
-            <Footer />
-            <Copyright />
-        </main>
+            ))}
+        <Footer />
+        <Copyright />
+        </Grid>
+        </Grid>
     )
 }
 

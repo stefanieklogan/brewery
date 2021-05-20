@@ -11,6 +11,7 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 // import { Grid } from '@material-ui/core';
 
+
 const useStyles = makeStyles({
     root: {
         marginTop: "80px",
@@ -50,7 +51,8 @@ function Footer() {
     const styles = useStyles();
     return (
         <div className={styles.root}>
-            {/* <Container fluid> */}
+            <Container fluid="true">
+
                 <Row>
                     <Col>
                         <Row>

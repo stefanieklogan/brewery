@@ -4,12 +4,18 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import Image from 'react-bootstrap/Image';
 import Logo from "../../assets/Celebration_Logo.png";
+// import Row from 'react-bootstrap/Row';
+
 
 const useStyles = makeStyles({
 
     navStyle: {
-        backgroundColor: "#f4f0e9",
+        backgroundColor: "#c89019",
         color: "#bd8a1f",
+    },
+    image: {
+        height: '125px',
+        width: "150px",
     }
 })
 
@@ -25,7 +31,9 @@ function NavBar() {
                     <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul className="navbar-nav nav-fill w-50">
                             <li className="nav-item">
-                                <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
+
+                            <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fixed ="true"/>
+
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/"> Home </Link>
@@ -42,7 +50,7 @@ function NavBar() {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/visit"> Visit </Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/signup"> NewsletterSignup</Link>
                             </li>
                             <li className="nav-item">
@@ -53,7 +61,7 @@ function NavBar() {
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/admin/feedbackresults"> FeedbackResults  </Link>
-                            </li>
+                            </li> */}
                             {/* <a href='https://untappd.com/CelebrationBrewing?ref=followbtn'><img alt="like brewery on untappd" className="right" src='https://untappd.akamaized.net/social/ut_follow_sm.png' /></a> */}
                         </ul>
                     </div>

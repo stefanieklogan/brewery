@@ -4,11 +4,12 @@ import { Grid, Button, Typography } from '@material-ui/core';
 // import Button from '@material-ui/core/Button';
 // import Typography from '@material-ui/core/Typography';
 import Logo from "../../assets/Celebration_Logo.png";
-import beerImage from "../../assets/brewery.jpg";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+// import beerImage from "../../assets/brewery.jpg";
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
+// import Grid from '@material-ui/core/Grid';
 
 // import ImageList from '@material-ui/core/ImageList';
 // import ImageListItem from '@material-ui/core/ImageListItem';
@@ -41,13 +42,14 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: "100px",
     },
     button: {
-        justifyContent: "center",
-        alignItems: "center",
+        // justifyContent: "center",
+        // alignItems: "center",
     },
     image: {
-        height: "350px",
-        width: "350px",
+        height: "35%",
+        width: "35%",
         paddingTop: "100px",
+        justify: "center"
     },
     beerImage: {
         height: "350px",
@@ -59,11 +61,9 @@ function HomePageAbout() {
     const styles = useStyles();
     return (
         <Grid>
-            <Row className="justify-content-md-center">
-                <div className={styles.image}>
-                    <Image src={Logo} alt="Celebration Brewing Logo" fluid />
-                </div>
-            </Row>
+            <Grid>
+                <Image justify="center" className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
+            </Grid>
             <Typography className={styles.titleStyle} component="h3" variant="h3">
                 ORLANDO'S FAVORITE BREWERY
             </Typography>
@@ -76,9 +76,9 @@ function HomePageAbout() {
                 <br />
             Everyday, we’re driven by our core values: delivering quality flavors, honoring our customers and celebrating the culture of beer. Experience it for yourself by joining us for a brewery tour, a special event or just to try what’s on tap.
             </Typography>
-            <div className={styles.root}>
-                <Button variant="outlined" href="#"> Visit Us </Button>
-            </div>
+            <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
+                <Button className={styles.button} variant="outlined" href="#"> Visit Us </Button>
+            </Grid>
             <Container>
                 <Typography className={styles.titleStyle} component="h3" variant="h3">
                     FEATURED BEERS
@@ -110,11 +110,11 @@ function HomePageAbout() {
         </ImageListItem>
       ))}
     </ImageList> */}
-                <div className={styles.root}>
+                <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                     <Button variant="outlined" href="#"> View All Beers </Button>
-                </div>
+                </Grid>
             </Container>
-            <Container fluid>
+            {/* <Container fluid>
                 <Row>
                     <Col>
                         <div className={styles.beerImage}>
@@ -122,18 +122,18 @@ function HomePageAbout() {
                         </div>
                     </Col>
                     <Col>
-                        <Typography className={styles.titleStyle} component="h3" variant="h3">
+                    <Typography className={styles.titleStyle} component="h3" variant="h3">
                             WHAT'S HAPPENING
                     </Typography>
                         <Typography className={styles.para} component="p" variant="inherit">
-                            Discover all the latest events of festivals that ar happening at Celebration Brewing or that Celebration Brewing will be a part of!
+                            Discover all the latest events of festivals that are happening at Celebration Brewing or that Celebration Brewing will be a part of!
                     </Typography>
                         <div className="justify-content-center">
                             <Button variant="outlined" href="#"> View All Events </Button>
                         </div>
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
 
         </Grid>
     )

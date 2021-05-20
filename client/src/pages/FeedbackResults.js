@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import TableHtml from '../components/TableHtml';
 import API from '../utils/API';
 // import moment from 'moment';
-import axios from 'axios';
-import Button from '@material-ui/core/Button';
 
 class TableData extends Component {
     state = {
