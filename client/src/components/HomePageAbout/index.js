@@ -52,7 +52,8 @@ const useStyles = makeStyles((theme) => ({
         justify: "center"
     },
     beerImage: {
-        height: "350px",
+        height: "100%",
+        width: "100%",
 
     }
 }));

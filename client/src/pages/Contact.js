@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     para: {
         textAlign: "center",
         marginTop: "30px",
-        marginBottom: "70px",
+        marginBottom: "50px",
         paddingRight: "100px",
         paddingLeft: "100px",
     },
@@ -31,10 +31,12 @@ const useStyles = makeStyles({
         backgroundColor: "#efe9dd",
     },
     image: {
+        height: "100%",
+        width: "100%",
         display: "flex",
-        justifyContent: "center",
-        flexWrap: "wrap",
-        marginTop: "50px",
+        // justifyContent: "center",
+        // flexWrap: "wrap",
+        // marginTop: "50px",
     }
 })
 
@@ -46,7 +48,7 @@ function Contact() {
         <Container>
             <Box width={1}>
                 <div className={styles.image}>
-                    <Image src={Beer} alt="Pouring beer" fluid />
+                    <Image src={Beer} alt="Pouring beer" fluid/>
                 </div>
             </Box>
             {/* <Fade> */}
