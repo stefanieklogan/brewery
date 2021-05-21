@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Container, Grid, Zoom } from '@material-ui/core';
+import { Typography, Container, Grid } from '@material-ui/core';
 // import { sizing } from '@material-ui/system';
 import FeedbackForm from '../components/FeedbackForm/';
 import Footer from '../components/Footer/';
@@ -16,16 +16,16 @@ const useStyles = makeStyles({
         textAlign: "center",
         marginTop: "50px",
         marginBottom: "50px",
-        paddingRight: "25%",
-        paddingLeft: "25%",
+        paddingRight: "20%",
+        paddingLeft: "20%",
     },
     paraTwo: {
         color: "white",
         textAlign: "center",
         marginTop: "50px",
         marginBottom: "50px",
-        paddingRight: "100px",
-        paddingLeft: "100px",
+        paddingRight: "10%",
+        paddingLeft: "10%",
     },
     title: {
         color: "black",

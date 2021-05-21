@@ -10,7 +10,7 @@ import BeerPhoto from "../assets/about-celebration.png";
 import Gif from "../assets/gif2.gif";
 // import BeerGlass from "../assets/beer-glass";
 // import beerImage from "../../assets/brewery.jpg";
-import Row from "react-bootstrap/Row";
+// import Row from "react-bootstrap/Row";
 // import Col from 'react-bootstrap/Col';
 // import Container from 'react-bootstrap/Container';
 import Image from "react-bootstrap/Image";
@@ -36,8 +36,8 @@ const useStyles = makeStyles((theme) => ({
   para: {
     textAlign: "center",
     marginTop: "30px",
-    paddingRight: "100px",
-    paddingLeft: "100px",
+    paddingRight: "15%",
+    paddingLeft: "15%",
   },
   button: {
     justifyContent: "center",
@@ -91,12 +91,15 @@ return (
         justify="center"
     >
         <Button variant="outlined" href="#">
-            Visit Us{" "}
+            Visit Us
         </Button>
     </Grid>
-    <Container style={{display:"flex", justifyContent: "center", alignItems: "center" }}>
+    <Grid>
+    <Container fluid="true" style={{display:"flex", justifyContent: "center", alignItems: "center" }}>
         <Image styles={{width:"100%", height:"100%"}} src={Gif}/>
     </Container>
+    </Grid>
+  
 
     {/* <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%", border: "solid 1px", borderRadius: "8px"}}>
         <Typography style={{marginTop: "1%", marginBottom: "2%"}} component="h4" variant="h4">

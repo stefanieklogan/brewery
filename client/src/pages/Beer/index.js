@@ -96,7 +96,7 @@ function Beer() {
         //     <Copyright />
         // </main>
         <Grid>
-            <Container fluid styles={{display:"flex"}}>
+            <Container fluid="true" styles={{display:"flex"}}>
                 <Image className={classes.image} src={BeerImg} alt="Picture of a can of beer" />
             </Container>
 
