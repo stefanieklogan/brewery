@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
         // backgroundColor: "white",
         color: "#c89019",
         textAlign: "center",
-        postition: "absolute",
-        // marginTop: "80px",
+        // postition: "absolute",
+        marginTop: "70px",
         bottom: "80px",
         right: "50px",
     },
@@ -58,27 +58,18 @@ function AboutUs() {
     const styles = useStyles();
     return (
         <div>
-            <Grid>
-                {/* <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-                    {itemData.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                            srcSet={`${item.img}?w=164&fit=crop&auto=format 1x,
-                            ${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                            alt={item.title}
-                            loading="lazy" />
-                        </ImageListItem>
-                    ))}
-                </ImageList> */}
-            <div className="justify-content-md-center" style={{position:"relative"}}>
+            <Grid>                 
+            {/* <div className="justify-content-md-center" style={{position:"relative"}}>
             <h3 className={styles.titleStyle} component="h3" variant="h3">
                 About Celebration Brewing
-            </h3>
+            </h3> */}
                 <div className={styles.image}>
-                    {/* <Image src={Logo} alt="Celebration Brewing Logo" fluid /> */}
                     <Image src={BeerPhoto} alt="Celebration Brewing Logo" fluid />
                 </div>
-            </div>
+            {/* </div> */}
+            <Typography className={styles.titleStyle} component="h3" variant="h3">
+                About Celebration Brewing
+            </Typography>
             
             <Typography className={styles.para} component="p" variant="inherit">
                 Since 2021, Celebration Brewing Company has been committed to producing authentic and unique beers that push the boundaries of regular brewing styles and categories. We’re proud to serve our customers with only the best, continually crafting each taste until it’s exactly right.

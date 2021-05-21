@@ -82,7 +82,7 @@ class FeedbackForm extends React.Component {
             emailInput = (
                 <div>
                     {/* <label>Email:</label>{isChecked} */}
-                    <TextField className="email" type="text" label="Email" variant="outlined" value={email} onChange={this.handleEmailChange} />{isChecked}
+                    <TextField style={{color:"white", backgroundColor:"white"}} className="email" type="text" label="Email" variant="outlined" value={email} onChange={this.handleEmailChange} />{isChecked}
                 </div>
             )
         }
@@ -104,10 +104,10 @@ class FeedbackForm extends React.Component {
                     {/* <label>Feedback:</label> */}
                     {/* <TextField id="outlined-multiline-static" multiline rowsMax={4} label="Feedback" variant="outlined" className="feedback" type="text" value={feedback} onChange={this.handleFeedbackChange}></TextField> */}
                 <div>
-                    <p className="checkbox">Check here if you would like to be contacted:</p><Checkbox value={checkbox} onChange={this.handleCheckboxChange} /><p className="email">{emailInput}</p>
+                    <p style={{color: "white"}} className="checkbox">Check here if you would like to be contacted:</p><Checkbox style={{color:"white"}} value={checkbox} onChange={this.handleCheckboxChange} /><p className="email">{emailInput}</p>
                 </div>
 
-                <Button className="submitBtn" variant="outlined" type="submit">Submit</Button>
+                <Button style={{color: "black", backbroundColor:"white"}} className="submitBtn" variant="contained" type="submit">Submit</Button>
 
             </Form>
             </Container>
