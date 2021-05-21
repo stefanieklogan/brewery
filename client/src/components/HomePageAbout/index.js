@@ -1,25 +1,18 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Button, Typography } from '@material-ui/core';
-// import Button from '@material-ui/core/Button';
-// import Typography from '@material-ui/core/Typography';
+import { Grid, Button, Typography, Container } from '@material-ui/core';
 import Logo from "../../assets/Celebration_Logo.png";
+import BeerCan1 from "../../assets/beer-can1.jpg";
+import BeerCan2 from "../../assets/beer-can2.jpg";
+import BeerCan3 from "../../assets/beer-can3.jpg";
+import BeerCan4 from "../../assets/beer-can4.jpg";
+import Image from 'react-bootstrap/Image';
+
 // import beerImage from "../../assets/brewery.jpg";
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
-// import Grid from '@material-ui/core/Grid';
-
-// import ImageList from '@material-ui/core/ImageList';
-// import ImageListItem from '@material-ui/core/ImageListItem';
-// import ImageListItemBar from '@material-ui/core/ImageListItemBar';
-// import ListSubheader from '@material-ui/core/ListSubheader';
-// import IconButton from '@material-ui/core/IconButton';
-// import InfoIcon from '@material-ui/icons/Info';
-// import { ImageList, ImageListItem, ImageListItemBar, ListSubheader } from '@material-ui/core';
-
 // import Container from 'react-bootstrap/Container';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -46,14 +39,15 @@ const useStyles = makeStyles((theme) => ({
         // alignItems: "center",
     },
     image: {
-        height: "35%",
-        width: "35%",
+        height: "25%",
+        width: "25%",
         paddingTop: "100px",
-        justify: "center"
     },
     beerImage: {
-        height: "100%",
-        width: "100%",
+        height: "25%",
+        width: "25%",
+        display: "flex",
+        padding: "2%",
 
     }
 }));
@@ -62,9 +56,9 @@ function HomePageAbout() {
     const styles = useStyles();
     return (
         <Grid>
-            <Grid>
-                <Image justify="center" className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
-            </Grid>
+            <Container style={{alignItems:"center", justifyContent: "center", display: "flex" }}>
+                <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
+            </Container>
             <Typography className={styles.titleStyle} component="h3" variant="h3">
                 ORLANDO'S FAVORITE BREWERY
             </Typography>
@@ -80,37 +74,27 @@ function HomePageAbout() {
             <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                 <Button className={styles.button} variant="outlined" href="#"> Visit Us </Button>
             </Grid>
-            <Container>
-                <Typography className={styles.titleStyle} component="h3" variant="h3">
+            <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%", border: "solid 1px", borderRadius: "8px"}}>
+                    <Typography style={{marginTop: "1%", marginBottom: "2%"}} component="h4" variant="h4">
+                        BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
+                    </Typography>
+                    <Typography component="h4" variant="h4">
+                        OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
+                    </Typography>
+                </Container>
+            <Container style={{backgroundColor:"black", marginTop:"5%", display:"fluid"}}>
+                <Typography style={{color:"white", textAlign:"center", padding:"5%"}} component="h3" variant="h3">
                     FEATURED BEERS
             </Typography>
-                {/* <ImageList sx={{ width: 500, height: 450 }}>
-        <ImageListItem key="Subheader" cols={2}>
-        <ListSubheader component="div">December</ListSubheader>
-        </ImageListItem>
-            {itemData.map((item) => (
-        <ImageListItem key={item.img}>
-            <img
-                srcSet={`${item.img}?w=248&fit=crop&auto=format 1x,
-                    ${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-            />
-        <ImageListItemBar
-            title={item.title}
-            subtitle={item.author}
-            actionIcon={
-              <IconButton
-                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                aria-label={`info about ${item.title}`}
-              >
-                <InfoIcon />
-              </IconButton>
-            }
-          />
-        </ImageListItem>
-      ))}
-    </ImageList> */}
+                <Container>
+                    <Grid container direction="row">
+                    <Image className={styles.beerImage} src={BeerCan1} alt="Picture of a can of beer" fluid />
+                    <Image className={styles.beerImage} src={BeerCan2} alt="Picture of a can of beer" fluid />
+                    <Image className={styles.beerImage} src={BeerCan3} alt="Picture of a can of beer" fluid />
+                    <Image className={styles.beerImage} src={BeerCan4} alt="Picture of a can of beer" fluid />
+                    </Grid>
+                </Container>
+            
                 <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                     <Button variant="outlined" href="#"> View All Beers </Button>
                 </Grid>
@@ -140,31 +124,5 @@ function HomePageAbout() {
     )
 };
 
-// const itemData = [
-//     {
-//         img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-//         title: 'Breakfast',
-//         author: '@bkristastucchio',
-//         rows: 2,
-//         cols: 2,
-//         featured: true,
-//     },
-//     {
-//         img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-//         title: 'Burger',
-//         author: '@rollelflex_graphy726',
-//     },
-//     {
-//         img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-//         title: 'Camera',
-//         author: '@helloimnik',
-//     },
-//     {
-//         img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-//         title: 'Coffee',
-//         author: '@nolanissac',
-//         cols: 2,
-//     },
-// ];
 
 export default HomePageAbout;

@@ -3,7 +3,7 @@ import './style.css';
 import { Link } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import Image from 'react-bootstrap/Image';
-import Logo from "../../assets/Celebration_Logo.png";
+import Logo from "../../assets/Celebration_LogoBLACK.png";
 // import Row from 'react-bootstrap/Row';
 
 
@@ -25,16 +25,17 @@ function NavBar() {
         <div>
             <div className={styles.navStyle}>
                 <nav className="navbar navbar-expand-lg navbar-light">
+                <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fixed ="true"/>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul className="navbar-nav nav-fill w-50">
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
 
                             <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fixed ="true"/>
 
-                            </li>
+                            </li> */}
                             <li className="nav-item">
                                 <Link style={{color:"white", fontSize:"24px"}} className="nav-link" to="/"> Home </Link>
                             </li>
