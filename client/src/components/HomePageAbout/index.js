@@ -1,25 +1,18 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Button, Typography, Container } from '@material-ui/core';
-// import Button from '@material-ui/core/Button';
-// import Typography from '@material-ui/core/Typography';
 import Logo from "../../assets/Celebration_Logo.png";
+import BeerCan1 from "../../assets/beer-can1.jpg";
+import BeerCan2 from "../../assets/beer-can2.jpg";
+import BeerCan3 from "../../assets/beer-can3.jpg";
+import BeerCan4 from "../../assets/beer-can4.jpg";
+
 // import beerImage from "../../assets/brewery.jpg";
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
 // import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-// import Grid from '@material-ui/core/Grid';
 
-// import ImageList from '@material-ui/core/ImageList';
-// import ImageListItem from '@material-ui/core/ImageListItem';
-// import ImageListItemBar from '@material-ui/core/ImageListItemBar';
-// import ListSubheader from '@material-ui/core/ListSubheader';
-// import IconButton from '@material-ui/core/IconButton';
-// import InfoIcon from '@material-ui/icons/Info';
-// import { ImageList, ImageListItem, ImageListItemBar, ListSubheader } from '@material-ui/core';
-
-// import Container from 'react-bootstrap/Container';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -51,8 +44,10 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: "100px",
     },
     beerImage: {
-        height: "100%",
-        width: "100%",
+        height: "25%",
+        width: "25%",
+        display: "flex",
+        padding: "2%",
 
     }
 }));
@@ -79,37 +74,19 @@ function HomePageAbout() {
             <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                 <Button className={styles.button} variant="outlined" href="#"> Visit Us </Button>
             </Grid>
-            <Container>
-                <Typography className={styles.titleStyle} component="h3" variant="h3">
+            <Container style={{backgroundColor:"black", marginTop:"5%", display:"fluid"}}>
+                <Typography style={{color:"white", textAlign:"center", padding:"5%"}} component="h3" variant="h3">
                     FEATURED BEERS
             </Typography>
-                {/* <ImageList sx={{ width: 500, height: 450 }}>
-        <ImageListItem key="Subheader" cols={2}>
-        <ListSubheader component="div">December</ListSubheader>
-        </ImageListItem>
-            {itemData.map((item) => (
-        <ImageListItem key={item.img}>
-            <img
-                srcSet={`${item.img}?w=248&fit=crop&auto=format 1x,
-                    ${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-            />
-        <ImageListItemBar
-            title={item.title}
-            subtitle={item.author}
-            actionIcon={
-              <IconButton
-                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                aria-label={`info about ${item.title}`}
-              >
-                <InfoIcon />
-              </IconButton>
-            }
-          />
-        </ImageListItem>
-      ))}
-    </ImageList> */}
+                <Container>
+                    <Grid container direction="row">
+                    <Image className={styles.beerImage} src={BeerCan1} alt="Picture of a can of beer" fluid />
+                    <Image className={styles.beerImage} src={BeerCan2} alt="Picture of a can of beer" fluid />
+                    <Image className={styles.beerImage} src={BeerCan3} alt="Picture of a can of beer" fluid />
+                    <Image className={styles.beerImage} src={BeerCan4} alt="Picture of a can of beer" fluid />
+                    </Grid>
+                </Container>
+            
                 <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                     <Button variant="outlined" href="#"> View All Beers </Button>
                 </Grid>
