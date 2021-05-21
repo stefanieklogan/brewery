@@ -31,11 +31,11 @@ function App() {
           <VisitUs /></Route>
         <Route exact path="/signup">
           <SignUp /></Route>
-          <Route exact path="/adminsignup">
+          <Route exact path="/admin/signup">
           <AdminSignupForm /></Route>
-        <Route exact path="/adminlogin">
+        <Route exact path="/admin/login">
           <Login /></Route>
-        <Route exact path='/admin/feedbackresults'>
+        <Route exact path='/admin/feedback'>
           <FeedbackResults /></Route>
       </Switch>
       {/* <Copyright /> */}

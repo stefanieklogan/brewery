@@ -10,7 +10,7 @@ export default {
   getBeers: function() {
     return axios.get("/api/untappd");
   },
-  getFeedback: function() {
-    return axios.get("/api/feedback");
-  }
+  // getFeedback: function() {
+  //   return axios.get("/api/feedback");
+  // }
 };
