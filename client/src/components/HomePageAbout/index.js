@@ -6,12 +6,12 @@ import BeerCan1 from "../../assets/beer-can1.jpg";
 import BeerCan2 from "../../assets/beer-can2.jpg";
 import BeerCan3 from "../../assets/beer-can3.jpg";
 import BeerCan4 from "../../assets/beer-can4.jpg";
+import Image from 'react-bootstrap/Image';
 
 // import beerImage from "../../assets/brewery.jpg";
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
 // import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -74,6 +74,14 @@ function HomePageAbout() {
             <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                 <Button className={styles.button} variant="outlined" href="#"> Visit Us </Button>
             </Grid>
+            <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%", border: "solid 1px", borderRadius: "8px"}}>
+                    <Typography style={{marginTop: "1%", marginBottom: "2%"}} component="h4" variant="h4">
+                        BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
+                    </Typography>
+                    <Typography component="h4" variant="h4">
+                        OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
+                    </Typography>
+                </Container>
             <Container style={{backgroundColor:"black", marginTop:"5%", display:"fluid"}}>
                 <Typography style={{color:"white", textAlign:"center", padding:"5%"}} component="h3" variant="h3">
                     FEATURED BEERS
@@ -116,31 +124,5 @@ function HomePageAbout() {
     )
 };
 
-// const itemData = [
-//     {
-//         img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-//         title: 'Breakfast',
-//         author: '@bkristastucchio',
-//         rows: 2,
-//         cols: 2,
-//         featured: true,
-//     },
-//     {
-//         img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-//         title: 'Burger',
-//         author: '@rollelflex_graphy726',
-//     },
-//     {
-//         img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-//         title: 'Camera',
-//         author: '@helloimnik',
-//     },
-//     {
-//         img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-//         title: 'Coffee',
-//         author: '@nolanissac',
-//         cols: 2,
-//     },
-// ];
 
 export default HomePageAbout;

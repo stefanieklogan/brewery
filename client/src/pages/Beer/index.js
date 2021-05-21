@@ -9,7 +9,10 @@ import { CardActionArea } from '@material-ui/core';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import { Grid, Container } from '@material-ui/core';
+import Image from 'react-bootstrap/Image';
+
+import BeerImg from "../../assets/beer-celebration.png";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,13 +29,18 @@ const useStyles = makeStyles((theme) => ({
     cover: {
         height: 175,
         width: 150,
-        align: "center",
-        justify: "center",
+        // align: "center",
+        // justify: "center",
     },
     title: {
         textAlign: "center",
         marginTop: "70px",
         marginBottom: "50px"
+    },
+    image: {
+        display: "flex",
+        height: "100%",
+        width: "100%",
     }
 }));
 
@@ -88,14 +96,18 @@ function Beer() {
         //     <Copyright />
         // </main>
         <Grid>
-        <Typography className={classes.title} component="h3" variant="h3">
+            <Container fluid styles={{display:"flex"}}>
+                <Image className={classes.image} src={BeerImg} alt="Picture of a can of beer" />
+            </Container>
+
+        {/* <Typography className={classes.title} component="h3" variant="h3">
             BEERS ON TAP
-        </Typography>
+        </Typography> */}
         <Grid container spacing={3} style={{ alignItems:"center", padding:"30px", justifyContent: "center" }}>
             {beers.map((beer) => (
             <Grid key={beer.beer.beer_name} item xs={6}>
             <Card className={classes.root}>
-            <CardActionArea>
+            <CardActionArea style={{justifyContent: "center", alignItems: "center", display: "flex"}}>
             <CardMedia
                 component="img"
                 className={classes.cover}
@@ -104,10 +116,10 @@ function Beer() {
                 height="140"
             />
             <CardContent>
-            <Typography component="h5" variant="h5">
+            <Typography style={{textAlign: "center", marginTop: "3%"}} component="h4" variant="h4">
                 {beer.beer.beer_name}
             </Typography>
-            <Typography variant="subtitle1" color="textSecondary">
+            <Typography style={{padding: "10%", textAlign: "center"}} variant="subtitle1" color="textSecondary">
                 {beer.beer.beer_description}
             </Typography>
             </CardContent>

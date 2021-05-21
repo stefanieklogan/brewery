@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 // import Logo from "../assets/Celebration_Logo.png";
 import BeerPhoto from "../assets/about-celebration.png";
+import Gif from "../assets/gif2.gif";
 // import BeerGlass from "../assets/beer-glass";
 // import beerImage from "../../assets/brewery.jpg";
 import Row from "react-bootstrap/Row";
@@ -93,14 +94,18 @@ return (
             Visit Us{" "}
         </Button>
     </Grid>
-    <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%", border: "solid 1px", borderRadius: "8px"}}>
+    <Container style={{display:"flex", justifyContent: "center", alignItems: "center" }}>
+        <Image styles={{width:"100%", height:"100%"}} src={Gif}/>
+    </Container>
+
+    {/* <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%", border: "solid 1px", borderRadius: "8px"}}>
         <Typography style={{marginTop: "1%", marginBottom: "2%"}} component="h4" variant="h4">
             BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
         </Typography>
         <Typography component="h4" variant="h4">
             OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
         </Typography>
-    </Container>
+    </Container>                         */}
     <Footer />
     <Copyright />
     </Grid>

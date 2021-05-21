@@ -7,17 +7,17 @@ import Copyright from '../components/Copyright/';
 import Image from 'react-bootstrap/Image';
 import Beer from "../assets/contact-celebration.png";
 import { makeStyles } from "@material-ui/core/styles";
-import { Transition } from 'react-transition-group';
+// import { Transition } from 'react-transition-group';
 
 
 const useStyles = makeStyles({
     para: {
         color: "black",
         textAlign: "center",
-        marginTop: "30px",
+        marginTop: "50px",
         marginBottom: "50px",
-        paddingRight: "100px",
-        paddingLeft: "100px",
+        paddingRight: "25%",
+        paddingLeft: "25%",
     },
     paraTwo: {
         color: "white",
