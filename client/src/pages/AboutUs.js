@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 // import Logo from "../assets/Celebration_Logo.png";
-import BeerPhoto from "../assets/beer-flight.jpg";
+import BeerPhoto from "../assets/about-celebration.png";
 // import BeerGlass from "../assets/beer-glass";
 // import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
@@ -59,17 +59,12 @@ function AboutUs() {
     return (
         <div>
             <Grid>                 
-            {/* <div className="justify-content-md-center" style={{position:"relative"}}>
-            <h3 className={styles.titleStyle} component="h3" variant="h3">
-                About Celebration Brewing
-            </h3> */}
                 <div className={styles.image}>
                     <Image src={BeerPhoto} alt="Celebration Brewing Logo" fluid />
                 </div>
-            {/* </div> */}
-            <Typography className={styles.titleStyle} component="h3" variant="h3">
+            {/* <Typography className={styles.titleStyle} component="h3" variant="h3">
                 About Celebration Brewing
-            </Typography>
+            </Typography> */}
             
             <Typography className={styles.para} component="p" variant="inherit">
                 Since 2021, Celebration Brewing Company has been committed to producing authentic and unique beers that push the boundaries of regular brewing styles and categories. We’re proud to serve our customers with only the best, continually crafting each taste until it’s exactly right.
@@ -89,13 +84,6 @@ function AboutUs() {
         </div>
     )
 };
-
-// const itemData= [
-//     {
-//         img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-//         title: "beer glass"
-//     }
-// ]
 
 export default AboutUs
 

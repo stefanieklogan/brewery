@@ -1,11 +1,11 @@
 import React from 'react';
-import { Typography, Container, Grid, Box } from '@material-ui/core';
+import { Typography, Container, Grid } from '@material-ui/core';
 // import { sizing } from '@material-ui/system';
 import FeedbackForm from '../components/FeedbackForm/';
 import Footer from '../components/Footer/';
 import Copyright from '../components/Copyright/';
 import Image from 'react-bootstrap/Image';
-import Beer from "../assets/pour-beer.jpg";
+import Beer from "../assets/contact-celebration.png";
 import { makeStyles } from "@material-ui/core/styles";
 
 
@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     paraTwo: {
         color: "white",
         textAlign: "center",
-        marginTop: "30px",
+        marginTop: "50px",
         marginBottom: "50px",
         paddingRight: "100px",
         paddingLeft: "100px",
@@ -58,9 +58,9 @@ function Contact() {
                 <div className={styles.image}>
                     <Image src={Beer} alt="Pouring beer" fluid/>
                 </div>
-            <Typography className={styles.title} component="h3" variant="h3">
+            {/* <Typography className={styles.title} component="h3" variant="h3">
                 CONTACT US
-                </Typography>
+                </Typography> */}
                 <Typography className={styles.para} component="p" variant="h6">
                 Located in the Celebration area of Orlando, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce out beers,etc.
                 </Typography>
