@@ -13,6 +13,23 @@ import Login from './pages/AdminLogin';
 import FeedbackResults from './pages/FeedbackResults';
 import AdminSignupForm from './pages/AdminSignup';
 
+import { createMuiTheme, MuiCssBaseline } from '@material-ui/core';
+
+const font = 'Barlow, Playfair Display';
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: font,
+  },
+  // overrides: {
+  //   MuiCssBaseline: {
+  //     '@global': {
+  //       '@font-face': [raleway]
+  //     }
+  //   }
+  // }
+})
+
 
 function App() {
   return (

@@ -1,10 +1,11 @@
 import React from 'react';
-import './style.css';
 import { Link } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import Image from 'react-bootstrap/Image';
 import Logo from "../../assets/Celebration_LogoBLACK.png";
 // import Row from 'react-bootstrap/Row';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+
 
 
 const useStyles = makeStyles({
@@ -19,6 +20,14 @@ const useStyles = makeStyles({
     }
 })
 
+const font = 'Barlow, Playfair Display';
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: font,
+  },
+})
+
 function NavBar() {
     const styles = useStyles();
     return (
@@ -29,6 +38,7 @@ function NavBar() {
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
+                <ThemeProvider theme={theme}>
                     <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul className="navbar-nav nav-fill w-50">
                             {/* <li className="nav-item">
@@ -37,19 +47,19 @@ function NavBar() {
 
                             </li> */}
                             <li className="nav-item">
-                                <Link style={{color:"white", fontSize:"24px"}} className="nav-link" to="/"> Home </Link>
+                                <Link style={{color:"white", fontSize:"18px"}} className="nav-link" to="/"> Home </Link>
                             </li>
                             <li className="nav-item">
-                                <Link style={{color:"white", fontSize:"24px"}} className="nav-link" to="/beer"> Beer </Link>
+                                <Link style={{color:"white", fontSize:"18px"}} className="nav-link" to="/beer"> Beer </Link>
                             </li>
                             <li className="nav-item">
-                                <Link style={{color:"white", fontSize:"24px"}} className="nav-link" to="/about"> About</Link>
+                                <Link style={{color:"white", fontSize:"18px"}} className="nav-link" to="/about"> About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link style={{color:"white", fontSize:"24px"}} className="nav-link" to="/contact"> Contact </Link>
+                                <Link style={{color:"white", fontSize:"18px"}} className="nav-link" to="/contact"> Contact </Link>
                             </li>
                             <li className="nav-item">
-                                <Link style={{color:"white", fontSize:"24px"}} className="nav-link" to="/visit"> Visit </Link>
+                                <Link style={{color:"white", fontSize:"18px"}} className="nav-link" to="/visit"> Visit </Link>
                             </li>
                             {/* <li className="nav-item">
                                 <Link className="nav-link" to="/signup"> NewsletterSignup</Link>
@@ -66,6 +76,7 @@ function NavBar() {
                             {/* <a href='https://untappd.com/CelebrationBrewing?ref=followbtn'><img alt="like brewery on untappd" className="right" src='https://untappd.akamaized.net/social/ut_follow_sm.png' /></a> */}
                         </ul>
                     </div>
+                    </ThemeProvider>
                 </nav>
             </div>
         </div>
