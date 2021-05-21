@@ -1,13 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Button, Typography } from '@material-ui/core';
+import { Grid, Button, Typography, Container } from '@material-ui/core';
 // import Button from '@material-ui/core/Button';
 // import Typography from '@material-ui/core/Typography';
 import Logo from "../../assets/Celebration_Logo.png";
 // import beerImage from "../../assets/brewery.jpg";
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 // import Grid from '@material-ui/core/Grid';
 
@@ -46,10 +46,9 @@ const useStyles = makeStyles((theme) => ({
         // alignItems: "center",
     },
     image: {
-        height: "35%",
-        width: "35%",
+        height: "25%",
+        width: "25%",
         paddingTop: "100px",
-        justify: "center"
     },
     beerImage: {
         height: "100%",
@@ -62,9 +61,9 @@ function HomePageAbout() {
     const styles = useStyles();
     return (
         <Grid>
-            <Grid>
-                <Image justify="center" className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
-            </Grid>
+            <Container style={{alignItems:"center", justifyContent: "center", display: "flex" }}>
+                <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
+            </Container>
             <Typography className={styles.titleStyle} component="h3" variant="h3">
                 ORLANDO'S FAVORITE BREWERY
             </Typography>
