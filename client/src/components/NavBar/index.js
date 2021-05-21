@@ -14,8 +14,8 @@ const useStyles = makeStyles({
         color: "#bd8a1f",
     },
     image: {
-        height: '125px',
-        width: "150px",
+        height: '75px',
+        width: "90px",
     }
 })
 
@@ -36,19 +36,19 @@ function NavBar() {
 
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/"> Home </Link>
+                                <Link style={{color:"white", fontSize:"24px"}} className="nav-link" to="/"> Home </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/beer"> Beer </Link>
+                                <Link style={{color:"white", fontSize:"24px"}} className="nav-link" to="/beer"> Beer </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/about"> About</Link>
+                                <Link style={{color:"white", fontSize:"24px"}} className="nav-link" to="/about"> About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/contact"> Contact </Link>
+                                <Link style={{color:"white", fontSize:"24px"}} className="nav-link" to="/contact"> Contact </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/visit"> Visit </Link>
+                                <Link style={{color:"white", fontSize:"24px"}} className="nav-link" to="/visit"> Visit </Link>
                             </li>
                             {/* <li className="nav-item">
                                 <Link className="nav-link" to="/signup"> NewsletterSignup</Link>

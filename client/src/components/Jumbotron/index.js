@@ -17,7 +17,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import { Icon } from '@iconify/react';
 //, InlineIcon removed after Icon- waning no unused vars
-// import untappdIcon from '@iconify-icons/simple-icons/untappd';
+import untappdIcon from '@iconify-icons/mdi/untappd';
 // import ResponsiveImgMaterialUi from "responsive-img-material-ui";
 import Logo from "../../assets/Celebration_Logo2.png";
 
@@ -64,7 +64,7 @@ function Jumbotron() {
                 </Grid>
 
                 <Grid container justify="center">
-                    <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon /></a>
+                    <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon icon={untappdIcon} /></a>
                     <a href="https://www.instagram.com/celebrationbrewing/" rel="noopener noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large" /></a>
                     <a href="https://www.facebook.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.icons}><FacebookIcon fontSize="large" /></a>
                     <a href="https://twitter.com/CelebrationBrew" rel="noopener noreferrer" target="_blank" className={styles.icons}><TwitterIcon fontSize="large" /></a>

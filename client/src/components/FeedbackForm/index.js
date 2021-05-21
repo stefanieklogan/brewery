@@ -2,7 +2,7 @@ import React from 'react';
 // import { HashRouter, Route, Switch } from 'react-router-dom';
 import Checkbox from '@material-ui/core/Checkbox';
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import { Container, Button } from '@material-ui/core/';
 // import Typography from '@material-ui/core/Typography';
 import Form from 'react-bootstrap/Form';
 // import { makeStyles } from "@material-ui/core/styles";
@@ -90,13 +90,13 @@ class FeedbackForm extends React.Component {
         // const styles = useStyles();
             
         return (
-
+            <Container style={{width:"75%"}}>
             <Form onSubmit={this.handleSubmit}>
                 
-                    <Form.Group controlId="formBasicEmail">
+                    <Form.Group style={{marginBottom: "2%"}} controlId="formBasicEmail">
                         <Form.Control type="name" placeholder="Enter Name" value={name} onChange={this.handleNameChange}></Form.Control>
                     </Form.Group>
-                    <Form.Group controlId="exampleForm.ControlTextarea1">
+                    <Form.Group style={{marginBottom: "2%"}} controlId="exampleForm.ControlTextarea1">
                         <Form.Control as="textarea" placeholder="Message" rows={3} value={feedback} onChange={this.handleFeedbackChange}/>
                     </Form.Group>
                     {/* <label>Name:</label> */}
@@ -110,6 +110,7 @@ class FeedbackForm extends React.Component {
                 <Button className="submitBtn" variant="outlined" type="submit">Submit</Button>
 
             </Form>
+            </Container>
         );
     }
 }

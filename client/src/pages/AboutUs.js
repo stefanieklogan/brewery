@@ -5,7 +5,8 @@ import { Grid } from '@material-ui/core';
 import { makeStyles } from "@material-ui/core/styles";
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Logo from "../assets/Celebration_Logo.png";
+// import Logo from "../assets/Celebration_Logo.png";
+import BeerPhoto from "../assets/beer-flight.jpg";
 // import BeerGlass from "../assets/beer-glass";
 // import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
@@ -23,11 +24,13 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     titleStyle: {
-        backgroundColor: "white",
+        // backgroundColor: "white",
         color: "#c89019",
         textAlign: "center",
-        marginTop: "80px",
-        marginBottom: "10px",
+        postition: "absolute",
+        // marginTop: "80px",
+        bottom: "80px",
+        right: "50px",
     },
     para: {
         textAlign: "center",
@@ -40,9 +43,10 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
     },
     image: {
-        height: "350px",
-        width: "350px",
-        paddingTop: "100px",
+        height: "100%",
+        width: "100%",
+        // position: "relative",
+        // paddingTop: "50px",
     },
     beerImage: {
         height: "350px",
@@ -66,14 +70,16 @@ function AboutUs() {
                         </ImageListItem>
                     ))}
                 </ImageList> */}
-            <Row className="justify-content-md-center">
-                <div className={styles.image}>
-                    <Image src={Logo} alt="Celebration Brewing Logo" fluid />
-                </div>
-            </Row>
-            <Typography className={styles.titleStyle} component="h3" variant="h3">
+            <div className="justify-content-md-center" style={{position:"relative"}}>
+            <h3 className={styles.titleStyle} component="h3" variant="h3">
                 About Celebration Brewing
-            </Typography>
+            </h3>
+                <div className={styles.image}>
+                    {/* <Image src={Logo} alt="Celebration Brewing Logo" fluid /> */}
+                    <Image src={BeerPhoto} alt="Celebration Brewing Logo" fluid />
+                </div>
+            </div>
+            
             <Typography className={styles.para} component="p" variant="inherit">
                 Since 2021, Celebration Brewing Company has been committed to producing authentic and unique beers that push the boundaries of regular brewing styles and categories. We’re proud to serve our customers with only the best, continually crafting each taste until it’s exactly right.
             <br />
