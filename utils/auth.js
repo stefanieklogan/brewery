@@ -1,12 +1,9 @@
-// const withAuth = (req, res, next) => {
-//     if (!req.session.logged_in) {
-//         res.render('login', {
-//             message: "Login required",
-//             title: "login"
-//         });
-//     } else {
-//         next();
-//     }
-// };
+const withAuth = (req, res, next) => {
+    if (!req.session.logged_in) {
+       alert("you must be logged in to see this page")
+    } else {
+        next();
+    }
+};
 
-// module.exports = withAuth;
+module.exports = withAuth;

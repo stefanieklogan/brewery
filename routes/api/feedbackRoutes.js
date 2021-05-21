@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Feedback } = require('../../models');
-const feedbackController = require("../../controllers/feedbackControllers");
+const withAuth = require('../../utils/auth')
+// const feedbackController = require("../../controllers/feedbackControllers");
 
 router.post('/', async (req, res) => {
 
@@ -22,8 +23,17 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.route("/")
-  .get(feedbackController.getFeedback)
+// router.route("/")
+//   .get(feedbackController.getFeedback)
 
+router.get('/',withAuth, async (req, res) => {
+  let postData = await Feedback.findAll({});
 
+  const posts = postData.map(
+    (post) => post.get({
+      plain: true
+    }));
+
+    res.status(200).json(posts);
+});
 module.exports = router;
