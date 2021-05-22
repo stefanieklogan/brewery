@@ -7,7 +7,7 @@ import Logo from "../../assets/Celebration_LogoBLACK.png";
 // import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Container from '@material-ui/core/Container';
+import { Container, Grid } from '@material-ui/core';
 import Image from 'react-bootstrap/Image';
 // import { Grid } from '@material-ui/core';
 
@@ -67,11 +67,13 @@ function Footer() {
                         </Row>
                         
                     </Col>
-                    <Col style={{width:"25%", height:"25%", justifyContent: "center", alignItems: "center"}}>
+                    
+                    <Col style={{width:"25%", height:"25%", justify: "center", alignItems: "center"}}>
                         <div >
                             <Image style={{width: "150px"}} src={Logo} alt="Celebration Brewing Logo" fluid />
                         </div>
                     </Col>
+                    
                         <Col>
                         <Row>
                         <Typography className={styles.para} component="p" variant="inherit">

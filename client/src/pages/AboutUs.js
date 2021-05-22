@@ -103,7 +103,8 @@ return (
         <Image styles={{width:"100%", height:"100%"}} src={Gif}/>
     </Container>
     </Grid>
-    <div style={{width: "80%", justifyContent: "center", textAlign: "left", padding: "2%", alignItems: "center"}}>
+    <Grid container justify="center">
+    <div style={{width: "80%", textAlign: "left", padding: "2%", alignItems: "center"}}>
         <Accordion style={{marginBottom: "1%", backgroundColor: "white", color: "black"}}>
             <AccordionSummary style={{backgroundColor: "black", color: "white"}}
             expandIcon={<ExpandMoreIcon style={{color: "white"}}/>}
@@ -161,6 +162,7 @@ return (
             </AccordionDetails>
         </Accordion>
     </div>
+    </Grid>
 
     {/* <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%", border: "solid 1px", borderRadius: "8px"}}>
         <Typography style={{marginTop: "1%", marginBottom: "2%"}} component="h4" variant="h4">

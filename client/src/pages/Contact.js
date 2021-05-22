@@ -43,9 +43,9 @@ const useStyles = makeStyles({
     image: {
         height: "100%",
         width: "100%",
-        display: "flex",
+        // display: "flex",
         // justifyContent: "center",
-        // flexWrap: "wrap",
+        flexWrap: "wrap",
         // marginTop: "50px",
     }
 });
@@ -53,41 +53,6 @@ const useStyles = makeStyles({
 function Contact() {
     const styles = useStyles();
 
-    // const duration = 300;
-
-    // const defaultStyle = {
-    //     transition: `opacity ${duration}ms ease-in-out`,
-    //     opacity: 0,
-    // }
-
-    // const transitionStyles= {
-    //     entering: { opacity: 1 },
-    //     entered: { opacity: 1 },
-    //     exiting: { opacity: 0 },
-    //     exited: { opacity: 0 },
-    // };
-
-    // const Fade = ({ in: inProp }) => (
-    //     <Transition in={inProp} timeout={duration}>
-    //         {state => (
-    //             <div style={{
-    //                 ...defaultStyle,
-    //                 ...transitionStyles[state]
-    //             }}>
-    //                 Breaking Ground
-    //             </div>
-    //         )}
-    //     </Transition>
-    // // );
-
-    // const documentOptions = {
-    //     loop: true,
-    //     autoplay: true,
-    //     animationData: documentsAnimation,
-    //     rendererSettings: {
-    //         presereAspectRatio: "xMidYMid slice"
-    //     }
-    // };
 
     return (
         <Grid>
@@ -99,10 +64,11 @@ function Contact() {
                 CONTACT US
                 </Typography> */}
                 {/* <Zoom { ...documentOptions}>   */}
-                <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%", border: "solid 1px", borderRadius: "8px"}}>
+                <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
                     <Typography style={{marginTop: "1%", marginBottom: "2%"}} component="h4" variant="h4">
                         BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
                     </Typography>
+                    <hr style={{width: "50%", justifyItems: "center"}}/>
                     <Typography component="h4" variant="h4">
                         OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
                     </Typography>
