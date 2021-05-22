@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import TableHtml from '../components/TableHtml';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
-
-// import API from '../utils/API';
-// import moment from 'moment';
+import moment from 'moment';
 
 class TableData extends Component {
     state = {
@@ -12,16 +10,21 @@ class TableData extends Component {
         headings: ["Date", "Name", "Email", "Contact?", "Feedback"],
         format: "",
         feedback: [],
-        sort: "DESC"
+        sort: "DESC",
+        dateMDY: moment('2021-05-21T21:17:23.000Z').format('l')
     };
 
     componentDidMount() {
         this.displayFeedback();
     }
 
-    componentDidUpdate(prevProps) {
-        if (this.props.search !== prevProps.search) this.displayFeedback();
-    }
+
+	handleLogout = e => {
+		e.preventDefault();
+		axios.post('/api/admin/logout')
+			.then(res => {console.log(res)})
+			.catch(error => {console.log(error)})
+	}
   
     displayFeedback = () => {
         axios.get('/api/feedback')
@@ -29,6 +32,11 @@ class TableData extends Component {
             console.log(res.data)
             this.setState({ rows: res.data })
         })};
+
+
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.search !== prevProps.search) this.displayFeedback();
+    // }
 
     handleClickChange = e => {
         if (this.state.sort === "DESC") {
@@ -65,6 +73,7 @@ class TableData extends Component {
                 Log Out</Button>
             <TableHtml
                 headings={this.state.headings}
+                dateMDY={this.state.date}
                 click={this.handleClickChange}
                 rows={this.state.rows}
                 format={this.state.format}
