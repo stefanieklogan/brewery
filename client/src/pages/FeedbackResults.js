@@ -18,6 +18,7 @@ class TableData extends Component {
         this.displayFeedback();
     }
 
+
 	handleLogout = e => {
 		e.preventDefault();
 		axios.post('/api/admin/logout')
@@ -32,9 +33,11 @@ class TableData extends Component {
             this.setState({ rows: res.data })
         })};
 
+
     // componentDidUpdate(prevProps) {
     //     if (this.props.search !== prevProps.search) this.displayFeedback();
     // }
+
     handleClickChange = e => {
         if (this.state.sort === "DESC") {
             this.setState({ sort: "ASCEND" })
@@ -54,6 +57,13 @@ class TableData extends Component {
         }
         this.setState({feedback:sortedArr}, () => {this.displayFeedback()})
     }
+
+    handleLogout = e => {
+		e.preventDefault();
+		axios.post('/api/admin/logout')
+			.then(res => {console.log(res)})
+			.catch(error => {console.log(error)})
+	}
 
     render() {
         return (
