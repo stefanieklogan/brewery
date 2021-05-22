@@ -59,7 +59,7 @@ function HomePageAbout() {
             <Container style={{alignItems:"center", justifyContent: "center", display: "flex" }}>
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
             </Container>
-            <Typography className={styles.titleStyle} component="h3" variant="h3">
+            <Typography fade className={styles.titleStyle} component="h3" variant="h3">
                 ORLANDO'S FAVORITE BREWERY
             </Typography>
             <Typography className={styles.para} component="p" variant="inherit">

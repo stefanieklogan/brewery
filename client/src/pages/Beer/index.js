@@ -16,8 +16,12 @@ import BeerImg from "../../assets/beer-celebration.png";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: 'flex',
-        padding: '50px',
+        // display: 'flex',
+        // padding: '30px',
+        marginRight: "5%",
+        marginLeft: "5%",
+        marginBottom: "5%",
+        marginTop: "5%"
     },
     details: {
         display: 'flex',
@@ -29,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     cover: {
         height: 175,
         width: 150,
+        margin: "5%",
         // align: "center",
         // justify: "center",
     },
@@ -38,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: "50px"
     },
     image: {
-        display: "flex",
         height: "100%",
         width: "100%",
     }
@@ -103,11 +107,11 @@ function Beer() {
         {/* <Typography className={classes.title} component="h3" variant="h3">
             BEERS ON TAP
         </Typography> */}
-        <Grid container spacing={3} style={{ alignItems:"center", padding:"30px", justifyContent: "center" }}>
+        <Grid container style={{ alignItems:"center", justifyContent: "center", backgroundColor: "black" }}>
             {beers.map((beer) => (
             <Grid key={beer.beer.beer_name} item xs={6}>
             <Card className={classes.root}>
-            <CardActionArea style={{justifyContent: "center", alignItems: "center", display: "flex"}}>
+            <CardActionArea style={{justifyContent: "center", alignItems: "center"}}>
             <CardMedia
                 component="img"
                 className={classes.cover}
@@ -116,7 +120,7 @@ function Beer() {
                 height="140"
             />
             <CardContent>
-            <Typography style={{textAlign: "center", marginTop: "3%"}} component="h4" variant="h4">
+            <Typography style={{textAlign: "center", marginTop: "3%", padding: "5%"}} component="h4" variant="h4">
                 {beer.beer.beer_name}
             </Typography>
             <Typography style={{padding: "10%", textAlign: "center"}} variant="subtitle1" color="textSecondary">

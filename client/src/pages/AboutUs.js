@@ -14,17 +14,21 @@ import Gif from "../assets/gif2.gif";
 // import Col from 'react-bootstrap/Col';
 // import Container from 'react-bootstrap/Container';
 import Image from "react-bootstrap/Image";
-// import { ImageList } from '@material-ui/core';
-// import ImageListItem from '@material-ui/core/ImageListItem';
+import { Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+root: {
     "& > *": {
-      margin: theme.spacing(1),
-      textAlign: "center",
+    margin: theme.spacing(1),
+    textAlign: "center",
     },
-  },
-  titleStyle: {
+},
+heading: {
+    fontSize: theme.typography.pxToRem(21),
+    fontWeight: theme.typography.fontWeightRegular,
+    },
+titleStyle: {
     // backgroundColor: "white",
     color: "#c89019",
     textAlign: "center",
@@ -32,26 +36,26 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "70px",
     bottom: "80px",
     right: "50px",
-  },
-  para: {
+},
+para: {
     textAlign: "center",
     marginTop: "30px",
     paddingRight: "15%",
     paddingLeft: "15%",
-  },
-  button: {
+},
+button: {
     justifyContent: "center",
     alignItems: "center",
-  },
-  image: {
+},
+image: {
     height: "100%",
     width: "100%",
     // position: "relative",
     // paddingTop: "50px",
-  },
-  beerImage: {
+},
+beerImage: {
     height: "350px",
-  },
+},
 }));
 
 function AboutUs() {
@@ -60,7 +64,7 @@ return (
   <div>
     <Grid>
       <div className={styles.image}>
-        <Image src={BeerPhoto} alt="Celebration Brewing Logo" fluid />
+        <Image fade src={BeerPhoto} alt="Celebration Brewing Logo" fluid />
       </div>
       {/* <Typography className={styles.titleStyle} component="h3" variant="h3">
                 About Celebration Brewing
@@ -99,7 +103,64 @@ return (
         <Image styles={{width:"100%", height:"100%"}} src={Gif}/>
     </Container>
     </Grid>
-  
+    <div style={{width: "80%", justifyContent: "center", textAlign: "left", padding: "2%", alignItems: "center"}}>
+        <Accordion style={{marginBottom: "1%", backgroundColor: "white", color: "black"}}>
+            <AccordionSummary style={{backgroundColor: "black", color: "white"}}
+            expandIcon={<ExpandMoreIcon style={{color: "white"}}/>}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+            >
+            <Typography className={styles.heading}>What made you decide to open up a brewery here in Celebration?</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+                <Typography>
+                    I looked at a lot of places and I scouted many established breweries downtown Orlando and something kept drawing me back to Celebration. There are many great food & drink options in downtown Celebration but not for the beer fans out there. 
+                </Typography>
+            </AccordionDetails>
+        </Accordion>
+        <Accordion style={{marginBottom: "1%", backgroundColor: "white", color: "black"}}>
+            <AccordionSummary style={{backgroundColor: "black", color: "white"}}
+            expandIcon={<ExpandMoreIcon style={{color: "white"}}/>}
+            aria-controls="panel2a-content"
+            id="panel2a-header"
+            >
+            <Typography className={styles.heading}>What have you enjoyed most about the process?</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+                <Typography>
+                    I've enjoyed the partnership and business assistance I've had so far. Many residents in town have given me recommendations or they know a guy who can help out. It's a lot to start a brewery literal dirt to just before opening here soon.
+                </Typography>
+            </AccordionDetails>
+        </Accordion>
+        <Accordion style={{marginBottom: "1%", backgroundColor: "white", color: "black"}}>
+            <AccordionSummary style={{backgroundColor: "black", color: "white"}}
+            expandIcon={<ExpandMoreIcon style={{color: "white"}}/>}
+            aria-controls="panel3a-content"
+            id="panel3a-header"
+            >
+            <Typography className={styles.heading}>Will you be offering a Celebration resident discount?</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+                <Typography>
+                    I;ve got several resident-focused events inthe works for 2023 where I hope residents and community members come to enjoy time here. that's when we'll say thank you for their on-going support.
+                </Typography>
+            </AccordionDetails>
+        </Accordion>
+        <Accordion style={{marginBottom: "1%", backgroundColor: "white", color: "black"}}>
+            <AccordionSummary style={{backgroundColor: "black", color: "white"}}
+            expandIcon={<ExpandMoreIcon style={{color: "white"}}/>}
+            aria-controls="panel4a-content"
+            id="panel4a-header"
+            >
+            <Typography className={styles.heading}>What types of beer will you be known for?</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+                <Typography>
+                    We have a range - stout, IPA, ale and lager just to name a few. I'd like to think we'll be known for unique tastes and names. Spring Park Stout, Celebration Storm IPA and Lakeside Lager are just a few beer names inspired by the great community we operate from. 
+                </Typography>
+            </AccordionDetails>
+        </Accordion>
+    </div>
 
     {/* <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%", border: "solid 1px", borderRadius: "8px"}}>
         <Typography style={{marginTop: "1%", marginBottom: "2%"}} component="h4" variant="h4">
