@@ -74,11 +74,14 @@ function HomePageAbout() {
             <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                 <Button className={styles.button} variant="outlined" href="#"> Visit Us </Button>
             </Grid>
-            <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%", border: "solid 1px", borderRadius: "8px"}}>
-                    <Typography style={{marginTop: "1%", marginBottom: "2%"}} component="h4" variant="h4">
+            <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
+                    <Typography style={{marginTop: "1%", marginBottom: "1%"}} component="h4" variant="h4">
                         BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
                     </Typography>
-                    <Typography component="h4" variant="h4">
+                    <Grid container justify="center">
+                        <hr style={{width: "50%", height: "5px", color: "#c89019", opacity: 0.7}} />
+                    </Grid>
+                    <Typography style={{ marginTop: "1%"}} component="h4" variant="h4">
                         OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
                     </Typography>
                 </Container>

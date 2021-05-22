@@ -65,11 +65,13 @@ function Contact() {
                 </Typography> */}
                 {/* <Zoom { ...documentOptions}>   */}
                 <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
-                    <Typography style={{marginTop: "1%", marginBottom: "2%"}} component="h4" variant="h4">
+                    <Typography style={{marginTop: "1%", marginBottom: "1%"}} component="h4" variant="h4">
                         BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
                     </Typography>
-                    <hr style={{width: "50%", justifyItems: "center"}}/>
-                    <Typography component="h4" variant="h4">
+                    <Grid container justify="center">
+                        <hr style={{width: "50%", height: "5px", color: "#c89019", opacity: 0.7}} />
+                    </Grid>
+                    <Typography style={{ marginTop: "1%"}} component="h4" variant="h4">
                         OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
                     </Typography>
                 </Container>
