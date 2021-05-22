@@ -19,13 +19,17 @@ class TableData extends Component {
         this.displayFeedback();
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.search !== prevProps.search) this.displayFeedback();
+    }
+
 	handleLogout = e => {
 		e.preventDefault();
 		axios.post('/api/admin/logout')
 			.then(res => {console.log(res)})
 			.catch(error => {console.log(error)})
 	}
-
+  
     displayFeedback = () => {
         axios.get('/api/feedback')
         .then(res => {
@@ -73,5 +77,4 @@ class TableData extends Component {
     };
 
     };
-
 export default TableData;
