@@ -8,6 +8,9 @@ import BeerCan3 from "../../assets/beer-can3.jpg";
 import BeerCan4 from "../../assets/beer-can4.jpg";
 import Image from 'react-bootstrap/Image';
 
+import MailchimpForm from '../Mailchimp/';
+
+
 // import beerImage from "../../assets/brewery.jpg";
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
@@ -59,7 +62,7 @@ function HomePageAbout() {
             <Container style={{alignItems:"center", justifyContent: "center", display: "flex" }}>
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
             </Container>
-            <Typography className={styles.titleStyle} component="h3" variant="h3">
+            <Typography fade className={styles.titleStyle} component="h3" variant="h3">
                 ORLANDO'S FAVORITE BREWERY
             </Typography>
             <Typography className={styles.para} component="p" variant="inherit">
@@ -74,11 +77,14 @@ function HomePageAbout() {
             <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                 <Button className={styles.button} variant="outlined" href="#"> Visit Us </Button>
             </Grid>
-            <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%", border: "solid 1px", borderRadius: "8px"}}>
-                    <Typography style={{marginTop: "1%", marginBottom: "2%"}} component="h4" variant="h4">
+            <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
+                    <Typography style={{marginTop: "1%", marginBottom: "1%"}} component="h4" variant="h4">
                         BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
                     </Typography>
-                    <Typography component="h4" variant="h4">
+                    <Grid container justify="center">
+                        <hr style={{width: "50%", height: "5px", color: "#c89019", opacity: 0.7}} />
+                    </Grid>
+                    <Typography style={{ marginTop: "1%"}} component="h4" variant="h4">
                         OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
                     </Typography>
                 </Container>
@@ -99,6 +105,7 @@ function HomePageAbout() {
                     <Button variant="outlined" href="#"> View All Beers </Button>
                 </Grid>
             </Container>
+            <MailchimpForm />
             {/* <Container fluid>
                 <Row>
                     <Col>

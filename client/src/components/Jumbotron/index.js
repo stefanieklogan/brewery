@@ -19,10 +19,20 @@ import { Icon } from '@iconify/react';
 //, InlineIcon removed after Icon- waning no unused vars
 import untappdIcon from '@iconify-icons/mdi/untappd';
 // import ResponsiveImgMaterialUi from "responsive-img-material-ui";
-import Logo from "../../assets/Celebration_Logo2.png";
+import Logo from "../../assets/celebration-logo-animate.gif";
 
 const useStyles = makeStyles({
     icons: {
+        marginRight: "25px",
+        marginLeft: "25px",
+        // marginBottom: "40px",
+        color: "black",
+        '&:hover': {
+            color: "#c89019",
+        }
+    },
+    beerIcon: {
+        fontSize: "40px",
         marginRight: "25px",
         marginLeft: "25px",
         marginBottom: "40px",
@@ -31,17 +41,9 @@ const useStyles = makeStyles({
             color: "#c89019",
         }
     },
-    beerIcon: {
-        fontSize: "30px",
-        marginRight: "25px",
-        marginLeft: "25px",
-        color: "black",
-        '&:hover': {
-            color: "#c89019",
-        }
-    },
     bodyColor: {
-        backgroundColor: "#f4f0e9",
+        // backgroundColor: "#f4f0e9",
+        backgroundColor: "white",
     },
     image: {
         height: "75%",
