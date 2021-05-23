@@ -1,5 +1,7 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
+import Footer from '../components/Footer/';
+import Copyright from '../components/Copyright/';
 // import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Logo from "../assets/Celebration_Logo.png"
@@ -59,10 +61,10 @@ function VisitUs() {
     const styles = useStyles();
     return (
         <div>
-            <Container fluid>
-            <div style={{height: "100%", width: "100%"}}>
-        <Image fade src={visitImage} alt="Celebration Brewing Logo" fluid />
-            </div>
+            <Container fluid style={{marginBottom: "10%"}}>
+                <div style={{height: "100%", width: "100%"}}>
+            <Image fade src={visitImage} alt="Celebration Brewing Logo" fluid />
+                </div>
                 <Row>
                     <Col sm={6}>
                         <div className={styles.beerImage}>
@@ -88,6 +90,8 @@ function VisitUs() {
                     </Col>
                 </Row>
             </Container>
+            < Footer />
+            < Copyright />
         </div>
     )
 };
