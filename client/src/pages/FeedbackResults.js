@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TableHtml from '../components/TableHtml';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
-
+import { withRouter } from "react-router-dom";
 // import API from '../utils/API';
 // import moment from 'moment';
 
@@ -17,41 +17,44 @@ class TableData extends Component {
 
     componentDidMount() {
         this.grabFeedback();
-    }
+    };
 
-	handleLogout = e => {
-		e.preventDefault();
-		axios.post('/api/admin/logout')
-			.then(res => {console.log(res)})
-			.catch(error => {console.log(error)})
-	}
+    handleLogout = e => {
+        e.preventDefault();
+        axios.post('/api/admin/logout')
+            .then(res => res.status === 204 ?
+                this.props.history.push('/') :
+                console.log("no redirect"))
+            .catch(error => { console.log(error)});
+    };
 
     grabFeedback = () => {
         axios.get('/api/feedback')
-        .then(res => {
-            console.log(res.data)
-            this.setState({ rows: res.data })
-        })};
+            .then(res => {
+                console.log(res.data);
+                this.setState({ rows: res.data });
+            })
+    };
 
     render() {
         return (
             <>
-            <Button type="submit" 
-            onClick={this.handleLogout} >
-                Log Out</Button>
-            <TableHtml
-                headings={this.state.headings}
-                click={this.handleClickChange}
-                rows={this.state.rows}
-                format={this.state.format}
-            />
+                <Button type="submit"
+                    onClick={this.handleLogout} >
+                    Log Out</Button>
+                <TableHtml
+                    headings={this.state.headings}
+                    click={this.handleClickChange}
+                    rows={this.state.rows}
+                    format={this.state.format}
+                />
             </>
         )
     };
 
-    };
+};
 
-export default TableData;
+export default withRouter(TableData);
 
 
     // componentDidUpdate(prevProps) {
