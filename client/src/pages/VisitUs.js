@@ -2,7 +2,9 @@ import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 // import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Logo from "../assets/Celebration_Logo.png";
+import Logo from "../assets/Celebration_Logo.png"
+import visitImage from "../assets/visit-celebration.png";
+
 import Map from "../assets/map.png";
 // import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
@@ -58,8 +60,11 @@ function VisitUs() {
     return (
         <div>
             <Container fluid>
+            <div style={{height: "100%", width: "100%"}}>
+        <Image fade src={visitImage} alt="Celebration Brewing Logo" fluid />
+            </div>
                 <Row>
-                    <Col sm={8}>
+                    <Col sm={6}>
                         <div className={styles.beerImage}>
                             <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
                             <Typography className={styles.titleStyle} component="h3" variant="h3">
@@ -75,7 +80,7 @@ function VisitUs() {
                                 <Link className="nav-link" to="/about"> PLAN YOUR VISIT</Link>                    </div>
                         </div>
                     </Col>
-                    <Col sm={4}>
+                    <Col sm={6}>
                         <div className={styles.mapImage}>
                             <Image src={Map} alt="Celebration Brewing Logo" fluid />
                             <Typography className={styles.titleStyle} component="h3" variant="h3"></Typography>
