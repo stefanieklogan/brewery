@@ -39,7 +39,7 @@ function NavBar() {
                 <Navbar collapseOnSelect expand="lg" >
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fixed ="true"/>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginRight: "3%"}} />
-                <Navbar.Collapse id="responsive-navbar-nav, justify-content-end" style={{marginLeft: "5%", marginTop: "2%"}}>
+                <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" style={{marginLeft: "5%", marginRight: "5%"}}>
                     <Nav className="mr-auto" >
                         <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/">Home</Nav.Link>
                         <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/beer">Beer</Nav.Link>
