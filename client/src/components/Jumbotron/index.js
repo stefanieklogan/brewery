@@ -19,7 +19,7 @@ import { Icon } from '@iconify/react';
 //, InlineIcon removed after Icon- waning no unused vars
 import untappdIcon from '@iconify-icons/mdi/untappd';
 // import ResponsiveImgMaterialUi from "responsive-img-material-ui";
-import Logo from "../../assets/Celebration_Logo2.png";
+import Logo from "../../assets/celebration-logo-animate.gif";
 
 const useStyles = makeStyles({
     icons: {
@@ -42,7 +42,8 @@ const useStyles = makeStyles({
         }
     },
     bodyColor: {
-        backgroundColor: "#f4f0e9",
+        // backgroundColor: "#f4f0e9",
+        backgroundColor: "white",
     },
     image: {
         height: "75%",
