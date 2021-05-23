@@ -1,5 +1,5 @@
 import React from 'react';
-// import { HashRouter, Route, Switch } from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
@@ -15,44 +15,47 @@ class AdminSignupForm extends React.Component {
 		};
 
 		this.handleEmailChange = (e) => {
-			this.setState({ email: e.target.value })
-		}
+			this.setState({ email: e.target.value });
+		};
 		this.handleNameChange = (e) => {
-			this.setState({ name: e.target.value })
-		}
+			this.setState({ name: e.target.value });
+		};
 
 		this.handlePasswordChange = (e) => {
-			this.setState({ password: e.target.value })
-		}
+			this.setState({ password: e.target.value });
+		};
 
-		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleSubmit =
+			this.handleSubmit.bind(this);
 	}
 
 	handleSubmit = e => {
 		e.preventDefault();
 		axios.post('/api/admin/signup', this.state)
-			.then(response => {
-				console.log(response)
+			.then(res => {
+				res.status === 200 ?
+					this.props.history.push('/admin/feedback') :
+					console.log("no redirect");
 			}).catch(error => {
-				console.log(error)
-			})
-	}
+				console.log(error);
+			});
+	};
 
 	render() {
 		const { email, name, password } = this.state
 		return (
 			<form noValidate autoComplete="off" onSubmit={this.handleSubmit}>
 
-				<TextField id="outlined-basic" label="Email" variant="outlined" 
-				value={email} 
-				onChange={this.handleEmailChange} />
+				<TextField id="outlined-basic" label="Email" variant="outlined"
+					value={email}
+					onChange={this.handleEmailChange} />
 
-				<TextField id="outlined-basic" label="Name" variant="outlined" 
-				value={name} 
-				onChange={this.handleNameChange} />
+				<TextField id="outlined-basic" label="Name" variant="outlined"
+					value={name}
+					onChange={this.handleNameChange} />
 
 				<TextField id="outlined-basic" label="Password" variant="outlined" value={password}
-				onChange={this.handlePasswordChange} />
+					onChange={this.handlePasswordChange} />
 
 				<Button type="submit" >Sign Up</Button>
 			</form>
@@ -60,4 +63,4 @@ class AdminSignupForm extends React.Component {
 	}
 }
 
-export default AdminSignupForm;
+export default withRouter(AdminSignupForm);
