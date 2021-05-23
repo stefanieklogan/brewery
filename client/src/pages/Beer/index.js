@@ -109,7 +109,7 @@ function Beer() {
         </Typography> */}
         <Grid container style={{ alignItems:"center", justifyContent: "center", backgroundColor: "black" }}>
             {beers.map((beer) => (
-            <Grid key={beer.beer.beer_name} item xs={6}>
+            <Grid key={beer.beer.beer_name} style={{height: "500px", width: "500px"}}>
             <Card className={classes.root}>
             <CardActionArea style={{justifyContent: "center", alignItems: "center"}}>
             <CardMedia
@@ -123,7 +123,7 @@ function Beer() {
             <Typography style={{textAlign: "center", marginTop: "3%", padding: "5%"}} component="h4" variant="h4">
                 {beer.beer.beer_name}
             </Typography>
-            <Typography style={{padding: "10%", textAlign: "center"}} variant="subtitle1" color="textSecondary">
+            <Typography style={{padding: "10%", textAlign: "center", overflow: "scroll"}} variant="subtitle1" color="textSecondary">
                 {beer.beer.beer_description}
             </Typography>
             </CardContent>
@@ -131,9 +131,9 @@ function Beer() {
             </Card>
             </Grid>
             ))}
+        </Grid>
         <Footer />
         <Copyright />
-        </Grid>
         </Grid>
     )
 }

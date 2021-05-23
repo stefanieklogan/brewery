@@ -8,6 +8,9 @@ import BeerCan3 from "../../assets/beer-can3.jpg";
 import BeerCan4 from "../../assets/beer-can4.jpg";
 import Image from 'react-bootstrap/Image';
 
+import MailchimpForm from '../Mailchimp/';
+
+
 // import beerImage from "../../assets/brewery.jpg";
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
@@ -102,6 +105,7 @@ function HomePageAbout() {
                     <Button variant="outlined" href="#"> View All Beers </Button>
                 </Grid>
             </Container>
+            <MailchimpForm />
             {/* <Container fluid>
                 <Row>
                     <Col>
