@@ -2,6 +2,7 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
+import { withRouter } from "react-router-dom";
 
 class Login extends React.Component {
 
@@ -25,31 +26,36 @@ class Login extends React.Component {
 		axios.post('/api/admin/login', {
 			email: this.state.email,
 			password: this.state.password
+		}).then(res => {
+			res.status === 200 ?
+				this.props.history.push('/admin/feedback') :
+				console.log("no redirect")
+		}).catch(error => {
+			console.log(error)
 		})
-			.then(response => {
-				console.log(response)
-			})
-			.catch(error => {
-				console.log(error)
-			})
 	}
-
 
 	render() {
 		const { email, password } = this.state
 		return (
 			<form noValidate autoComplete="off" >
-				<TextField id="outlined-basic" label="Email" variant="outlined" value={email}
+				<TextField id="outlined-basic"
+					label="Email" variant="outlined"
+					value={email}
 					onChange={this.handleEmailChange} />
 
-				<TextField id="outlined-basic" label="Password" variant="outlined" value={password}
+				<TextField id="outlined-basic"
+					label="Password" variant="outlined"
+					value={password}
 					onChange={this.handlePasswordChange} />
 
-				<Button type="submit" onClick={this.handleLogin} >Log In</Button>
-				
+				<Button type="submit"
+					onClick={this.handleLogin} >
+					Log In</Button>
+
 			</form>
 		);
 	}
 }
 
-export default Login;
+export default withRouter(Login);
