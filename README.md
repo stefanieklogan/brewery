@@ -11,7 +11,7 @@
 <a name="application"></a>
 ## Application
 
-* Deployed application: xxxxx
+* Deployed application: https://pure-journey-55067.herokuapp.com/
 
 * Walk thru video: xxx
 
@@ -22,21 +22,35 @@
 
 * Welcome to Celebration Brewing
 
+* As a business owner, I want users to understand my location, beer offerings, company history and contact methods. 
+
+* It is desired my beer offerings stay up-to-date based on inventory on untappd.com/celebrationbrewing. 
+
+* It is desired users can submit their email address for newsletter distribution.
+
+* It is desired a user can leave feedback & choose to be contacted via email. As an admin, I want to be able to login and view all feedback. 
+
 <a name="depend"></a>
 ## Dependencies
 
 * React.js
 
-* HTML
-
-* CSS
+* Material UI
 
 * mySQL
+
+* untappd API
 
 <a name="install"></a>
 ## Installation
 
 * After cloning this repository, run 'npm install' for dependencies. 
+
+* Create a '.env' file with your MySQL port, username, password and untappd API key. 
+
+* Schema and seeds files are available and should be executed prior to application use via 'npm run seeds'. Look for 'brewery_db' and three tables (feedback/admin/user) to verify file successfully ran.
+
+* To run the application, enter 'npm start' inside terminal. 
 
 <a name="notes"></a>
 ## Notes

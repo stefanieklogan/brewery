@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import TableHtml from '../components/TableHtml';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
+
 import { withRouter } from "react-router-dom";
 // import API from '../utils/API';
 // import moment from 'moment';
+
 
 class TableData extends Component {
     state = {
@@ -12,7 +14,8 @@ class TableData extends Component {
         headings: ["Date", "Name", "Email", "Contact?", "Feedback"],
         format: "",
         feedback: [],
-        sort: "DESC"
+        sort: "DESC",
+        dateMDY: moment('2021-05-21T21:17:23.000Z').format('l')
     };
 
     componentDidMount() {
@@ -36,6 +39,37 @@ class TableData extends Component {
             })
     };
 
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.search !== prevProps.search) this.displayFeedback();
+    // }
+
+    handleClickChange = e => {
+        if (this.state.sort === "DESC") {
+            this.setState({ sort: "ASCEND" })
+        } else {
+            this.setState({ sort: "DESC"})
+        }
+        this.handleSort();
+    }
+
+    handleSort = () => {
+        const sortedArr = [...this.state.feedback]
+        console.log(sortedArr);
+        if (this.state.sort === "DESC") {
+        sortedArr.sort((a,b) => a.date.localeCompare(b.date))}
+        else {
+        sortedArr.sort((a,b) => b.date.localeCompare(a.date))
+        }
+        this.setState({feedback:sortedArr}, () => {this.displayFeedback()})
+    }
+
+    handleLogout = e => {
+		e.preventDefault();
+		axios.post('/api/admin/logout')
+			.then(res => {console.log(res)})
+			.catch(error => {console.log(error)})
+	}
+
     render() {
         return (
             <>
@@ -51,11 +85,9 @@ class TableData extends Component {
             </>
         )
     };
-
 };
 
 export default withRouter(TableData);
-
 
     // componentDidUpdate(prevProps) {
     //     if (this.props.search !== prevProps.search) this.displayFeedback();
@@ -79,3 +111,4 @@ export default withRouter(TableData);
     //     }
     //     this.setState({feedback:sortedArr}, () => {this.displayFeedback()})
     // }
+
