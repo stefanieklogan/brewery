@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import TableHtml from '../components/TableHtml';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
-import moment from 'moment';
+
+import { withRouter } from "react-router-dom";
+// import API from '../utils/API';
+// import moment from 'moment';
+
 
 class TableData extends Component {
     state = {
@@ -15,24 +19,25 @@ class TableData extends Component {
     };
 
     componentDidMount() {
-        this.displayFeedback();
-    }
+        this.grabFeedback();
+    };
 
+    handleLogout = e => {
+        e.preventDefault();
+        axios.post('/api/admin/logout')
+            .then(res => res.status === 204 ?
+                this.props.history.push('/') :
+                console.log("no redirect"))
+            .catch(error => { console.log(error)});
+    };
 
-	handleLogout = e => {
-		e.preventDefault();
-		axios.post('/api/admin/logout')
-			.then(res => {console.log(res)})
-			.catch(error => {console.log(error)})
-	}
-  
-    displayFeedback = () => {
+    grabFeedback = () => {
         axios.get('/api/feedback')
-        .then(res => {
-            console.log(res.data)
-            this.setState({ rows: res.data })
-        })};
-
+            .then(res => {
+                console.log(res.data);
+                this.setState({ rows: res.data });
+            })
+    };
 
     // componentDidUpdate(prevProps) {
     //     if (this.props.search !== prevProps.search) this.displayFeedback();
@@ -68,19 +73,42 @@ class TableData extends Component {
     render() {
         return (
             <>
-            <Button type="submit" 
-            onClick={this.handleLogout} >
-                Log Out</Button>
-            <TableHtml
-                headings={this.state.headings}
-                dateMDY={this.state.date}
-                click={this.handleClickChange}
-                rows={this.state.rows}
-                format={this.state.format}
-            />
+                <Button type="submit"
+                    onClick={this.handleLogout} >
+                    Log Out</Button>
+                <TableHtml
+                    headings={this.state.headings}
+                    click={this.handleClickChange}
+                    rows={this.state.rows}
+                    format={this.state.format}
+                />
             </>
         )
     };
+};
 
-    };
-export default TableData;
+export default withRouter(TableData);
+
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.search !== prevProps.search) this.displayFeedback();
+    // }
+    // handleClickChange = e => {
+    //     if (this.state.sort === "DESC") {
+    //         this.setState({ sort: "ASCEND" })
+    //     } else {
+    //         this.setState({ sort: "DESC"})
+    //     }
+    //     this.handleSort();
+    // }
+
+    // handleSort = () => {
+    //     const sortedArr = [...this.state.feedback]
+    //     console.log(sortedArr);
+    //     if (this.state.sort === "DESC") {
+    //     sortedArr.sort((a,b) => a.date.localeCompare(b.date))}
+    //     else {
+    //     sortedArr.sort((a,b) => b.date.localeCompare(a.date))
+    //     }
+    //     this.setState({feedback:sortedArr}, () => {this.displayFeedback()})
+    // }
+

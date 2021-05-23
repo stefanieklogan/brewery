@@ -6,12 +6,10 @@ const { Admin } = require('../../models');
 router.post('/signup', async (req, res) => {
     try {
         const userData = await Admin.create(req.body);
-
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
             res.status(200).json(userData);
-            console.log(userData);
         });
 
     } catch (err) {
@@ -33,7 +31,6 @@ router.post('/login', async (req, res) => {
             });
             return;
         }
-        console.log(userData);
 
         const validPassword = await userData.checkPassword(req.body.password);
 
@@ -64,8 +61,6 @@ router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(204).end();
-            console.log("Logout Successful")
-            res.reload()
         });
     } else {
         res.status(404).end();
