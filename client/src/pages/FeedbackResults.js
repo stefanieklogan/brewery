@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 
 import { withRouter } from "react-router-dom";
 // import API from '../utils/API';
-// import moment from 'moment';
+import moment from 'moment';
 
 
 class TableData extends Component {
@@ -62,13 +62,6 @@ class TableData extends Component {
         }
         this.setState({feedback:sortedArr}, () => {this.displayFeedback()})
     }
-
-    handleLogout = e => {
-		e.preventDefault();
-		axios.post('/api/admin/logout')
-			.then(res => {console.log(res)})
-			.catch(error => {console.log(error)})
-	}
 
     render() {
         return (
