@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import Image from 'react-bootstrap/Image';
-import Logo from "../../assets/Celebration_LogoBLACK.png";
+import Logo from "../../assets/Celebration_LogoWHITE.png";
 // import Row from 'react-bootstrap/Row';
 // import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
@@ -12,7 +12,7 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 const useStyles = makeStyles({
 
     navStyle: {
-        backgroundColor: "#c89019",
+        backgroundColor: "#cd8f2a",
         // backgroundColor: "white",
         // color: "#bd8a1f",
     },
@@ -39,36 +39,16 @@ function NavBar() {
             <div className={styles.navStyle}>
                 <Navbar collapseOnSelect expand="lg" >
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fixed ="true"/>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginRight: "3%", color: "#c89019"}} />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginRight: "3%", color: "#efe9db"}} />
                 <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" style={{marginLeft: "5%", marginRight: "5%"}}>
                     <Nav className="mr-auto" >
-                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/">Home</Nav.Link>
-                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/beer">Beer</Nav.Link>
-                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/about">About</Nav.Link>
-                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/contact">Contact</Nav.Link>
-                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/visit">Visit</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"18px", fontFamily: "Barlow", fontWeight: 300}} href="/">HOME</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"18px", fontFamily: "Barlow", fontWeight: 300 }} href="/beer">BEER</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"18px", fontFamily: "Barlow", fontWeight: 300}} href="/about">ABOUT</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"18px", fontFamily: "Barlow", fontWeight: 300}} href="/contact">CONTACT</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"18px", fontFamily: "Barlow", fontWeight: 300}} href="/visit">VISIT</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-                    {/* <button style={{marginRight: "4%"}} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button> */}
-                    {/* <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                        <ul style={{marginRight: "4%"}} className="navbar-nav nav-fill">
-                            <li style={{marginRight: "2%"}} className="nav-item">
-                                <Link style={{color:"white", fontSize:"16px"}} className="nav-link" to="/"> Home </Link>
-                            </li>
-                            <li style={{marginRight: "2%"}} className="nav-item">
-                                <Link style={{color:"white", fontSize:"16px"}} className="nav-link" to="/beer"> Beer </Link>
-                            </li>
-                            <li style={{marginRight: "2%"}} className="nav-item">
-                                <Link style={{color:"white", fontSize:"16px"}} className="nav-link" to="/about"> About</Link>
-                            </li>
-                            <li style={{marginRight: "2%"}} className="nav-item">
-                                <Link style={{color:"white", fontSize:"16px"}} className="nav-link" to="/contact"> Contact </Link>
-                            </li>
-                            <li style={{marginRight: "2%"}} className="nav-item">
-                                <Link style={{color:"white", fontSize:"16px"}} className="nav-link" to="/visit"> Visit </Link>
-                            </li> */}
                             {/* <li className="nav-item">
                                 <Link className="nav-link" to="/signup"> NewsletterSignup</Link>
                             </li>

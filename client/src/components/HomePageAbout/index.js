@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Button, Typography, Container } from '@material-ui/core';
 import Logo from "../../assets/Celebration_Logo.png";
@@ -28,30 +29,36 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "white",
         color: "#c89019",
         textAlign: "center",
-        marginTop: "80px",
+        marginTop: "4%",
         marginBottom: "10px",
+        fontFamily: "Barlow",
+        fontWeight: 400,
+        fontSize: "52px"
     },
     para: {
         textAlign: "center",
         marginTop: "30px",
         paddingRight: "100px",
         paddingLeft: "100px",
-    },
-    button: {
-        // justifyContent: "center",
-        // alignItems: "center",
+        fontFamily: "Red Hat Display",
+        lineSpacing: "0.2px",
+        fontSize: "21px"
     },
     image: {
         height: "25%",
         width: "25%",
-        paddingTop: "100px",
+        paddingTop: "4%",
     },
     beerImage: {
-        height: "25%",
-        width: "25%",
-        display: "flex",
+        height: "100%",
+        width: "100%",
+        // display: "flex",
         padding: "2%",
-
+        marginBottom: "2%"
+    },
+    button: {
+        fontFamily: "Barlow",
+        fontSize: "18px",
     }
 }));
 
@@ -75,57 +82,49 @@ function HomePageAbout() {
             Everyday, we’re driven by our core values: delivering quality flavors, honoring our customers and celebrating the culture of beer. Experience it for yourself by joining us for a brewery tour, a special event or just to try what’s on tap.
             </Typography>
             <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
-                <Button className={styles.button} variant="outlined" href="#"> Visit Us </Button>
+                <Button className={styles.button} variant="outlined" href="/visit"> Visit Us </Button>
             </Grid>
             <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
-                    <Typography style={{marginTop: "1%", marginBottom: "1%"}} component="h4" variant="h4">
+                    <Typography style={{marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
                         BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
                     </Typography>
                     <Grid container justify="center">
                         <hr style={{width: "50%", height: "5px", color: "#c89019", opacity: 0.7}} />
                     </Grid>
-                    <Typography style={{ marginTop: "1%"}} component="h4" variant="h4">
+                    <Typography style={{ marginTop: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
                         OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
                     </Typography>
                 </Container>
             <Container style={{backgroundColor:"black", marginTop:"5%", display:"fluid"}}>
-                <Typography style={{color:"white", textAlign:"center", padding:"5%"}} component="h3" variant="h3">
+                <Typography style={{color:"white", textAlign:"center", padding:"3%", fontFamily: "Barlow", fontSize: "64px"}} component="h3" variant="h3">
                     FEATURED BEERS
             </Typography>
-                <Container>
-                    <Grid container direction="row">
+                <Container >
+                    <Grid container direction="row" style={{ alignItems:"center", justifyContent: "center", display: "flex", justify: "center"}}>
+                    <div className="content_img">
                     <Image className={styles.beerImage} src={BeerCan1} alt="Picture of a can of beer" fluid />
+                    <div>Octopuss Ale</div>
+                    </div>
+                    <div className="content_img">
                     <Image className={styles.beerImage} src={BeerCan2} alt="Picture of a can of beer" fluid />
+                    <div>Growers</div>
+                    </div>
+                    <div className="content_img">
                     <Image className={styles.beerImage} src={BeerCan3} alt="Picture of a can of beer" fluid />
+                    <div>Mango Cart</div>
+                    </div>
+                    <div className="content_img">
                     <Image className={styles.beerImage} src={BeerCan4} alt="Picture of a can of beer" fluid />
+                    <div>Tahoma</div>
+                    </div>
                     </Grid>
                 </Container>
             
-                <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
+                {/* <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                     <Button variant="outlined" href="#"> View All Beers </Button>
-                </Grid>
+                </Grid> */}
             </Container>
             {/* <MailchimpForm /> */}
-            {/* <Container fluid>
-                <Row>
-                    <Col>
-                        <div className={styles.beerImage}>
-                            <Image src={beerImage} alt="Celebration Brewing Logo" fluid />
-                        </div>
-                    </Col>
-                    <Col>
-                    <Typography className={styles.titleStyle} component="h3" variant="h3">
-                            WHAT'S HAPPENING
-                    </Typography>
-                        <Typography className={styles.para} component="p" variant="inherit">
-                            Discover all the latest events of festivals that are happening at Celebration Brewing or that Celebration Brewing will be a part of!
-                    </Typography>
-                        <div className="justify-content-center">
-                            <Button variant="outlined" href="#"> View All Events </Button>
-                        </div>
-                    </Col>
-                </Row>
-            </Container> */}
 
         </Grid>
     )

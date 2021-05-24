@@ -18,6 +18,10 @@ const useStyles = makeStyles({
         marginBottom: "50px",
         paddingRight: "20%",
         paddingLeft: "20%",
+        fontFamily: "Red Hat Display",
+        lineSpacing: "0.2px",
+        fontSize: "21px",
+        fontWeight: 300,
     },
     paraTwo: {
         color: "white",
@@ -26,6 +30,10 @@ const useStyles = makeStyles({
         marginBottom: "50px",
         paddingRight: "10%",
         paddingLeft: "10%",
+        fontFamily: "Red Hat Display", 
+        fontSize: "18px", 
+        fontWeight: 300, 
+        letterSpacing: ".6px"
     },
     title: {
         color: "black",
@@ -43,10 +51,10 @@ const useStyles = makeStyles({
     image: {
         height: "100%",
         width: "100%",
+        marginTop: "2%",
         // display: "flex",
         // justifyContent: "center",
         flexWrap: "wrap",
-        // marginTop: "50px",
     }
 });
 
@@ -65,13 +73,13 @@ function Contact() {
                 </Typography> */}
                 {/* <Zoom { ...documentOptions}>   */}
                 <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
-                    <Typography style={{marginTop: "1%", marginBottom: "1%"}} component="h4" variant="h4">
+                    <Typography style={{marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
                         BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
                     </Typography>
                     <Grid container justify="center">
                         <hr style={{width: "50%", height: "5px", color: "#c89019", opacity: 0.7}} />
                     </Grid>
-                    <Typography style={{ marginTop: "1%"}} component="h4" variant="h4">
+                    <Typography style={{ marginTop: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
                         OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
                     </Typography>
                 </Container>
@@ -84,7 +92,7 @@ function Contact() {
             <Typography className={styles.h4} component="h4" variant="h4">
                 Share Feedback
                 </Typography>
-                <Typography className={styles.paraTwo} component="p" variant="inherit"> We value your input and feedback! Please fill out the form below and we will get in touch as soon as possible! Thank you!
+                <Typography className={styles.paraTwo} component="p" variant="inherit"> We value your input and feedback. Please fill out the form below and we will get in touch as soon as possible. Thank you!
                 </Typography>
             
             <FeedbackForm />

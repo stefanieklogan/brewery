@@ -25,6 +25,7 @@ const useStyles = makeStyles({
     icons: {
         marginRight: "25px",
         marginLeft: "25px",
+        marginTop: "17px",
         // marginBottom: "40px",
         color: "black",
         '&:hover': {
@@ -32,7 +33,7 @@ const useStyles = makeStyles({
         }
     },
     beerIcon: {
-        fontSize: "40px",
+        fontSize: "39px",
         marginRight: "25px",
         marginLeft: "25px",
         marginBottom: "40px",

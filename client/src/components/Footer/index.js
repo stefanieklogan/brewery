@@ -28,16 +28,22 @@ const useStyles = makeStyles({
     para: {
         textAlign: "center",
         marginTop: "50px",
+        fontFamily: "Red Hat Display",
+        fontSize: "18px"
         // paddingRight: "100px",
         // paddingLeft: "100px",
     },
     number: {
         textAlign: "center",
         marginTop: "20px",
+        fontFamily: "Red Hat Display",
+        fontSize: "18px"
     },
     hours: {
         textAlign: "center",
         marginTop: "10px",
+        fontFamily: "Red Hat Display",
+        fontSize: "18px"
     },
     // link: {
     //     textAlign: "center",
@@ -68,9 +74,14 @@ function Footer() {
                         
                     </Col>
                     
-                    <Col style={{width:"25%", height:"25%", justify: "center", alignItems: "center"}}>
+                    <Col style={{width:"25%", height:"25%", 
+                    justify: "center",  
+                    alignItems: 'center',
+                    display: 'flex',
+                    justifyContent: 'center'
+                }}>
                         <div >
-                            <Image style={{width: "150px"}} src={Logo} alt="Celebration Brewing Logo" fluid />
+                            <Image style={{width: "150px", justifyContent: "center", alignItems: "center"}} src={Logo} alt="Celebration Brewing Logo" fluid />
                         </div>
                     </Col>
                     
