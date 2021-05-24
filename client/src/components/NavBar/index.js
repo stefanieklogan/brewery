@@ -42,11 +42,11 @@ function NavBar() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginRight: "3%", color: "#efe9db"}} />
                 <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" style={{marginLeft: "5%", marginRight: "5%"}}>
                     <Nav className="mr-auto" >
-                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/">Home</Nav.Link>
-                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/beer">Beer</Nav.Link>
-                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/about">About</Nav.Link>
-                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/contact">Contact</Nav.Link>
-                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/visit">Visit</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"18px", fontFamily: "Barlow", fontWeight: 300}} href="/">HOME</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"18px", fontFamily: "Barlow", fontWeight: 300 }} href="/beer">BEER</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"18px", fontFamily: "Barlow", fontWeight: 300}} href="/about">ABOUT</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"18px", fontFamily: "Barlow", fontWeight: 300}} href="/contact">CONTACT</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"18px", fontFamily: "Barlow", fontWeight: 300}} href="/visit">VISIT</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                             {/* <li className="nav-item">

@@ -31,12 +31,18 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
         marginTop: "4%",
         marginBottom: "10px",
+        fontFamily: "Barlow",
+        fontWeight: 400,
+        fontSize: "52px"
     },
     para: {
         textAlign: "center",
         marginTop: "30px",
         paddingRight: "100px",
         paddingLeft: "100px",
+        fontFamily: "Red Hat Display",
+        lineSpacing: "0.2px",
+        fontSize: "21px"
     },
     image: {
         height: "25%",
@@ -46,9 +52,13 @@ const useStyles = makeStyles((theme) => ({
     beerImage: {
         height: "100%",
         width: "100%",
-        display: "flex",
+        // display: "flex",
         padding: "2%",
         marginBottom: "2%"
+    },
+    button: {
+        fontFamily: "Barlow",
+        fontSize: "18px",
     }
 }));
 
@@ -75,21 +85,21 @@ function HomePageAbout() {
                 <Button className={styles.button} variant="outlined" href="/visit"> Visit Us </Button>
             </Grid>
             <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
-                    <Typography style={{marginTop: "1%", marginBottom: "1%"}} component="h4" variant="h4">
+                    <Typography style={{marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
                         BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
                     </Typography>
                     <Grid container justify="center">
                         <hr style={{width: "50%", height: "5px", color: "#c89019", opacity: 0.7}} />
                     </Grid>
-                    <Typography style={{ marginTop: "1%"}} component="h4" variant="h4">
+                    <Typography style={{ marginTop: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
                         OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
                     </Typography>
                 </Container>
             <Container style={{backgroundColor:"black", marginTop:"5%", display:"fluid"}}>
-                <Typography style={{color:"white", textAlign:"center", padding:"3%"}} component="h3" variant="h3">
+                <Typography style={{color:"white", textAlign:"center", padding:"3%", fontFamily: "Barlow", fontSize: "64px"}} component="h3" variant="h3">
                     FEATURED BEERS
             </Typography>
-                <Container fluid="true" style={{alignItems:"center", justifyContent: "center", display: "flex" }}>
+                <Container style={{ alignItems:"center", justifyContent: "center", display: "flex" }} justify="center">
                     <Grid container direction="row">
                     <div className="content_img">
                     <Image className={styles.beerImage} src={BeerCan1} alt="Picture of a can of beer" fluid />

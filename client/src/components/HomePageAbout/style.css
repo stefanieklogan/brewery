@@ -18,7 +18,8 @@
     background: white;
     color: black;
     margin-bottom: 5px;
-    font-family: sans-serif;
+    font-family: 'Red Hat Display';
+    font-size: 18px;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: visibility 0s, opacity 0.5s linear; 
