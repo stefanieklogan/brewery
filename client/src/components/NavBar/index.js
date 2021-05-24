@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Image from 'react-bootstrap/Image';
 import Logo from "../../assets/Celebration_LogoBLACK.png";
 // import Row from 'react-bootstrap/Row';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+// import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 
@@ -12,7 +12,8 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 const useStyles = makeStyles({
 
     navStyle: {
-        backgroundColor: "white",
+        backgroundColor: "#c89019",
+        // backgroundColor: "white",
         // color: "#bd8a1f",
     },
     image: {
@@ -41,11 +42,11 @@ function NavBar() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginRight: "3%", color: "#c89019"}} />
                 <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" style={{marginLeft: "5%", marginRight: "5%"}}>
                     <Nav className="mr-auto" >
-                        <Nav.Link style={{color: "#c89019", marginRight: "2%", fontSize:"16px"}} href="/">Home</Nav.Link>
-                        <Nav.Link style={{color: "#c89019", marginRight: "2%", fontSize:"16px"}} href="/beer">Beer</Nav.Link>
-                        <Nav.Link style={{color: "#c89019", marginRight: "2%", fontSize:"16px"}} href="/about">About</Nav.Link>
-                        <Nav.Link style={{color: "#c89019", marginRight: "2%", fontSize:"16px"}} href="/contact">Contact</Nav.Link>
-                        <Nav.Link style={{color: "#c89019", marginRight: "2%", fontSize:"16px"}} href="/visit">Visit</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/">Home</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/beer">Beer</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/about">About</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/contact">Contact</Nav.Link>
+                        <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/visit">Visit</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                     {/* <button style={{marginRight: "4%"}} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
