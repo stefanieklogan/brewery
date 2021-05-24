@@ -84,7 +84,7 @@ function Contact() {
             <Typography className={styles.h4} component="h4" variant="h4">
                 Share Feedback
                 </Typography>
-                <Typography className={styles.paraTwo} component="p" variant="inherit"> We value your input and feedback! Please fill out the form below and we will get in touch as soon as possible! Thank you!
+                <Typography className={styles.paraTwo} component="p" variant="inherit"> We value your input and feedback. Please fill out the form below and we will get in touch as soon as possible. Thank you!
                 </Typography>
             
             <FeedbackForm />

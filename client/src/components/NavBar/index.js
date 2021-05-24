@@ -12,7 +12,7 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 const useStyles = makeStyles({
 
     navStyle: {
-        backgroundColor: "#c89019",
+        backgroundColor: "#cd8f2a",
         // backgroundColor: "white",
         // color: "#bd8a1f",
     },
@@ -39,7 +39,7 @@ function NavBar() {
             <div className={styles.navStyle}>
                 <Navbar collapseOnSelect expand="lg" >
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fixed ="true"/>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginRight: "3%", color: "#c89019"}} />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginRight: "3%", color: "black"}} />
                 <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" style={{marginLeft: "5%", marginRight: "5%"}}>
                     <Nav className="mr-auto" >
                         <Nav.Link style={{color: "white", marginRight: "2%", fontSize:"16px"}} href="/">Home</Nav.Link>
