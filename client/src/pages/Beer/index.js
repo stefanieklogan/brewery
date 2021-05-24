@@ -18,10 +18,10 @@ const useStyles = makeStyles((theme) => ({
     root: {
         // display: 'flex',
         // padding: '30px',
-        marginRight: "5%",
-        marginLeft: "5%",
-        marginBottom: "5%",
-        marginTop: "5%"
+        marginRight: "3%",
+        marginLeft: "3%",
+        marginBottom: "3%",
+        marginTop: "6%"
     },
     details: {
         display: 'flex',
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     cover: {
         height: 175,
         width: 150,
-        margin: "5%",
+        margin: "3%",
         // align: "center",
         // justify: "center",
     },
@@ -45,6 +45,8 @@ const useStyles = makeStyles((theme) => ({
     image: {
         height: "100%",
         width: "100%",
+        marginTop: "2%",
+        marginBottom: "2%"
     }
 }));
 
@@ -104,9 +106,6 @@ function Beer() {
                 <Image className={classes.image} src={BeerImg} alt="Picture of a can of beer" />
             </Container>
 
-        {/* <Typography className={classes.title} component="h3" variant="h3">
-            BEERS ON TAP
-        </Typography> */}
         <Grid container style={{ alignItems:"center", justifyContent: "center", backgroundColor: "black" }}>
             {beers.map((beer) => (
             <Grid key={beer.beer.beer_name} style={{height: "500px", width: "500px"}}>
@@ -120,10 +119,10 @@ function Beer() {
                 height="140"
             />
             <CardContent>
-            <Typography style={{textAlign: "center", marginTop: "3%", padding: "5%"}} component="h4" variant="h4">
+            <Typography style={{textAlign: "center", padding: "2%", fontFamily: "Playfair Display"}} component="h4" variant="h4">
                 {beer.beer.beer_name}
             </Typography>
-            <Typography style={{padding: "10%", textAlign: "center", overflow: "scroll"}} variant="subtitle1" color="textSecondary">
+            <Typography style={{padding: "5%", textAlign: "center", fontFamily: "Barlow", fontWeight: 400, overflow: "scroll"}} variant="subtitle1" color="textSecondary">
                 {beer.beer.beer_description}
             </Typography>
             </CardContent>

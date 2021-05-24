@@ -62,7 +62,7 @@ function VisitUs() {
     return (
         <div>
             <Container fluid style={{marginBottom: "10%"}}>
-                <div style={{height: "100%", width: "100%"}}>
+                <div style={{height: "100%", width: "100%", marginTop: "2%"}}>
             <Image fade src={visitImage} alt="Celebration Brewing Logo" fluid />
                 </div>
                 <Row>
@@ -79,13 +79,13 @@ function VisitUs() {
                                 A blurb about taking a brewery tour at Celebration brewing.
                     </Typography>
                             <div className="justify-content-center">
-                                <Link className="nav-link" to="/about"> PLAN YOUR VISIT</Link>                    </div>
+                                <Link className="nav-link" to="/about"> PLAN YOUR VISIT</Link>
+                            </div>
                         </div>
                     </Col>
                     <Col sm={6}>
-                        <div className={styles.mapImage}>
-                            <Image src={Map} alt="Celebration Brewing Logo" fluid />
-                            <Typography className={styles.titleStyle} component="h3" variant="h3"></Typography>
+                        <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="600" height="450" style={{border:0, marginTop: "5%"}} allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </Col>
                 </Row>

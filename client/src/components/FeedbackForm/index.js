@@ -5,24 +5,8 @@ import TextField from '@material-ui/core/TextField';
 import { Container, Button } from '@material-ui/core/';
 // import Typography from '@material-ui/core/Typography';
 import Form from 'react-bootstrap/Form';
-// import { makeStyles } from "@material-ui/core/styles";
 import axios from 'axios';
 
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//         '& > *': {
-//             margin: theme.spacing(1),
-//             textAlign: "center",
-//         },
-//     },
-//     titleStyle: {
-//         backgroundColor: "white",
-//         color: "#c89019",
-//         textAlign: "center",
-//         marginTop: "80px",
-//         marginBottom: "10px",
-//     },
-// }));
 
 class FeedbackForm extends React.Component {
 
@@ -104,7 +88,7 @@ class FeedbackForm extends React.Component {
                     {/* <label>Feedback:</label> */}
                     {/* <TextField id="outlined-multiline-static" multiline rowsMax={4} label="Feedback" variant="outlined" className="feedback" type="text" value={feedback} onChange={this.handleFeedbackChange}></TextField> */}
                 <div>
-                    <p style={{color: "white"}} className="checkbox">Check here if you would like to be contacted:</p><Checkbox style={{color:"white"}} value={checkbox} onChange={this.handleCheckboxChange} /><p className="email">{emailInput}</p>
+                    <p style={{color: "white", fontFamily: "Barlow", fontSize: "18px", fontWeight: 300, letterSpacing: ".6px"}} className="checkbox">Check here if you would like to be contacted:</p><Checkbox style={{color:"white"}} value={checkbox} onChange={this.handleCheckboxChange} /><p className="email">{emailInput}</p>
                 </div>
 
                 <Button style={{color: "black", backbroundColor:"white"}} className="submitBtn" variant="contained" type="submit">Submit</Button>
