@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Button, Typography, Container } from '@material-ui/core';
 import Logo from "../../assets/Celebration_Logo.png";
@@ -43,12 +44,11 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: "4%",
     },
     beerImage: {
-        height: "25%",
-        width: "25%",
+        height: "100%",
+        width: "100%",
         display: "flex",
         padding: "2%",
         marginBottom: "2%"
-
     }
 }));
 
@@ -91,10 +91,22 @@ function HomePageAbout() {
             </Typography>
                 <Container>
                     <Grid container direction="row">
+                    <div className="content_img">
                     <Image className={styles.beerImage} src={BeerCan1} alt="Picture of a can of beer" fluid />
+                    <div>Octopuss Ale</div>
+                    </div>
+                    <div className="content_img">
                     <Image className={styles.beerImage} src={BeerCan2} alt="Picture of a can of beer" fluid />
+                    <div>Growers</div>
+                    </div>
+                    <div className="content_img">
                     <Image className={styles.beerImage} src={BeerCan3} alt="Picture of a can of beer" fluid />
+                    <div>Mango Cart</div>
+                    </div>
+                    <div className="content_img">
                     <Image className={styles.beerImage} src={BeerCan4} alt="Picture of a can of beer" fluid />
+                    <div>Tahoma</div>
+                    </div>
                     </Grid>
                 </Container>
             

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import Image from 'react-bootstrap/Image';
-import Logo from "../../assets/Celebration_LogoBLACK.png";
+import Logo from "../../assets/Celebration_LogoWHITE.png";
 // import Row from 'react-bootstrap/Row';
 // import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
