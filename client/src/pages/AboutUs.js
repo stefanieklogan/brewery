@@ -73,7 +73,7 @@ return (
       <Typography className={styles.para} component="p" variant="inherit">
         Frank L began dreaming of his vision for Celebration Brewing while
         homebrewing right here in Main Village, Celebration. Brewing a keg here,
-        pouring a pint there, it’s good to be friends with Frank! As a resident
+        pouring a pint there, Frank easily made friends. As a resident
         for over 15 years, Frank saw the need for creating community for those
         who enjoy good beer and good company. Fast forward to today where he’s
         turning his dream into a reality.
@@ -143,7 +143,7 @@ return (
             </AccordionSummary>
             <AccordionDetails>
                 <Typography>
-                    I;ve got several resident-focused events inthe works for 2023 where I hope residents and community members come to enjoy time here. that's when we'll say thank you for their on-going support.
+                    Yes, we're offering 10% discount with valid Celebration ID.
                 </Typography>
             </AccordionDetails>
         </Accordion>
