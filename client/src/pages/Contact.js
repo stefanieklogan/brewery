@@ -43,10 +43,10 @@ const useStyles = makeStyles({
     image: {
         height: "100%",
         width: "100%",
+        marginTop: "2%",
         // display: "flex",
         // justifyContent: "center",
         flexWrap: "wrap",
-        // marginTop: "50px",
     }
 });
 

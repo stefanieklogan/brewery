@@ -70,7 +70,7 @@ function Footer() {
                     
                     <Col style={{width:"25%", height:"25%", justify: "center", alignItems: "center"}}>
                         <div >
-                            <Image style={{width: "150px"}} src={Logo} alt="Celebration Brewing Logo" fluid />
+                            <Image style={{width: "150px", justifyContent: "center", alignItems: "center"}} src={Logo} alt="Celebration Brewing Logo" fluid />
                         </div>
                     </Col>
                     

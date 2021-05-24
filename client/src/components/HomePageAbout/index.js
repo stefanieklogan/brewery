@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "white",
         color: "#c89019",
         textAlign: "center",
-        marginTop: "80px",
+        marginTop: "4%",
         marginBottom: "10px",
     },
     para: {
@@ -37,20 +37,17 @@ const useStyles = makeStyles((theme) => ({
         paddingRight: "100px",
         paddingLeft: "100px",
     },
-    button: {
-        // justifyContent: "center",
-        // alignItems: "center",
-    },
     image: {
         height: "25%",
         width: "25%",
-        paddingTop: "100px",
+        paddingTop: "4%",
     },
     beerImage: {
         height: "25%",
         width: "25%",
         display: "flex",
         padding: "2%",
+        marginBottom: "2%"
 
     }
 }));
@@ -75,7 +72,7 @@ function HomePageAbout() {
             Everyday, we’re driven by our core values: delivering quality flavors, honoring our customers and celebrating the culture of beer. Experience it for yourself by joining us for a brewery tour, a special event or just to try what’s on tap.
             </Typography>
             <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
-                <Button className={styles.button} variant="outlined" href="#"> Visit Us </Button>
+                <Button className={styles.button} variant="outlined" href="/visit"> Visit Us </Button>
             </Grid>
             <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
                     <Typography style={{marginTop: "1%", marginBottom: "1%"}} component="h4" variant="h4">
@@ -89,7 +86,7 @@ function HomePageAbout() {
                     </Typography>
                 </Container>
             <Container style={{backgroundColor:"black", marginTop:"5%", display:"fluid"}}>
-                <Typography style={{color:"white", textAlign:"center", padding:"5%"}} component="h3" variant="h3">
+                <Typography style={{color:"white", textAlign:"center", padding:"3%"}} component="h3" variant="h3">
                     FEATURED BEERS
             </Typography>
                 <Container>
@@ -101,31 +98,11 @@ function HomePageAbout() {
                     </Grid>
                 </Container>
             
-                <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
+                {/* <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                     <Button variant="outlined" href="#"> View All Beers </Button>
-                </Grid>
+                </Grid> */}
             </Container>
             {/* <MailchimpForm /> */}
-            {/* <Container fluid>
-                <Row>
-                    <Col>
-                        <div className={styles.beerImage}>
-                            <Image src={beerImage} alt="Celebration Brewing Logo" fluid />
-                        </div>
-                    </Col>
-                    <Col>
-                    <Typography className={styles.titleStyle} component="h3" variant="h3">
-                            WHAT'S HAPPENING
-                    </Typography>
-                        <Typography className={styles.para} component="p" variant="inherit">
-                            Discover all the latest events of festivals that are happening at Celebration Brewing or that Celebration Brewing will be a part of!
-                    </Typography>
-                        <div className="justify-content-center">
-                            <Button variant="outlined" href="#"> View All Events </Button>
-                        </div>
-                    </Col>
-                </Row>
-            </Container> */}
 
         </Grid>
     )

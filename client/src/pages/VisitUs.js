@@ -62,7 +62,7 @@ function VisitUs() {
     return (
         <div>
             <Container fluid style={{marginBottom: "10%"}}>
-                <div style={{height: "100%", width: "100%"}}>
+                <div style={{height: "100%", width: "100%", marginTop: "2%"}}>
             <Image fade src={visitImage} alt="Celebration Brewing Logo" fluid />
                 </div>
                 <Row>

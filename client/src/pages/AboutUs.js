@@ -50,8 +50,7 @@ button: {
 image: {
     height: "100%",
     width: "100%",
-    // position: "relative",
-    // paddingTop: "50px",
+    marginTop: "2%",
 },
 beerImage: {
     height: "350px",
@@ -94,9 +93,9 @@ return (
         style={{ width: "100%", alignItems: "center", marginTop: "40px" }}
         justify="center"
     >
-        <Button variant="outlined" href="#">
+        {/* <Button variant="outlined" href="#">
             Visit Us
-        </Button>
+        </Button> */}
     </Grid>
     <Grid>
     <Container fluid="true" style={{display:"flex", justifyContent: "center", alignItems: "center" }}>
