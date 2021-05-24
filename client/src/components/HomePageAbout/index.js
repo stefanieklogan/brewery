@@ -99,8 +99,8 @@ function HomePageAbout() {
                 <Typography style={{color:"white", textAlign:"center", padding:"3%", fontFamily: "Barlow", fontSize: "64px"}} component="h3" variant="h3">
                     FEATURED BEERS
             </Typography>
-                <Container style={{ alignItems:"center", justifyContent: "center", display: "flex" }} justify="center">
-                    <Grid container direction="row">
+                <Container >
+                    <Grid container direction="row" style={{ alignItems:"center", justifyContent: "center", display: "flex", justify: "center"}}>
                     <div className="content_img">
                     <Image className={styles.beerImage} src={BeerCan1} alt="Picture of a can of beer" fluid />
                     <div>Octopuss Ale</div>
