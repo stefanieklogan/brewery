@@ -1,10 +1,13 @@
 /* Parent Container */
 .content_img{
     position: relative;
-    width: 200px;
-    height: 200px;
-    float: left;
+    width: 275px;
+    height: 375px;
+    /* float: left; */
+    justify-content: center;
+    align-items: center;
     margin-right: 10px;
+    margin-bottom: 5%
 }
 
    /* Child Text Container */
@@ -12,8 +15,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     margin-bottom: 5px;
     font-family: sans-serif;
     opacity: 0;
