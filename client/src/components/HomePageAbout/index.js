@@ -70,7 +70,7 @@ function HomePageAbout() {
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
             </Container>
             <Typography fade className={styles.titleStyle} component="h3" variant="h3">
-                ORLANDO'S FAVORITE BREWERY
+                CELEBRATION'S FAVORITE BREWERY
             </Typography>
             <Typography className={styles.para} component="p" variant="inherit">
                 Since 2021, Celebration Brewing Company has been committed to producing authentic and unique beers that push the boundaries of regular brewing styles and categories. We’re proud to serve our customers with only the best, continually crafting each taste until it’s exactly right.

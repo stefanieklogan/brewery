@@ -122,7 +122,20 @@ function Beer() {
             <Typography style={{textAlign: "left", padding: "2%", fontFamily: "Playfair Display", color: "white"}} component="h4" variant="h4">
                 {beer.beer.beer_name}
             </Typography>
+
             <Typography style={{padding: "5%", textAlign: "left", fontFamily: "Barlow", fontWeight: 400, color: "white"}} variant="subtitle1" color="textSecondary">
+
+            <Typography style={{textAlign: "center", padding: "2%", fontFamily: "Playfair Display"}} component="h4" variant="h4">
+                {beer.beer.beer_abv}
+            </Typography>
+            <Typography style={{textAlign: "center", padding: "2%", fontFamily: "Playfair Display"}} component="h4" variant="h4">
+                {beer.beer.beer_ibu}
+            </Typography>
+            <Typography style={{textAlign: "center", padding: "2%", fontFamily: "Playfair Display"}} component="h4" variant="h4">
+                {beer.beer.beer_style}
+            </Typography>
+            <Typography style={{padding: "5%", textAlign: "center", fontFamily: "Barlow", fontWeight: 400, overflow: "scroll"}} variant="subtitle1" color="textSecondary">
+
                 {beer.beer.beer_description}
             </Typography>
             </CardContent>
