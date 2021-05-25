@@ -12,8 +12,8 @@ function Homepage() {
 			<Image />
 			<HomePageAbout />
 			{/* <SignUpForm /> */}
-			<Footer />
-			<Copyright />
+			{/* <Footer /> */}
+			{/* <Copyright /> */}
 		</div>
 	);
 }

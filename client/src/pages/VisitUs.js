@@ -22,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     titleStyle: {
-        backgroundColor: "white",
         color: "black",
         textAlign: "left",
         marginTop: "80px",
@@ -84,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
 function VisitUs() {
     const styles = useStyles();
     return (
-        <div>
+        <div style={{backgroundColor: "#f4eee3"}}>
             <Container fluid style={{marginBottom: "10%"}}>
                 <div style={{height: "100%", width: "100%", marginTop: "2%"}}>
             <Image fade src={visitImage} alt="Celebration Brewing Logo" fluid />

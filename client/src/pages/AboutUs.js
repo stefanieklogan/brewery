@@ -69,8 +69,7 @@ beerImage: {
 function AboutUs() {
 const styles = useStyles();
 return (
-  <div>
-    <Grid>
+    <Grid style={{backgroundColor: "#f4eee3"}}>
       <div className={styles.image}>
         <Image fade src={BeerPhoto} alt="Celebration Brewing Logo" fluid />
       </div>
@@ -194,7 +193,6 @@ return (
     <Footer />
     <Copyright />
     </Grid>
-</div>
 );
 }
 

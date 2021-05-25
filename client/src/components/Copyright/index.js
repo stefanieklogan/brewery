@@ -6,7 +6,8 @@ import pbu from "../../assets/pbu_40_black.png"
 const useStyles = makeStyles({
     copyrightColor: {
         color: "black",
-        marginTop: "70px",
+        marginTop: "20px",
+        backgroundColor: "#f4eee3"
     }
 })
 

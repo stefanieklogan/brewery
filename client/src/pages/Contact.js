@@ -65,7 +65,7 @@ function Contact() {
 
 
     return (
-        <Grid>
+        <Grid style={{backgroundColor: "#f4eee3"}}>
         <Container>
                 <div className={styles.image}>
                     <Image src={Beer} alt="Pouring beer" fluid/>
@@ -88,7 +88,7 @@ function Contact() {
                 
                 {/* </Zoom > */}
                 <Typography className={styles.para} component="p" variant="h6">
-                Located in the Celebration area of Orlando, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce out beers,etc.
+                Located in the Celebration area of Orlando, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce our beers, etc.
                 </Typography>
             <Container style={{backgroundColor:"black", padding: "2em"}}>
             <Typography className={styles.h4} component="h4" variant="h4">

@@ -67,7 +67,7 @@ function Beer() {
             .catch(err => console.log(err));
     };
     return (
-        <Grid>
+        <Grid style={{backgroundColor: "#f4eee3"}}>
             <Container fluid="true" styles={{display:"flex"}}>
                 <Image className={classes.image} src={BeerImg} alt="Picture of a can of beer" />
             </Container>

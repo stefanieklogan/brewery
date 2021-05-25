@@ -8,6 +8,8 @@ import BeerCan2 from "../../assets/beer-can2.jpg";
 import BeerCan3 from "../../assets/beer-can3.jpg";
 import BeerCan4 from "../../assets/beer-can4.jpg";
 import Image from 'react-bootstrap/Image';
+import Footer from '../../components/Footer/';
+import Copyright from '../../components/Copyright/';
 
 // import MailchimpForm from '../Mailchimp/';
 
@@ -71,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
 function HomePageAbout() {
     const styles = useStyles();
     return (
-        <Grid>
+        <Grid style={{backgroundColor: "#f4eee3"}}>
             <Container style={{alignItems:"center", justifyContent: "center", display: "flex" }}>
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
             </Container>
@@ -133,6 +135,8 @@ function HomePageAbout() {
                 </Grid> */}
             </Container>
             {/* <MailchimpForm /> */}
+            <Footer />
+            <Copyright />
 
         </Grid>
     )
