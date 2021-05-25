@@ -101,16 +101,6 @@ function Footer() {
                             Sat & Sun 10:00am - 12:00am
                         </Typography>
                         </Row>
-                        {/* <Typography className={styles.titleStyle} component="h4" variant="h4">
-                            Explore
-                    </Typography>
-                        <Typography className={styles.link} component="p" variant="inherit">
-                            <Link className="nav-link" to="/"> Home </Link>
-                            <Link className="nav-link" to="/about"> About</Link>
-                            <Link className="nav-link" to="/beer"> Beer </Link>
-                            <Link className="nav-link" to="/visit"> Visit</Link>
-                            <Link className="nav-link" to="/contact"> Contact </Link>
-                        </Typography> */}
                         </Col>
                 </Row>
             </Container>
