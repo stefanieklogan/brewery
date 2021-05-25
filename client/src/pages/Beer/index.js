@@ -108,21 +108,21 @@ function Beer() {
 
         <Grid container style={{ alignItems:"center", justifyContent: "center", backgroundColor: "black" }}>
             {beers.map((beer) => (
-            <Grid key={beer.beer.beer_name} style={{height: "500px", width: "500px"}}>
+            <Grid key={beer.beer.beer_name} style={{height: "250px", width: "600px"}}>
             <Card className={classes.root}>
-            <CardActionArea style={{justifyContent: "center", alignItems: "center"}}>
-            <CardMedia
+            <CardActionArea style={{justifyContent: "left", alignItems: "left", backgroundColor: "black"}}>
+            {/* <CardMedia
                 component="img"
                 className={classes.cover}
                 image={beer.beer.beer_label}
                 alt={beer.beer.beer_name}
                 height="140"
-            />
+            /> */}
             <CardContent>
-            <Typography style={{textAlign: "center", padding: "2%", fontFamily: "Playfair Display"}} component="h4" variant="h4">
+            <Typography style={{textAlign: "left", padding: "2%", fontFamily: "Playfair Display", color: "white"}} component="h4" variant="h4">
                 {beer.beer.beer_name}
             </Typography>
-            <Typography style={{padding: "5%", textAlign: "center", fontFamily: "Barlow", fontWeight: 400, overflow: "scroll"}} variant="subtitle1" color="textSecondary">
+            <Typography style={{padding: "5%", textAlign: "left", fontFamily: "Barlow", fontWeight: 400, color: "white"}} variant="subtitle1" color="textSecondary">
                 {beer.beer.beer_description}
             </Typography>
             </CardContent>

@@ -103,22 +103,6 @@ return (
         justify="center"
     >
     </Grid> */}
-    <Grid>
-    <Container style={{ marginTop: "4%", marginBottom: "4%", textAlign: "center", padding: "2%"}}>
-        <Typography style={{marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
-            BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
-        </Typography>
-        <Grid container justify="center">
-            <hr style={{width: "50%", height: "5px", color: "#c89019", opacity: 0.7}} />
-        </Grid>
-        <Typography style={{ marginTop: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
-            OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
-        </Typography>
-    </Container>
-    {/* <Container fluid="true" style={{display:"flex", justifyContent: "center", alignItems: "center" }}>
-        <Image styles={{width:"100%", height:"100%"}} src={Gif}/>
-    </Container> */}
-    </Grid>
     <Grid container justify="center">
     <div style={{width: "80%", textAlign: "left", padding: "2%", alignItems: "center"}}>
         <Accordion style={{marginBottom: "1%", backgroundColor: "white", color: "black"}}>
@@ -178,6 +162,22 @@ return (
             </AccordionDetails>
         </Accordion>
     </div>
+    </Grid>
+    <Grid>
+    <Container style={{ marginTop: "4%", marginBottom: "4%", textAlign: "center", padding: "2%"}}>
+        <Typography style={{marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
+            BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
+        </Typography>
+        <Grid container justify="center">
+            <hr style={{width: "50%", height: "5px", color: "#c89019", opacity: 0.7}} />
+        </Grid>
+        <Typography style={{ marginTop: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
+            OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
+        </Typography>
+    </Container>
+    {/* <Container fluid="true" style={{display:"flex", justifyContent: "center", alignItems: "center" }}>
+        <Image styles={{width:"100%", height:"100%"}} src={Gif}/>
+    </Container> */}
     </Grid>
 
     {/* <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%", border: "solid 1px", borderRadius: "8px"}}>
