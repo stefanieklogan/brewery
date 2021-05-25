@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css';
 import { makeStyles } from "@material-ui/core/styles";
-import pbu from "../../assets/pbu_40_yellow.png"
+import pbu from "../../assets/pbu_40_black.png"
 
 const useStyles = makeStyles({
     copyrightColor: {
