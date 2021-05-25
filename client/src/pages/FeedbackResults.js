@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 import TableHtml from '../components/TableHtml';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
-
 import { withRouter } from "react-router-dom";
 // import API from '../utils/API';
-import moment from 'moment';
-
 
 class TableData extends Component {
     state = {
@@ -15,7 +12,7 @@ class TableData extends Component {
         format: "",
         feedback: [],
         sort: "DESC",
-        dateMDY: moment('2021-05-21T21:17:23.000Z').format('l')
+        // dateMDY: moment('2021-05-21T21:17:23.000Z').format('l')
     };
 
     componentDidMount() {
@@ -38,10 +35,6 @@ class TableData extends Component {
                 this.setState({ rows: res.data });
             })
     };
-
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.search !== prevProps.search) this.displayFeedback();
-    // }
 
     handleClickChange = e => {
         if (this.state.sort === "DESC") {
