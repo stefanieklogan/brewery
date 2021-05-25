@@ -26,14 +26,14 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     titleStyle: {
-        backgroundColor: "white",
+        backgroundColor: "black",
         color: "#c89019",
         textAlign: "center",
-        marginTop: "4%",
+        marginTop: "50px",
         marginBottom: "10px",
         fontFamily: "Barlow",
         fontWeight: 400,
-        fontSize: "52px"
+        fontSize: "64px"
     },
     para: {
         textAlign: "center",
@@ -42,7 +42,10 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: "100px",
         fontFamily: "Red Hat Display",
         lineSpacing: "0.2px",
-        fontSize: "21px"
+        letterSpacing: "0.2px",
+        fontSize: "21px",
+        fontWeight: 300,
+        color: "white"
     },
     image: {
         height: "25%",
@@ -59,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
     button: {
         fontFamily: "Barlow",
         fontSize: "18px",
+        color: "white",
+        backgroundColor: "#c89019",
+        marginBottom: "40px"
     }
 }));
 
@@ -69,7 +75,8 @@ function HomePageAbout() {
             <Container style={{alignItems:"center", justifyContent: "center", display: "flex" }}>
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
             </Container>
-            <Typography fade className={styles.titleStyle} component="h3" variant="h3">
+            <Container style={{backgroundColor: "black", marginTop: "5%", display: "fluid"}}>
+            <Typography fade styles={{marginTop: "20px"}} className={styles.titleStyle} component="h3" variant="h3">
                 CELEBRATION'S FAVORITE BREWERY
             </Typography>
             <Typography className={styles.para} component="p" variant="inherit">
@@ -84,6 +91,7 @@ function HomePageAbout() {
             <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                 <Button className={styles.button} variant="outlined" href="/visit"> Visit Us </Button>
             </Grid>
+            </Container>
             <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
                     <Typography style={{marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
                         BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
@@ -96,7 +104,7 @@ function HomePageAbout() {
                     </Typography>
                 </Container>
             <Container style={{backgroundColor:"black", marginTop:"5%", display:"fluid"}}>
-                <Typography style={{color:"white", textAlign:"center", padding:"3%", fontFamily: "Barlow", fontSize: "64px"}} component="h3" variant="h3">
+                <Typography style={{color:"#c89019", textAlign:"center", padding:"3%", fontFamily: "Barlow", fontSize: "64px"}} component="h3" variant="h3">
                     FEATURED BEERS
             </Typography>
                 <Container >

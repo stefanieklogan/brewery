@@ -6,9 +6,7 @@ import Copyright from '../components/Copyright/';
 import Typography from '@material-ui/core/Typography';
 import Logo from "../assets/Celebration_Logo.png"
 import visitImage from "../assets/visit-celebration.png";
-
-import Map from "../assets/map.png";
-// import beerImage from "../../assets/brewery.jpg";
+import { Grid } from '@material-ui/core';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -53,7 +51,33 @@ const useStyles = makeStyles((theme) => ({
         height: "250px",
         marginTop: "100px",
         alignItems: "center"
-
+    },
+    number: {
+        textAlign: "left",
+        color: "white",
+        marginTop: "20px",
+        fontFamily: "Red Hat Display",
+        fontSize: "18px"
+    },
+    hours: {
+        textAlign: "center",
+        color: "white",
+        marginTop: "10px",
+        fontFamily: "Red Hat Display",
+        fontSize: "18px",
+        marginTop: "1%",
+        marginBottom: "4%",
+        // marginRight: "5%"
+        
+    },
+    hourTitle: {
+        fontSize: "32px",
+        fontFamily: "Barlow",
+        color: "white",
+        textAlign: "center",
+        marginTop: "6%",
+        marginBottom: "4%",
+        // marginRight: "3%"
     }
 }));
 
@@ -66,7 +90,7 @@ function VisitUs() {
             <Image fade src={visitImage} alt="Celebration Brewing Logo" fluid />
                 </div>
                 <Row>
-                    <Col sm={6}>
+                    <Col sm={4}>
                         <div className={styles.beerImage}>
                             <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
                             <Typography className={styles.titleStyle} component="h3" variant="h3">
@@ -83,14 +107,47 @@ function VisitUs() {
                             </div>
                         </div>
                     </Col>
-                    <Col sm={6}>
+                    <Col sm={4} style={{backgroundColor: "black", marginTop: "3%"}}>
+                <Container>
+                    <Row style={{border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "5%"}}>
+                        <Typography className={styles.hourTitle} variant="inherit">
+                            Hours:
+                        </Typography>
+                        <Grid container justify="center" style={{marginBottom: "3%"}}>
+                            <hr style={{width: "40%", height: "2px", color: "#c89019", opacity: 0.7}} />
+                        </Grid>                        
+                        <Typography className={styles.hours} component="p" variant="inherit">
+                            Monday 10:00am - 7:00pm
+                        </Typography>
+                        <Typography className={styles.hours} component="p" variant="inherit">
+                            Tuesday 10:00am - 7:00pm
+                        </Typography>
+                        <Typography className={styles.hours} component="p" variant="inherit">
+                            Wednesday 10:00am - 7:00pm
+                        </Typography>
+                        <Typography className={styles.hours} component="p" variant="inherit">
+                            Thursday 10:00am - 7:00pm
+                        </Typography>
+                        <Typography className={styles.hours} component="p" variant="inherit">
+                            Friday 10:00am - 7:00pm
+                        </Typography>
+                        <Typography className={styles.hours} component="p" variant="inherit">
+                            Saturday 10:00am - 12:00pm
+                        </Typography>
+                        <Typography className={styles.hours} component="p" variant="inherit">
+                            Sunday 10:00am - 12:00am
+                        </Typography>
+                        </Row>
+                </Container>
+                    </Col>
+                    <Col sm={4}>
                         <div>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="600" height="450" style={{border:0, marginTop: "5%"}} allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </Col>
                 </Row>
             </Container>
-            < Footer />
+            {/* < Footer /> */}
             < Copyright />
         </div>
     )

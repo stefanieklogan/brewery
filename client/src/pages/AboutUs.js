@@ -144,8 +144,9 @@ return (
             <AccordionDetails>
                 <Typography>
                     Yes, we're offering 10% discount with valid Celebration ID.
+                    </Typography>
                 <Typography className={styles.accordianPara}>
-                    I;ve got several resident-focused events inthe works for 2023 where I hope residents and community members come to enjoy time here. that's when we'll say thank you for their on-going support.
+                    I've got several resident-focused events in the works for 2023 where I hope residents and community members come to enjoy time here. That's when we'll say thank you for their on-going support.
                 </Typography>
             </AccordionDetails>
         </Accordion>
