@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-import Footer from '../components/Footer/';
+// import Footer from '../components/Footer/';
 import Copyright from '../components/Copyright/';
 // import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "1%",
         marginBottom: "4%",
         // marginRight: "5%"
-        
+
     },
     hourTitle: {
         fontSize: "32px",
@@ -85,9 +85,9 @@ function VisitUs() {
     const styles = useStyles();
     return (
         <div>
-            <Container fluid style={{marginBottom: "10%"}}>
-                <div style={{height: "100%", width: "100%", marginTop: "2%"}}>
-            <Image fade src={visitImage} alt="Celebration Brewing Logo" fluid />
+            <Container fluid style={{ marginBottom: "10%" }}>
+                <div style={{ height: "100%", width: "100%", marginTop: "2%" }}>
+                    <Image fade src={visitImage} alt="Celebration Brewing Logo" fluid />
                 </div>
                 <Row>
                     <Col sm={4}>
@@ -107,42 +107,42 @@ function VisitUs() {
                             </div>
                         </div>
                     </Col>
-                    <Col sm={4} style={{backgroundColor: "black", marginTop: "3%"}}>
-                <Container>
-                    <Row style={{border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "5%"}}>
-                        <Typography className={styles.hourTitle} variant="inherit">
-                            Hours:
+                    <Col sm={4} style={{ backgroundColor: "black", marginTop: "3%" }}>
+                        <Container>
+                            <Row style={{ border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "5%" }}>
+                                <Typography className={styles.hourTitle} variant="inherit">
+                                    Hours:
                         </Typography>
-                        <Grid container justify="center" style={{marginBottom: "3%"}}>
-                            <hr style={{width: "40%", height: "2px", color: "#c89019", opacity: 0.7}} />
-                        </Grid>                        
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Monday 10:00am - 7:00pm
+                                <Grid container justify="center" style={{ marginBottom: "3%" }}>
+                                    <hr style={{ width: "40%", height: "2px", color: "#c89019", opacity: 0.7 }} />
+                                </Grid>
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Monday 10:00am - 7:00pm
                         </Typography>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Tuesday 10:00am - 7:00pm
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Tuesday 10:00am - 7:00pm
                         </Typography>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Wednesday 10:00am - 7:00pm
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Wednesday 10:00am - 7:00pm
                         </Typography>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Thursday 10:00am - 7:00pm
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Thursday 10:00am - 7:00pm
                         </Typography>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Friday 10:00am - 7:00pm
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Friday 10:00am - 7:00pm
                         </Typography>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Saturday 10:00am - 12:00pm
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Saturday 10:00am - 12:00pm
                         </Typography>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Sunday 10:00am - 12:00am
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Sunday 10:00am - 12:00am
                         </Typography>
-                        </Row>
-                </Container>
+                            </Row>
+                        </Container>
                     </Col>
                     <Col sm={4}>
                         <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="600" height="450" style={{border:0, marginTop: "5%"}} allowfullscreen="" loading="lazy"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="600" height="450" style={{ border: 0, marginTop: "5%" }} allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </Col>
                 </Row>
