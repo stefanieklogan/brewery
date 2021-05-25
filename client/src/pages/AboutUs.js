@@ -72,7 +72,7 @@ function AboutUs() {
         <div>
             <Grid>
                 <div className={styles.image}>
-                    <Image fade src={BeerPhoto} alt="Celebration Brewing Logo" fluid />
+                    <Image fade="true" src={BeerPhoto} alt="Celebration Brewing Logo" fluid />
                 </div>
                 {/* <Typography className={styles.titleStyle} component="h3" variant="h3">
                 About Celebration Brewing
