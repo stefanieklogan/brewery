@@ -86,7 +86,7 @@ function VisitUs() {
         <div>
             <Container fluid style={{ marginBottom: "10%" }}>
                 <div style={{ height: "100%", width: "100%", marginTop: "2%" }}>
-                    <Image fade src={visitImage} alt="Celebration Brewing Logo" fluid />
+                    <Image fade="true" src={visitImage} alt="Celebration Brewing Logo" fluid />
                 </div>
                 <Row>
                     <Col sm={4}>
