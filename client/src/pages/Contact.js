@@ -27,7 +27,7 @@ const useStyles = makeStyles({
         color: "white",
         textAlign: "center",
         marginTop: "50px",
-        marginBottom: "50px",
+        marginBottom: "75px",
         paddingRight: "10%",
         paddingLeft: "10%",
         fontFamily: "Red Hat Display", 
@@ -43,7 +43,9 @@ const useStyles = makeStyles({
     },
     h4:{
         textAlign: "center",
-        color: "white"
+        color: "white",
+        fontFamily: "Barlow",
+        fontSize: "36px"
     },
     bodyColor: {
         backgroundColor: "#efe9dd",
@@ -72,7 +74,7 @@ function Contact() {
                 CONTACT US
                 </Typography> */}
                 {/* <Zoom { ...documentOptions}>   */}
-                <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
+                {/* <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
                     <Typography style={{marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
                         BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
                     </Typography>
@@ -82,7 +84,7 @@ function Contact() {
                     <Typography style={{ marginTop: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
                         OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
                     </Typography>
-                </Container>
+                </Container> */}
                 
                 {/* </Zoom > */}
                 <Typography className={styles.para} component="p" variant="h6">
@@ -90,7 +92,7 @@ function Contact() {
                 </Typography>
             <Container style={{backgroundColor:"black", padding: "2em"}}>
             <Typography className={styles.h4} component="h4" variant="h4">
-                Share Feedback
+                SHARE FEEDBACK
                 </Typography>
                 <Typography className={styles.paraTwo} component="p" variant="inherit"> We value your input and feedback. Please fill out the form below and we will get in touch as soon as possible. Thank you!
                 </Typography>
