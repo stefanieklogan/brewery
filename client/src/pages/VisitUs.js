@@ -65,7 +65,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "10px",
         fontFamily: "Red Hat Display",
         fontSize: "18px",
-        marginTop: "1%",
         marginBottom: "4%",
         // marginRight: "5%"
 
