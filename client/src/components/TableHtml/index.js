@@ -1,5 +1,6 @@
 import React from 'react';
 import "./style.css";
+import Moment from 'react-moment';
 
 function TableHtml({ format, headings, rows }) {
   // let { format, headings, rows, click } = props;
@@ -21,7 +22,7 @@ function TableHtml({ format, headings, rows }) {
         {rows.map((item) => {
           return <tr key={item.id}>
             <td>
-              {item.date_created}
+              <Moment format="MM-DD-YYYY">{item.date_created}</Moment>
             </td>
             <td>
               {item.name}
