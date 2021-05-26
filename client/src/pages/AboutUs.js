@@ -45,7 +45,7 @@ titleStyle: {
 },
 para: {
     textAlign: "center",
-    marginTop: "30px",
+    marginTop: "5%",
     paddingRight: "15%",
     paddingLeft: "15%",
     fontFamily: "Red Hat Display",
@@ -59,7 +59,7 @@ button: {
 image: {
     height: "100%",
     width: "100%",
-    marginTop: "2%",
+    // marginTop: "2%",
 },
 beerImage: {
     height: "350px",
@@ -102,9 +102,9 @@ return (
         justify="center"
     >
     </Grid> */}
-    <Grid container justify="center">
+    <Grid container justify="center" style={{marginTop: "3%"}}>
     <div style={{width: "80%", textAlign: "left", padding: "2%", alignItems: "center"}}>
-        <Accordion style={{marginBottom: "1%", backgroundColor: "white", color: "black"}}>
+        <Accordion style={{marginBottom: "1%", backgroundColor: "#fff1db", color: "black"}}>
             <AccordionSummary style={{backgroundColor: "black", color: "white"}}
             expandIcon={<ExpandMoreIcon style={{color: "white"}}/>}
             aria-controls="panel1a-content"
@@ -118,7 +118,7 @@ return (
                 </Typography>
             </AccordionDetails>
         </Accordion>
-        <Accordion style={{marginBottom: "1%", backgroundColor: "white", color: "black"}}>
+        <Accordion style={{marginBottom: "1%", backgroundColor: "#fff1db", color: "black"}}>
             <AccordionSummary style={{backgroundColor: "black", color: "white"}}
             expandIcon={<ExpandMoreIcon style={{color: "white"}}/>}
             aria-controls="panel2a-content"
@@ -132,7 +132,7 @@ return (
                 </Typography>
             </AccordionDetails>
         </Accordion>
-        <Accordion style={{marginBottom: "1%", backgroundColor: "white", color: "black"}}>
+        <Accordion style={{marginBottom: "1%", backgroundColor: "#fff1db", color: "black"}}>
             <AccordionSummary style={{backgroundColor: "black", color: "white"}}
             expandIcon={<ExpandMoreIcon style={{color: "white"}}/>}
             aria-controls="panel3a-content"
@@ -149,7 +149,7 @@ return (
                 </Typography>
             </AccordionDetails>
         </Accordion>
-        <Accordion style={{marginBottom: "1%", backgroundColor: "white", color: "black"}}>
+        <Accordion style={{marginBottom: "1%", backgroundColor: "#fff1db", color: "black"}}>
             <AccordionSummary style={{backgroundColor: "black", color: "white"}}
             expandIcon={<ExpandMoreIcon style={{color: "white"}}/>}
             aria-controls="panel4a-content"
@@ -157,7 +157,12 @@ return (
             >
             <Typography className={styles.heading}>What types of beer will you be known for?</Typography>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails style={{shadowColor: "#888888", shadowOffset: {
+                width: 0,
+                height: 0,
+            },
+                shadowOpacity: 0.12, shadowRadius: 60,
+            }}>
                 <Typography className={styles.accordianPara}>
                     We have a range - stout, IPA, ale and lager just to name a few. I'd like to think we'll be known for unique tastes and names. Spring Park Stout, Celebration Storm IPA and Lakeside Lager are just a few beer names inspired by the great community we operate from. 
                 </Typography>
@@ -166,7 +171,7 @@ return (
     </div>
     </Grid>
     <Grid>
-    <Container style={{ marginTop: "4%", marginBottom: "4%", textAlign: "center", padding: "2%"}}>
+    <Container style={{ marginTop: "2%", marginBottom: "4%", textAlign: "center", padding: "2%"}}>
         <Typography style={{marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
             BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
         </Typography>
