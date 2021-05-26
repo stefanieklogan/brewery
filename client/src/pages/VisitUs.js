@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     titleStyle: {
         color: "black",
         textAlign: "center",
-        marginTop: "80px",
+        marginTop: "60px",
         marginBottom: "10px",
     },
     para: {
@@ -38,9 +38,9 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
     },
     image: {
-        height: "200px",
-        width: "250px",
-        marginTop: "100px",
+        height: "225px",
+        width: "275px",
+        // marginTop: "5%",
     },
     link: {
         color: "black",
@@ -89,7 +89,7 @@ function VisitUs() {
             <Image fade src={visitImage} alt="Celebration Brewing Logo" fluid />
                 </div>
                 <Row>
-                    <Col sm={4} style={{ alignItems: "center", justifyContent: "center", justify: "center", display: "flex"}}>
+                    <Col sm={4} style={{ border: "solid", borderColor: "#c89019", padding: "2%", marginTop: "5%", alignItems: "center", justifyContent: "center", justify: "center", display: "flex"}}>
                         <Grid>
                             <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
                             <Typography className={styles.titleStyle} component="h4" variant="h4">
@@ -101,14 +101,11 @@ function VisitUs() {
                             <Typography style={{textAlign: "center"}} component="p" variant="inherit">
                                 Celebration, Florida                            
                             </Typography>
-                            <div className="justify-content-center">
-                                <Link className="nav-link" to="/about"> PLAN YOUR VISIT</Link>
-                            </div>
                         </Grid>
                     </Col>
-                    <Col sm={4} style={{backgroundColor: "black", marginTop: "3%"}}>
-                <Container>
-                    <Row style={{border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "5%"}}>
+                    <Col sm={4} style={{backgroundColor: "black", marginTop: "5%"}}>
+                <Container style={{border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "3%"}}>
+                    <Row >
                         <Typography className={styles.hourTitle} variant="inherit">
                             HOURS
                         </Typography>
@@ -141,7 +138,7 @@ function VisitUs() {
                     </Col>
                     <Col sm={4} style={{ alignItems: "center", justifyContent: "center", justify: "center", display: "flex"}}>
                         <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="450" height="650" style={{border:0, marginTop: "9.5%"}} allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="450" height="600" style={{border:0, marginTop: "10%"}} allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </Col>
                 </Row>
