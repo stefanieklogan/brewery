@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
         marginTop: "50px",
         marginBottom: "10px",
+        paddingTop: "3%",
         fontFamily: "Barlow",
         fontWeight: 400,
         fontSize: "64px"
@@ -78,7 +79,7 @@ function HomePageAbout() {
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
             </Container>
             <Container style={{backgroundColor: "black", marginTop: "5%", display: "fluid"}}>
-            <Typography fade styles={{marginTop: "20px"}} className={styles.titleStyle} component="h3" variant="h3">
+            <Typography fade className={styles.titleStyle} component="h3" variant="h3">
                 CELEBRATION'S FAVORITE BREWERY
             </Typography>
             <Typography className={styles.para} component="p" variant="inherit">
