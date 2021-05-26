@@ -84,35 +84,35 @@ function VisitUs() {
     const styles = useStyles();
     return (
         <div style={{backgroundColor: "#f4eee3"}}>
-            <Container fluid style={{marginBottom: "10%"}}>
+        <Container fluid style={{marginBottom: "10%"}}>
                 <div style={{height: "100%", width: "100%", marginTop: "2%"}}>
             <Image fade="true" src={visitImage} alt="Celebration Brewing Logo" fluid />
                 </div>
-                <Row>
-                    <Col sm={4} style={{ border: "solid", borderColor: "#c89019", padding: "2%", marginTop: "5%", alignItems: "center", justifyContent: "center", justify: "center", display: "flex"}}>
-                        <Grid>
-                            <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
-                            <Typography className={styles.titleStyle} component="h4" variant="h4">
-                                LOCATION
-                            </Typography>
-                            <Typography className={styles.para} component="p" variant="inherit">
-                                1617 Future Way
-                            </Typography>
-                            <Typography style={{textAlign: "center"}} component="p" variant="inherit">
-                                Celebration, Florida                            
-                            </Typography>
-                        </Grid>
-                    </Col>
-                    <Col sm={4} style={{backgroundColor: "black", marginTop: "5%"}}>
+        </Container>
+        <Container>
+            <Row>
+                <Col xs={6} sm={4} style={{ border: "solid", borderColor: "#c89019", padding: "2%", marginTop: "5%", alignItems: "center", justifyContent: "center", justify: "center", display: "flex"}}>
+                    <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
+                    <Typography className={styles.titleStyle} component="h4" variant="h4">
+                        LOCATION
+                    </Typography>
+                    <Typography className={styles.para} component="p" variant="inherit">
+                        1617 Future Way
+                    </Typography>
+                    <Typography style={{textAlign: "center"}} component="p" variant="inherit">
+                        Celebration, Florida                            
+                    </Typography>
+                <Col/>
+
+                <Col sm={4} style={{backgroundColor: "black", marginTop: "5%"}}>
                 <Container style={{border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "3%"}}>
-                    <Row >
-                        <Typography className={styles.hourTitle} variant="inherit">
-                            HOURS
-                        </Typography>
-                        <Grid container justify="center" style={{marginBottom: "3%"}}>
-                            <hr style={{width: "40%", height: "2px", color: "#c89019", opacity: 0.7}} />
-                        </Grid>                        
-                        <Typography className={styles.hours} component="p" variant="inherit">
+                    <Typography className={styles.hourTitle} variant="inherit">
+                        HOURS
+                    </Typography>
+                    <div container justify="center" style={{marginBottom: "3%"}}>
+                        <hr style={{width: "40%", height: "2px", color: "#c89019", opacity: 0.7}} />
+                    </div>                        
+                    <Typography className={styles.hours} component="p" variant="inherit">
                             Monday 10:00am - 7:00pm
                         </Typography>
                         <Typography className={styles.hours} component="p" variant="inherit">
@@ -133,16 +133,19 @@ function VisitUs() {
                         <Typography className={styles.hours} component="p" variant="inherit">
                             Sunday 10:00am - 12:00am
                         </Typography>
-                        </Row>
                 </Container>
-                    </Col>
-                    <Col sm={4} style={{ alignItems: "center", justifyContent: "center", justify: "center", display: "flex"}}>
-                        <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="450" height="600" style={{border:0, marginTop: "10%"}} allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+                </Col>
+
+                <Col sm={4} style={{ alignItems: "center", justifyContent: "center", justify: "center", display: "flex"}}>
+                    <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="450" height="600" style={{border:0, marginTop: "10%"}} allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </Col>
+                </Col>
+            </Row>
+            
+        </Container>
+            
             {/* < Footer /> */}
             < Copyright />
         </div>
