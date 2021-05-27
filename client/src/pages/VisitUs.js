@@ -74,10 +74,12 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
         color: "white",
         fontFamily: "Red Hat Display",
+
         fontSize: "20px",
         // marginTop: "1%",
         marginBottom: "4%",
         
+
     },
     hourTitle: {
         fontSize: "36px",
@@ -101,10 +103,12 @@ const useStyles = makeStyles((theme) => ({
 function VisitUs() {
     const styles = useStyles();
     return (
+
         <div style={{backgroundColor: "#f4eee3"}}>
             <Container fluid style={{marginBottom: "10%"}}>
                 <div style={{height: "100%", width: "100%", marginTop: "2%"}}>
                     <Image src={visitImage} alt="Celebration Brewing Logo" fluid />
+
                 </div>
 
                 <Row style={{backgroundColor: "black", marginTop: "2%", marginBottom: "2%"}}>
@@ -145,38 +149,42 @@ function VisitUs() {
                     </Row>
                     </Col>
 
+
                     <Col sm={4}>
                     <Container>
                     <Row style={{border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "5%", marginBottom: "4%"}}>
                         <Typography className={styles.hourTitle} component="h5" variant="inherit">
                             HOURS
+
                         </Typography>
-                        <Grid container justify="center" style={{marginBottom: "3%"}}>
-                            <hr style={{width: "40%", height: "2px", color: "#c89019", opacity: 0.7}} />
-                        </Grid>                        
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Monday 10:00am - 7:00pm
+                                <Grid container justify="center" style={{ marginBottom: "3%" }}>
+                                    <hr style={{ width: "40%", height: "2px", color: "#c89019", opacity: 0.7 }} />
+                                </Grid>
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Monday 10:00am - 7:00pm
                         </Typography>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Tuesday 10:00am - 7:00pm
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Tuesday 10:00am - 7:00pm
                         </Typography>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Wednesday 10:00am - 7:00pm
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Wednesday 10:00am - 7:00pm
                         </Typography>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Thursday 10:00am - 7:00pm
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Thursday 10:00am - 7:00pm
                         </Typography>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Friday 10:00am - 7:00pm
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Friday 10:00am - 7:00pm
                         </Typography>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Saturday 10:00am - 12:00pm
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Saturday 10:00am - 12:00pm
                         </Typography>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Sunday 10:00am - 12:00am
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Sunday 10:00am - 12:00am
                         </Typography>
+
                         </Row>
                     </Container>
+
                     </Col>
 
                     

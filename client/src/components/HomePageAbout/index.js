@@ -14,7 +14,6 @@ import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 // import MailchimpForm from '../Mailchimp/';
 
-
 // import beerImage from "../../assets/brewery.jpg";
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
@@ -23,7 +22,9 @@ function pxToRem(value) {
     return `${value / 16}rem`;
 }
 
+
 const breakpoints = createBreakpoints({});
+
 const useStyles = makeStyles((theme) => ({
     root: {
         '& > *': {
@@ -91,6 +92,7 @@ const useStyles = makeStyles((theme) => ({
 function HomePageAbout() {
     const styles = useStyles();
     return (
+
         <Grid style={{backgroundColor: "#f4eee3"}}>
             <Container style={{alignItems:"center", justifyContent: "center", display: "flex" }}>
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
@@ -109,45 +111,48 @@ function HomePageAbout() {
                 Everyday, we’re driven by our core values: delivering quality flavors, honoring our customers and celebrating the culture of beer. Experience it for yourself by joining us for a brewery tour, a special event or just to try what’s on tap.
                 </Typography>
                 <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
+
                     <Button className={styles.button} variant="outlined" href="/visit"> Visit Us </Button>
                 </Grid>
             </Container>
-            <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
-                    <Typography style={{marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
-                        BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
+            <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%" }}>
+                <Typography style={{ marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow" }} component="h4" variant="h4">
+                    BREAKING GROUND <span style={{ color: "#c89019" }}> | </span> SUMMER 2021
                     </Typography>
-                    <Grid container justify="center">
-                        <hr style={{width: "50%", height: "5px", color: "#c89019", opacity: 0.7}} />
-                    </Grid>
-                    <Typography style={{ marginTop: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
-                        OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
+                <Grid container justify="center">
+                    <hr style={{ width: "50%", height: "5px", color: "#c89019", opacity: 0.7 }} />
+                </Grid>
+                <Typography style={{ marginTop: "1%", fontFamily: "Barlow" }} component="h4" variant="h4">
+                    OPENING <span style={{ color: "#c89019" }}> | </span> WINTER 2022
                     </Typography>
+
                 </Container>
             <Container style={{backgroundColor:"black", marginTop:"5%", display:"fluid"}}>
                 <Typography className={styles.beerTitle} component="h3" variant="h3">
+
                     FEATURED BEERS
             </Typography>
                 <Container >
-                    <Grid container direction="row" style={{ alignItems:"center", justifyContent: "center", display: "flex", justify: "center"}}>
-                    <div className="content_img">
-                    <Image className={styles.beerImage} src={BeerCan1} alt="Picture of a can of beer" fluid />
-                    <div>Octopuss Ale</div>
-                    </div>
-                    <div className="content_img">
-                    <Image className={styles.beerImage} src={BeerCan2} alt="Picture of a can of beer" fluid />
-                    <div>Growers</div>
-                    </div>
-                    <div className="content_img">
-                    <Image className={styles.beerImage} src={BeerCan3} alt="Picture of a can of beer" fluid />
-                    <div>Mango Cart</div>
-                    </div>
-                    <div className="content_img">
-                    <Image className={styles.beerImage} src={BeerCan4} alt="Picture of a can of beer" fluid />
-                    <div>Tahoma</div>
-                    </div>
+                    <Grid container direction="row" style={{ alignItems: "center", justifyContent: "center", display: "flex", justify: "center" }}>
+                        <div className="content_img">
+                            <Image className={styles.beerImage} src={BeerCan1} alt="Picture of a can of beer" fluid />
+                            <div>Octopuss Ale</div>
+                        </div>
+                        <div className="content_img">
+                            <Image className={styles.beerImage} src={BeerCan2} alt="Picture of a can of beer" fluid />
+                            <div>Growers</div>
+                        </div>
+                        <div className="content_img">
+                            <Image className={styles.beerImage} src={BeerCan3} alt="Picture of a can of beer" fluid />
+                            <div>Mango Cart</div>
+                        </div>
+                        <div className="content_img">
+                            <Image className={styles.beerImage} src={BeerCan4} alt="Picture of a can of beer" fluid />
+                            <div>Tahoma</div>
+                        </div>
                     </Grid>
                 </Container>
-            
+
                 {/* <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
                     <Button variant="outlined" href="#"> View All Beers </Button>
                 </Grid> */}

@@ -7,7 +7,7 @@ import Logo from "../../assets/Celebration_LogoBLACK.png";
 // import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Container, Grid } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 import Image from 'react-bootstrap/Image';
 
 
@@ -61,48 +61,49 @@ function Footer() {
             <Container fluid="true">
                 <Row>
                     <Col>
-                    <Row>
-                        <Typography className={styles.para} component="p" variant="inherit">
-                            1234 Disney World Dr.
-                            Orlando, Florida 33333
+                        <Row>
+                            <Typography className={styles.para} component="p" variant="inherit">
+                                1234 Disney World Dr.
+                                Orlando, Florida 33333
                         </Typography>
                         </Row>
                         <Row>
-                        <Typography className={styles.number} component="p" variant="inherit">
-                            (333) 333-3333
+                            <Typography className={styles.number} component="p" variant="inherit">
+                                (333) 333-3333
                         </Typography>
                         </Row>
-                        
+
                     </Col>
-                    
-                    <Col style={{width:"25%", height:"25%", 
-                    justify: "center",  
-                    alignItems: 'center',
-                    display: 'flex',
-                    justifyContent: 'center'
-                }}>
+
+                    <Col style={{
+                        width: "25%", height: "25%",
+                        justify: "center",
+                        alignItems: 'center',
+                        display: 'flex',
+                        justifyContent: 'center'
+                    }}>
                         <div >
-                            <Image style={{width: "150px", justifyContent: "center", alignItems: "center"}} src={Logo} alt="Celebration Brewing Logo" fluid />
+                            <Image style={{ width: "150px", justifyContent: "center", alignItems: "center" }} src={Logo} alt="Celebration Brewing Logo" fluid />
                         </div>
                     </Col>
-                    
-                        <Col>
+
+                    <Col>
                         <Row>
-                        <Typography className={styles.para} component="p" variant="inherit">
-                            Hours:
+                            <Typography className={styles.para} component="p" variant="inherit">
+                                Hours:
                         </Typography>
                         </Row>
                         <Row>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            M-F 10:00am - 7:00pm
+                            <Typography className={styles.hours} component="p" variant="inherit">
+                                M-F 10:00am - 7:00pm
                         </Typography>
                         </Row>
                         <Row>
-                        <Typography className={styles.hours} component="p" variant="inherit">
-                            Sat & Sun 10:00am - 12:00am
+                            <Typography className={styles.hours} component="p" variant="inherit">
+                                Sat & Sun 10:00am - 12:00am
                         </Typography>
                         </Row>
-                        </Col>
+                    </Col>
                 </Row>
             </Container>
         </div>
