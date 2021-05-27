@@ -11,9 +11,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-import { Link } from 'react-router-dom';
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
+// import { Link } from 'react-router-dom';
 
+function pxToRem(value) {
+    return `${value / 16}rem`;
+}
 
+const breakpoints = createBreakpoints({});
 const useStyles = makeStyles((theme) => ({
     root: {
         '& > *': {
@@ -22,17 +27,23 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     titleStyle: {
-        backgroundColor: "white",
-        color: "black",
-        textAlign: "left",
-        marginTop: "80px",
-        marginBottom: "10px",
+        color: "white",
+        textAlign: "center",
+        marginTop: "20px",
+        marginBottom: "20px",
+        fontFamily: "Barlow",
+        // fontSize: "36px"
+        fontSize: pxToRem(28),
+        [breakpoints.up("md")]: {
+            fontSize: pxToRem(36)
+        }
     },
     para: {
-        textAlign: "left",
-        marginTop: "30px",
-        paddingRight: "100px",
-        paddingLeft: "100px",
+        color: "white",
+        textAlign: "center",
+        marginTop: "10px",
+        fontFamily: "Red Hat Display",
+        fontSize: "20px",
     },
     button: {
         justifyContent: "center",
@@ -62,55 +73,89 @@ const useStyles = makeStyles((theme) => ({
     hours: {
         textAlign: "center",
         color: "white",
-        marginTop: "10px",
         fontFamily: "Red Hat Display",
-        fontSize: "18px",
+
+        fontSize: "20px",
+        // marginTop: "1%",
         marginBottom: "4%",
-        // marginRight: "5%"
+        
 
     },
     hourTitle: {
-        fontSize: "32px",
+        fontSize: "36px",
         fontFamily: "Barlow",
         color: "white",
         textAlign: "center",
         marginTop: "6%",
         marginBottom: "4%",
         // marginRight: "3%"
+    },
+    logo: {
+        alignItems: "center",
+        justifyContent: "center",
+        justify: "center",
+        display: "flex",
+        height: "100%",
+        width: "50%"
     }
 }));
 
 function VisitUs() {
     const styles = useStyles();
     return (
-        <div>
-            <Container fluid style={{ marginBottom: "10%" }}>
-                <div style={{ height: "100%", width: "100%", marginTop: "2%" }}>
-                    <Image fade="true" src={visitImage} alt="Celebration Brewing Logo" fluid />
+
+        <div style={{backgroundColor: "#f4eee3"}}>
+            <Container fluid style={{marginBottom: "10%"}}>
+                <div style={{height: "100%", width: "100%", marginTop: "2%"}}>
+                    <Image src={visitImage} alt="Celebration Brewing Logo" fluid />
+
                 </div>
-                <Row>
-                    <Col sm={4}>
-                        <div className={styles.beerImage}>
-                            <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
-                            <Typography className={styles.titleStyle} component="h3" variant="h3">
-                                Contact Us
-                    </Typography>
-                            <Typography className={styles.titleStyle} component="h5" variant="h5">
-                                VISIT CELEBRATION BREWING
-                    </Typography>
-                            <Typography className={styles.para} component="p" variant="inherit">
-                                A blurb about taking a brewery tour at Celebration brewing.
-                    </Typography>
-                            <div className="justify-content-center">
-                                <Link className="nav-link" to="/about"> PLAN YOUR VISIT</Link>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col sm={4} style={{ backgroundColor: "black", marginTop: "3%" }}>
+
+                <Row style={{backgroundColor: "black", marginTop: "2%", marginBottom: "2%"}}>
+            
+                    <Col sm={4} style={{ marginBottom: "2%"}}>
                         <Container>
-                            <Row style={{ border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "5%" }}>
-                                <Typography className={styles.hourTitle} variant="inherit">
-                                    Hours:
+                            <Row style={{border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "5%"}}>
+                            <div style={{alignItems: "center", justifyContent: "center", justify: "center", display: "flex"}}>
+                            <Image className={styles.logo} src={Logo} alt="Celebration Brewing Logo" fluid />
+                            </div>
+                            <Typography className={styles.titleStyle} component="h4" variant="h4">
+                                LOCATION 
+                            </Typography>
+                            <Grid container justify="center" style={{marginBottom: "3%"}}>
+                            <hr style={{width: "40%", height: "2px", color: "#c89019", opacity: 0.7}} />
+                            </Grid>
+                            <Typography className={styles.para}>
+                                1617 Future Way
+                            </Typography>
+                            <Typography className={styles.para}>
+                                Celebration, Florida 33333
+                            </Typography>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <Typography className={styles.para}>
+                                (333)333-3333
+                            </Typography>
+                            </Row>
+                        </Container>
+                    </Col>
+
+                    <Col sm={4}>
+                    <Row style={{border: "solid", borderColor: "#c89019", padding: "2%", marginTop: "5%", marginRight: "3%", marginLeft: "3%", marginBottom: "4%"}}>
+                        <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="100%" height="450px" style={{border:0, marginTop: "1%"}} allowFullScreen="" loading="lazy"></iframe>
+                        </div>
+                    </Row>
+                    </Col>
+
+
+                    <Col sm={4}>
+                    <Container>
+                    <Row style={{border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "5%", marginBottom: "4%"}}>
+                        <Typography className={styles.hourTitle} component="h5" variant="inherit">
+                            HOURS
+
                         </Typography>
                                 <Grid container justify="center" style={{ marginBottom: "3%" }}>
                                     <hr style={{ width: "40%", height: "2px", color: "#c89019", opacity: 0.7 }} />
@@ -136,14 +181,13 @@ function VisitUs() {
                                 <Typography className={styles.hours} component="p" variant="inherit">
                                     Sunday 10:00am - 12:00am
                         </Typography>
-                            </Row>
-                        </Container>
+
+                        </Row>
+                    </Container>
+
                     </Col>
-                    <Col sm={4}>
-                        <div>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" title="map" width="600" height="450" style={{ border: 0, marginTop: "5%" }} allowFullScreen={true} loading="lazy"></iframe>
-                        </div>
-                    </Col>
+
+                    
                 </Row>
             </Container>
             {/* < Footer /> */}

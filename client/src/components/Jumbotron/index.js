@@ -43,8 +43,7 @@ const useStyles = makeStyles({
         }
     },
     bodyColor: {
-        // backgroundColor: "#f4f0e9",
-        backgroundColor: "white",
+        backgroundColor: "#f4eee3"
     },
     image: {
         height: "75%",

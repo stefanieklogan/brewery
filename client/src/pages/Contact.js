@@ -54,9 +54,9 @@ const useStyles = makeStyles({
         height: "100%",
         width: "100%",
         marginTop: "2%",
-        // display: "flex",
+        display: "flex",
         // justifyContent: "center",
-        flexWrap: "wrap",
+        // flexWrap: "wrap",
     }
 });
 
@@ -65,30 +65,13 @@ function Contact() {
 
 
     return (
-        <Grid>
+        <Grid style={{backgroundColor: "#f4eee3"}}>
         <Container>
                 <div className={styles.image}>
                     <Image src={Beer} alt="Pouring beer" fluid/>
                 </div>
-            {/* <Typography className={styles.title} component="h3" variant="h3">
-                CONTACT US
-                </Typography> */}
-                {/* <Zoom { ...documentOptions}>   */}
-                {/* <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
-                    <Typography style={{marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
-                        BREAKING GROUND <span style={{color: "#c89019"}}> | </span> SUMMER 2021
-                    </Typography>
-                    <Grid container justify="center">
-                        <hr style={{width: "50%", height: "5px", color: "#c89019", opacity: 0.7}} />
-                    </Grid>
-                    <Typography style={{ marginTop: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
-                        OPENING <span style={{color: "#c89019"}}> | </span> WINTER 2022
-                    </Typography>
-                </Container> */}
-                
-                {/* </Zoom > */}
                 <Typography className={styles.para} component="p" variant="h6">
-                Located in the Celebration area of Orlando, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce out beers,etc.
+                Located in the Celebration area of Orlando, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce our beers, etc.
                 </Typography>
             <Container style={{backgroundColor:"black", padding: "2em"}}>
             <Typography className={styles.h4} component="h4" variant="h4">

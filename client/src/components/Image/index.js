@@ -10,6 +10,7 @@ const useStyles = makeStyles({
         display: "flex",
         height: "100%",
         width: "100%",
+        backgroundColor: "#f4eee3",
         }
 })
 

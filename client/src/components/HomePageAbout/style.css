@@ -37,3 +37,47 @@
     visibility: visible;
     opacity: 0.7; 
 }
+
+.fade-in-text {
+    /* display: inline-block; */
+    text-align: "center";
+    justify-content: "center";
+    margin-top: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-family: "Red Hat Display";
+    letter-spacing: 0.2px;
+    font-size: 21px;
+    font-weight: 200;
+    color: white;
+    animation: fadeIn linear 8s;
+    -webkit-animation: fadeIn linear 8s;
+    -moz-animation: fadeIn linear 8s;
+    -o-animation: fadeIn linear 8s;
+    -ms-animation: fadeIn linear 8s;
+  }
+  
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
