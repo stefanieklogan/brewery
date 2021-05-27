@@ -7,7 +7,7 @@ import Logo from "../../assets/Celebration_LogoBLACK.png";
 // import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Container } from '@material-ui/core';
+import { Grid, Container } from '@material-ui/core';
 import Image from 'react-bootstrap/Image';
 
 
