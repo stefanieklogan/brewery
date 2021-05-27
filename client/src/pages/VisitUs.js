@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         paddingRight: "30px",
         paddingLeft: "30px",
         fontFamily: "Red Hat Display",
-        fontSize: "21px",
+        fontSize: "20px",
     },
     button: {
         justifyContent: "center",
@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
         color: "white",
         fontFamily: "Red Hat Display",
-        fontSize: "18px",
+        fontSize: "20px",
         // marginTop: "1%",
         marginBottom: "4%",
         
@@ -100,9 +100,9 @@ function VisitUs() {
                     <Image src={visitImage} alt="Celebration Brewing Logo" fluid />
                 </div>
 
-                <Row style={{backgroundColor: "black"}}>
-
-                    <Col sm={4}>
+                <Row style={{backgroundColor: "black", marginTop: "2%"}}>
+            
+                    <Col sm={4} style={{ marginBottom: "2%"}}>
                         <Container>
                             <Row style={{border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "5%"}}>
                             <div style={{alignItems: "center", justifyContent: "center", justify: "center", display: "flex"}}>
@@ -111,12 +111,16 @@ function VisitUs() {
                             <Typography className={styles.titleStyle} component="h4" variant="h4">
                                 LOCATION 
                             </Typography>
+                            <Grid container justify="center" style={{marginBottom: "3%"}}>
+                            <hr style={{width: "40%", height: "2px", color: "#c89019", opacity: 0.7}} />
+                            </Grid>
                             <Typography className={styles.para}>
                                 1617 Future Way
                             </Typography>
                             <Typography className={styles.para}>
                                 Celebration, Florida 33333
                             </Typography>
+                            <br/>
                             <br/>
                             <br/>
                             <Typography className={styles.para}>
@@ -126,7 +130,7 @@ function VisitUs() {
                         </Container>
                     </Col>
 
-                    <Col sm={4} style={{ padding: "2%"}}>
+                    <Col sm={4}>
                     <Container>
                     <Row style={{border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "5%"}}>
                         <Typography className={styles.hourTitle} component="h5" variant="inherit">
@@ -163,7 +167,7 @@ function VisitUs() {
                     <Col sm={4}>
                     <Row style={{border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "5%"}}>
                         <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="450" height="600" style={{border:0, marginTop: "5%"}} allowFullScreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="100%" height="450px" style={{border:0, marginTop: "1%"}} allowFullScreen="" loading="lazy"></iframe>
                         </div>
                     </Row>
                     </Col>
