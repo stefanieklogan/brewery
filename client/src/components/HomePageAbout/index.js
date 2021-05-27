@@ -12,7 +12,7 @@ import Footer from '../../components/Footer/';
 import Copyright from '../../components/Copyright/';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
-// import MailchimpForm from '../Mailchimp/';
+import MailchimpForm from '../Mailchimp/';
 
 // import beerImage from "../../assets/brewery.jpg";
 // import Row from 'react-bootstrap/Row';
@@ -152,12 +152,9 @@ function HomePageAbout() {
                         </div>
                     </Grid>
                 </Container>
+                </Container>
 
-                {/* <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
-                    <Button variant="outlined" href="#"> View All Beers </Button>
-                </Grid> */}
-            </Container>
-            {/* <MailchimpForm /> */}
+            <MailchimpForm />
             <Footer />
             <Copyright />
 

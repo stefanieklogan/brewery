@@ -1,4 +1,5 @@
-// import React from 'react';
+import React from 'react';
+import {Container, Typography} from '@material-ui/core';
 // import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 // const url = process.env.REACT_APP_MAILCHIMP_URL;
@@ -107,3 +108,39 @@
 //   }
   
 //   render(<Demo />, document.querySelector("#demo"));
+function MailchimpForm() {
+    return (
+        <Container style={{backgroundColor: "#f4eee3", border: "solid 2px", borderColor: "#c89019", padding: "3%", marginTop: "23%", justifyContent: "center", alignItems: "center", justify: "center", display: "flex"}} id="mc_embed_signup">
+
+            <form action="https://thisworldtraveled.us20.list-manage.com/subscribe/post?u=b7ab21bae1fd6631ff7334f76&amp;id=77244976d7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+	            <Typography style={{textAlign: "center", fontFamily: "Barlow", fontSize: "48px"}}>GET TAPPED IN</Typography>
+                <Typography>Stay up to date with all the latest brewery events, newest beer releases and more!</Typography> 
+                {/* <div className="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                <div className="mc-field-group">
+	                <label for="mce-EMAIL">Email Address  <span className="asterisk">*</span></label>
+	                <input type="email" value="" name="EMAIL" className="required email" id="mce-EMAIL"/>
+                </div>
+                <div className="mc-field-group">
+	                <label for="mce-FNAME">First Name </label>
+	                <input type="text" value="" name="FNAME" className="" id="mce-FNAME"/>
+                </div>
+                <div className="mc-field-group">
+	                <label for="mce-LNAME">Last Name </label>
+	                <input type="text" value="" name="LNAME" className="" id="mce-LNAME"/>
+                </div> */}
+                </div>
+	            {/* <div id="mce-responses" className="clear">
+		            <div className="response" id="mce-error-response" style={{display:"none"}}></div>
+		            <div className="response" id="mce-success-response" style={{display:"none"}}></div>
+	            </div>     */}
+                <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true"><input type="text" name="b_b7ab21bae1fd6631ff7334f76_77244976d7" tabindex="-1" value=""/></div>
+                <div className="clear"><input type="submit" value="GET OUR NEWSLETTER" name="subscribe" id="mc-embedded-subscribe" className="button"/>
+            </div>
+            </form>
+        </Container>
+    )
+};
+
+export default MailchimpForm;
+
