@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Feedback } = require('../../models');
 const withAuth = require('../../utils/auth')
-// const feedbackController = require("../../controllers/feedbackControllers");
 
 router.post('/', async (req, res) => {
 

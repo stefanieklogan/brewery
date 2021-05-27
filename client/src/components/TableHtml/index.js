@@ -2,7 +2,7 @@ import React from 'react';
 import "./style.css";
 import Moment from 'react-moment';
 
-function TableHtml({ format, headings, rows }) {
+function TableHtml({ format, headings, rows, handleClickChange }) {
   // let { format, headings, rows, click } = props;
   return (
     <table className={`table ${format || "table-striped"}`}>
@@ -10,10 +10,9 @@ function TableHtml({ format, headings, rows }) {
         <tr>
           {headings.map(heading => {
             if (heading === "Name") {
-              // return <th scope="col" onClick={click}>{heading}</th>
-              return <th key={heading} scope="col">{heading}</th>
+              return <th key={heading} onClick={handleClickChange} scope="col">{heading}</th>
             }
-            else { return <th key={heading} scope="col">{heading}</th> }
+            else { return <th key={heading} onClick={handleClickChange} scope="col">{heading}</th> }
           })
           }
         </tr>
