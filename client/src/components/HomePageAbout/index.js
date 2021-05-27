@@ -10,6 +10,7 @@ import BeerCan4 from "../../assets/beer-can4.jpg";
 import Image from 'react-bootstrap/Image';
 import Footer from '../../components/Footer/';
 import Copyright from '../../components/Copyright/';
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 // import MailchimpForm from '../Mailchimp/';
 
@@ -18,8 +19,11 @@ import Copyright from '../../components/Copyright/';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
 // import Container from 'react-bootstrap/Container';
+function pxToRem(value) {
+    return `${value / 16}rem`;
+}
 
-
+const breakpoints = createBreakpoints({});
 const useStyles = makeStyles((theme) => ({
     root: {
         '& > *': {
@@ -36,20 +40,23 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: "3%",
         fontFamily: "Barlow",
         fontWeight: 400,
-        fontSize: "64px"
+        fontSize: pxToRem(52),
+        [breakpoints.up("md")]: {
+            fontSize: pxToRem(64)
+        }
     },
-    para: {
-        textAlign: "center",
-        marginTop: "30px",
-        paddingRight: "100px",
-        paddingLeft: "100px",
-        fontFamily: "Red Hat Display",
-        lineSpacing: "0.2px",
-        letterSpacing: "0.2px",
-        fontSize: "21px",
-        fontWeight: 300,
-        color: "white"
-    },
+    // para: {
+    //     textAlign: "center",
+    //     marginTop: "30px",
+    //     paddingRight: "50px",
+    //     paddingLeft: "50px",
+    //     fontFamily: "Red Hat Display",
+    //     lineSpacing: "0.2px",
+    //     letterSpacing: "0.2px",
+    //     fontSize: "21px",
+    //     fontWeight: 300,
+    //     color: "white"
+    // },
     image: {
         height: "25%",
         width: "25%",
@@ -68,7 +75,17 @@ const useStyles = makeStyles((theme) => ({
         color: "white",
         backgroundColor: "#c89019",
         marginBottom: "40px"
-    }
+    },
+    beerTitle: {
+        fontSize: pxToRem(48),
+        [breakpoints.up("md")]: {
+            fontSize: pxToRem(64)
+        },
+        color:"#c89019", 
+        textAlign:"center", 
+        padding:"3%", 
+        fontFamily: "Barlow",
+    },
 }));
 
 function HomePageAbout() {
@@ -79,21 +96,21 @@ function HomePageAbout() {
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
             </Container>
             <Container style={{backgroundColor: "black", marginTop: "5%", display: "fluid"}}>
-            <Typography fade className={styles.titleStyle} component="h3" variant="h3">
-                CELEBRATION'S FAVORITE BREWERY
-            </Typography>
-            <Typography className={styles.para} component="p" variant="inherit">
-                Since 2021, Celebration Brewing Company has been committed to producing authentic and unique beers that push the boundaries of regular brewing styles and categories. We’re proud to serve our customers with only the best, continually crafting each taste until it’s exactly right.
-            <br />
+                <Typography fade="true" className={styles.titleStyle} component="h3" variant="h3">
+                    CELEBRATION'S FAVORITE BREWERY
+                </Typography>
+                <Typography className="fade-in-text" component="p" variant="inherit">
+                    Since 2021, Celebration Brewing Company has been committed to producing authentic and unique beers that push the boundaries of regular brewing styles and categories. We’re proud to serve our customers with only the best, continually crafting each taste until it’s exactly right.
                 <br />
-            Celebration Brewing is a family-owned brewery, taproom, and kitchen located in beautiful Celebration, Florida. We focus on using only the best ingredients and delivering the utmost quality to our customers.
-            <br />
+                    <br />
+                Celebration Brewing is a family-owned brewery, taproom, and kitchen located in beautiful Celebration, Florida. We focus on using only the best ingredients and delivering the utmost quality to our customers.
                 <br />
-            Everyday, we’re driven by our core values: delivering quality flavors, honoring our customers and celebrating the culture of beer. Experience it for yourself by joining us for a brewery tour, a special event or just to try what’s on tap.
-            </Typography>
-            <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
-                <Button className={styles.button} variant="outlined" href="/visit"> Visit Us </Button>
-            </Grid>
+                    <br />
+                Everyday, we’re driven by our core values: delivering quality flavors, honoring our customers and celebrating the culture of beer. Experience it for yourself by joining us for a brewery tour, a special event or just to try what’s on tap.
+                </Typography>
+                <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
+                    <Button className={styles.button} variant="outlined" href="/visit"> Visit Us </Button>
+                </Grid>
             </Container>
             <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%"}}>
                     <Typography style={{marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow"}} component="h4" variant="h4">
@@ -107,7 +124,7 @@ function HomePageAbout() {
                     </Typography>
                 </Container>
             <Container style={{backgroundColor:"black", marginTop:"5%", display:"fluid"}}>
-                <Typography style={{color:"#c89019", textAlign:"center", padding:"3%", fontFamily: "Barlow", fontSize: "64px"}} component="h3" variant="h3">
+                <Typography className={styles.beerTitle} component="h3" variant="h3">
                     FEATURED BEERS
             </Typography>
                 <Container >

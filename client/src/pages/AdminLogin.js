@@ -1,6 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import {Typography} from '@material-ui/core'
 import axios from 'axios';
 import { withRouter } from "react-router-dom";
 
@@ -38,19 +39,27 @@ class Login extends React.Component {
 	render() {
 		const { email, password } = this.state
 		return (
-			<form noValidate autoComplete="off" >
+			<form noValidate autoComplete="off">
+				<Typography style={{fontFamily: "Barlow", fontSize: "32px", marginLeft: "2%", marginTop: "2%"}}>
+					LOG INTO YOUR ADMIN ACCOUNT
+				</Typography>
 				<TextField id="outlined-basic"
 					label="Email" variant="outlined"
 					value={email}
-					onChange={this.handleEmailChange} />
+					onChange={this.handleEmailChange} 
+					style={{marginTop: "2%", marginRight: "1%", marginLeft: "2%"}}
+					/>
 
 				<TextField id="outlined-basic"
 					label="Password" variant="outlined"
 					value={password}
-					onChange={this.handlePasswordChange} />
+					onChange={this.handlePasswordChange} 
+					style={{marginRight: "1%", marginTop: "2%"}}
+					/>
 
 				<Button type="submit"
-					onClick={this.handleLogin} >
+					onClick={this.handleLogin} 
+					style={{marginTop: "2.5%", border: "solid 1px", borderColor: "#cd8f2a", color: "#cd8f2a"}}>
 					Log In</Button>
 
 			</form>
