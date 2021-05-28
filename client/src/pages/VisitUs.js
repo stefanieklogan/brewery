@@ -74,12 +74,9 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
         color: "white",
         fontFamily: "Red Hat Display",
-
         fontSize: "20px",
         // marginTop: "1%",
         marginBottom: "4%",
-        
-
     },
     hourTitle: {
         fontSize: "36px",
@@ -110,10 +107,17 @@ function VisitUs() {
                     <Image src={visitImage} alt="Celebration Brewing Logo" fluid />
 
                 </div>
+                <Col sm={12}>
+                    <Row style={{border: "solid", borderColor: "#c89019", padding: "2%", marginTop: "5%", marginBottom: "4%"}}>
+                        <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="100%" height="400px" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
+                        </div>
+                    </Row>
+                    </Col>
 
                 <Row style={{backgroundColor: "black", marginTop: "2%", marginBottom: "2%"}}>
             
-                    <Col sm={4} style={{ marginBottom: "2%"}}>
+                    <Col sm={6} style={{ marginBottom: "2%"}}>
                         <Container>
                             <Row style={{border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "5%"}}>
                             <div style={{alignItems: "center", justifyContent: "center", justify: "center", display: "flex"}}>
@@ -141,54 +145,62 @@ function VisitUs() {
                         </Container>
                     </Col>
 
-                    <Col sm={4}>
-                    <Row style={{border: "solid", borderColor: "#c89019", padding: "2%", marginTop: "5%", marginRight: "3%", marginLeft: "3%", marginBottom: "4%"}}>
-                        <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="100%" height="450px" style={{border:0, marginTop: "1%"}} allowFullScreen="" loading="lazy"></iframe>
-                        </div>
-                    </Row>
-                    </Col>
 
-
-                    <Col sm={4}>
+                    <Col sm={6}>
                     <Container>
                     <Row style={{border: "solid", borderColor: "#c89019", padding: "5%", marginTop: "5%", marginBottom: "4%"}}>
                         <Typography className={styles.hourTitle} component="h5" variant="inherit">
                             HOURS
 
                         </Typography>
-                                <Grid container justify="center" style={{ marginBottom: "3%" }}>
-                                    <hr style={{ width: "40%", height: "2px", color: "#c89019", opacity: 0.7 }} />
-                                </Grid>
+                            <Grid container justify="center" style={{ marginBottom: "3%" }}>
+                                <hr style={{ width: "40%", height: "2px", color: "#c89019", opacity: 0.7 }} />
+                            </Grid>
+                            {/* <Row>
+                                
+                                    <Typography style={{ color: "white",}}>
+                                        Monday
+                                    </Typography>
+                                    <Typography style={{ color: "white"}}>
+                                        Tuesday
+                                    </Typography>
+                                    <Typography style={{ color: "white"}}>
+                                        10-7
+                                    </Typography>
+                                    <Typography style={{color: "white"}}>
+                                        10-7
+                                    </Typography>
+                                
+                            </Row> */}
                                 <Typography className={styles.hours} component="p" variant="inherit">
-                                    Monday 10:00am - 7:00pm
-                        </Typography>
+                                    <span style={{ marginRight: "6%"}}>Monday</span> 10am - 7pm 
+                                </Typography>
                                 <Typography className={styles.hours} component="p" variant="inherit">
-                                    Tuesday 10:00am - 7:00pm
-                        </Typography>
+                                <span style={{ marginRight: "6%"}}>Tuesday</span> 10am - 7pm
+                                </Typography>
                                 <Typography className={styles.hours} component="p" variant="inherit">
-                                    Wednesday 10:00am - 7:00pm
-                        </Typography>
+                                <span style={{ marginRight: "6%"}}>Wednesday</span>10am - 7pm
+                                </Typography>
                                 <Typography className={styles.hours} component="p" variant="inherit">
-                                    Thursday 10:00am - 7:00pm
-                        </Typography>
+                                <span style={{ marginRight: "6%"}}>Thursday</span>10am - 7pm
+                                </Typography>
                                 <Typography className={styles.hours} component="p" variant="inherit">
-                                    Friday 10:00am - 7:00pm
-                        </Typography>
+                                <span style={{ marginRight: "6%"}}>Friday</span>10am - 7pm
+                                </Typography>
                                 <Typography className={styles.hours} component="p" variant="inherit">
-                                    Saturday 10:00am - 12:00pm
-                        </Typography>
+                                <span style={{ marginRight: "6%"}}>Saturday</span>10am - 12pm
+                                </Typography>
                                 <Typography className={styles.hours} component="p" variant="inherit">
-                                    Sunday 10:00am - 12:00am
-                        </Typography>
+                                <span style={{ marginRight: "6%"}}>Sunday</span>10am - 12am
+                                </Typography>
 
                         </Row>
                     </Container>
 
-                    </Col>
-
-                    
+                    </Col> 
                 </Row>
+
+            
             </Container>
             {/* < Footer /> */}
             < Copyright />
