@@ -114,7 +114,7 @@ function MailchimpForm() {
 
             <form action="https://thisworldtraveled.us20.list-manage.com/subscribe/post?u=b7ab21bae1fd6631ff7334f76&amp;id=77244976d7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
-	            <Typography style={{textAlign: "center", fontFamily: "Barlow", fontSize: "48px", marginBottom: "1%"}}>GET TAPPED IN</Typography>
+	            <Typography style={{textAlign: "center", fontFamily: "Barlow", fontSize: "48px", marginBottom: "1%"}}>GET TAPPED IN &#9993;</Typography>
                 <Typography style={{textAlign: "center", fontFamily: "Red Hat Display", fontSize: "18px", marginBottom:"2%"}} >Stay up to date with all the latest brewery events, newest beer releases and more!</Typography> 
                 {/* <div className="indicates-required"><span class="asterisk">*</span> indicates required</div>
                 <div className="mc-field-group">
