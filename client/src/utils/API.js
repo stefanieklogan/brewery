@@ -7,7 +7,7 @@ export default {
   // postSignup: function() {
   //   return axios.post("/api/signup");
   // },
-  getBeers: function() {
+  getBeers: function () {
     return axios.get("/api/untappd");
   },
   // getFeedback: function() {
