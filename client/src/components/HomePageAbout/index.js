@@ -57,7 +57,11 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "18px",
         color: "white",
         backgroundColor: "#c89019",
-        marginBottom: "40px"
+        marginBottom: "40px",
+        "&:hover": {
+            backgroundColor: "#f4eee3",
+            color: "black"
+        },
     },
     beerTitle: {
         fontSize: pxToRem(42),

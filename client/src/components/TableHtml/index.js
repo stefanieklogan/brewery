@@ -1,21 +1,21 @@
 import React from 'react';
 import "./style.css";
 import Moment from 'react-moment';
+import { Container } from '@material-ui/core';
 
 function TableHtml({ format, headings, rows, handleClickChange }) {
   // let { format, headings, rows, click } = props;
   return (
-    <div style={{ backgroundColor: "black" }}>
-      <table className={`table ${format || "table-striped"}`} style={{ marginTop: "2%", marginRight: "2%", marginLeft: "2%", border: "black" }}>
-
-        <thead>
-          <tr style={{ color: "white", fontFamily: "Barlow", textTransform: "uppercase" }}>
-            {headings.map(heading => {
-              if (heading === "Name") {
-                return <th key={heading} onClick={handleClickChange} scope="col">{heading}</th>
-              }
-              else { return <th key={heading} onClick={handleClickChange} scope="col">{heading}</th> }
-            })
+    
+    <Container style={{backgroundColor: "black"}}>
+    <div style={{backgroundColor: "black"}}> 
+    <table className={`table ${format || "table-striped"}`} style={{marginTop: "2%", marginRight: "2%", marginLeft: "2%", border: "black"}}>
+      
+      <thead>
+        <tr style={{color: "white", fontFamily: "Barlow", textTransform: "uppercase"}}>
+          {headings.map(heading => {
+            if (heading === "Name") {
+              return <th key={heading} onClick={handleClickChange} scope="col">{heading}</th>
             }
           </tr>
         </thead>
@@ -43,6 +43,7 @@ function TableHtml({ format, headings, rows, handleClickChange }) {
         </tbody>
       </table>
     </div>
+    </Container>
   );
 }
 
