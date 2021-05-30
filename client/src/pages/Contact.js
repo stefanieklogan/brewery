@@ -31,9 +31,9 @@ const useStyles = makeStyles({
         marginBottom: "75px",
         paddingRight: "10%",
         paddingLeft: "10%",
-        fontFamily: "Red Hat Display", 
-        fontSize: "18px", 
-        fontWeight: 300, 
+        fontFamily: "Red Hat Display",
+        fontSize: "18px",
+        fontWeight: 300,
         letterSpacing: ".6px"
     },
     title: {
@@ -42,7 +42,7 @@ const useStyles = makeStyles({
         marginTop: "50px",
         marginBottom: "10px",
     },
-    h4:{
+    h4: {
         textAlign: "center",
         color: "white",
         fontFamily: "Barlow",
@@ -66,28 +66,29 @@ function Contact() {
 
 
     return (
+
         <div style={{backgroundColor: "#f4eee3"}}>
         <Container fluid="true" style={{backgroundColor: "#f4eee3"}}>
                 <div fluid="true" className={styles.image}>
                     <Image src={Beer} alt="Pouring beer" fluid/>
                 </div>
                 <Typography className={styles.para} component="p" variant="h6">
-                Located less than five miles from the Walt Disney World&reg; Resort, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce our beers, etc.
+                    Located less than five miles from the Walt Disney World&reg; Resort, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce our beers, etc.
                 </Typography>
-            <Container style={{backgroundColor:"black", padding: "2em"}}>
-            <Typography className={styles.h4} component="h4" variant="h4">
-            &#10000; SHARE FEEDBACK &#10000;
+                <Container style={{ backgroundColor: "black", padding: "2em" }}>
+                    <Typography className={styles.h4} component="h4" variant="h4">
+                        &#10000; SHARE FEEDBACK &#10000;
                 </Typography>
-                <Typography className={styles.paraTwo} component="p" variant="inherit"> We value your input and feedback. We also value your privacy and will only contact you if agree. Thank you!
+                    <Typography className={styles.paraTwo} component="p" variant="inherit"> We value your input and feedback. We also value your privacy and will only contact you if agree. Thank you!
                 </Typography>
-            
-            <FeedbackForm />
+
+                    <FeedbackForm />
+                </Container>
+
+                <MailchimpForm />
             </Container>
-            
-            <MailchimpForm />
-        </Container>
-        <Footer />
-        <Copyright />
+            <Footer />
+            <Copyright />
 
         </div>
     );
