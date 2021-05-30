@@ -14,11 +14,9 @@ import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 import MailchimpForm from '../Mailchimp/';
 
-
 function pxToRem(value) {
     return `${value / 16}rem`;
 }
-
 
 const breakpoints = createBreakpoints({});
 
@@ -66,9 +64,9 @@ const useStyles = makeStyles((theme) => ({
         [breakpoints.up("md")]: {
             fontSize: pxToRem(64)
         },
-        color:"#c89019", 
-        textAlign:"center", 
-        padding:"3%", 
+        color: "#c89019",
+        textAlign: "center",
+        padding: "3%",
         fontFamily: "Barlow",
     },
 }));
@@ -76,12 +74,11 @@ const useStyles = makeStyles((theme) => ({
 function HomePageAbout() {
     const styles = useStyles();
     return (
-
-        <Grid fluid style={{backgroundColor: "#f4eee3"}}>
-            <Container style={{alignItems:"center", justifyContent: "center", display: "flex" }}>
-                <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
+        <Grid fluid style={{ backgroundColor: "#f4eee3" }}>
+            <Container style={{ alignItems: "center", justifyContent: "center", display: "flex" }}>
+                <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid="true" />
             </Container>
-            <Container style={{backgroundColor: "black", marginTop: "5%", display: "fluid"}}>
+            <Container style={{ backgroundColor: "black", marginTop: "5%", display: "fluid" }}>
                 <Typography fade="true" className={styles.titleStyle} component="h3" variant="h3">
                     CELEBRATION'S FAVORITE BREWERY
                 </Typography>
@@ -94,7 +91,7 @@ function HomePageAbout() {
                     <br />
                 Everyday, we’re driven by our core values: delivering quality flavors, honoring our customers and celebrating the culture of beer. Experience it for yourself by joining us for a brewery tour, a special event or just to try what’s on tap.
                 </Typography>
-                <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px"}} justify="center">
+                <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px" }} justify="center">
 
                     <Button className={styles.button} variant="outlined" href="/visit"> Visit Us </Button>
                 </Grid>
@@ -110,8 +107,8 @@ function HomePageAbout() {
                     OPENING <span style={{ color: "#c89019" }}> | </span> WINTER 2022
                     </Typography>
 
-                </Container>
-            <Container style={{backgroundColor:"black", marginTop:"5%", display:"fluid"}}>
+            </Container>
+            <Container style={{ backgroundColor: "black", marginTop: "5%", display: "fluid" }}>
                 <Typography className={styles.beerTitle} component="h3" variant="h3">
 
                     FEATURED BEERS
@@ -136,7 +133,7 @@ function HomePageAbout() {
                         </div>
                     </Grid>
                 </Container>
-                </Container>
+            </Container>
 
             <MailchimpForm />
             <Footer />
@@ -145,6 +142,5 @@ function HomePageAbout() {
         </Grid>
     )
 };
-
 
 export default HomePageAbout;
