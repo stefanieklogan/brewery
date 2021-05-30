@@ -27,7 +27,7 @@ function MailchimpForm() {
 		            <div className="response" id="mce-error-response" style={{display:"none"}}></div>
 		            <div className="response" id="mce-success-response" style={{display:"none"}}></div>
 	            </div>     */}
-                <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true"><input type="text" name="b_b7ab21bae1fd6631ff7334f76_77244976d7" tabIndex="-1" value="defaultValue" /></div>
+                <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true"><input type="text" name="b_b7ab21bae1fd6631ff7334f76_77244976d7" tabIndex="-1" defaultValue /></div>
                 <div style={{ justifyContent: "center", alignItems: "center", justify: "center", display: "flex", marginTop: "2%" }} className="clear"><input style={{ backgroundColor: "black", fontFamily: "Barlow", fontSize: "18px" }} type="submit" value="JOIN OUR NEWSLETTER" name="subscribe" id="mc-embedded-subscribe" className="button" />
                 </div>
             </form>
