@@ -99,7 +99,7 @@ function VisitUs() {
         <div style={{ backgroundColor: "#f4eee3" }}>
             <Container fluid="true" style={{ marginBottom: "10%" }}>
                 <div style={{ height: "100%", width: "100%" }}>
-                    <Image src={visitImage} alt="Celebration Brewing Logo" fluid />
+                    <Image src={visitImage} alt="Photo of beer with Visit Us text" fluid />
 
                 </div>
                 <Col sm={12}>
