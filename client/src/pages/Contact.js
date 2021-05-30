@@ -72,13 +72,13 @@ function Contact() {
                     <Image src={Beer} alt="Pouring beer" fluid/>
                 </div>
                 <Typography className={styles.para} component="p" variant="h6">
-                Located in the Celebration area of Orlando, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce our beers, etc.
+                Located less than five miles from the Walt Disney World&reg; Resort, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce our beers, etc.
                 </Typography>
             <Container style={{backgroundColor:"black", padding: "2em"}}>
             <Typography className={styles.h4} component="h4" variant="h4">
-                SHARE FEEDBACK
+            &#10000; SHARE FEEDBACK &#10000;
                 </Typography>
-                <Typography className={styles.paraTwo} component="p" variant="inherit"> We value your input and feedback. Please fill out the form below and we will get in touch as soon as possible. Thank you!
+                <Typography className={styles.paraTwo} component="p" variant="inherit"> We value your input and feedback. We also value your privacy and will only contact you if agree. Thank you!
                 </Typography>
             
             <FeedbackForm />
