@@ -105,7 +105,7 @@ function VisitUs() {
                 <Col sm={12}>
                     <Row style={{ border: "solid", borderColor: "#c89019", padding: "2%", marginTop: "3%", marginBottom: "3%", marginRight: "1%", marginLeft: "1%" }}>
                         <div>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="100%" height="400px" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="100%" height="400px" style={{ border: 0 }} allowFullScreen="" loading="lazy" title="celebration brewery on google maps"></iframe>
                         </div>
                     </Row>
                 </Col>
