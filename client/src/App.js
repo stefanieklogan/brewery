@@ -1,35 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from './components/NavBar';
-// import Copyright from './components/Copyright';
 import Homepage from './pages/Home'
 import Beer from './pages/Beer';
 import AboutUs from './pages/AboutUs';
-// import Feedback from './pages/FeedbackForm';
 import VisitUs from './pages/VisitUs';
 import Contact from './pages/Contact';
 import SignUp from "./pages/Signup"
 import Login from './pages/AdminLogin';
 import FeedbackResults from './pages/FeedbackResults';
 import AdminSignupForm from './pages/AdminSignup';
-
-
-// import { createMuiTheme, MuiCssBaseline } from '@material-ui/core';
-
-// const font = 'Barlow, Playfair Display';
-
-// const theme = createMuiTheme({
-//   typography: {
-//     fontFamily: font,
-//   },
-//   // overrides: {
-//   //   MuiCssBaseline: {
-//   //     '@global': {
-//   //       '@font-face': [raleway]
-//   //     }
-//   //   }
-//   // }
-// })
 
 
 function App() {
@@ -56,7 +36,6 @@ function App() {
         <Route exact path='/admin/feedback'>
           <FeedbackResults /></Route>
       </Switch>
-      {/* <Copyright /> */}
     </Router>
   );
 }

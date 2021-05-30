@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Container, Grid } from '@material-ui/core';
+import { Typography, Container } from '@material-ui/core';
 // import { sizing } from '@material-ui/system';
 import FeedbackForm from '../components/FeedbackForm/';
 import MailchimpForm from '../components/Mailchimp/';
@@ -68,7 +68,7 @@ function Contact() {
     return (
         <div style={{backgroundColor: "#f4eee3"}}>
         <Container fluid="true" style={{backgroundColor: "#f4eee3"}}>
-                <div fluid className={styles.image}>
+                <div fluid="true" className={styles.image}>
                     <Image src={Beer} alt="Pouring beer" fluid/>
                 </div>
                 <Typography className={styles.para} component="p" variant="h6">

@@ -66,17 +66,17 @@ class TableData extends Component {
 
     render() {
         return (
-            <>
+            <div style={{backgroundColor: "black"}}>
                 <Button type="submit" onClick={this.handleLogout} style={{marginTop: "2.5%", marginLeft: "2%",border: "solid 1px", borderColor: "#cd8f2a", color: "#cd8f2a", fontFamily: "Barlow"}}>
                     Log Out</Button>
-                <p style={{fontStyle: 'italic', marginTop: "1.5%", marginLeft: "2%", fontFamily: "Red Hat Display"}}>Click on any column header to sort data</p>
+                <p style={{fontStyle: 'italic', color: "white", marginTop: "1.5%", marginLeft: "2%", fontFamily: "Red Hat Display"}}>Click on any column header to sort data</p>
                 <TableHtml
                     headings={this.state.headings}
                     handleClickChange={() => this.handleClickChange()}
                     rows={this.state.rows}
                     format={this.state.format}
                 />
-            </>
+            </div>
         )
     };
 };
