@@ -1,8 +1,6 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-// import Footer from '../components/Footer/';
 import Copyright from '../components/Copyright/';
-// import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Logo from "../assets/Celebration_Logo.png"
 import visitImage from "../assets/visit-celebration.png";
@@ -12,7 +10,6 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
-// import { Link } from 'react-router-dom';
 
 function pxToRem(value) {
     return `${value / 16}rem`;
@@ -75,7 +72,6 @@ const useStyles = makeStyles((theme) => ({
         color: "white",
         fontFamily: "Red Hat Display",
         fontSize: "20px",
-        // marginTop: "1%",
         marginBottom: "4%",
     },
     hourTitle: {
@@ -85,7 +81,6 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
         marginTop: "6%",
         marginBottom: "4%",
-        // marginRight: "3%"
     },
     logo: {
         alignItems: "center",
@@ -102,13 +97,13 @@ function VisitUs() {
     return (
 
         <div style={{backgroundColor: "#f4eee3"}}>
-            <Container fluid style={{marginBottom: "10%"}}>
-                <div style={{height: "100%", width: "100%", marginTop: "2%"}}>
+            <Container fluid="true" style={{marginBottom: "10%"}}>
+                <div style={{height: "100%", width: "100%"}}>
                     <Image src={visitImage} alt="Celebration Brewing Logo" fluid />
 
                 </div>
                 <Col sm={12}>
-                    <Row style={{border: "solid", borderColor: "#c89019", padding: "2%", marginTop: "5%", marginBottom: "4%"}}>
+                    <Row style={{border: "solid", borderColor: "#c89019", padding: "2%", marginTop: "3%", marginBottom: "3%", marginRight: "1%", marginLeft: "1%"}}>
                         <div>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28102.35909696965!2d-81.56934498256605!3d28.304536877601265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1617%20Future%20Way%2C%20Celebration%20FL!5e0!3m2!1sen!2sus!4v1621821478802!5m2!1sen!2sus" width="100%" height="400px" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
                         </div>
@@ -133,7 +128,7 @@ function VisitUs() {
                                 1617 Future Way
                             </Typography>
                             <Typography className={styles.para}>
-                                Celebration, Florida 33333
+                                Celebration, Florida 34747
                             </Typography>
                             <br/>
                             <br/>
@@ -156,22 +151,6 @@ function VisitUs() {
                             <Grid container justify="center" style={{ marginBottom: "3%" }}>
                                 <hr style={{ width: "40%", height: "2px", color: "#c89019", opacity: 0.7 }} />
                             </Grid>
-                            {/* <Row>
-                                
-                                    <Typography style={{ color: "white",}}>
-                                        Monday
-                                    </Typography>
-                                    <Typography style={{ color: "white"}}>
-                                        Tuesday
-                                    </Typography>
-                                    <Typography style={{ color: "white"}}>
-                                        10-7
-                                    </Typography>
-                                    <Typography style={{color: "white"}}>
-                                        10-7
-                                    </Typography>
-                                
-                            </Row> */}
                                 <Typography className={styles.hours} component="p" variant="inherit">
                                     <span style={{ marginRight: "6%"}}>Monday</span> 10am - 7pm 
                                 </Typography>
@@ -202,7 +181,6 @@ function VisitUs() {
 
             
             </Container>
-            {/* < Footer /> */}
             < Copyright />
         </div>
     )

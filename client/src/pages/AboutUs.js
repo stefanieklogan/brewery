@@ -5,11 +5,6 @@ import { Grid, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import BeerPhoto from "../assets/about-celebration.png";
-// import BeerGlass from "../assets/beer-glass";
-// import beerImage from "../../assets/brewery.jpg";
-// import Row from "react-bootstrap/Row";
-// import Col from 'react-bootstrap/Col';
-// import Container from 'react-bootstrap/Container';
 import Image from "react-bootstrap/Image";
 import { Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -32,10 +27,8 @@ accordianPara: {
     fontSize: "20px",
 },
 titleStyle: {
-    // backgroundColor: "white",
     color: "#c89019",
     textAlign: "center",
-    // postition: "absolute",
     marginTop: "70px",
     bottom: "80px",
     right: "50px",
@@ -67,7 +60,7 @@ const styles = useStyles();
 return (
     <Grid style={{backgroundColor: "#f4eee3"}}>
       <div className={styles.image}>
-        <Image fade src={BeerPhoto} alt="Celebration Brewing Logo" fluid />
+        <Image src={BeerPhoto} alt="Celebration Brewing Logo" fluid />
       </div>
       
 

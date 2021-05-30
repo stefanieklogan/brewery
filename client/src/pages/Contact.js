@@ -17,8 +17,8 @@ const useStyles = makeStyles({
         textAlign: "center",
         marginTop: "50px",
         marginBottom: "50px",
-        paddingRight: "20%",
-        paddingLeft: "20%",
+        paddingRight: "10%",
+        paddingLeft: "10%",
         fontFamily: "Red Hat Display",
         lineSpacing: "0.2px",
         fontSize: "21px",
@@ -53,8 +53,8 @@ const useStyles = makeStyles({
     },
     image: {
         height: "100%",
-        width: "100%",
-        marginTop: "2%",
+        maxWidth: "100%",
+        // marginTop: "2%",
         display: "flex",
         // justifyContent: "center",
         // flexWrap: "wrap",
@@ -66,9 +66,9 @@ function Contact() {
 
 
     return (
-        <Grid style={{backgroundColor: "#f4eee3"}}>
-        <Container>
-                <div className={styles.image}>
+        <div style={{backgroundColor: "#f4eee3"}}>
+        <Container fluid="true" style={{backgroundColor: "#f4eee3"}}>
+                <div fluid className={styles.image}>
                     <Image src={Beer} alt="Pouring beer" fluid/>
                 </div>
                 <Typography className={styles.para} component="p" variant="h6">
@@ -89,7 +89,7 @@ function Contact() {
         <Footer />
         <Copyright />
 
-        </Grid>
+        </div>
     );
 
 }
