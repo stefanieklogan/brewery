@@ -11,13 +11,16 @@ function TableHtml({ format, headings, rows, handleClickChange }) {
     <div style={{backgroundColor: "black"}}> 
     <table className={`table ${format || "table-striped"}`} style={{marginTop: "2%", marginRight: "2%", marginLeft: "2%", border: "black"}}>
       
-      <thead>
+    <thead>
         <tr style={{color: "white", fontFamily: "Barlow", textTransform: "uppercase"}}>
           {headings.map(heading => {
             if (heading === "Name") {
               return <th key={heading} onClick={handleClickChange} scope="col">{heading}</th>
             }
-          </tr>
+            else { return <th key={heading} onClick={handleClickChange} scope="col">{heading}</th> }
+          })
+          }
+        </tr>
         </thead>
         <tbody>
           {rows.map((item) => {
