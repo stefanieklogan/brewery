@@ -5,10 +5,11 @@ import Moment from 'react-moment';
 function TableHtml({ format, headings, rows, handleClickChange }) {
   // let { format, headings, rows, click } = props;
   return (
-    <table className={`table ${format || "table-striped"}`} style={{marginTop: "2%", marginRight: "2%", marginLeft: "2%"}}>
+    <div style={{backgroundColor: "black"}}> 
+    <table className={`table ${format || "table-striped"}`} style={{marginTop: "2%", marginRight: "2%", marginLeft: "2%", border: "black"}}>
       
       <thead>
-        <tr>
+        <tr style={{color: "white", fontFamily: "Barlow", textTransform: "uppercase"}}>
           {headings.map(heading => {
             if (heading === "Name") {
               return <th key={heading} onClick={handleClickChange} scope="col">{heading}</th>
@@ -20,8 +21,8 @@ function TableHtml({ format, headings, rows, handleClickChange }) {
       </thead>
       <tbody>
         {rows.map((item) => {
-          return <tr key={item.id}>
-            <td>
+          return <tr style={{color: "white", fontFamily: "Red Hat Display"}} key={item.id}>
+            <td style={{color: "white"}}>
               <Moment format="MM-DD-YYYY">{item.date_created}</Moment>
             </td>
             <td>
@@ -41,6 +42,7 @@ function TableHtml({ format, headings, rows, handleClickChange }) {
         )}
       </tbody>
     </table>
+    </div>
   );
 }
 

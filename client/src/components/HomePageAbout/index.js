@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: "40px"
     },
     beerTitle: {
-        fontSize: pxToRem(48),
+        fontSize: pxToRem(42),
         [breakpoints.up("md")]: {
             fontSize: pxToRem(64)
         },
@@ -93,7 +93,7 @@ function HomePageAbout() {
     const styles = useStyles();
     return (
 
-        <Grid style={{backgroundColor: "#f4eee3"}}>
+        <Grid fluid style={{backgroundColor: "#f4eee3"}}>
             <Container style={{alignItems:"center", justifyContent: "center", display: "flex" }}>
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid />
             </Container>

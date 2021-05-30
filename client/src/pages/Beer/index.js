@@ -44,8 +44,8 @@ const useStyles = makeStyles((theme) => ({
     image: {
         height: "100%",
         width: "100%",
-        marginTop: "2%",
-        marginBottom: "2%"
+        // marginTop: "2%",
+        // marginBottom: "2%"
     }
 }));
 
@@ -68,10 +68,11 @@ function Beer() {
     return (
 
         <Grid style={{backgroundColor: "#f4eee3"}}>
-            <Container fluid="true" styles={{display:"flex"}}>
-
+            <Grid container fluid="true" styles={{display:"flex"}}>
+                <div>
                 <Image className={classes.image} src={BeerImg} alt="Picture of a can of beer" />
-            </Container>
+                </div>
+            </Grid>
 
             <Grid container style={{ alignItems: "center", justifyContent: "center", backgroundColor: "black" }}>
                 {beers.map((beer) => (

@@ -67,7 +67,7 @@ const styles = useStyles();
 return (
     <Grid style={{backgroundColor: "#f4eee3"}}>
       <div className={styles.image}>
-        <Image fade src={BeerPhoto} alt="Celebration Brewing Logo" fluid />
+        <Image src={BeerPhoto} alt="Celebration Brewing Logo" fluid />
       </div>
       
 

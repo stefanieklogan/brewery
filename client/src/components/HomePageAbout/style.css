@@ -40,8 +40,8 @@
 
 .fade-in-text {
     /* display: inline-block; */
-    text-align: "center";
-    justify-content: "center";
+    text-align: center;
+    justify-content: center;
     margin-top: 30px;
     padding-right: 50px;
     padding-left: 50px;
