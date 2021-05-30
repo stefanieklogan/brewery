@@ -47,8 +47,8 @@ function App() {
           <Contact /></Route>
         <Route exact path="/visit">
           <VisitUs /></Route>
-        <Route exact path="/signup">
-          <SignUp /></Route>
+        {/* <Route exact path="/signup">
+          <SignUp /></Route> */}
           <Route exact path="/admin/signup">
           <AdminSignupForm /></Route>
         <Route exact path="/admin/login">
