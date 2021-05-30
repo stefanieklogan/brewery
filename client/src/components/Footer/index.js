@@ -91,7 +91,7 @@ function Footer() {
                         </Row>
                         <Row>
                             <Typography className={styles.hours} component="p" variant="inherit">
-                                Sat & Sun 10:00am - 12:00am
+                                Sat &amp; Sun 10:00am - 12:00am
                         </Typography>
                         </Row>
                     </Col>
@@ -103,6 +103,6 @@ function Footer() {
     )
 }
 
-export default Footer
+export default Footer;
 
 
