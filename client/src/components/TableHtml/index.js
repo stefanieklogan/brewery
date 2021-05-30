@@ -5,7 +5,8 @@ import Moment from 'react-moment';
 function TableHtml({ format, headings, rows, handleClickChange }) {
   // let { format, headings, rows, click } = props;
   return (
-    <table className={`table ${format || "table-striped"}`}>
+    <table className={`table ${format || "table-striped"}`} style={{marginTop: "2%", marginRight: "2%", marginLeft: "2%"}}>
+      
       <thead>
         <tr>
           {headings.map(heading => {

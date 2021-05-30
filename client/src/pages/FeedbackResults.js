@@ -67,8 +67,9 @@ class TableData extends Component {
     render() {
         return (
             <>
-                <Button type="submit" onClick={this.handleLogout} >
+                <Button type="submit" onClick={this.handleLogout} style={{marginTop: "2.5%", marginLeft: "2%",border: "solid 1px", borderColor: "#cd8f2a", color: "#cd8f2a"}}>
                     Log Out</Button>
+                <p style={{fontStyle: 'italic', marginTop: "1.5%", marginLeft: "2%"}}>Click on any column header to sort data</p>
                 <TableHtml
                     headings={this.state.headings}
                     handleClickChange={() => this.handleClickChange()}
