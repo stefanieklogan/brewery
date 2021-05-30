@@ -14,10 +14,7 @@ import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 import MailchimpForm from '../Mailchimp/';
 
-// import beerImage from "../../assets/brewery.jpg";
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
-// import Container from 'react-bootstrap/Container';
+
 function pxToRem(value) {
     return `${value / 16}rem`;
 }
@@ -46,18 +43,6 @@ const useStyles = makeStyles((theme) => ({
             fontSize: pxToRem(64)
         }
     },
-    // para: {
-    //     textAlign: "center",
-    //     marginTop: "30px",
-    //     paddingRight: "50px",
-    //     paddingLeft: "50px",
-    //     fontFamily: "Red Hat Display",
-    //     lineSpacing: "0.2px",
-    //     letterSpacing: "0.2px",
-    //     fontSize: "21px",
-    //     fontWeight: 300,
-    //     color: "white"
-    // },
     image: {
         height: "25%",
         width: "25%",
@@ -66,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
     beerImage: {
         height: "100%",
         width: "100%",
-        // display: "flex",
         padding: "2%",
         marginBottom: "2%"
     },

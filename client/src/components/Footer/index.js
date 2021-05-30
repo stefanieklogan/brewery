@@ -1,10 +1,7 @@
 import React from 'react';
-// import './style.css';
-// import { Link } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
 import Logo from "../../assets/Celebration_LogoBLACK.png";
-// import beerImage from "../../assets/brewery.jpg";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Grid, Container } from '@material-ui/core';
@@ -27,11 +24,9 @@ const useStyles = makeStyles({
     },
     para: {
         textAlign: "center",
-        marginTop: "50px",
+        marginTop: "30px",
         fontFamily: "Red Hat Display",
         fontSize: "18px"
-        // paddingRight: "100px",
-        // paddingLeft: "100px",
     },
     number: {
         textAlign: "center",
@@ -45,12 +40,6 @@ const useStyles = makeStyles({
         fontFamily: "Red Hat Display",
         fontSize: "18px"
     },
-    // link: {
-    //     textAlign: "center",
-    //     marginTop: "30px",
-    //     color: "black",
-    //     textDecoration: "none",
-    // }
 })
 
 function Footer() {
@@ -63,10 +52,12 @@ function Footer() {
                     <Col>
                         <Row>
                             <Typography className={styles.para} component="p" variant="inherit">
-                                1234 Disney World Dr.
-                                Orlando, Florida 33333
+                                1617 Future Way
+                                <br/>
+                                Celebration, Florida 34747
                         </Typography>
                         </Row>
+                        
                         <Row>
                             <Typography className={styles.number} component="p" variant="inherit">
                                 (333) 333-3333
@@ -90,7 +81,7 @@ function Footer() {
                     <Col>
                         <Row>
                             <Typography className={styles.para} component="p" variant="inherit">
-                                Hours:
+                                HOURS
                         </Typography>
                         </Row>
                         <Row>

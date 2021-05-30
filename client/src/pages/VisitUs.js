@@ -1,8 +1,6 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-// import Footer from '../components/Footer/';
 import Copyright from '../components/Copyright/';
-// import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Logo from "../assets/Celebration_Logo.png"
 import visitImage from "../assets/visit-celebration.png";
@@ -12,7 +10,6 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
-// import { Link } from 'react-router-dom';
 
 function pxToRem(value) {
     return `${value / 16}rem`;
@@ -75,7 +72,6 @@ const useStyles = makeStyles((theme) => ({
         color: "white",
         fontFamily: "Red Hat Display",
         fontSize: "20px",
-        // marginTop: "1%",
         marginBottom: "4%",
     },
     hourTitle: {
@@ -85,7 +81,6 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
         marginTop: "6%",
         marginBottom: "4%",
-        // marginRight: "3%"
     },
     logo: {
         alignItems: "center",
@@ -133,7 +128,7 @@ function VisitUs() {
                                 1617 Future Way
                             </Typography>
                             <Typography className={styles.para}>
-                                Celebration, Florida 33333
+                                Celebration, Florida 34747
                             </Typography>
                             <br/>
                             <br/>
