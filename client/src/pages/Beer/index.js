@@ -68,7 +68,7 @@ function Beer() {
     return (
 
         <Grid style={{ backgroundColor: "#f4eee3" }}>
-            <Grid container fluid="true" styles={{ display: "flex" }}>
+            <Grid container fluid="true" style={{ display: "flex" }}>
                 <div>
                     <Image className={classes.image} src={BeerImg} alt="Picture of a can of beer" />
                 </div>
