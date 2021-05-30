@@ -8,7 +8,7 @@ import AboutUs from './pages/AboutUs';
 // import Feedback from './pages/FeedbackForm';
 import VisitUs from './pages/VisitUs';
 import Contact from './pages/Contact';
-import SignUp from "./pages/Signup"
+// import SignUp from "./pages/Signup"
 import Login from './pages/AdminLogin';
 import FeedbackResults from './pages/FeedbackResults';
 import AdminSignupForm from './pages/AdminSignup';
@@ -47,8 +47,8 @@ function App() {
           <Contact /></Route>
         <Route exact path="/visit">
           <VisitUs /></Route>
-        <Route exact path="/signup">
-          <SignUp /></Route>
+        {/* <Route exact path="/signup">
+          <SignUp /></Route> */}
           <Route exact path="/admin/signup">
           <AdminSignupForm /></Route>
         <Route exact path="/admin/login">
