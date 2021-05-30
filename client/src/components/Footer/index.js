@@ -45,59 +45,59 @@ const useStyles = makeStyles({
 function Footer() {
     const styles = useStyles();
     return (
-        <Grid style={{backgroundColor: "#f4eee3"}}>
-        <div className={styles.root}>
-            <Container fluid="true">
-                <Row>
-                    <Col>
-                        <Row>
-                            <Typography className={styles.para} component="p" variant="inherit">
-                                1617 Future Way
-                                <br/>
+        <Grid style={{ backgroundColor: "#f4eee3" }}>
+            <div className={styles.root}>
+                <Container fluid="true">
+                    <Row>
+                        <Col>
+                            <Row>
+                                <Typography className={styles.para} component="p" variant="inherit">
+                                    1617 Future Way
+                                <br />
                                 Celebration, Florida 34747
                         </Typography>
-                        </Row>
-                        
-                        <Row>
-                            <Typography className={styles.number} component="p" variant="inherit">
-                                (333) 333-3333
-                        </Typography>
-                        </Row>
+                            </Row>
 
-                    </Col>
+                            <Row>
+                                <Typography className={styles.number} component="p" variant="inherit">
+                                    (333) 333-3333
+                        </Typography>
+                            </Row>
 
-                    <Col style={{
-                        width: "25%", height: "25%",
-                        justify: "center",
-                        alignItems: 'center',
-                        display: 'flex',
-                        justifyContent: 'center'
-                    }}>
-                        <div >
-                            <Image style={{ width: "150px", justifyContent: "center", alignItems: "center" }} src={Logo} alt="Celebration Brewing Logo" fluid />
-                        </div>
-                    </Col>
+                        </Col>
 
-                    <Col>
-                        <Row>
-                            <Typography className={styles.para} component="p" variant="inherit">
-                                HOURS
+                        <Col style={{
+                            width: "25%", height: "25%",
+                            justify: "center",
+                            alignItems: 'center',
+                            display: 'flex',
+                            justifyContent: 'center'
+                        }}>
+                            <div >
+                                <Image style={{ width: "150px", justifyContent: "center", alignItems: "center" }} src={Logo} alt="Celebration Brewing Logo" fluid />
+                            </div>
+                        </Col>
+
+                        <Col>
+                            <Row>
+                                <Typography className={styles.para} component="p" variant="inherit">
+                                    HOURS
                         </Typography>
-                        </Row>
-                        <Row>
-                            <Typography className={styles.hours} component="p" variant="inherit">
-                                M-F 10:00am - 7:00pm
+                            </Row>
+                            <Row>
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    M-F 10:00am - 7:00pm
                         </Typography>
-                        </Row>
-                        <Row>
-                            <Typography className={styles.hours} component="p" variant="inherit">
-                                Sat &amp; Sun 10:00am - 12:00am
+                            </Row>
+                            <Row>
+                                <Typography className={styles.hours} component="p" variant="inherit">
+                                    Sat &amp; Sun 10:00am - 12:00am
                         </Typography>
-                        </Row>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </Grid>
 
     )
