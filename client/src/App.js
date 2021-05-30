@@ -13,7 +13,6 @@ import Login from './pages/AdminLogin';
 import FeedbackResults from './pages/FeedbackResults';
 import AdminSignupForm from './pages/AdminSignup';
 
-
 // import { createMuiTheme, MuiCssBaseline } from '@material-ui/core';
 
 // const font = 'Barlow, Playfair Display';
@@ -30,7 +29,6 @@ import AdminSignupForm from './pages/AdminSignup';
 //   //   }
 //   // }
 // })
-
 
 function App() {
   return (
@@ -49,7 +47,7 @@ function App() {
           <VisitUs /></Route>
         {/* <Route exact path="/signup">
           <SignUp /></Route> */}
-          <Route exact path="/admin/signup">
+        <Route exact path="/admin/signup">
           <AdminSignupForm /></Route>
         <Route exact path="/admin/login">
           <Login /></Route>

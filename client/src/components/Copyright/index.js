@@ -1,7 +1,6 @@
-import React from 'react'
-import './style.css';
+import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-import pbu from "../../assets/pbu_40_black.png"
+import pbu from "../../assets/pbu_40_black.png";
 
 const useStyles = makeStyles({
     copyrightColor: {
@@ -9,7 +8,7 @@ const useStyles = makeStyles({
         marginTop: "20px",
         backgroundColor: "#f4eee3"
     }
-})
+});
 
 //set the copyright date to the current year so that it automatically updates
 

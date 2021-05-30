@@ -43,8 +43,6 @@ class FeedbackForm extends React.Component {
         if (this.state.checkbox === false) {
             this.setState({ email: '' })
         }
-        console.log(this.state)
-        console.log(`${this.state.name} ${this.state.feedback} ${this.state.email} ${this.state.checkbox}`)
         axios.post('/api/feedback', this.state)
             .then(response => {
                 console.log(response)
@@ -53,7 +51,6 @@ class FeedbackForm extends React.Component {
                 console.log(error)
             })
 
-        alert(`Thank you for your feedback!`)
         e.preventDefault();
     }
 
@@ -66,34 +63,34 @@ class FeedbackForm extends React.Component {
             emailInput = (
                 <div>
                     {/* <label>Email:</label>{isChecked} */}
-                    <TextField style={{color:"white", backgroundColor:"white"}} className="email" type="text" label="Email" variant="outlined" value={email} onChange={this.handleEmailChange} />{isChecked}
+                    <TextField style={{ color: "white", backgroundColor: "white" }} className="email" type="text" label="Email" variant="outlined" value={email} onChange={this.handleEmailChange} />{isChecked}
                 </div>
             )
         }
 
         // const styles = useStyles();
-            
+
         return (
-            <Container style={{width:"75%"}}>
-            <Form onSubmit={this.handleSubmit}>
-                
-                    <Form.Group style={{marginBottom: "2%"}} controlId="formBasicEmail">
+            <Container style={{ width: "75%" }}>
+                <Form onSubmit={this.handleSubmit}>
+
+                    <Form.Group style={{ marginBottom: "2%" }} controlId="formBasicEmail">
                         <Form.Control type="name" placeholder="Enter Name" value={name} onChange={this.handleNameChange}></Form.Control>
                     </Form.Group>
-                    <Form.Group style={{marginBottom: "2%"}} controlId="exampleForm.ControlTextarea1">
-                        <Form.Control as="textarea" placeholder="Message" rows={3} value={feedback} onChange={this.handleFeedbackChange}/>
+                    <Form.Group style={{ marginBottom: "2%" }} controlId="exampleForm.ControlTextarea1">
+                        <Form.Control as="textarea" placeholder="Message" rows={3} value={feedback} onChange={this.handleFeedbackChange} />
                     </Form.Group>
                     {/* <label>Name:</label> */}
                     {/* <TextField id="outlined-password-input" label="Name" variant="outlined" className="name" type="text" value={name} onChange={this.handleNameChange} /> */}
                     {/* <label>Feedback:</label> */}
                     {/* <TextField id="outlined-multiline-static" multiline rowsMax={4} label="Feedback" variant="outlined" className="feedback" type="text" value={feedback} onChange={this.handleFeedbackChange}></TextField> */}
-                <div>
-                    <p style={{color: "white", fontFamily: "Barlow", fontSize: "18px", fontWeight: 300, letterSpacing: ".6px"}} className="checkbox">Check here if you would like to be contacted:</p><Checkbox style={{color:"white"}} value={checkbox} onChange={this.handleCheckboxChange} /><p className="email">{emailInput}</p>
-                </div>
+                    <div>
+                        <p style={{ color: "white", fontFamily: "Barlow", fontSize: "18px", fontWeight: 300, letterSpacing: ".6px" }} className="checkbox">Check here if you would like to be contacted:</p><Checkbox style={{ color: "white" }} value={checkbox} onChange={this.handleCheckboxChange} /><p className="email">{emailInput}</p>
+                    </div>
 
-                <Button style={{color: "black", backbroundColor:"white"}} className="submitBtn" variant="contained" type="submit">Submit</Button>
+                    <Button style={{ color: "black", backbroundColor: "white" }} className="submitBtn" variant="contained" type="submit">Submit</Button>
 
-            </Form>
+                </Form>
             </Container>
         );
     }

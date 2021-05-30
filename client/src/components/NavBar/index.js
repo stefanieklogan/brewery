@@ -23,11 +23,11 @@ function NavBar() {
     const styles = useStyles();
     return (
 
-            <div className={styles.navStyle}>
-                <Navbar collapseOnSelect expand="lg" >
-                <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fixed ="true"/>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginRight: "3%", color: "#efe9db"}} />
-                <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" style={{marginLeft: "5%", marginRight: "5%"}}>
+        <div className={styles.navStyle}>
+            <Navbar collapseOnSelect expand="lg" >
+                <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fixed="true" />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{ marginRight: "3%", color: "#efe9db" }} />
+                <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" style={{ marginLeft: "5%", marginRight: "5%" }}>
 
                     <Nav className="mr-auto" >
                         <Nav.Link style={{ color: "white", marginRight: "2%", fontSize: "18px", fontFamily: "Barlow", fontWeight: 300 }} href="/">HOME</Nav.Link>
@@ -50,8 +50,8 @@ function NavBar() {
                                 <Link className="nav-link" to="/admin/feedbackresults"> FeedbackResults  </Link>
                             </li> */}
 
-                </Navbar>
-            </div>
+            </Navbar>
+        </div>
 
     )
 }
