@@ -8,7 +8,7 @@ import Card from '@material-ui/core/Card';
 import { CardActionArea } from '@material-ui/core';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import { Grid, Container } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Image from 'react-bootstrap/Image';
 
 import BeerImg from "../../assets/beer-celebration.png";
@@ -67,10 +67,10 @@ function Beer() {
     };
     return (
 
-        <Grid style={{backgroundColor: "#f4eee3"}}>
-            <Grid container fluid="true" styles={{display:"flex"}}>
+        <Grid style={{ backgroundColor: "#f4eee3" }}>
+            <Grid container fluid="true" styles={{ display: "flex" }}>
                 <div>
-                <Image className={classes.image} src={BeerImg} alt="Picture of a can of beer" />
+                    <Image className={classes.image} src={BeerImg} alt="Picture of a can of beer" />
                 </div>
             </Grid>
 
