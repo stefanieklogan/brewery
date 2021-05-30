@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
 function HomePageAbout() {
     const styles = useStyles();
     return (
-        <Grid fluid style={{ backgroundColor: "#f4eee3" }}>
+        <Grid fluid="true" style={{ backgroundColor: "#f4eee3" }}>
             <Container style={{ alignItems: "center", justifyContent: "center", display: "flex" }}>
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid="true" />
             </Container>
