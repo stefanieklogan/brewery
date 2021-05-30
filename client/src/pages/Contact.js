@@ -61,11 +61,11 @@ function Contact() {
 
         <div style={{backgroundColor: "#f4eee3"}}>
         <Container style={{backgroundColor: "#f4eee3"}}>
-            <Grid fluid="true">
-                <div style={{ width: "100%", height:"100%"}}>
+            {/* <Grid fluid="true"> */}
+                <div style={{ width: "100%", height: "100%" }}>
                     <Image src={Beer} alt="Beer photo with contact us text" fluid/>
                 </div>
-                </Grid>
+                {/* </Grid> */}
                 <Grid>
                 <Typography className={styles.para} component="p" variant="h6">
                     Located less than five miles from the Walt Disney World&reg; Resort, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce our beers, etc.
