@@ -7,18 +7,18 @@ import { withRouter } from "react-router-dom";
 class TableData extends Component {
     constructor(props) {
         super(props);
-    
-    this.state = {
-        rows: [],
-        headings: ["Date", "Name", "Email", "Contact?", "Feedback"],
-        format: "",
-        feedback: [],
-        sort: "DESC",
-    };
 
-    this.handleClickChange = this.handleClickChange.bind(this);
-    this.handleLogout = this.handleLogout.bind(this);
-}
+        this.state = {
+            rows: [],
+            headings: ["Date", "Name", "Email", "Contact?", "Feedback"],
+            format: "",
+            feedback: [],
+            sort: "DESC",
+        };
+
+        this.handleClickChange = this.handleClickChange.bind(this);
+        this.handleLogout = this.handleLogout.bind(this);
+    }
 
     componentDidMount() {
         this.grabFeedback();
@@ -30,46 +30,42 @@ class TableData extends Component {
             .then(res => res.status === 204 ?
                 this.props.history.push('/') :
                 console.log("no redirect"))
-            .catch(error => { console.log(error)});
+            .catch(error => { console.log(error) });
     };
 
     grabFeedback = () => {
         axios.get('/api/feedback')
             .then(res => {
-                console.log('grab feedback:');
-                console.log(res.data);
                 this.setState({ rows: res.data });
             })
     };
 
     handleClickChange = e => {
-        console.log('handleClickChange line 4');
         if (this.state.sort === "DESC") {
             this.setState({ sort: "ASCEND" })
         } else {
-            this.setState({ sort: "DESC"})
+            this.setState({ sort: "DESC" })
         }
         this.handleSortDate();
     }
 
     handleSortDate = () => {
-        const sortedArr = [...this.state.rows]
-        console.log(sortedArr);
+        const sortedArr = [...this.state.rows];
         if (this.state.sort === "DESC") {
-        sortedArr.sort((a,b) => a.date_created.localeCompare(b.date_created))}
-        else {
-        sortedArr.sort((a,b) => b.date_created.localeCompare(a.date_created))
+            sortedArr.sort((a, b) => a.date_created.localeCompare(b.date_created))
         }
-        this.setState({rows:sortedArr})
-        console.log(sortedArr);
+        else {
+            sortedArr.sort((a, b) => b.date_created.localeCompare(a.date_created))
+        }
+        this.setState({ rows: sortedArr })
     }
 
     render() {
         return (
             <>
-                <Button type="submit" onClick={this.handleLogout} style={{marginTop: "2.5%", marginLeft: "2%",border: "solid 1px", borderColor: "#cd8f2a", color: "#cd8f2a", fontFamily: "Barlow"}}>
+                <Button type="submit" onClick={this.handleLogout} style={{ marginTop: "2.5%", marginLeft: "2%", border: "solid 1px", borderColor: "#cd8f2a", color: "#cd8f2a", fontFamily: "Barlow" }}>
                     Log Out</Button>
-                <p style={{fontStyle: 'italic', marginTop: "1.5%", marginLeft: "2%", fontFamily: "Red Hat Display"}}>Click on any column header to sort data</p>
+                <p style={{ fontStyle: 'italic', marginTop: "1.5%", marginLeft: "2%", fontFamily: "Red Hat Display" }}>Click on any column header to sort data</p>
                 <TableHtml
                     headings={this.state.headings}
                     handleClickChange={() => this.handleClickChange()}
