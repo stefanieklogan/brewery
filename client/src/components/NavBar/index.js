@@ -37,19 +37,6 @@ function NavBar() {
                         <Nav.Link style={{ color: "white", marginRight: "2%", fontSize: "18px", fontFamily: "Barlow", fontWeight: 300 }} href="/visit">VISIT</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-                {/* <li className="nav-item">
-                                <Link className="nav-link" to="/signup"> NewsletterSignup</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/adminsignup"> AdminSignup</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/adminlogin"> AdminLogin</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/admin/feedbackresults"> FeedbackResults  </Link>
-                            </li> */}
-
             </Navbar>
         </div>
 

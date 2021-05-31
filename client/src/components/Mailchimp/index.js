@@ -3,7 +3,7 @@ import { Container, Typography } from '@material-ui/core';
 
 function MailchimpForm() {
     return (
-        <Container style={{backgroundColor: "#f4eee3", border: "solid 2px", borderColor: "#c89019", padding: "3%", marginTop: "3%", justifyContent: "center", alignItems: "center", justify: "center", display: "flex"}} id="mc_embed_signup">
+        <Container style={{backgroundColor: "#f4eee3", border: "solid 2px", borderColor: "#c89019", padding: "3%", marginTop: "3%", justifyContent: "center", alignItems: "center", justify: "center"}} id="mc_embed_signup">
 <div id="mc_embed_signup" style={{backgroundColor: "#f4eee3",}}>
 <form action="https://herokuapp.us6.list-manage.com/subscribe/post?u=3dc81bfbf90e2c6dafba9ba03&amp;id=29655d6c76" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
             <div id="mc_embed_signup_scroll">
