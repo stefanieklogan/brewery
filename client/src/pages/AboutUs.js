@@ -94,7 +94,7 @@ function AboutUs() {
                 Life’s short. Love what you do, do what you love. #CelebrationBrewing
             </Typography>
 
-            {/* <Grid container justify="center" style={{ marginTop: "3%" }}>
+            <Grid container justify="center" style={{ marginTop: "3%" }}>
                 <div style={{ width: "80%", textAlign: "left", padding: "2%", alignItems: "center" }}>
                     <Accordion style={{ marginBottom: "1%", backgroundColor: "#fff1db", color: "black" }}>
                         <AccordionSummary style={{ backgroundColor: "black", color: "white" }}
@@ -162,7 +162,7 @@ function AboutUs() {
                         </AccordionDetails>
                     </Accordion>
                 </div>
-            </Grid> */}
+            </Grid>
 
             <div style={{backgroundColor: "black", padding: "3%"}}> 
                 <Typography style={{fontFamily: "Barlow", textAlign: "center", fontSize: "52px", color: "#f4eee3"}}>FAQ</Typography>
