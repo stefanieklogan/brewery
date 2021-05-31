@@ -83,7 +83,7 @@ function Beer() {
                                     </Grid>
                                     <Typography style={{ textAlign: "center", padding: "2%", fontFamily: "Playfair Display", color: "white", fontSize: "21px" }} component="h4" variant="h4">
                                         {beer.beer.beer_style} <span style={{ color: "#cd8f2a" }}> | </span> {beer.beer.beer_abv}%
-            </Typography>
+                                    </Typography>
                                     <Typography style={{ padding: "5%", textAlign: "center", fontFamily: "Barlow", fontSize: "18px", fontWeight: 300, color: "white" }} variant="subtitle1">
                                         {beer.beer.beer_description}
                                     </Typography>
