@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default {
+const API = {
   // postLogin: function() {
   //   return axios.post("/api/user/login");
   // },
@@ -14,3 +14,4 @@ export default {
   //   return axios.get("/api/feedback");
   // }
 };
+export default API;
