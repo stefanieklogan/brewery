@@ -60,17 +60,15 @@ function Contact() {
     return (
 
         <div style={{backgroundColor: "#f4eee3"}}>
-        <Container style={{backgroundColor: "#f4eee3"}}>
-            {/* <Grid fluid="true"> */}
-                <div style={{ width: "100%", height: "100%" }}>
+            <div style={{ width: "100%", maxWidth: "100%", height: "auto", maxHeight: "100%" }}>
                     <Image src={Beer} alt="Beer photo with contact us text" fluid/>
                 </div>
-                {/* </Grid> */}
+            <div style={{backgroundColor: "#f4eee3"}}>
                 <Grid>
                 <Typography className={styles.para} component="p" variant="h6">
                     Located less than five miles from the Walt Disney World&reg; Resort, Celebration Brewing is the best brewery in town. We offer brewery tours so that guests can learn about how we produce our beers, etc.
                 </Typography>
-                <Container style={{ backgroundColor: "black", padding: "2%" }}>
+                <div style={{ backgroundColor: "black", padding: "2%" }}>
                     <Typography className={styles.h4} component="h4" variant="h4">
                         {/* &#10000; SHARE FEEDBACK &#10000; */}
                         SHARE FEEDBACK
@@ -78,10 +76,10 @@ function Contact() {
                     <Typography className={styles.paraTwo} component="p" variant="inherit"> We value your input and feedback. We also value your privacy and will only contact you if agree. Thank you!
                 </Typography>
                     <FeedbackForm />
-                </Container>
+                </div>
                 </Grid>
                     <MailchimpForm />
-            </Container>
+            </div>
             <Footer />
             <Copyright />
 

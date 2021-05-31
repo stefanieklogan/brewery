@@ -82,7 +82,7 @@ function HomePageAbout() {
             <Container style={{ alignItems: "center", justifyContent: "center", display: "flex" }}>
                 <Image className={styles.image} src={Logo} alt="Celebration Brewing Logo" fluid="true" />
             </Container>
-            <Container style={{ backgroundColor: "black", marginTop: "5%", display: "fluid" }}>
+            <div style={{ backgroundColor: "black", marginTop: "5%", display: "fluid" }}>
                 <Typography fade="true" className={styles.titleStyle} component="h3" variant="h3">
                     CELEBRATION'S FAVORITE BREWERY
                 </Typography>
@@ -99,7 +99,7 @@ function HomePageAbout() {
 
                     <Button className={styles.button} variant="outlined" href="/visit"> Visit Us </Button>
                 </Grid>
-            </Container>
+            </div>
             <Container style={{ marginTop: "3%", textAlign: "center", padding: "2%" }}>
                 <Typography style={{ marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow" }} component="h4" variant="h4">
                     BREAKING GROUND <span style={{ color: "#c89019" }}> | </span> SUMMER 2021
@@ -112,7 +112,7 @@ function HomePageAbout() {
                     </Typography>
 
             </Container>
-            <Container style={{ backgroundColor: "black", marginTop: "5%", display: "fluid" }}>
+            <div style={{ backgroundColor: "black", marginTop: "5%", display: "fluid" }}>
                 <Typography className={styles.beerTitle} component="h3" variant="h3">
 
                     FEATURED BEERS
@@ -137,7 +137,7 @@ function HomePageAbout() {
                         </div>
                     </Grid>
                 </Container>
-            </Container>
+            </div>
 
             <MailchimpForm />
             <Footer />

@@ -15,8 +15,6 @@ import BeerImg from "../../assets/beer-celebration.png";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        // display: 'flex',
-        // padding: '30px',
         marginRight: "3%",
         marginLeft: "3%",
         marginBottom: "3%",
@@ -33,8 +31,6 @@ const useStyles = makeStyles((theme) => ({
         height: 175,
         width: 150,
         margin: "3%",
-        // align: "center",
-        // justify: "center",
     },
     title: {
         textAlign: "center",
@@ -44,8 +40,6 @@ const useStyles = makeStyles((theme) => ({
     image: {
         height: "100%",
         width: "100%",
-        // marginTop: "2%",
-        // marginBottom: "2%"
     }
 }));
 
