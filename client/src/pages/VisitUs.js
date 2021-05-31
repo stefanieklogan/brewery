@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "20px",
         marginBottom: "20px",
         fontFamily: "Barlow",
+        // fontSize: "36px"
         fontSize: pxToRem(28),
         [breakpoints.up("md")]: {
             fontSize: pxToRem(36)
@@ -96,10 +97,11 @@ function VisitUs() {
     return (
 
         <div style={{ backgroundColor: "#f4eee3" }}>
-            <div style={{ height: "100%", width: "100%" }}>
-                <Image src={visitImage} alt="Photo of beer with Visit Us text" fluid />
-            </div>
             <Container fluid="true" style={{ marginBottom: "10%" }}>
+                <div style={{ height: "100%", width: "100%" }}>
+                    <Image src={visitImage} alt="Photo of beer with Visit Us text" fluid />
+
+                </div>
                 <Col sm={12}>
                     <Row style={{ border: "solid", borderColor: "#c89019", padding: "2%", marginTop: "3%", marginBottom: "3%", marginRight: "1%", marginLeft: "1%" }}>
                         <div>

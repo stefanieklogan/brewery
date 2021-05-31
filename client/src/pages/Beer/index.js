@@ -15,6 +15,8 @@ import BeerImg from "../../assets/beer-celebration.png";
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        // display: 'flex',
+        // padding: '30px',
         marginRight: "3%",
         marginLeft: "3%",
         marginBottom: "3%",
@@ -31,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
         height: 175,
         width: 150,
         margin: "3%",
+        // align: "center",
+        // justify: "center",
     },
     title: {
         textAlign: "center",
@@ -40,6 +44,8 @@ const useStyles = makeStyles((theme) => ({
     image: {
         height: "100%",
         width: "100%",
+        // marginTop: "2%",
+        // marginBottom: "2%"
     }
 }));
 
@@ -83,7 +89,7 @@ function Beer() {
                                     </Grid>
                                     <Typography style={{ textAlign: "center", padding: "2%", fontFamily: "Playfair Display", color: "white", fontSize: "21px" }} component="h4" variant="h4">
                                         {beer.beer.beer_style} <span style={{ color: "#cd8f2a" }}> | </span> {beer.beer.beer_abv}%
-                                    </Typography>
+            </Typography>
                                     <Typography style={{ padding: "5%", textAlign: "center", fontFamily: "Barlow", fontSize: "18px", fontWeight: 300, color: "white" }} variant="subtitle1">
                                         {beer.beer.beer_description}
                                     </Typography>

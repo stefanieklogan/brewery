@@ -8,9 +8,6 @@ import BeerPhoto from "../assets/about-celebration.png";
 import Image from "react-bootstrap/Image";
 import { Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,20 +20,11 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: "Barlow",
         fontWeight: 300,
         fontSize: "24px",
-        letterSpacing: "0.4px",
-        textAlign: "center",
-        color: "#cd8f2a",
-        textTransform: "uppercase"
     },
     accordianPara: {
         fontFamily: "Red Hat Display",
-        fontWeight: 200,
+        fontWeight: 300,
         fontSize: "20px",
-        letterSpacing: "0.4px",
-        textAlign: "center",
-        marginRight: "6%",
-        marginLeft: "6%",
-        color: "#f4eee3"
     },
     titleStyle: {
         color: "#c89019",
@@ -48,12 +36,11 @@ const useStyles = makeStyles((theme) => ({
     para: {
         textAlign: "center",
         marginTop: "5%",
-        marginBottom: "5%",
         paddingRight: "15%",
         paddingLeft: "15%",
         fontFamily: "Red Hat Display",
         lineSpacing: "0.2px",
-        fontSize: "21px",
+        fontSize: "21px"
     },
     button: {
         justifyContent: "center",
@@ -75,6 +62,8 @@ function AboutUs() {
             <div className={styles.image}>
                 <Image src={BeerPhoto} alt="Celebration Brewing Logo" fluid />
             </div>
+
+
             <Typography className={styles.para} component="p" variant="inherit">
                 Frank L began dreaming of his vision for Celebration Brewing while
                 homebrewing right here in Main Village, Celebration. Brewing a keg here,
@@ -82,16 +71,16 @@ function AboutUs() {
                 for over 15 years, Frank saw the need for creating community for those
                 who enjoy good beer and good company. Fast forward to today where he’s
                 turning his dream into a reality.
+        <br />
                 <br />
+        At Celebration Brewing we’re here to serve our community one pint at a
+        time. Our beers are crafted to bring our community together. Whether you
+        call Celebration home or just come to visit - stop by and taste what’s
+        on tap.
+        <br />
                 <br />
-                At Celebration Brewing we’re here to serve our community one pint at a
-                time. Our beers are crafted to bring our community together. Whether you
-                call Celebration home or just come to visit - stop by and taste what’s
-                on tap.
-                <br />
-                <br />
-                Life’s short. Love what you do, do what you love. #CelebrationBrewing
-            </Typography>
+        Life’s short. Love what you do, do what you love. #CelebrationBrewing
+    </Typography>
 
             <Grid container justify="center" style={{ marginTop: "3%" }}>
                 <div style={{ width: "80%", textAlign: "left", padding: "2%", alignItems: "center" }}>
@@ -134,7 +123,7 @@ function AboutUs() {
                         <AccordionDetails>
                             <Typography>
                                 Yes, we're offering 10% discount with valid Celebration ID.
-                            </Typography>
+                    </Typography>
                             <Typography className={styles.accordianPara}>
                                 I've got several resident-focused events in the works for 2023 where I hope residents and community members come to enjoy time here. That's when we'll say thank you for their on-going support.
                 </Typography>
@@ -162,63 +151,20 @@ function AboutUs() {
                     </Accordion>
                 </div>
             </Grid>
-
-            <div style={{backgroundColor: "black", padding: "3%"}}> 
-                <Typography style={{fontFamily: "Barlow", textAlign: "center", fontSize: "52px", color: "#f4eee3"}}>FAQ</Typography>
-                <Grid container justify="center">
-                    <hr style={{ width: "20%", height: "2px", color: "#c89019", opacity: 0.7 }} />
-                </Grid>                
-                <br/>
-                <br/>
-                <Row>
-                    <Col sm={4}>
-                    <Typography className={styles.heading}>1. What made you decide to open up a brewery here in Celebration? </Typography>
-                    </Col>
-                    <Col sm={8}>
-                    <Typography className={styles.accordianPara}>I looked at a lot of places and I scouted many established breweries downtown Orlando and something kept drawing me back to Celebration. There are many great food &amp; drink options in downtown Celebration but not for the beer fans out there.</Typography>
-                    </Col>
-                </Row>
-                <br/>
-                <br/>
-                <br/>
-                <Row>
-                    <Col sm={4}>
-                    <Typography className={styles.heading}>2. What have you enjoyed most about the process?</Typography>
-                    </Col>
-                    <Col sm={8}>
-                    <Typography className={styles.accordianPara}>I've enjoyed the partnership and business assistance I've had so far. Many residents in town have given me recommendations or they know a guy who can help out. It's a lot to start a brewery literal dirt to just before opening here soon.</Typography>
-                    </Col>
-                </Row>
-                <br/>
-                <br/>
-                <br/>
-
-                <Typography className={styles.heading}>2. What have you enjoyed most about the process?</Typography>
-                <Typography className={styles.accordianPara}>I've enjoyed the partnership and business assistance I've had so far. Many residents in town have given me recommendations or they know a guy who can help out. It's a lot to start a brewery literal dirt to just before opening here soon.</Typography>
-                <br/>
-                <Typography className={styles.heading}>3. Will you be offering a Celebration resident discount?</Typography>
-                <Typography className={styles.accordianPara}>Yes, we're offering 10% discount with valid Celebration ID. </Typography>
-                <Typography className={styles.accordianPara}>I've got several resident-focused events in the works for 2023 where I hope residents and community members come to enjoy time here. That's when we'll say thank you for their on-going support.</Typography>
-                <br/>
-                <Typography className={styles.heading}>4. What types of beer will you be known for?</Typography>
-                <Typography className={styles.accordianPara}>We have a range - stout, IPA, ale and lager just to name a few. I'd like to think we'll be known for unique tastes and names. Spring Park Stout, Celebration Storm IPA and Lakeside Lager are just a few beer names inspired by the great community we operate from.</Typography>
-
-            </div>
-
             <Grid>
                 <Container style={{ marginTop: "2%", marginBottom: "4%", textAlign: "center", padding: "2%" }}>
                     <Typography style={{ marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow" }} component="h4" variant="h4">
                         BREAKING GROUND <span style={{ color: "#c89019" }}> | </span> SUMMER 2021
-                    </Typography>
+        </Typography>
                     <Grid container justify="center">
                         <hr style={{ width: "50%", height: "5px", color: "#c89019", opacity: 0.7 }} />
                     </Grid>
                     <Typography style={{ marginTop: "1%", fontFamily: "Barlow" }} component="h4" variant="h4">
                         OPENING <span style={{ color: "#c89019" }}> | </span> WINTER 2022
-                    </Typography>
+        </Typography>
                 </Container>
-            </Grid>
 
+            </Grid>
             <Footer />
             <Copyright />
         </Grid>

@@ -3,6 +3,7 @@ import React from 'react';
 import Checkbox from '@material-ui/core/Checkbox';
 import TextField from '@material-ui/core/TextField';
 import { Container, Button } from '@material-ui/core/';
+// import Typography from '@material-ui/core/Typography';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 
@@ -61,10 +62,13 @@ class FeedbackForm extends React.Component {
         if (isChecked) {
             emailInput = (
                 <div>
+                    {/* <label>Email:</label>{isChecked} */}
                     <TextField style={{ color: "white", backgroundColor: "white" }} className="email" type="text" label="Email" variant="outlined" value={email} onChange={this.handleEmailChange} />{isChecked}
                 </div>
             )
         }
+
+        // const styles = useStyles();
 
         return (
             <Container style={{ width: "75%" }}>
@@ -76,6 +80,10 @@ class FeedbackForm extends React.Component {
                     <Form.Group style={{ marginBottom: "2%" }} controlId="exampleForm.ControlTextarea1">
                         <Form.Control as="textarea" placeholder="Message" rows={3} value={feedback} onChange={this.handleFeedbackChange} />
                     </Form.Group>
+                    {/* <label>Name:</label> */}
+                    {/* <TextField id="outlined-password-input" label="Name" variant="outlined" className="name" type="text" value={name} onChange={this.handleNameChange} /> */}
+                    {/* <label>Feedback:</label> */}
+                    {/* <TextField id="outlined-multiline-static" multiline rowsMax={4} label="Feedback" variant="outlined" className="feedback" type="text" value={feedback} onChange={this.handleFeedbackChange}></TextField> */}
                     <div>
                         <p style={{ color: "white", fontFamily: "Barlow", fontSize: "18px", fontWeight: 300, letterSpacing: ".6px" }} className="checkbox">Check here if you would like to be contacted:</p><Checkbox style={{ color: "white" }} value={checkbox} onChange={this.handleCheckboxChange} /><p className="email">{emailInput}</p>
                     </div>
