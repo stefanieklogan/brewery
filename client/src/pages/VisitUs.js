@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "20px",
         marginBottom: "20px",
         fontFamily: "Barlow",
-        // fontSize: "36px"
         fontSize: pxToRem(28),
         [breakpoints.up("md")]: {
             fontSize: pxToRem(36)

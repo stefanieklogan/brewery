@@ -1,6 +1,5 @@
 import React from 'react';
 import { Typography, Container, Grid } from '@material-ui/core';
-// import { sizing } from '@material-ui/system';
 import FeedbackForm from '../components/FeedbackForm/';
 import MailchimpForm from '../components/Mailchimp/';
 import Footer from '../components/Footer/';
@@ -8,7 +7,6 @@ import Copyright from '../components/Copyright/';
 import Image from 'react-bootstrap/Image';
 import Beer from "../assets/contact-celebration.png";
 import { makeStyles } from "@material-ui/core/styles";
-// import { Transition } from 'react-transition-group';
 
 
 const useStyles = makeStyles({

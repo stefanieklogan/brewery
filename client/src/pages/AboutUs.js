@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "20px",
         letterSpacing: "0.4px",
         textAlign: "center",
-        // padding: "1%",
         marginRight: "6%",
         marginLeft: "6%",
         color: "#f4eee3"

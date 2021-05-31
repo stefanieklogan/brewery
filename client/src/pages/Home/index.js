@@ -9,7 +9,6 @@ function Homepage() {
 			<Jumbotron />
 			<Image />
 			<HomePageAbout />
-			{/* <SignUpForm /> */}
 		</div>
 	);
 }

@@ -17,7 +17,6 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import { Icon } from '@iconify/react';
 //, InlineIcon removed after Icon- waning no unused vars
 import untappdIcon from '@iconify-icons/mdi/untappd';
-// import ResponsiveImgMaterialUi from "responsive-img-material-ui";
 import Logo from "../../assets/Celebration_Logo2.png";
 
 const useStyles = makeStyles({
@@ -25,7 +24,6 @@ const useStyles = makeStyles({
         marginRight: "25px",
         marginLeft: "25px",
         marginTop: "17px",
-        // marginBottom: "40px",
         color: "black",
         '&:hover': {
             color: "#c89019",
