@@ -11,9 +11,7 @@
 <a name="application"></a>
 ## Application
 
-* Deployed application: https://pure-journey-55067.herokuapp.com/
-
-* Walk thru video: xxx
+* Deployed application: https://secure-stream-74196.herokuapp.com/
 
 ![homepage image](xxx)
 
@@ -55,7 +53,15 @@
 <a name="notes"></a>
 ## Notes
 
-* Future development includes ......
+* Future development includes
+
+* Events calendar
+
+* Updated imagery of construction process & grand-opening
+
+* Shopify shop for merchandise sales
+
+* Food & Beverage menu & online ordering
 
 <a name="streetcred"></a>
 ## The other stuff: License & Badges
