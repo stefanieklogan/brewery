@@ -1,1 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&family=Playfair+Display&display=swap');
+.makeStyles-image-10 {
+
+    padding-top: 0px !important;
+}
+.MuiTypography-root {
+	margin-left: 5px !important;
+}

@@ -16,7 +16,8 @@ class FeedbackForm extends React.Component {
             name: '',
             feedback: '',
             checkbox: false,
-            email: ''
+            email: '',
+            thanks: false,
         };
 
         this.handleNameChange = (e) => {
@@ -46,6 +47,7 @@ class FeedbackForm extends React.Component {
         axios.post('/api/feedback', this.state)
             .then(response => {
                 console.log(response)
+                this.setState({ thanks: true })
             })
             .catch(error => {
                 console.log(error)
@@ -55,8 +57,10 @@ class FeedbackForm extends React.Component {
     }
 
     render() {
-        const { name, feedback, checkbox, email } = this.state
+        const { name, feedback, checkbox, email } = this.state;
         const isChecked = this.state.checkbox;
+        const isThanks = this.state.thanks;
+
         let emailInput;
 
         if (isChecked) {
@@ -66,6 +70,15 @@ class FeedbackForm extends React.Component {
                     <TextField style={{ color: "white", backgroundColor: "white" }} className="email" type="text" label="Email" variant="outlined" value={email} onChange={this.handleEmailChange} />{isChecked}
                 </div>
             )
+        }
+
+        let thanksMessage;
+
+        if (isThanks) {
+            thanksMessage = (
+            <p style={{ color: "white", fontFamily: "Barlow", fontSize: "18px", fontWeight: 300, letterSpacing: ".6px" }}>Thank you for your Input!</p>
+            )
+            
         }
 
         // const styles = useStyles();
@@ -89,8 +102,10 @@ class FeedbackForm extends React.Component {
                     </div>
 
                     <Button style={{ color: "black", backbroundColor: "white" }} className="submitBtn" variant="contained" type="submit">Submit</Button>
+                    {thanksMessage}
 
                 </Form>
+                
             </Container>
         );
     }

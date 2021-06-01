@@ -20,7 +20,7 @@ module.exports = {
         res.json(err)
       });
   },
-  getBreweryCheckins: function () {
+  getCheckins: function (req, res) {
     fetch(
       "https://api.untappd.com/v4/brewery/checkins/" +
       bID +
@@ -30,7 +30,7 @@ module.exports = {
     ).then(response => {
       return response.json()
     }).then(data => {
-      res.json(data)
+      res.json(data.response.checkins.items)
     }).catch(err => {
       res.json(err)
     });

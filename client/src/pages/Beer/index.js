@@ -59,11 +59,11 @@ function Beer() {
     }, [])
 
     function loadBeers() {
-        API.getBeers()
-            .then(res =>
-                setBeers(res.data)
-            )
-            .catch(err => console.log(err));
+        // API.getBeers()
+        //     .then(res =>
+        //         setBeers(res.data)
+        //     )
+        //     .catch(err => console.log(err));
     };
     return (
 
