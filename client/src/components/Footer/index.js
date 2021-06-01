@@ -49,7 +49,11 @@ function Footer() {
             <div className={styles.root}>
                 <Container fluid="true">
                     <Row>
-                        <Col>
+                        <Col style={{
+                            justify: "center",
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}>
                             <Row>
                                 <Typography className={styles.para} component="p" variant="inherit">
                                     1617 Future Way
@@ -78,7 +82,11 @@ function Footer() {
                             </div>
                         </Col>
 
-                        <Col>
+                        <Col style={{
+                            justify: "center",
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}>
                             <Row>
                                 <Typography className={styles.para} component="p" variant="inherit">
                                     HOURS
@@ -92,7 +100,7 @@ function Footer() {
                             <Row>
                                 <Typography className={styles.hours} component="p" variant="inherit">
                                     Sat &amp; Sun 10:00am - 12:00am
-                        </Typography>
+                            </Typography>
                             </Row>
                         </Col>
                     </Row>
