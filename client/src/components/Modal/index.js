@@ -5,6 +5,8 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Button from "@material-ui/core/Button";
 import { Typography } from '@material-ui/core';
+import {useHistory} from "react-router-dom";
+
 
 const useStyles = makeStyles((theme) => ({
 	modal: {
@@ -22,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function TransitionsModal() {
+	const history = useHistory();
+
 	const classes = useStyles();
 	const [open, setOpen] = useState(false);
 
@@ -65,6 +69,17 @@ export default function TransitionsModal() {
 						>
 							Yes, take me to Celebration Brewery!
         </Button>
+		<Button
+onClick={() => history.goBack()}							style={{
+								marginTop: "2.5%",
+								border: "solid 1px",
+								borderColor: "#cd8f2a",
+								color: "#cd8f2a",
+							}}
+						>
+							Not yet, take me back a page!
+        </Button>
+
 					</div>
 
 				</Fade>
