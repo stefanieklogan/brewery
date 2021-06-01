@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@iconify/icons-simple-icons": "^1.1.27",
     "@iconify/react": "^1.1.4",
