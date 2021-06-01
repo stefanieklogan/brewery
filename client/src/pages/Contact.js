@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Container, Grid } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 // import { sizing } from '@material-ui/system';
 import FeedbackForm from '../components/FeedbackForm/';
 import MailchimpForm from '../components/Mailchimp/';
