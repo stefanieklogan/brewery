@@ -3,7 +3,7 @@ import Jumbotron from '../../components/Jumbotron';
 import Image from '../../components/Image';
 import HomePageAbout from '../../components/HomePageAbout';
 import Checkins from '../../components/checkins';
-import TransitionsModal from '../../components/modal/index';
+import TransitionsModal from '../../components/Modal/index';
 
 function Homepage() {
 	return (
