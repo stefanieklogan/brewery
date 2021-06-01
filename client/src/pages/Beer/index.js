@@ -84,12 +84,12 @@ function Beer() {
                                     <Typography style={{ textAlign: "center", padding: "2%", fontFamily: "Playfair Display", color: "white" }} component="h4" variant="h4">
                                         {beer.beer.beer_name}
                                     </Typography>
-                                    <Grid container justify="center">
+                                    <div style={{justify:"center", justifyContent: "center", alignItems: "center", display: "flex"}}>
                                         <hr style={{ width: "40%", height: "2px", color: "#c89019", opacity: 0.7 }} />
-                                    </Grid>
+                                    </div>
                                     <Typography style={{ textAlign: "center", padding: "2%", fontFamily: "Playfair Display", color: "white", fontSize: "21px" }} component="h4" variant="h4">
                                         {beer.beer.beer_style} <span style={{ color: "#cd8f2a" }}> | </span> {beer.beer.beer_abv}%
-            </Typography>
+                                    </Typography>
                                     <Typography style={{ padding: "5%", textAlign: "center", fontFamily: "Barlow", fontSize: "18px", fontWeight: 300, color: "white" }} variant="subtitle1">
                                         {beer.beer.beer_description}
                                     </Typography>
