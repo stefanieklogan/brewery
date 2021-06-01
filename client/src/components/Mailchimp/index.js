@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Typography } from '@material-ui/core';
 
 function MailchimpForm() {
+    const [userInput, setUserInput] = useState('')
+
+    function handleInputChange(e) {
+      setUserInput(  e.target.value )
+      console.log(userInput)
+    };
     return (
         <Container style={{backgroundColor: "#f4eee3", border: "solid 2px", borderColor: "#c89019", padding: "3%", marginTop: "3%", justifyContent: "center", alignItems: "center", justify: "center", display: "flex"}} id="mc_embed_signup">
 <div id="mc_embed_signup" style={{backgroundColor: "#f4eee3",}}>
@@ -23,7 +29,7 @@ function MailchimpForm() {
 	                <input type="text" value="" name="LNAME" className="" id="mce-LNAME"/>
                 </div>  */}
                 </div>   
-                <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true"><input type="text" name="b_b7ab21bae1fd6631ff7334f76_77244976d7" tabIndex="-1" value="onChange"/></div>
+                <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true"><input type="text" name="b_b7ab21bae1fd6631ff7334f76_77244976d7" tabIndex="-1" onChange={handleInputChange}/></div>
                 <div style={{justifyContent: "center", alignItems: "center", justify: "center", display: "flex", marginTop: "2%"}} className="clear"><input style={{backgroundColor: "black", fontFamily: "Barlow", fontSize: "18px"}} type="submit" value="JOIN OUR NEWSLETTER" name="subscribe" id="mc-embedded-subscribe" className="button"/>
             </div>
             </form>
