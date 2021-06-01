@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Celebration Brewing
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+1. [ Application. ](#application)
+2. [ Project Overview. ](#overview)
+3. [ Dependencies. ](#depend)
+4. [ Installation. ](#install)
+5. [ Notes. ](#notes)
+6. [ The other stuff: License & Badges. ](#streetcred)
 
-## Available Scripts
+<a name="application"></a>
+## Application
 
-In the project directory, you can run:
+* Deployed application: https://pure-journey-55067.herokuapp.com/
 
-### `npm start`
+![homepage image](xxx)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<a name="overview"></a>
+## Project overview
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Welcome to Celebration Brewing
 
-### `npm test`
+* As a business owner, I want users to understand my location, beer offerings, company history and contact methods. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* It is desired my beer offerings stay up-to-date based on inventory on untappd.com/celebrationbrewing. 
 
-### `npm run build`
+* It is desired users can submit their email address for newsletter distribution.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* It is desired a user can leave feedback & choose to be contacted via email. As an admin, I want to be able to login and view all feedback. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<a name="depend"></a>
+## Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* React.js
 
-### `npm run eject`
+* Material UI
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* mySQL
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* untappd API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<a name="install"></a>
+## Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* After cloning this repository, run 'npm install' for dependencies. 
 
-## Learn More
+* Create a '.env' file with your MySQL port, username, password and untappd API key. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Schema and seeds files are available and should be executed prior to application use via 'npm run seeds'. Look for 'brewery_db' and three tables (feedback/admin/user) to verify file successfully ran.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* To run the application, enter 'npm start' inside terminal. 
 
-### Code Splitting
+<a name="notes"></a>
+## Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Future development includes ......
 
-### Analyzing the Bundle Size
+* Events calendar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Updated imagery re construction & grand opening
 
-### Making a Progressive Web App
+* Shopify shop for merchandise sales
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* Food menu with online ordering
 
-### Advanced Configuration
+<a name="streetcred"></a>
+## The other stuff: License & Badges
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Copyright © Nicolas Gallagher and Jonathan Neal, The MIT License (MIT)
 
-### Deployment
+<img src="https://img.shields.io/badge/node_JS%20-%231572B6.svg?&style=for-the-badge&logo=nodeJS3&logoColor=white"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
