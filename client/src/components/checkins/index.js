@@ -31,11 +31,12 @@ function Checkins() {
 		if (currentCheckin === checkins.length - 1) {
 			setCurrentCheckin(0)
 		} else {
-		setTimeout(function() {
-			setCurrentCheckin(currentCheckin + 1);
-		},3000)}
-	}, [currentCheckin])
-	
+			setTimeout(function () {
+				setCurrentCheckin(currentCheckin + 1);
+			}, 3000)
+		}
+	}, [currentCheckin,checkins.length])
+
 	useEffect(() => {
 		loadCheckins()
 	}, [])
@@ -58,10 +59,10 @@ function Checkins() {
 	}))(Avatar);
 
 	return (
-		checkins.length> 0 ? 
-		<Grid className={classes.root} container justify="center">
-			<List > 
-					<Grid  item xs={12}>
+		checkins.length > 0 ?
+			<Grid className={classes.root} container justify="center">
+				<List >
+					<Grid item xs={12}>
 						<ListItem align-items="flex-start">
 							<ListItemAvatar>
 								<Badge
@@ -92,10 +93,10 @@ function Checkins() {
 							} />
 						</ListItem>
 					</Grid>
-			
-			</List>
-		</Grid> :
-		<div>Loading</div>
+
+				</List>
+			</Grid> :
+			<div>Loading</div>
 	)
 }
 

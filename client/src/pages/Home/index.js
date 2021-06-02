@@ -9,8 +9,8 @@ function Homepage() {
 	return (
 		<div>
 			<TransitionsModal />
-			<Checkins/>
 			<Jumbotron />
+			<Checkins />
 			<Image />
 			<HomePageAbout />
 			{/* <SignUpForm /> */}
