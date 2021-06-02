@@ -59,11 +59,11 @@ function Beer() {
     }, [])
 
     function loadBeers() {
-        // API.getBeers()
-        //     .then(res =>
-        //         setBeers(res.data)
-        //     )
-        //     .catch(err => console.log(err));
+        API.getBeers()
+            .then(res =>
+                setBeers(res.data)
+            )
+            .catch(err => console.log(err));
     };
     return (
 
@@ -84,7 +84,7 @@ function Beer() {
                                     <Typography style={{ textAlign: "center", padding: "2%", fontFamily: "Playfair Display", color: "white" }} component="h4" variant="h4">
                                         {beer.beer.beer_name}
                                     </Typography>
-                                    <div style={{justify:"center", justifyContent: "center", alignItems: "center", display: "flex"}}>
+                                    <div style={{ justify: "center", justifyContent: "center", alignItems: "center", display: "flex" }}>
                                         <hr style={{ width: "40%", height: "2px", color: "#c89019", opacity: 0.7 }} />
                                     </div>
                                     <Typography style={{ textAlign: "center", padding: "2%", fontFamily: "Playfair Display", color: "white", fontSize: "21px" }} component="h4" variant="h4">
