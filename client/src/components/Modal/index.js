@@ -5,7 +5,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Button from "@material-ui/core/Button";
 import { Typography } from '@material-ui/core';
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
-		
+
 	},
 	paper: {
 		backgroundColor: theme.palette.background.paper,
@@ -31,7 +31,7 @@ export default function TransitionsModal() {
 
 	useEffect(() => {
 		setOpen(true);
-	},[]);
+	}, []);
 
 	const handleClose = () => {
 		setOpen(false);
@@ -54,30 +54,43 @@ export default function TransitionsModal() {
 			>
 				<Fade in={open}>
 					<div className={classes.paper}>
-						<Typography style={{ marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow"  }}
-						align="center" component="h4" variant="h4">
+
+						<Typography style={{ marginTop: "1%", marginBottom: "4%", fontFamily: "Barlow" }}
+							align="center" component="h4" variant="h4">
 							Are you 21+ ?
 						</Typography>
 						<Button
 							onClick={handleClose}
 							style={{
 								marginTop: "2.5%",
+								marginLeft: "2.5%",
+								marginRight: "2.5%",
+								paddingTop: "2.5%",
+								paddingBottom: "2.5%",
+								paddingLeft: "2.5%",
+								paddingRight: "2.5%",
 								border: "solid 1px",
 								borderColor: "#cd8f2a",
 								color: "#cd8f2a",
 							}}
 						>
-							Yes, take me to Celebration Brewery!
+							Yes
         </Button>
-		<Button
-onClick={() => history.goBack()}							style={{
+						<Button
+							onClick={() => history.goBack()} style={{
 								marginTop: "2.5%",
+								marginLeft: "2.5%",
+								marginRight: "2.5%",
+								paddingTop: "2.5%",
+								paddingBottom: "2.5%",
+								paddingLeft: "2.5%",
+								paddingRight: "2.5%",
 								border: "solid 1px",
 								borderColor: "#cd8f2a",
 								color: "#cd8f2a",
 							}}
 						>
-							Not yet, take me back a page!
+							No
         </Button>
 
 					</div>

@@ -5,15 +5,15 @@
 2. [ Project Overview. ](#overview)
 3. [ Dependencies. ](#depend)
 4. [ Installation. ](#install)
-5. [ Notes. ](#notes)
+5. [ Future Development. ](#future)
 6. [ The other stuff: License & Badges. ](#streetcred)
 
 <a name="application"></a>
 ## Application
 
-* Deployed application: https://secure-stream-74196.herokuapp.com/
+* Deployed application: https://pure-journey-55067.herokuapp.com/
 
-![homepage image](xxx)
+![homepage image](https://github.com/stefanieklogan/brewery/blob/main/client/src/assets/homepage.jpg)
 
 <a name="overview"></a>
 ## Project overview
@@ -50,10 +50,8 @@
 
 * To run the application, enter 'npm start' inside terminal. 
 
-<a name="notes"></a>
-## Notes
-
-* Future development includes
+<a name="future"></a>
+## Future Development
 
 * Events calendar
 
