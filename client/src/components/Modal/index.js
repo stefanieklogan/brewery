@@ -54,7 +54,7 @@ export default function TransitionsModal() {
 			>
 				<Fade in={open}>
 					<div className={classes.paper}>
-						<Typography style={{ marginTop: "1%", marginBottom: "4%", fontFamily: "Barlow"  }}
+						<Typography style={{ marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow"  }}
 						align="center" component="h4" variant="h4">
 							Are you 21+ ?
 						</Typography>

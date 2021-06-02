@@ -25,8 +25,7 @@ module.exports = {
       "https://api.untappd.com/v4/brewery/checkins/" +
       bID +
       "?client_id=" + cliID +
-      "&client_secret=" + cliSec +
-      "&limit=" + limit
+      "&client_secret=" + cliSec
     ).then(response => {
       return response.json()
     }).then(data => {

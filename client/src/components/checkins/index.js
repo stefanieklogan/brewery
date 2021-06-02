@@ -23,20 +23,32 @@ const useStyles = makeStyles((theme) => ({
 
 function Checkins() {
 	const classes = useStyles();
-
 	const [checkins, setCheckins] = useState([])
 
+	const [currentCheckin, setCurrentCheckin] = useState(null)
+
+	useEffect(() => {
+		if (currentCheckin === checkins.length - 1) {
+			setCurrentCheckin(0)
+		} else {
+		setTimeout(function() {
+			setCurrentCheckin(currentCheckin + 1);
+		},3000)}
+	}, [currentCheckin])
+	
 	useEffect(() => {
 		loadCheckins()
 	}, [])
 
 	function loadCheckins() {
-		// API.getCheckins()
-		// 	.then(res =>
-		// 		setCheckins(res.data)
-		// 	)
-		// 	.catch(err => console.log(err));
+		API.getCheckins()
+			.then(res =>
+				setCheckins(res.data),
+				setCurrentCheckin(0)
+			)
+			.catch(err => console.log(err));
 	};
+
 	const SmallAvatar = withStyles((theme) => ({
 		root: {
 			width: 22,
@@ -44,12 +56,13 @@ function Checkins() {
 			border: `1px solid ${theme.palette.background.paper}`,
 		},
 	}))(Avatar);
+
 	return (
+		checkins.length> 0 ? 
 		<Grid className={classes.root} container justify="center">
-			<List >
-				{checkins.map((checkin) => (
-					<Grid key={checkin.checkin_id} item xs={12}>
-						<ListItem key={checkin.checkin_id} align-items="flex-start">
+			<List > 
+					<Grid  item xs={12}>
+						<ListItem align-items="flex-start">
 							<ListItemAvatar>
 								<Badge
 									overlap="circle"
@@ -57,9 +70,9 @@ function Checkins() {
 										vertical: 'bottom',
 										horizontal: 'right',
 									}}
-									badgeContent={<SmallAvatar src={checkin.beer.beer_label} />}
+									badgeContent={<SmallAvatar src={checkins[currentCheckin].beer.beer_label} />}
 								>
-									<Avatar className={classes.large} src={checkin.user.user_avatar} />
+									<Avatar className={classes.large} src={checkins[currentCheckin].user.user_avatar} />
 								</Badge>
 							</ListItemAvatar>
 							<ListItemText primary={
@@ -69,19 +82,20 @@ function Checkins() {
 										variant="overline"
 										className={classes.inline}
 										color="textPrimary">
-										{' '}{checkin.user.user_name}
+										{' '}{checkins[currentCheckin].user_name}
 										{' '}is drinking{' '}
-										<b>{checkin.beer.beer_name}</b>
+										<b>{checkins[currentCheckin].beer.beer_name}</b>
 										{' '}at{' '}
-										{checkin.brewery.brewery_name}{' '}
+										{checkins[currentCheckin].brewery.brewery_name}{' '}
 									</Typography>
 								</React.Fragment>
 							} />
 						</ListItem>
 					</Grid>
-				))}
+			
 			</List>
-		</Grid>
+		</Grid> :
+		<div>Loading</div>
 	)
 }
 
