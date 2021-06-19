@@ -2,17 +2,30 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuCard from "../components/MenuCard";
+import Footer from '../components/Footer/';
+import Copyright from '../components/Copyright/';
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
+
+
+function pxToRem(value) {
+    return `${value / 16}rem`;
+}
+
+const breakpoints = createBreakpoints({});
 
 const useStyles = makeStyles({
     heading: {
         color: "white",
-        textAlign: "center",
-        marginTop: "3rem",
+        marginTop: "10rem",
         fontFamily: "Barlow",
         textTransform: "uppercase",
         wordSpacing: "0.7rem",
         letterSpacing: "0.1rem",
-        fontSize: "4rem"
+        verticalAlign: "middle",
+        fontSize: pxToRem(64),
+        [breakpoints.up("md")]: {
+            fontSize: pxToRem(72)
+        }      
     },
 
 })
@@ -61,20 +74,21 @@ function Menu() {
     const classes = useStyles();
     
     return (
-        <Grid container style={{ alignItems: "center", justifyContent: "center", backgroundColor: "black" }}>
-            <div >
+        <Grid style={{ backgroundColor: "#f4eee3" }}>
+        <Grid container fluid="true" style={{ textAlign: "center", alignItems: "center", justifyContent: "center", justify: "center", display: "flex", backgroundColor: "black" }}>
+            <div style={{ backgroundImage: 'url("https://source.unsplash.com/0r2FM2tsbeM")', backgroundSize: "cover", backgroundPosition: "cover", backgroundRepeat: "no-repeat", width: "100%", height: "50vh"}}>
                 <h2 className={classes.heading}> Quick Bites </h2>
-                <hr/>
-                <div class="row">
-                {MenuItems.map((item) => (
-                    <div className="card-body"> 
-                    <div className="col-3">    
-                        <MenuCard project={item} />
-                    </div>
-                    </div>
-                    ))} 
-                </div>   
             </div>
+                <div className="row">
+                {MenuItems.map((item) => (
+                    <Grid>    
+                        <MenuCard project={item} />
+                    </Grid>
+                    ))} 
+                </div> 
+        </Grid>
+        <Footer />
+        <Copyright />
         </Grid>
     )
 }

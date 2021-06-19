@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs';
 import VisitUs from './pages/VisitUs';
 import Contact from './pages/Contact';
 import Menu from './pages/Menu';
+import Events from './pages/Events'
 // import SignUp from "./pages/Signup"
 import Login from './pages/AdminLogin';
 import FeedbackResults from './pages/FeedbackResults';
@@ -28,8 +29,10 @@ function App() {
           <Contact /></Route>
         <Route exact path="/visit">
           <VisitUs /></Route>
-          <Route exact path="/menu">
+        <Route exact path="/menu">
           <Menu /></Route>
+        <Route exact path="/events">
+          <Events /></Route>
         {/* <Route exact path="/signup">
           <SignUp /></Route> */}
         <Route exact path="/admin/signup">

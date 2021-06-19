@@ -34,6 +34,7 @@ function NavBar() {
                         <Nav.Link style={{ color: "white", marginRight: "2%", fontSize: "18px", fontFamily: "Barlow", fontWeight: 300 }} href="/beer">BEER</Nav.Link>
                         <Nav.Link style={{ color: "white", marginRight: "2%", fontSize: "18px", fontFamily: "Barlow", fontWeight: 300 }} href="/menu">MENU</Nav.Link>
                         <Nav.Link style={{ color: "white", marginRight: "2%", fontSize: "18px", fontFamily: "Barlow", fontWeight: 300 }} href="/about">ABOUT</Nav.Link>
+                        <Nav.Link style={{ color: "white", marginRight: "2%", fontSize: "18px", fontFamily: "Barlow", fontWeight: 300 }} href="/events">EVENTS</Nav.Link>
                         <Nav.Link style={{ color: "white", marginRight: "2%", fontSize: "18px", fontFamily: "Barlow", fontWeight: 300 }} href="/contact">CONTACT</Nav.Link>
                         <Nav.Link style={{ color: "white", marginRight: "2%", fontSize: "18px", fontFamily: "Barlow", fontWeight: 300 }} href="/visit">VISIT</Nav.Link>
                     </Nav>
