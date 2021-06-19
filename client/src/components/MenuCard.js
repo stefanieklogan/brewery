@@ -9,15 +9,12 @@ import { Grid, Card, Typography, CardActionArea, CardContent, Container } from "
 
 const useStyles = makeStyles({
     root: {
-        // marginRight: "3%",
-        // marginLeft: "3%",
         marginTop: "2%",
         marginBottom: "2%",
         justifyContent: "center",
         alignItems: "center",
         justify: "center",
         display: "flex",
-        // height: "300px",
         width: "100%",
         border: "1px solid #c89019",
     },

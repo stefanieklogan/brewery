@@ -20,14 +20,14 @@ const useStyles = makeStyles({
         // flexGrow: 1,
     },
     images: {
-        width: "80%",
+        width: "100%",
         margin: "center",
         // justifyContent: "center",
         // justify: "center",
         // alignItems: "center",
         // display: "flex"
     },
-    button: {
+    date: {
         backgroundColor: "#cd8f2a",
         color: "white",
         padding: ".8rem",
@@ -35,7 +35,7 @@ const useStyles = makeStyles({
         textAlign: "center",
         margin: "auto",
         marginBottom: "25px",
-        fontFamily: "Playfair Display"
+        fontFamily: "Playfair Display",
     },
     title: {
         marginBottom: "20px",
@@ -45,11 +45,13 @@ const useStyles = makeStyles({
         
     },
     description: {
-        // marginBottom: "20px",
-        margin: "1rem 20rem",
+        // marginRight: "20rem",
+        // marginLeft: "20rem",
         textAlign: "center",
         color: "white",
-        fontFamily: "Playfair Display"
+        fontFamily: "Playfair Display",
+        fontSize: "1.2rem",
+        marginBottom: "1rem"
         
     }
 })
@@ -74,7 +76,7 @@ function EventCard(props) {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                    <Typography className={styles.button}>{props.project.date}</Typography>
+                    <Typography className={styles.date}>{props.project.date}</Typography>
                     </CardActions>
                 {/* </CardActionArea> */}
             </Card>

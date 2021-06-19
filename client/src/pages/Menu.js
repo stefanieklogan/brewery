@@ -34,39 +34,39 @@ const MenuItems =
 [
     {
         "key": 1,
-        "food": "Pretzels and beer cheese",
+        "food": "pretzels and beer cheese",
         "price": "$10",
-        "description": "Handmade soft pretzels served with a side of beer cheese"
+        "description": "handmade soft pretzels served with a side of beer cheese"
     },
     {
         "key": 2,
-        "food": "Goat cheese & marinara",
+        "food": "goat cheese & marinara",
         "price": "$12",
-        "description": "Spread served with warm pita wedges"
+        "description": "spread served with warm pita wedges"
     },
     {
         "key": 3,
-        "food": "Chicken wings",
+        "food": "chicken wings",
         "price": "$9",
-        "description": "Tossed with ale and spices - Mi | Me | Ho"
+        "description": "tossed with ale and spices - Mi | Me | Ho"
     },
     {
         "key": 4,
         "food": "'96 Mini burgers",
         "price": "$12",
-        "description": "Four sliders topped with grilled onions, mushrooms and swiss cheese"
+        "description": "four sliders topped with grilled onions, mushrooms and swiss cheese"
     },
     {
         "key": 5,
-        "food": "Chips and guac",
+        "food": "chips and guac",
         "price": "$9",
-        "description": "Corn tortilla chips with homemade guacamole"
+        "description": "corn tortilla chips with homemade guacamole"
     },
     {
         "key": 6,
-        "food": "Fried mac & cheese bites",
+        "food": "fried mac & cheese bites",
         "price": "$10",
-        "description": "Deep fried macaroni and cheese bites made with a blend of creamy cheeses "
+        "description": "deep fried macaroni and cheese bites made with a blend of creamy cheeses "
     }
 ]
 

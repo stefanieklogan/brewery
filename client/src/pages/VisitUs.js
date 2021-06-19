@@ -60,6 +60,13 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "100px",
         alignItems: "center"
     },
+    tel: {
+        color: "white",
+        textAlign: "center",
+        marginTop: "10px",
+        fontFamily: "Red Hat Display",
+        fontSize: "20px",
+    },
     number: {
         textAlign: "left",
         color: "white",
@@ -131,9 +138,7 @@ function VisitUs() {
                                     Celebration, Florida 34747
                             </Typography>
                                 <br />
-                                <br />
-                                <br />
-                                <Typography className={styles.para}>
+                                <Typography className={styles.tel}>
                                     (333)333-3333
                             </Typography>
                             </Row>
