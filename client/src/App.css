@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&family=Playfair+Display&display=swap');
 .makeStyles-image-10 {
-
     padding-top: 0px !important;
 }
+.makeStyles-image-8 {
+    margin-bottom: 0px !important;
+}
 .MuiTypography-root {
-	margin-left: 5px !important;
+	margin-left: 8px !important;
+}
+.MuiListItem-root {
+    padding-bottom: 20px !important;
+}
+.MuiTypography-overline {
+	font-size:.850rem !important;
 }

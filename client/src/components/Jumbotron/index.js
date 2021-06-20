@@ -35,7 +35,6 @@ const useStyles = makeStyles({
         fontSize: "39px",
         marginRight: "25px",
         marginLeft: "25px",
-        marginBottom: "40px",
         color: "black",
         '&:hover': {
             color: "#c89019",
