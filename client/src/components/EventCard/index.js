@@ -59,17 +59,9 @@ function EventCard(props) {
     const styles = useStyles();
     return (
         <Card className={styles.root}>
-            {/* <CardActionArea> */}
             <div className={styles.images}>
                 <img className="card-img" src={props.project.image} alt={props.project.title} />
             </div>
-            <CardContent>
-                <Typography className={styles.title} variant="h4" component="h2">
-                    {props.project.title}
-                </Typography>
-                <div style={{ justify: "center", justifyContent: "center", alignItems: "center", display: "flex" }}>
-                    <hr style={{ width: "40%", height: "2px", color: "#c89019", opacity: 0.7, marginBottom: "1.3rem" }} />
-                </div>
                     <CardContent>
                         <Typography className={styles.title} variant="h4" component="h2">
                             {props.project.title}
@@ -84,11 +76,7 @@ function EventCard(props) {
                         {props.project.date}
                         </Typography>
                     </CardContent>
-                    {/* <CardActions>
-                    <Typography className={styles.date}>{props.project.date}</Typography>
-                    </CardActions> */}
-                {/* </CardActionArea> */}
-            </Card>
+                </Card>
     )
 }
 
