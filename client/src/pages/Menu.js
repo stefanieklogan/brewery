@@ -30,45 +30,45 @@ const useStyles = makeStyles({
 
 })
 
-const MenuItems =
-    [
-        {
-            "key": 1,
-            "food": "Pretzels and beer cheese",
-            "price": "$10",
-            "description": "Handmade soft pretzels served with a side of beer cheese"
-        },
-        {
-            "key": 2,
-            "food": "Goat cheese & marinara",
-            "price": "$12",
-            "description": "Spread served with warm pita wedges"
-        },
-        {
-            "key": 3,
-            "food": "Chicken wings",
-            "price": "$9",
-            "description": "Tossed with ale and spices - Mi | Me | Ho"
-        },
-        {
-            "key": 4,
-            "food": "'96 Mini burgers",
-            "price": "$12",
-            "description": "Four sliders topped with grilled onions, mushrooms and swiss cheese"
-        },
-        {
-            "key": 5,
-            "food": "Chips and guac",
-            "price": "$9",
-            "description": "Corn tortilla chips with homemade guacamole"
-        },
-        {
-            "key": 6,
-            "food": "Fried mac & cheese bites",
-            "price": "$10",
-            "description": "Deep fried macaroni and cheese bites made with a blend of creamy cheeses "
-        }
-    ]
+const MenuItems = 
+[
+    {
+        "key": 1,
+        "food": "pretzels and beer cheese",
+        "price": "$10",
+        "description": "handmade soft pretzels served with a side of beer cheese"
+    },
+    {
+        "key": 2,
+        "food": "goat cheese & marinara",
+        "price": "$12",
+        "description": "spread served with warm pita wedges"
+    },
+    {
+        "key": 3,
+        "food": "chicken wings",
+        "price": "$9",
+        "description": "tossed with ale and spices - Mi | Me | Ho"
+    },
+    {
+        "key": 4,
+        "food": "'96 Mini burgers",
+        "price": "$12",
+        "description": "four sliders topped with grilled onions, mushrooms and swiss cheese"
+    },
+    {
+        "key": 5,
+        "food": "chips and guac",
+        "price": "$9",
+        "description": "corn tortilla chips with homemade guacamole"
+    },
+    {
+        "key": 6,
+        "food": "fried mac & cheese bites",
+        "price": "$10",
+        "description": "deep fried macaroni and cheese bites made with a blend of creamy cheeses "
+    }
+]
 
 function Menu() {
     const classes = useStyles();

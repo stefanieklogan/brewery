@@ -71,16 +71,16 @@ function AboutUs() {
                 for over 15 years, Frank saw the need for creating community for those
                 who enjoy good beer and good company. Fast forward to today where he’s
                 turning his dream into a reality.
-        <br />
-                <br />
-        At Celebration Brewing we’re here to serve our community one pint at a
-        time. Our beers are crafted to bring our community together. Whether you
-        call Celebration home or just come to visit - stop by and taste what’s
-        on tap.
-        <br />
-                <br />
-        Life’s short. Love what you do, do what you love. #CelebrationBrewing
-    </Typography>
+            <br />
+            <br />
+                At Celebration Brewing we’re here to serve our community one pint at a
+                time. Our beers are crafted to bring our community together. Whether you
+                call Celebration home or just come to visit - stop by and taste what’s
+                on tap.
+            <br />
+            <br />
+                Life’s short. Love what you do, do what you love. #CelebrationBrewing
+            </Typography>
 
             <Grid container justify="center" style={{ marginTop: "3%" }}>
                 <div style={{ width: "80%", textAlign: "left", padding: "2%", alignItems: "center" }}>
@@ -94,8 +94,8 @@ function AboutUs() {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography className={styles.accordianPara}>
-                                I looked at a lot of places and I scouted many established breweries downtown Orlando and something kept drawing me back to Celebration. There are many great food &amp; drink options in downtown Celebration but not for the beer fans out there.
-                </Typography>
+                                I looked at a lot of places and I scouted many established breweries in downtown Orlando and something kept drawing me back to Celebration. There are many great food &amp; drink options in downtown Celebration but not for the beer fans out there.
+                            </Typography>
                         </AccordionDetails>
                     </Accordion>
                     <Accordion style={{ marginBottom: "1%", backgroundColor: "#fff1db", color: "black" }}>
@@ -108,7 +108,7 @@ function AboutUs() {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography className={styles.accordianPara}>
-                                I've enjoyed the partnership and business assistance I've had so far. Many residents in town have given me recommendations or they know a guy who can help out. It's a lot to start a brewery literal dirt to just before opening here soon.
+                                I've enjoyed the partnership and business assistance I've had so far. Many residents in town have given me recommendations or they know a guy who can help out. It's a lot to start a brewery from literal dirt to just before opening here soon.
                 </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -145,7 +145,7 @@ function AboutUs() {
                             shadowOpacity: 0.12, shadowRadius: 60,
                         }}>
                             <Typography className={styles.accordianPara}>
-                                We have a range - stout, IPA, ale and lager just to name a few. I'd like to think we'll be known for unique tastes and names. Spring Park Stout, Celebration Storm IPA and Lakeside Lager are just a few beer names inspired by the great community we operate from.
+                                We will have a range - stout, IPA, ale and lager just to name a few. I'd like to think we'll be known for unique tastes and names. Spring Park Stout, Celebration Storm IPA and Lakeside Lager are just a few beer names inspired by the great community we operate from.
                 </Typography>
                         </AccordionDetails>
                     </Accordion>
