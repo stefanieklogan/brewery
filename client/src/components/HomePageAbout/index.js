@@ -96,7 +96,6 @@ function HomePageAbout() {
                 Everyday, we’re driven by our core values: delivering quality flavors, honoring our customers and celebrating the culture of beer. Experience it for yourself by joining us for a brewery tour, a special event or just to try what’s on tap.
                 </Typography>
                 <Grid container direction="row" spacing={1} style={{ width: "100%", alignItems: "center", marginTop: "40px" }} justify="center">
-
                     <Button className={styles.button} variant="outlined" href="/visit"> Visit Us </Button>
                 </Grid>
             </Container>
@@ -104,17 +103,15 @@ function HomePageAbout() {
                 <Typography style={{ marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow" }} component="h4" variant="h4">
                     BREAKING GROUND <span style={{ color: "#c89019" }}> | </span> SUMMER 2021
                     </Typography>
-                <div style={{justify:"center", justifyContent: "center", alignItems: "center", display: "flex"}}>
+                <div style={{ justify: "center", justifyContent: "center", alignItems: "center", display: "flex" }}>
                     <hr style={{ width: "50%", height: "3px", color: "#c89019", opacity: 0.7 }} />
                 </div>
                 <Typography style={{ marginTop: "1%", fontFamily: "Barlow" }} component="h4" variant="h4">
                     OPENING <span style={{ color: "#c89019" }}> | </span> WINTER 2022
                     </Typography>
-
             </Container>
             <Container style={{ backgroundColor: "black", marginTop: "5%", display: "fluid" }}>
                 <Typography className={styles.beerTitle} component="h3" variant="h3">
-
                     FEATURED BEERS
             </Typography>
                 <Container >
@@ -138,11 +135,9 @@ function HomePageAbout() {
                     </Grid>
                 </Container>
             </Container>
-
             <MailchimpForm />
             <Footer />
             <Copyright />
-
         </Grid>
     )
 };

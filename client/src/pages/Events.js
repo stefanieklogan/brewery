@@ -29,7 +29,7 @@ const useStyles = makeStyles({
         fontSize: pxToRem(52),
         [breakpoints.up("md")]: {
             fontSize: pxToRem(64)
-        }      
+        }
     },
 
 })
@@ -62,19 +62,19 @@ function Events() {
 
     return (
         <Grid style={{ backgroundColor: "#f4eee3" }}>
-        <Grid fluid="true" container style={{ alignItems: "center", justifyContent: "center", justify: "center", display: "flex", backgroundColor: "black" }}> 
-            <div style={{ backgroundImage: 'url("https://source.unsplash.com/vI7pDreQLl4")', backgroundSize: "cover", backgroundPosition: "cover", backgroundRepeat: "no-repeat", width: "100%", height: "50vh", marginBottom: "3rem"}}>
-                <h2 className={classes.heading}> Events </h2>
-            </div>
-            <div>
-                <div className="row">
-                    {BreweryEvents.map((item) => (
-                    <Grid>
-                        <EventCard project={item} />
-                    </Grid>
-                    ))}  
+            <Grid fluid="true" container style={{ alignItems: "center", justifyContent: "center", justify: "center", display: "flex", backgroundColor: "black" }}>
+                <div style={{ backgroundImage: 'url("https://source.unsplash.com/vI7pDreQLl4")', backgroundSize: "cover", backgroundPosition: "cover", backgroundRepeat: "no-repeat", width: "100%", height: "50vh", marginBottom: "3rem" }}>
+                    <h2 className={classes.heading}> Events </h2>
                 </div>
-            </div>
+                <div>
+                    <div className="row">
+                        {BreweryEvents.map((item) => (
+                            <Grid>
+                                <EventCard project={item} />
+                            </Grid>
+                        ))}
+                    </div>
+                </div>
             </Grid>
             <Footer />
             <Copyright />

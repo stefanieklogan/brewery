@@ -9,7 +9,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Grid from '@material-ui/core/Grid';
-// import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
 	root: {

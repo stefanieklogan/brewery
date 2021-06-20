@@ -42,7 +42,7 @@ const useStyles = makeStyles({
         textAlign: "center",
         color: "white",
         fontFamily: "Playfair Display"
-        
+
     },
     description: {
         // marginBottom: "20px",
@@ -50,34 +50,34 @@ const useStyles = makeStyles({
         textAlign: "center",
         color: "white",
         fontFamily: "Playfair Display"
-        
+
     }
 })
 
 function EventCard(props) {
     const styles = useStyles();
     return (
-            <Card className={styles.root}>
-                {/* <CardActionArea> */}
-                <div className={styles.images}>
-                    <img className="card-img" src={props.project.image} alt={props.project.title}/>
+        <Card className={styles.root}>
+            {/* <CardActionArea> */}
+            <div className={styles.images}>
+                <img className="card-img" src={props.project.image} alt={props.project.title} />
+            </div>
+            <CardContent>
+                <Typography className={styles.title} variant="h4" component="h2">
+                    {props.project.title}
+                </Typography>
+                <div style={{ justify: "center", justifyContent: "center", alignItems: "center", display: "flex" }}>
+                    <hr style={{ width: "40%", height: "2px", color: "#c89019", opacity: 0.7, marginBottom: "1.3rem" }} />
                 </div>
-                    <CardContent>
-                        <Typography className={styles.title} variant="h4" component="h2">
-                            {props.project.title}
-                        </Typography>
-                        <div style={{justify:"center", justifyContent: "center", alignItems: "center", display: "flex"}}>
-                        <hr style={{ width: "40%", height: "2px", color: "#c89019", opacity: 0.7, marginBottom: "1.3rem" }} />
-                        </div> 
-                        <Typography className={styles.description} variant="h5" component="h5">
-                        {props.project.description}
-                        </Typography>
-                    </CardContent>
-                    <CardActions>
-                    <Typography className={styles.button}>{props.project.date}</Typography>
-                    </CardActions>
-                {/* </CardActionArea> */}
-            </Card>
+                <Typography className={styles.description} variant="h5" component="h5">
+                    {props.project.description}
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Typography className={styles.button}>{props.project.date}</Typography>
+            </CardActions>
+            {/* </CardActionArea> */}
+        </Card>
     )
 }
 

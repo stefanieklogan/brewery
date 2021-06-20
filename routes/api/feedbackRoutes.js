@@ -13,17 +13,12 @@ router.post('/', async (req, res) => {
     }
     let feedback = await Feedback.create(newFeedback);
 
-    console.log("feedback: " + feedback);
-
     res.status(200).json(feedback);
   } catch (err) {
     console.log(err);
     res.status(500).send(err);
   }
 });
-
-// router.route("/")
-//   .get(feedbackController.getFeedback)
 
 router.get('/',withAuth, async (req, res) => {
   let postData = await Feedback.findAll({});

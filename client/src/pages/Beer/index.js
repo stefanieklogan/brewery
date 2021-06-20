@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import API from "../../utils/API.js";
 import Footer from '../../components/Footer/';
 import Copyright from '../../components/Copyright/';
-//     CardActions removed from line 5 after typography
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import { CardActionArea } from '@material-ui/core';
@@ -15,8 +14,6 @@ import BeerImg from "../../assets/beer-celebration.png";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        // display: 'flex',
-        // padding: '30px',
         marginRight: "3%",
         marginLeft: "3%",
         marginBottom: "3%",
@@ -33,8 +30,6 @@ const useStyles = makeStyles((theme) => ({
         height: 175,
         width: 150,
         margin: "3%",
-        // align: "center",
-        // justify: "center",
     },
     title: {
         textAlign: "center",
@@ -44,8 +39,6 @@ const useStyles = makeStyles((theme) => ({
     image: {
         height: "100%",
         width: "100%",
-        // marginTop: "2%",
-        // marginBottom: "2%"
     }
 }));
 
@@ -66,14 +59,12 @@ function Beer() {
             .catch(err => console.log(err));
     };
     return (
-
         <Grid style={{ backgroundColor: "#f4eee3" }}>
             <Grid container fluid="true" style={{ display: "flex" }}>
                 <div>
                     <Image className={classes.image} src={BeerImg} alt="Picture of a can of beer" />
                 </div>
             </Grid>
-
             <Grid container style={{ alignItems: "center", justifyContent: "center", backgroundColor: "black" }}>
                 {beers.map((beer) => (
                     <Grid key={beer.beer.beer_name} style={{ height: "300px", width: "600px" }}>
