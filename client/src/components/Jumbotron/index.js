@@ -1,23 +1,13 @@
 import React from "react";
-
-//Cannot find module: '@material-ui/core/grid'. Make sure this package is installed.
-//npm ERR! Could not install from "@material-ui/core/grid" as it does not contain a package.json file.
-
 import { Grid } from '@material-ui/core';
-// import Container from 'react-bootstrap/Container';
-
 import Image from 'react-bootstrap/Image';
 import { Container } from '@material-ui/core';
-// import Row from 'react-bootstrap/Row';
-
 import { makeStyles } from "@material-ui/core/styles";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import { Icon } from '@iconify/react';
-//, InlineIcon removed after Icon- waning no unused vars
 import untappdIcon from '@iconify-icons/mdi/untappd';
-// import ResponsiveImgMaterialUi from "responsive-img-material-ui";
 import Logo from "../../assets/Celebration_Logo2.png";
 
 const useStyles = makeStyles({
@@ -25,7 +15,6 @@ const useStyles = makeStyles({
         marginRight: "25px",
         marginLeft: "25px",
         marginTop: "17px",
-        // marginBottom: "40px",
         color: "black",
         '&:hover': {
             color: "#c89019",
@@ -35,7 +24,6 @@ const useStyles = makeStyles({
         fontSize: "39px",
         marginRight: "25px",
         marginLeft: "25px",
-        marginBottom: "40px",
         color: "black",
         '&:hover': {
             color: "#c89019",
@@ -55,7 +43,6 @@ const useStyles = makeStyles({
 function Jumbotron() {
     const styles = useStyles();
     return (
-
         <Grid className={styles.bodyColor}>
             <Container fluid="true">
                 <Grid className="justify-content-center">
@@ -63,7 +50,6 @@ function Jumbotron() {
                         <Image src={Logo} alt="Celebration Brewing Logo" fluid />
                     </div>
                 </Grid>
-
                 <Grid container justify="center">
                     <a href="https://untappd.com/CelebrationBrewing" rel="noopener noreferrer" target="_blank" className={styles.beerIcon}><Icon icon={untappdIcon} /></a>
                     <a href="https://www.instagram.com/celebrationbrewing/" rel="noopener noreferrer" target="_blank" className={styles.icons}><InstagramIcon fontSize="large" /></a>
@@ -72,7 +58,6 @@ function Jumbotron() {
                 </Grid>
             </Container>
         </Grid>
-
     );
 }
 

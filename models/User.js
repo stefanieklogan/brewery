@@ -19,22 +19,12 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-
-        // allow the user to enter email or not --- check to make sure code is working properly
         email: {
             type: DataTypes.STRING,
-            // allowNull: false,
-            // validate: {
-            //     isEmail: true,
-            // },
+
         },
     },
     {
-        // hooks: {
-        // beforeCreate: async (newUserData) => {
-        //     return newUserData;
-        // },
-        // },
         sequelize,
         timestamps: false,
         freezeTableName: true,

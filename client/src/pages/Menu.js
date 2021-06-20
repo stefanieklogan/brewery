@@ -25,7 +25,7 @@ const useStyles = makeStyles({
         fontSize: pxToRem(64),
         [breakpoints.up("md")]: {
             fontSize: pxToRem(72)
-        }      
+        }
     },
 
 })
@@ -72,23 +72,23 @@ const MenuItems =
 
 function Menu() {
     const classes = useStyles();
-    
+
     return (
         <Grid style={{ backgroundColor: "#f4eee3" }}>
-        <Grid container fluid="true" style={{ textAlign: "center", alignItems: "center", justifyContent: "center", justify: "center", display: "flex", backgroundColor: "black" }}>
-            <div style={{ backgroundImage: 'url("https://source.unsplash.com/0r2FM2tsbeM")', backgroundSize: "cover", backgroundPosition: "cover", backgroundRepeat: "no-repeat", width: "100%", height: "50vh"}}>
-                <h2 className={classes.heading}> Quick Bites </h2>
-            </div>
+            <Grid container fluid="true" style={{ textAlign: "center", alignItems: "center", justifyContent: "center", justify: "center", display: "flex", backgroundColor: "black" }}>
+                <div style={{ backgroundImage: 'url("https://source.unsplash.com/0r2FM2tsbeM")', backgroundSize: "cover", backgroundPosition: "cover", backgroundRepeat: "no-repeat", width: "100%", height: "50vh" }}>
+                    <h2 className={classes.heading}> Quick Bites </h2>
+                </div>
                 <div className="row">
-                {MenuItems.map((item) => (
-                    <Grid>    
-                        <MenuCard project={item} />
-                    </Grid>
-                    ))} 
-                </div> 
-        </Grid>
-        <Footer />
-        <Copyright />
+                    {MenuItems.map((item) => (
+                        <Grid>
+                            <MenuCard project={item} />
+                        </Grid>
+                    ))}
+                </div>
+            </Grid>
+            <Footer />
+            <Copyright />
         </Grid>
     )
 }
