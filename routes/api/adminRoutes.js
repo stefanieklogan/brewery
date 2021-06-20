@@ -1,8 +1,6 @@
 const router = require('express').Router();
-// const adminController = require("../../controllers/adminController");
 const { Admin } = require('../../models');
-// router.route("/login")
-// 	.post(adminController.postLogin)
+
 router.post('/signup', async (req, res) => {
     try {
         const userData = await Admin.create(req.body);

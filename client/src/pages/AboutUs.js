@@ -156,14 +156,13 @@ function AboutUs() {
                     <Typography style={{ marginTop: "1%", marginBottom: "1%", fontFamily: "Barlow" }} component="h4" variant="h4">
                         BREAKING GROUND <span style={{ color: "#c89019" }}> | </span> SUMMER 2021
         </Typography>
-                <div style={{justify:"center", justifyContent: "center", alignItems: "center", display: "flex"}}>
-                    <hr style={{ width: "50%", height: "3px", color: "#c89019", opacity: 0.7 }} />
-                </div>
+                    <div style={{ justify: "center", justifyContent: "center", alignItems: "center", display: "flex" }}>
+                        <hr style={{ width: "50%", height: "3px", color: "#c89019", opacity: 0.7 }} />
+                    </div>
                     <Typography style={{ marginTop: "1%", fontFamily: "Barlow" }} component="h4" variant="h4">
                         OPENING <span style={{ color: "#c89019" }}> | </span> WINTER 2022
         </Typography>
                 </Container>
-
             </Grid>
             <Footer />
             <Copyright />

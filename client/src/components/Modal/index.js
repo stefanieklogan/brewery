@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TransitionsModal() {
 	const history = useHistory();
-
 	const classes = useStyles();
 	const [open, setOpen] = useState(false);
 
@@ -39,7 +38,6 @@ export default function TransitionsModal() {
 
 	return (
 		<div>
-
 			<Modal
 				aria-labelledby="transition-modal-title"
 				aria-describedby="transition-modal-description"
@@ -92,9 +90,7 @@ export default function TransitionsModal() {
 						>
 							No
         </Button>
-
 					</div>
-
 				</Fade>
 			</Modal>
 		</div>
