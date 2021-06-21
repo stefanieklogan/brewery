@@ -13,6 +13,7 @@ import Copyright from '../../components/Copyright/';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 import MailchimpForm from '../Mailchimp/';
+// import MailchimpSubscribe from '../MailchimpSubscribe';
 
 function pxToRem(value) {
     return `${value / 16}rem`;
@@ -136,6 +137,7 @@ function HomePageAbout() {
                 </Container>
             </Container>
             <MailchimpForm />
+            {/* <MailchimpSubscribe /> */}
             <Footer />
             <Copyright />
         </Grid>
