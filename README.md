@@ -1,23 +1,5 @@
 # Celebration Brewing
 
-## Table of Contents
-1. [ Application. ](#application)
-2. [ Project Overview. ](#overview)
-3. [ Dependencies. ](#depend)
-4. [ Installation. ](#install)
-5. [ Future Development. ](#future)
-6. [ The other stuff: License & Badges. ](#streetcred)
-
-<a name="application"></a>
-## Application
-
-* Deployed application: https://pure-journey-55067.herokuapp.com/
-
-![homepage image](https://github.com/stefanieklogan/brewery/blob/main/client/src/assets/homepage.jpg)
-
-<a name="overview"></a>
-## Project overview
-
 * Welcome to Celebration Brewing
 
 * As a business owner, I want users to understand my location, beer offerings, company history and contact methods. 
@@ -28,7 +10,10 @@
 
 * It is desired a user can leave feedback & choose to be contacted via email. As an admin, I want to be able to login and view all feedback. 
 
-<a name="depend"></a>
+## Deployed Application
+
+https://secure-stream-74196.herokuapp.com/
+
 ## Dependencies
 
 * React.js
@@ -39,7 +24,6 @@
 
 * untappd API
 
-<a name="install"></a>
 ## Installation
 
 * After cloning this repository, run 'npm install' for dependencies. 
@@ -50,7 +34,6 @@
 
 * To run the application, enter 'npm start' inside terminal. 
 
-<a name="future"></a>
 ## Future Development
 
 * Events calendar
@@ -62,9 +45,7 @@
 * Food & Beverage menu & online ordering
 
 <a name="streetcred"></a>
-## The other stuff: License & Badges
-
-* Copyright © Nicolas Gallagher and Jonathan Neal, The MIT License (MIT)
+## The other stuff: Badges
 
 <img src="https://img.shields.io/badge/node_JS%20-%231572B6.svg?&style=for-the-badge&logo=nodeJS3&logoColor=white"/>
 
