@@ -101,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function VisitUs() {
-    const styles = useStyles();
+    // const styles = useStyles();
     return (
 
         <div style={{ backgroundColor: "#f4eee3" }}>

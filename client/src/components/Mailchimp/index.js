@@ -19,7 +19,7 @@ function MailchimpForm() {
                 <MailchimpSubscribe
                     url={url}
                     render={({ subscribe, status, message }) => (
-                        <div>
+                        <div style={{fontFamily: "Red Hat Display", fontSize: "18px", justifyContent: "center", justify: "center", alignItems: "center", display: "flex" }}>
                             <SimpleForm onSubmitted={formData => subscribe(formData)} />
                             {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
                             {status === "error" && <div style={{ color: "red" }} dangerouslySetInnerHTML={{ __html: message }} />}
