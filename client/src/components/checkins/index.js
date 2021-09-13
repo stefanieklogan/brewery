@@ -9,7 +9,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Grid from '@material-ui/core/Grid';
-
+import CheckinReplace from "../replaceCheckins/index.js";
 const useStyles = makeStyles((theme) => ({
 	root: {
 		backgroundColor: "#f4eee3",
@@ -95,7 +95,7 @@ function Checkins() {
 
 				</List>
 			</Grid> :
-			<div>Loading</div>
+			<CheckinReplace />
 	)
 }
 
