@@ -6,7 +6,7 @@ import f1 from '../../assets/images/f1.png'
 import f2 from '../../assets/images/f2.png'
 import f3 from '../../assets/images/f3.png'
 import o4 from '../../assets/images/o4.png'
-
+import mockCheckins from '../../assets/images/mockCheckins.gif'
 import Image from 'react-bootstrap/Image';
 
 
@@ -47,8 +47,11 @@ function CheckinReplace() {
 		
 		checkinScreens.length > 0 ?
 		<Grid fluid="true">
-			
-				<Image src={checkinScreens[currentCheckin]} 
+				<Image src=
+				{
+					// checkinScreens[currentCheckin]
+					mockCheckins
+				} 
 				className={styles.image} />
 				</Grid>
 			:
