@@ -9,8 +9,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { Grid } from '@material-ui/core';
 import Image from 'react-bootstrap/Image';
-
 import BeerImg from "../../assets/beer-celebration.png";
+import beerReplace from '../../assets/images/beerReplace.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -66,6 +66,7 @@ function Beer() {
                 </div>
             </Grid>
             <Grid container style={{ alignItems: "center", justifyContent: "center", backgroundColor: "black" }}>
+
                 {beers.map((beer) => (
                     <Grid key={beer.beer.beer_name} style={{ height: "300px", width: "600px" }}>
                         <Card className={classes.root}>
@@ -89,6 +90,8 @@ function Beer() {
                         </Card>
                     </Grid>
                 ))}
+                <Image src={beerReplace}
+                    className={classes.image} />
             </Grid>
             <Footer />
             <Copyright />
