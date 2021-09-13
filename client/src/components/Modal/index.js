@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
+		justify: "center",
 
 	},
 	paper: {
@@ -55,12 +56,19 @@ export default function TransitionsModal() {
 						<Typography style={{ marginTop: "1%", marginBottom: "4%", fontFamily: "Barlow" }}
 							align="center" component="h4" variant="h4">
 							Are you 21+ ?
+							<br />
+							<br />
+							* Please note that checkins and beers
+							<br />
+							have been changed to display mock functionality as 
+							<br /> Untappd API data has been deleted. *
 						</Typography>
 						<Button
 							onClick={handleClose}
 							style={{
+								
 								marginTop: "2.5%",
-								marginLeft: "2.5%",
+								marginLeft: "40%",
 								marginRight: "2.5%",
 								paddingTop: "2.5%",
 								paddingBottom: "2.5%",
